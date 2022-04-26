@@ -31,6 +31,7 @@
         <value>faktureringsopgørelser</value>
     </caseValues>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Balance Transfers --></label>
         <name>FinServ__BalanceTransfers__c</name>
     </fields>

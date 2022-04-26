@@ -27,10 +27,6 @@ On-premise SonarQube requires your SonarQube instance to be accesible through in
             <translation><!-- On-premise SonarQube --></translation>
         </picklistValues>
     </fields>
-    <fields>
-        <label><!-- Report Issues From Latest Commit --></label>
-        <name>copado__ReportIssuesFromLatestCommit__c</name>
-    </fields>
     <recordTypes>
         <description><!-- Record Type for CodeScan integration. Requires CodeScan licensing. --></description>
         <label><!-- CodeScan --></label>

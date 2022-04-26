@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>CHANNEL_ORDERS__Application__c</fullName>
         <deprecated>false</deprecated>
@@ -468,7 +467,7 @@ CHANNEL_ORDERS__pc_Contract_Length__c)/12), 4) = 0 &amp;&amp; MOD(YEAR(CHANNEL_O
             <filterItems>
                 <field>CHANNEL_ORDERS__Partner_Product_Catalog__c.CreatedDate</field>
                 <operation>greaterThan</operation>
-                <value>1/1/1900, 12:00 AM</value>
+                <value>1/1/1900 12:00 AM</value>
             </filterItems>
             <isOptional>true</isOptional>
         </lookupFilter>

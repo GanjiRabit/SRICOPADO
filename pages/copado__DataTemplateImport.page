@@ -219,7 +219,7 @@
                     <footer class="slds-modal__footer">
                         <apex:outputPanel layout="block" styleClass="buttons modal-button" id="uploadTemplateFooter">
                             <apex:outputPanel layout="none" rendered="{!templateInformationList.size > 0}">
-                                <button  id="doneButton" type="button" class="slds-button slds-button_brand hide-buttons" onclick="lockScreen();dti.orgCallout('{!JSENCODE(OrgCalloutDataJSON)}');">
+                                <button  id="doneButton" type="button" class="slds-button slds-button_brand hide-buttons" onclick="lockScreen();dti.orgCallout('{!OrgCalloutData}');">
                                     {!$Label.Confirm_Import}
                                 </button>
                                 <button id="validateButton" type="button" class="slds-button slds-button_brand" onclick="lockScreen();checkValidationCondition();">
@@ -227,7 +227,7 @@
                                 </button>
                             </apex:outputPanel>
 
-                            <apex:actionFunction name="checkValidationCondition" action="{!checkValidationCondition}" onComplete="dti.orgCallout('{!JSENCODE(OrgCalloutDataJSON)}');dti.applyRenderSVG();" reRender="uploadTemplateHeader,uploadTemplateContent,errorPanel" />
+                            <apex:actionFunction name="checkValidationCondition" action="{!checkValidationCondition}" onComplete="dti.orgCallout('{!OrgCalloutData}');dti.applyRenderSVG();" reRender="uploadTemplateHeader,uploadTemplateContent,errorPanel" />
                         </apex:outputPanel>
                     </footer>
                 </apex:outputPanel>

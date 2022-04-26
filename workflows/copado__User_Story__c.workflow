@@ -1,72 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <alerts>
-        <fullName>Approval_Required_for_Destructive_Changes</fullName>
-        <description>Approval Required for Destructive Changes</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>saivenkatesh.ayyagari@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Approval_for_Destructive_Changes</template>
-    </alerts>
-    <alerts>
-        <fullName>Approved</fullName>
-        <description>Approved</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>bina.das@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>saivenkatesh.ayyagari@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/User_Story_Approved</template>
-    </alerts>
-    <alerts>
-        <fullName>Email_Approval</fullName>
-        <description>Email Approval</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>bina.das@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/User_Story_Approval</template>
-    </alerts>
-    <alerts>
-        <fullName>Rejected</fullName>
-        <description>Rejected</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>bina.das@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>saivenkatesh.ayyagari@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/User_Story_Rejected</template>
-    </alerts>
-    <alerts>
-        <fullName>Send_the_email_alert_to_approver</fullName>
-        <description>Send the email alert to approver</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>bina.das@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>saivenkatesh.ayyagari@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/User_Story_Link</template>
-    </alerts>
     <fieldUpdates>
         <fullName>CICD_CheckPromoteAndDeployCheckbox</fullName>
         <field>copado__Promote_and_Deploy__c</field>
@@ -84,6 +17,17 @@
         <name>CICD_ResetPromoteAndDeploy</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CICD_ResetRecordTypeToPreApproval</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CICD_PreLeadApprovalToInt</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>CICD_ResetRecordTypeToPreApproval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
@@ -108,12 +52,34 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>CICD_SetRecordTypeToPost</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CICD_PostLeadApprovalToInt</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>CICD_Set Record Type to Post</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>CICD_SetStatusToBeCompleted</fullName>
         <field>copado__Status__c</field>
         <literalValue>Completed</literalValue>
         <name>CICD_SetStatusToBeCompleted</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CICD_UpdateRecordTypeToClosed</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CICD_Closed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>CICD_UpdateRecordTypeToClosed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
@@ -137,45 +103,17 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>EnablePRApproveCheckbox</fullName>
-        <field>copado__Pull_Requests_Approved__c</field>
-        <literalValue>1</literalValue>
-        <name>EnablePRApproveCheckbox</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Enable_Stop_Indexing_Metadata</fullName>
-        <description>When prod deployment completes</description>
-        <field>copado__Stop_Indexing_Metadata__c</field>
-        <literalValue>1</literalValue>
-        <name>Enable Stop Indexing Metadata</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Flag_PR_approved_checkbox</fullName>
-        <description>Flag PR approved checkbox after approval</description>
-        <field>copado__Pull_Requests_Approved__c</field>
-        <literalValue>1</literalValue>
-        <name>Flag PR approved checkbox</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
     <rules>
         <fullName>CICD_CloseUserStory</fullName>
         <actions>
             <name>CICD_SetStatusToBeCompleted</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <actions>
+            <name>CICD_UpdateRecordTypeToClosed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
         <formula>TEXT(CICD_WorkflowStatus__c) = &apos;Closed&apos;</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
@@ -186,6 +124,10 @@
             <type>FieldUpdate</type>
         </actions>
         <actions>
+            <name>CICD_ResetRecordTypeToPreApproval</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
             <name>CICD_ResetReopenCheckbox</name>
             <type>FieldUpdate</type>
         </actions>
@@ -193,37 +135,8 @@
             <name>CICD_ResetWorkflowStatus</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <formula>CICD_ReopenUserStory__c</formula>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
-    </rules>
-    <rules>
-        <fullName>Flag PR approved checkbox</fullName>
-        <actions>
-            <name>Flag_PR_approved_checkbox</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>false</active>
-        <criteriaItems>
-            <field>copado__User_Story__c.copado__Pull_Requests_Approved__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </criteriaItems>
-        <description>Flag PR approved checkbox after approval</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
-    </rules>
-    <rules>
-        <fullName>Stop Indexing Metadata</fullName>
-        <actions>
-            <name>Enable_Stop_Indexing_Metadata</name>
-            <type>FieldUpdate</type>
-        </actions>
         <active>true</active>
-        <criteriaItems>
-            <field>copado__User_Story__c.copado__Status__c</field>
-            <operation>equals</operation>
-            <value>Done</value>
-        </criteriaItems>
+        <formula>CICD_ReopenUserStory__c</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

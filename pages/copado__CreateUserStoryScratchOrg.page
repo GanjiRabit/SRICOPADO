@@ -12,6 +12,7 @@
 
         </script>
         <c:IncludeConnectionJsComponent />
+        <c:IncludeCodeMirrorResourceComponent addCMjs="true" addYamljs="false" addActiveLinejs="true" addJSONLintjs="true" addLintjs="true" addAutoRefreshjs="false" addCommentjs="true" addCMcss="true" addEclipsecss="true" addLintcss="true"/>
 
         <apex:stylesheet value="{!IF($User.UIThemeDisplayed == 'Theme4d',URLFOR($Resource.copado__CopadoLightningCSS),'')}" />
     </head>
@@ -163,33 +164,37 @@
                 <apex:outputPanel layout="block" rendered="{!metadata == 'CURRENT'}">
                     <apex:actionFunction name="renderParent" reRender="progressContainer" />
                     <c:ScratchOrgMetadata parentPageController="{!this}" componentName="ScratchOrgMetadata"
-                                          showActionButtons="false" mode="wizard"/>
+                                          showActionButtons="false" mode="wizard" />
                 </apex:outputPanel>
                 <apex:outputPanel layout="block" rendered="{!definition == 'CURRENT'}">
                     <apex:actionFunction name="renderParent" reRender="progressContainer" />
                     <c:ScratchOrgTemplate parentPageController="{!this}" componentName="ScratchOrgTemplate"
-                                          showActionButtons="false" mode="wizard" showAllTemplateButtons="true" />
+                                          showActionButtons="false" mode="wizard" showAllTemplateButtons="true" /> 
                 </apex:outputPanel>
                 <apex:outputPanel layout="block" rendered="{!extension == 'CURRENT'}">
                     <apex:actionFunction name="renderParent" reRender="progressContainer" />
                     <c:ScratchOrgExtensions parentPageController="{!this}" componentName="ScratchOrgExtensions" mode="wizard" />
                 </apex:outputPanel>
                 <apex:outputPanel layout="block" rendered="{!AND(OR(review == 'CURRENT',review == 'COMPLETE'),!showExtensionStatus)}">
-                    <c:ScratchOrgCompletion id="reviewComponent" parentPageController="{!this}" componentName="ScratchOrgCompletion"
+                    <c:ScratchOrgCompletion id="soc" parentPageController="{!this}" componentName="ScratchOrgCompletion"
                                             showActionButtons="false" mode="wizard" />
                     <apex:inputHidden value="{!selectedPermissions}" id="permSetsPage" />
-                    <apex:actionFunction name="loadReviewData" action="{!loadReviewData}" reRender="reviewComponent" />
+                    <apex:actionFunction name="loadReviewData" action="{!loadReviewData}" reRender="soc" />
                     <script type="application/javascript">
                     (function () {
-                        setTimeout(function () {
-                            loadReviewData();
-                        }, 100)
+                        setTimeout(
+                            function () {
+                                loadReviewData()
+                            }
+                            , 100
+                        )
                     })();
+
                     </script>
                 </apex:outputPanel>
                 <apex:outputPanel layout="block" rendered="{!showExtensionStatus}">
                     <apex:actionFunction name="renderParent" reRender="progressContainer" />
-                    <c:DXExtensionStatuses parentPageController="{!this}" componentName="ExtensionStatuses" mode="wizard" destinationEnvironmentName="Scratch Org For {!thisUserStory.Name}" />
+                    <c:DXExtensionStatuses parentPageController="{!this}" componentName="ExtensionStatuses" mode="wizard" destinationEnvironmentName="Scratch Org For {!parentUS.Name}" />
                 </apex:outputPanel>
             </apex:outputPanel>
         </apex:outputPanel>

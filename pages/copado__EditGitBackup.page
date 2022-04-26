@@ -20,7 +20,7 @@
             <apex:pageMessages id="pmessage" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"/>
             <apex:sectionHeader title="{!$ObjectType.copado__Git_Backup__c.Label} {!$Label.copado__edit}" subtitle="{!IF(ISBLANK(backup.Name),'New ' + $ObjectType.copado__Git_Backup__c.Label ,backup.Name)}" description="{!$Label.copado__git_backup_edit_description}" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}" />
             <apex:outputPanel layout="block" styleClass="slds-scope copado-lightning-container" rendered="{!$User.UIThemeDisplayed == 'Theme4d'}">
-                    
+
                 <div class="slds-page-header">
                   <apex:outputPanel layout="block" id="pageMessages">
                     <apex:pagemessages id="msg"/>
@@ -44,7 +44,7 @@
                     <!-- ACTION BUTTONS -->
                     <div class="slds-col slds-no-flex slds-grid slds-align-top ">
                       <div class="slds-button-group" role="group">
-                        
+
                       </div>
                     </div>
                     <!-- / ACTION BUTTONS -->
@@ -57,7 +57,7 @@
                     <apex:outputPanel layout="block" style="background: white;" id="headerFields">
                     <ul class="slds-grid slds-page-header__detail-row">
                       <apex:variable value="{!1}" var="rowNum"/>
-                      <apex:repeat value="{!$ObjectType.copado__Git_Backup__c.FieldSets.copado__Copado_Header_Fields}" var="f"> 
+                      <apex:repeat value="{!$ObjectType.copado__Git_Backup__c.FieldSets.copado__Copado_Header_Fields}" var="f">
                         <apex:outputPanel layout="block" rendered="{!rowNum < 8}">
                         <li class="slds-page-header__detail-block slds-truncate" style="padding-right: 2em; padding-left: 2em;">
                             <c:LightningReadyOutputFields dividerBottom="false" SObject="{!copado__Git_Backup__c}" Field="{!f}"></c:LightningReadyOutputFields>
@@ -85,13 +85,13 @@
                             <apex:commandButton action="{!save}" value="{!$Label.site.save}"/>
                             <apex:commandButton action="{!cancel}" value="{!$Label.site.cancel}"/>
                         </apex:pageblockButtons>
-                
-                        <apex:actionRegion >  
+
+                        <apex:actionRegion >
                             <apex:actionFunction action="{!orgChanged}" name="orgChanged" reRender="pbsTypesSection" >
                                 <apex:param name="orgID" assignTo="{!orgID}" value="" />
                             </apex:actionFunction>
                        </apex:actionRegion>
-                
+
                         <apex:pageBlockSection showHeader="true" title="{!$Label.copado__basic_information}">
                             <apex:inputField required="true" value="{!backup.Name}" />
                             <apex:selectList required="true" value="{!backup.copado__Frequency__c}" size="1">
@@ -103,15 +103,15 @@
                             <apex:outputField value="{!backup.copado__Last_Backup__c}" />
                             <apex:inputField required="true" value="{!backup.copado__Git_Snapshot_Permissions__c}" />
                         </apex:pageBlockSection>
-                            
+
                         <apex:pageBlockSection columns="1" title="{!$Label.copado__other_information}" rendered="{!showOtherInformation}">
                             <apex:repeat value="{!$ObjectType.copado__Git_Backup__c.FieldSets.copado__CustomFields}" var="f">
                                 <apex:inputField value="{!backup[f]}" required="{!OR(f.required, f.dbrequired)}"/>
                             </apex:repeat>
                         </apex:pageBlockSection>
-                
+
                         <apex:pageBlockSection title="{!$Label.copado__advanced_metadata_filters}" collapsible="true" showHeader="true" id="pbsTypesSection" columns="1">
-                
+
                             <apex:pageBlockSectionItem >
                                 <c:MultiselectPicklist leftLabel="{!$ObjectType.copado__Git_Backup__c.fields.copado__Metadata_Types__c.Label}" pleftOptions="{!types}" rightLabel="{!$Label.copado__selected_types}" prightOptions="{!selectedTypes}" size="14" width="250px" id="siTypes"/>
                             </apex:pageBlockSectionItem>
@@ -139,8 +139,8 @@
                                         var tdrow = $copado($copado('.pbButton')[0]);
                                         if(tdrow){
                                             tdrow.css( "text-align", "center" );
-                                        }  
-                                      } 
+                                        }
+                                      }
                                   }
                                 });
                         </script>

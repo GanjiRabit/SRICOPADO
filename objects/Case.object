@@ -196,56 +196,10 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <businessProcesses>
-        <fullName>TestcaseSupportProcess</fullName>
-        <isActive>true</isActive>
-        <values>
-            <fullName>Closed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Completed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Escalated</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>On Hold</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Validated</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>in Progress test</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
-    <externalSharingModel>ReadWriteTransfer</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Assaignee__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Assaignee</label>
-        <referenceTo>User</referenceTo>
-        <relationshipName>Cases</relationshipName>
-        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -264,6 +218,20 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CaseNumber__c</fullName>
+        <description>test field change 2 for back promote</description>
+        <externalId>false</externalId>
+        <label>CaseNumber</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>ChatKey__c</fullName>
@@ -454,54 +422,6 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <fields>
-        <fullName>agf__ADM_Work__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>A connection to the Agile Accelerator Work object used to track Bugs, Investigations and User Stories</description>
-        <externalId>false</externalId>
-        <label>Work</label>
-        <referenceTo>agf__ADM_Work__c</referenceTo>
-        <relationshipLabel>Cases</relationshipLabel>
-        <relationshipName>AgileAcceleratorCases</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>thankful__ThankfulCaseStatus__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Thankful Case Status</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>open</fullName>
-                    <default>false</default>
-                    <label>Open</label>
-                </value>
-                <value>
-                    <fullName>in progress</fullName>
-                    <default>false</default>
-                    <label>In Progress</label>
-                </value>
-                <value>
-                    <fullName>closed</fullName>
-                    <default>false</default>
-                    <label>Closed</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
     <listViews>
         <fullName>AllOpenCases</fullName>
         <filterScope>Everything</filterScope>
@@ -527,101 +447,6 @@
         </filters>
         <label>My Open Cases</label>
     </listViews>
-    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
-    <recordTypeTrackHistory>true</recordTypeTrackHistory>
-    <recordTypes>
-        <fullName>test</fullName>
-        <active>true</active>
-        <businessProcess>TestcaseSupportProcess</businessProcess>
-        <label>test</label>
-        <picklistValues>
-            <picklist>Origin</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Priority</picklist>
-            <values>
-                <fullName>High</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Medium</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Reason</picklist>
-            <values>
-                <fullName>Complex functionality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Instructions not clear</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>User didn%27t attend training</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Bugfix</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Feature Request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Question</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>thankful__ThankfulCaseStatus__c</picklist>
-            <values>
-                <fullName>closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>in progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>open</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>

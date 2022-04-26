@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>CICD_JiraIssueFieldName__c</field>
-        <value xsi:type="xsd:string">customfield_10803.key</value>
+        <value xsi:type="xsd:string">assignee.emailAddress</value>
     </values>
     <values>
         <field>CICD_MappingNotes__c</field>
@@ -36,6 +36,6 @@
     </values>
     <values>
         <field>CICD_SyncVariationKey__c</field>
-        <value xsi:type="xsd:string">TEST2</value>
+        <value xsi:type="xsd:string">DEV</value>
     </values>
 </CustomMetadata>

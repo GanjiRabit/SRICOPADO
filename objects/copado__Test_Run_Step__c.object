@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
         <fullName>copado__TestRunExecutionFieldSet</fullName>
         <description>In use on ExecuteTestRun.page for client org&apos;s custom fields and Actual Result field on Test Run Step object.</description>

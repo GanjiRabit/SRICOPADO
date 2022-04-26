@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <alerts>
-        <fullName>Initial_submission_email</fullName>
-        <description>Initial submission email</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>bina.das@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>srujana@blue5green.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Manual_Approval_for_Destructive_Changes</template>
-    </alerts>
     <fieldUpdates>
         <fullName>copado__Set_US_Commit_Name</fullName>
         <field>Name</field>

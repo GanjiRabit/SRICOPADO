@@ -6,11 +6,6 @@
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Data Set --></label>
-        <name>copado__Data_Set__c</name>
-        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Data Template --></label>
         <name>copado__Data_Template__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
@@ -47,11 +42,6 @@
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Function --></label>
-        <name>copado__Function__c</name>
-        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Git Snapshot --></label>
         <name>copado__Git_Backup__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
@@ -69,11 +59,6 @@
     <fields>
         <label><!-- Org Difference --></label>
         <name>copado__Org_Difference__c</name>
-        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Package Version --></label>
-        <name>copado__Package_Version__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>

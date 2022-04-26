@@ -29,8 +29,8 @@ var metadataGrid2;
             return unlockScreen();
         }
 
-        // cut the commit message length to < 255 chars.
-        commitData.formData.copadoCommitMessage = commitData.formData.copadoCommitMessage.substring(0,255);
+        // cut the commit message length to < 80 chars.
+        commitData.formData.copadoCommitMessage = commitData.formData.copadoCommitMessage.substring(0,80);
 
         if(callback) {
             callback(commitData.formData.copadoCommitMessage,gitCommitCommons.conf.data.orgId,gitCommitCommons.conf.data.snapshotId,gitCommitCommons.conf.data.operationLabel);

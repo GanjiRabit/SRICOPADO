@@ -9,16 +9,16 @@ global class IndexMetadataJob implements Database.Batchable<SObject>, Database.S
     global IndexMetadataJob() {
 
     }
-    global void execute(System.SchedulableContext sContext) {
+    global void execute(System.SchedulableContext sc) {
 
     }
-    global void execute(Database.BatchableContext bContext, List<copado__User_Story__c> scope) {
+    global void execute(Database.BatchableContext BC, List<copado__User_Story__c> scope) {
 
     }
-    global void finish(Database.BatchableContext bContext) {
+    global void finish(Database.BatchableContext BC) {
 
     }
-    global Database.QueryLocator start(Database.BatchableContext bContext) {
+    global Database.QueryLocator start(Database.BatchableContext BC) {
         return null;
     }
 }

@@ -268,22 +268,16 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Contact_Record_Page</content>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Contact_Record_Page</content>
         <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -331,7 +325,6 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
         <fullName>WM_Client_Relationship_Group_Members</fullName>
         <description>Client profile&apos;s Relationship Groups table</description>
@@ -357,33 +350,6 @@
         </displayedFields>
         <label>Relationship Group Members</label>
     </fieldSets>
-    <fields>
-        <fullName>ABC__c</fullName>
-        <externalId>false</externalId>
-        <label>ABC</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ADD_AutoNumber__c</fullName>
-        <displayFormat>A-{0000000}</displayFormat>
-        <externalId>false</externalId>
-        <label>ADD AutoNumber</label>
-        <type>AutoNumber</type>
-    </fields>
-    <fields>
-        <fullName>ADD_External_ID__c</fullName>
-        <externalId>true</externalId>
-        <label>ADD External ID</label>
-        <length>20</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
@@ -421,12 +387,6 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Customer_Id_Test__c</fullName>
-        <externalId>true</externalId>
-        <label>Customer Id Test</label>
-        <type>AutoNumber</type>
     </fields>
     <fields>
         <fullName>Department</fullName>
@@ -467,8 +427,10 @@
     </fields>
     <fields>
         <fullName>FinServ__Affiliations__c</fullName>
+        <complianceGroup>PII</complianceGroup>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>12</inlineHelpText>
         <label>Affiliations</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -557,6 +519,7 @@ if(And( month(Today())= month(Birthdate), Day(Today())&lt; Day(Birthdate)),
 (Year(Today())- Year(Birthdate)) + 
 (Month(Today())-Month(Birthdate)-1)/12))))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>your age</inlineHelpText>
         <label>Age</label>
         <precision>18</precision>
         <required>false</required>
@@ -568,6 +531,7 @@ if(And( month(Today())= month(Birthdate), Day(Today())&lt; Day(Birthdate)),
         <fullName>FinServ__AnnualIncome__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>test</inlineHelpText>
         <label>Annual Income</label>
         <precision>18</precision>
         <required>false</required>
@@ -586,6 +550,7 @@ if(And( month(Today())= month(Birthdate), Day(Today())&lt; Day(Birthdate)),
             if(ISBLANK(Account.BillingState), &quot;&quot; , Account.BillingState&amp; &quot; &quot;)&amp;
             if(ISBLANK(Account.BillingPostalCode), &quot;&quot; , Account.BillingPostalCode &amp; br()) &amp;
             if( OR( ISPICKVAL($User.LanguageLocaleKey, &quot;ja&quot;) , ISBLANK(Account.BillingCountry) ) , &quot;&quot; , Account.BillingCountry )</formula>
+        <inlineHelpText>test</inlineHelpText>
         <label>Billing Address</label>
         <required>false</required>
         <type>Text</type>
@@ -709,6 +674,7 @@ if(And( month(Today())= month(Birthdate), Day(Today())&lt; Day(Birthdate)),
         <deprecated>false</deprecated>
         <description>Country of residence.</description>
         <externalId>false</externalId>
+        <inlineHelpText>test</inlineHelpText>
         <label>Country</label>
         <length>50</length>
         <required>false</required>
@@ -1942,27 +1908,20 @@ if(ISBLANK(OtherCountry), &quot;&quot; , OtherCountry)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Test_Contact_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Test Contact Field</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Title</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <listViews>
         <fullName>AllContacts</fullName>
-        <columns>ACCOUNT.ACCOUNT_ID</columns>
-        <columns>CONTACT.LAST_NAME</columns>
         <columns>FULL_NAME</columns>
-        <columns>FinServ__CountryOfResidence__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>All Contacts</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>BirthdaysThisMonth</fullName>

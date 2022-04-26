@@ -9,7 +9,7 @@
         <name>copado__Introduction__c</name>
     </fields>
     <fields>
-        <label><!-- Credential --></label>
+        <label><!-- Org --></label>
         <name>copado__Org__c</name>
     </fields>
     <fields>

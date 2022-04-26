@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Allow Validation Only --></label>
-        <name>Copado_Allow_Validation_Only__c</name>
-    </fields>
-    <fields>
-        <label><!-- Regulated Environment --></label>
-        <name>Regulated_Environment__c</name>
-    </fields>
-    <fields>
         <label><!-- Allow Deployments --></label>
         <name>copado__Allow_Deployments__c</name>
     </fields>

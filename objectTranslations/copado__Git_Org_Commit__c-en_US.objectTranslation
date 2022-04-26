@@ -5,10 +5,6 @@
         <name>copado__CBM_Fields</name>
     </fieldSets>
     <fields>
-        <label><!-- ExternalID --></label>
-        <name>ExternalID__c</name>
-    </fields>
-    <fields>
         <label><!-- Changes --></label>
         <name>copado__Changes__c</name>
     </fields>
@@ -43,7 +39,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Credential --></label>
+        <label><!-- Org --></label>
         <name>copado__Org__c</name>
         <relationshipLabel><!-- Snapshot Commits --></relationshipLabel>
     </fields>

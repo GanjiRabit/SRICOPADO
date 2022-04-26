@@ -10,7 +10,7 @@
                     console.log(' >>>>> response' , response);
 
 
-                    response.detail[0].repositories.forEach ( repo => {  
+                    response.detail[0].repositories.forEach ( repo => {
                         repo.commits.forEach ( commit =>{
                             commits.push({
                                 id: commit.displayId,
@@ -82,7 +82,8 @@
                             commitsToGetAdditionalFiles.push(commit);
                         }else{
                             commit.files.forEach(file => {
-                          		filePaths.push(file.path);
+                                if(file.path.startsWith('force-app/main/default/'))
+                                filePaths.push(file.path);
                             });   
                         }
                     }
@@ -180,34 +181,34 @@
             }
         });
     },
-       groupFilesByMetadata : function(component){
+    groupFilesByMetadata : function(component){
         let _self = this;
         return new Promise( (resolve,reject) => {
             try{
 
                 let filePaths = component.get("v.filePaths");
                 let metadataConfig = component.get("v.metadataConfig");
-                let metadataFiles = { };                
+                let metadataFiles = { };
+                let metadataInfo = { };
                 let restrictedTypes = [];
                 let restrictedMetadata = [];
                 filePaths.forEach( filePath => {
-                    
-                    _self.getMetadataInfo( filePath , metadataConfig ).forEach( metadataInfo => {
-                            if(metadataInfo && metadataInfo.metadataType && metadataInfo.componentName){
-                                if( Object.keys(metadataFiles).indexOf(metadataInfo.metadataType) > -1){
-                                    if( metadataFiles[metadataInfo.metadataType].indexOf(metadataInfo.componentName) == -1)
-                                        metadataFiles[metadataInfo.metadataType].push(metadataInfo.componentName);
-                                }else{
-                                    metadataFiles[metadataInfo.metadataType] = [metadataInfo.componentName];
-                                }
-                            }else if(metadataInfo && metadataInfo.restrictedMetadata){
-                                if(restrictedTypes.indexOf(metadataInfo.restrictedMetadata.type) == -1){
-                                    restrictedMetadata.push(metadataInfo.restrictedMetadata);
-                                    restrictedTypes.push(metadataInfo.restrictedMetadata.type);
-                                 }// end of if restrictiion check
-                            }//end of if - null check for metadata config     
-                        })//end of metadata collection array groupoing                                                                            
-                    });// end of for - files collection
+                    metadataInfo = _self.getMetadataInfo( filePath , metadataConfig );
+                    if(metadataInfo && metadataInfo.metadataType && metadataInfo.componentName){
+                        if( Object.keys(metadataFiles).indexOf(metadataInfo.metadataType) > -1){
+                            if( metadataFiles[metadataInfo.metadataType].indexOf(metadataInfo.componentName) == -1)
+                                metadataFiles[metadataInfo.metadataType].push(metadataInfo.componentName);
+                        }else{
+                            metadataFiles[metadataInfo.metadataType] = [metadataInfo.componentName];
+                        }
+                    }else if(metadataInfo && metadataInfo.restrictedMetadata){
+                        if(restrictedTypes.indexOf(metadataInfo.restrictedMetadata.type) == -1){
+                            restrictedMetadata.push(metadataInfo.restrictedMetadata);
+                            restrictedTypes.push(metadataInfo.restrictedMetadata.type);
+                        }
+                    }//end of if - null check for metadata config                   
+                        
+                });// end of for - files collection
                  component.set("v.restrictedMetadata" , restrictedMetadata);
                 _self.processMetadataFIles( component ,  metadataFiles);
                 resolve();
@@ -246,13 +247,11 @@
         component.set("v.metadataGrouping" , metadataGrouping);
     },
     getMetadataInfo : function( url ,  metadataConfig){
-        let metadataCollection = [];
         let metadataInfo = {};
         
             try{
                 Object.keys(metadataConfig).forEach( configKey =>{
-                    metadataInfo = {};
-                    
+                    if(!metadataConfig[configKey].CICD_RestrictMetadataType__c){
                         //create a Regex for the config comp name check
                         let regex = new RegExp(configKey);
                         let compResult = regex.exec(url);
@@ -268,29 +267,22 @@
                                     compName = parentName + metadataConfig[configKey].CICD_JoinString__c + compName;
                                 }//end of parent Name null check   
                             }//end of parent name exp null check
-                          
-                  if(!metadataConfig[configKey].CICD_RestrictMetadataType__c){
-                           metadataInfo.componentName = compName;
-                            metadataCollection.push(metadataInfo);
+                            metadataInfo.componentName = compName;
+                        }// end of comp nam null check
                     }else{
                         metadataInfo.restrictedMetadata = {
                             type : metadataConfig[configKey].DeveloperName,
                             message : metadataConfig[configKey].CICD_RestrictionMessage__c
                         };
-                        metadataCollection.push(metadataInfo);
                      } // end of restriction check
-                
-                        }// end of comp nam null check
-      			
                                        
 
                 });//end of keys loop
             }catch(err){
                 metadataInfo = {};
-                metadataCollection.push(metadataInfo);
                 console.log(err);
             }
-        return metadataCollection;
+        return metadataInfo;
     },
     getMetadataConfiguration: function(component){
         let metadataQuery = 'select DeveloperName, CICD_ComponentNameExpression__c , CICD_ParentNameExpression__c  , CICD_JoinString__c , CICD_RestrictMetadataType__c , CICD_RestrictionMessage__c from CICD_MetadataDirectoryConfig__mdt where CICD_ComponentNameExpression__c != null';

@@ -1,0 +1,18 @@
+<apex:page contentType="application/pdf" renderAs="PDF" controller="PDFRenderServiceController">
+
+    <apex:repeat value="{!loops}" var="loopVar">
+
+        <apex:outputPanel rendered="{!loopVar == 0}">
+            <div>
+                <c:pdfHeaderPage ></c:pdfHeaderPage>
+            </div>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!loopVar > 0 }">
+            <div style="page-break-before:always;">
+                <c:pdfHeaderPage ></c:pdfHeaderPage>
+            </div>
+        </apex:outputPanel>
+
+    </apex:repeat>
+
+</apex:page>

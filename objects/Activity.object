@@ -149,6 +149,7 @@
         <deprecated>false</deprecated>
         <description>Notes about client&apos;s objectives</description>
         <externalId>false</externalId>
+        <inlineHelpText>test</inlineHelpText>
         <label>Objectives</label>
         <required>false</required>
         <type>TextArea</type>
@@ -186,24 +187,6 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>thankful__Channel__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>&apos;email&apos;</formula>
-        <label>Channel</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>thankful__IsInternal__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>true</formula>
-        <label>Is Internal</label>
-        <type>Checkbox</type>
     </fields>
     <listViews>
         <fullName>MyActivities</fullName>

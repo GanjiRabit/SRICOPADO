@@ -5,28 +5,12 @@
         <name>WM_Client_Relationship_Group_Members</name>
     </fieldSets>
     <fields>
-        <label><!-- ABC --></label>
-        <name>ABC__c</name>
-    </fields>
-    <fields>
-        <label><!-- ADD AutoNumber --></label>
-        <name>ADD_AutoNumber__c</name>
-    </fields>
-    <fields>
-        <label><!-- ADD External ID --></label>
-        <name>ADD_External_ID__c</name>
-    </fields>
-    <fields>
         <label><!-- AutoNumber --></label>
         <name>AutoNumber__c</name>
     </fields>
     <fields>
         <label><!-- CustomExternalid --></label>
         <name>CustomExternalid__c</name>
-    </fields>
-    <fields>
-        <label><!-- Customer Id Test --></label>
-        <name>Customer_Id_Test__c</name>
     </fields>
     <fields>
         <label><!-- ExternalV1 --></label>
@@ -37,6 +21,7 @@
         <name>External__c</name>
     </fields>
     <fields>
+        <help><!-- 12 --></help>
         <label><!-- Affiliations --></label>
         <name>FinServ__Affiliations__c</name>
     </fields>
@@ -45,14 +30,17 @@
         <name>FinServ__AgeAsText__c</name>
     </fields>
     <fields>
+        <help><!-- your age --></help>
         <label><!-- Age --></label>
         <name>FinServ__Age__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Annual Income --></label>
         <name>FinServ__AnnualIncome__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Billing Address --></label>
         <name>FinServ__BillingAddress__c</name>
     </fields>
@@ -121,6 +109,7 @@
         <name>FinServ__CountryOfBirth__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Country --></label>
         <name>FinServ__CountryOfResidence__c</name>
     </fields>
@@ -797,10 +786,6 @@
     <fields>
         <label><!-- NewADD External --></label>
         <name>NewADD_External__c</name>
-    </fields>
-    <fields>
-        <label><!-- Test Contact Field --></label>
-        <name>Test_Contact_Field__c</name>
     </fields>
     <recordTypes>
         <description><!-- Contact data for an institution or a business account --></description>

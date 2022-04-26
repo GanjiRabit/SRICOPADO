@@ -1,0 +1,32 @@
+<apex:component controller="PDFRenderServiceController">
+
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td width="50%">
+                    To:
+                </td>
+                <td width="50%">
+                    Number of pages (including cover):
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    HTML Content
+                </td>
+                <td width="50%">
+                    <apex:outputText value="{!htmlContent}" escape="false" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <apex:outputText value="{!dynamicContent}" escape="false" />
+
+    <div>
+        APEX GENERATED DYNAMIC COMPONENT
+    </div>
+    <apex:dynamicComponent componentValue="{!DynamicComponent}"></apex:dynamicComponent>
+
+
+</apex:component>

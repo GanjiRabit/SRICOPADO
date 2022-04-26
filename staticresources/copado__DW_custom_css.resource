@@ -67,7 +67,7 @@ body .stage.panelSlide {
     background-color: var(--progress-background-color);
     text-transform: uppercase;
     padding: 6px 10px;
-    width: 160px;
+    width: 150px;
     text-align: center;
     z-index: 0;
 }
@@ -526,16 +526,6 @@ body .stage.panelSlide {
     box-shadow: inset 0 0 3px #111;
     background: var(--main-blue-color);
     color: white !important;
-}
-
-.co-dw-container .filter-container .slds-input, .co-dw-container .filter-container .slds-combobox__input, .co-dw-container .filter-container .slds-input:focus, .co-dw-container .filter-container .slds-combobox__input:focus, .co-dw-container .filter-container .slds-select, .co-dw-container .filter-container .slds-select:focus {
-    border-width: unset;
-    border: 1px solid rgb(221, 219, 218);
-    border-radius: .25rem;
-}
-
-.co-dw-container .filter-container .criteria-order {
-    padding-top: 6px;
 }
 
 /* JQX tables */

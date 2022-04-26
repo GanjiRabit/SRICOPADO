@@ -180,7 +180,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Read</externalSharingModel>
     <fields>
         <fullName>FinServ__APRType__c</fullName>
         <deprecated>false</deprecated>

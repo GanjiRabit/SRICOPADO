@@ -36,6 +36,6 @@
     </values>
     <values>
         <field>CICD_SyncVariationKey__c</field>
-        <value xsi:type="xsd:string">TEST2</value>
+        <value xsi:type="xsd:string">DEV</value>
     </values>
 </CustomMetadata>

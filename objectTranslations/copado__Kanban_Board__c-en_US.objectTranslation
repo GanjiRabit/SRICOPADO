@@ -27,9 +27,4 @@
         <label><!-- SOQL Query --></label>
         <name>copado__SOQL_Query__c</name>
     </fields>
-    <fields>
-        <label><!-- Sprint --></label>
-        <name>copado__Sprint__c</name>
-        <relationshipLabel><!-- Kanban Boards --></relationshipLabel>
-    </fields>
 </CustomObjectTranslation>

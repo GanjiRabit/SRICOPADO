@@ -102,6 +102,7 @@
     <columns>
         <field>Account$FinServ__AUM__c</field>
     </columns>
+    <currency>USD</currency>
     <description>Assets under management amounts and % by client age ranges</description>
     <filter>
         <criteriaItems>
@@ -119,7 +120,7 @@
         <field>BucketField_10836747</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>AUM by Age Range</name>
+    <name>AUM by Age Range2</name>
     <params>
         <name>co</name>
         <value>1</value>

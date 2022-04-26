@@ -17,8 +17,6 @@
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     background-color:#f1f1f1;     
-    white-space: initial !important;
-    height: 65px;
 }
 .THIS .slds-col{
     overflow: hidden;

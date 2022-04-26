@@ -154,26 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
-    <fields>
-        <fullName>Step_Formula__c</fullName>
-        <externalId>false</externalId>
-        <formula>!ISNULL( copado__Destination_Org__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Step Formula</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>block_save__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>block_save</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
     <fields>
         <fullName>copado__Async_Job_ID__c</fullName>
         <deprecated>false</deprecated>
@@ -199,24 +179,10 @@
         <type>Percent</type>
     </fields>
     <fields>
-        <fullName>copado__Destination_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Read only field used internally for system property replacement.</description>
-        <externalId>false</externalId>
-        <formula>CASESAFEID(copado__Destination_Org__r.copado__To_Org__r.copado__Environment__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Destination Id</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>copado__Destination_Org__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Destination Credential</label>
+        <label>Destination Org</label>
         <referenceTo>copado__Destination_Org__c</referenceTo>
         <relationshipLabel>Deployment Jobs</relationshipLabel>
         <relationshipName>Deployment_Jobs</relationshipName>
@@ -281,67 +247,6 @@
         <externalId>false</externalId>
         <label>External Status</label>
         <length>100</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Git_Repository__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Read only field used internally for system property replacement.</description>
-        <externalId>false</externalId>
-        <formula>copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Repository Id</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Last_Result__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Latest result with more details of the job execution.</inlineHelpText>
-        <label>Last Result</label>
-        <referenceTo>copado__Result__c</referenceTo>
-        <relationshipLabel>Deployment Jobs</relationshipLabel>
-        <relationshipName>Deployment_Jobs</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Pipeline_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Read only field used internally for system property replacement.</description>
-        <externalId>false</externalId>
-        <formula>IF(
-NOT(ISBLANK(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c)),
-CASESAFEID(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c),
-CASESAFEID(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c)
-)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Pipeline Id</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Source_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Read only field used internally for system property replacement.</description>
-        <externalId>false</externalId>
-        <formula>CASESAFEID(copado__Step__r.copado__Deployment__r.copado__From_Org__r.copado__Environment__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Source Id</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -432,7 +337,7 @@ CASESAFEID(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Re
         <externalId>false</externalId>
         <formula>copado__Destination_Org__r.copado__To_Org__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>To Credential Name</label>
+        <label>To Org Name</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -468,11 +373,5 @@ CASESAFEID(copado__Step__r.copado__Deployment__r.copado__Promotion__r.copado__Re
         <lookupDialogsAdditionalFields>copado__Step__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
-    <validationRules>
-        <fullName>stop_creation</fullName>
-        <active>true</active>
-        <errorConditionFormula>block_save__c = TRUE</errorConditionFormula>
-        <errorMessage>Stop Job creation</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

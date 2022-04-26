@@ -164,10 +164,6 @@
             <translation><!-- Run Specified Tests --></translation>
         </picklistValues>
     </fields>
-    <validationRules>
-        <errorMessage><!-- Platform for pipeline and Environment must match --></errorMessage>
-        <name>copado__EnvironmentAndPipelinePlatformMustBeSame</name>
-    </validationRules>
     <webLinks>
         <label><!-- Select_Branch --></label>
         <name>copado__Select_Branch</name>

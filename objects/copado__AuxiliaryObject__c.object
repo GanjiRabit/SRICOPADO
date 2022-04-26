@@ -154,7 +154,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Continuous_Integration__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -162,20 +161,6 @@
         <externalId>false</externalId>
         <label>Continuous Integration</label>
         <referenceTo>copado__Continuous_Integration__c</referenceTo>
-        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
-        <relationshipName>AuxiliaryObjects</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Data_Set__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Lookup to Data Set to use in StepEdition component in deployment page.</description>
-        <externalId>false</externalId>
-        <label>Data Set</label>
-        <referenceTo>copado__Data_Set__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
         <required>false</required>
@@ -285,33 +270,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>copado__Function__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Function</label>
-        <referenceTo>copado__Function__c</referenceTo>
-        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
-        <relationshipName>AuxiliaryObjects</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>copado__Git_Backup__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Git Snapshot</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>copado__Git_Backup__c.copado__Git_Snapshot_Permissions__c</field>
-                <operation>notEqual</operation>
-                <value>Allow Commits Only</value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
         <referenceTo>copado__Git_Backup__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
@@ -352,19 +315,6 @@
         <externalId>false</externalId>
         <label>Org Difference</label>
         <referenceTo>copado__OrgDiff__c</referenceTo>
-        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
-        <relationshipName>AuxiliaryObjects</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Package_Version__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Package Version</label>
-        <referenceTo>copado__Artifact_Version__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
         <required>false</required>

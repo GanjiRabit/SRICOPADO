@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <content>Dashboard_home</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-    </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
-    <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
@@ -22,7 +13,10 @@
     <setupExperience>service</setupExperience>
     <tabs>standard-Account</tabs>
     <tabs>AppLog__c</tabs>
-    <tabs>MarketingFlyer__c</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>test_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -30,10 +24,19 @@
             <tab>AppLog__c</tab>
         </mappings>
         <mappings>
-            <tab>MarketingFlyer__c</tab>
+            <tab>Child_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Parent_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Template__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>
+        </mappings>
+        <mappings>
+            <tab>testForDeletion__c</tab>
         </mappings>
     </workspaceConfig>
 </CustomApplication>

@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
         <fullName>WM_Client_FinancialGoal</fullName>
         <description>Client profile&apos;s Goals tab</description>

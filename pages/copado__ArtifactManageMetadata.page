@@ -183,6 +183,67 @@
         </script>
         <apex:includeScript value="{!URLFOR($Resource.metadataGrid2) }" />
         <apex:includeScript value="{!URLFOR($Resource.artifactmanagemetadata) }" />
+
+        <!--<apex:actionFunction name="findDependencies" action="{!metadataDependency}" onComplete="rerenderGrid(); " reRender="dependencyBlock,theMessages">
+            <apex:param name="selectedMetadata" value="" />
+        </apex:actionFunction>-->
+
+        <!--<apex:outputPanel layout="block" id="dependencyBlock">
+            <script>
+                var jsonFile = [];
+                function rerenderGrid(){
+                    jsonFile = '{!JSENCODE(dependencyMetadataJSON)}';
+                    if(jsonFile){
+                        var dependencies = JSON.parse(jsonFile);
+                        if(dependencies.length === metadataGrid2.dependencyRetrieveArray.length){
+                            metadataGrid2.reloadSelectionsJSON(dependencies,currentTab);
+                            metadataGrid2._reapplyFilters();
+                            var elt = metadataGrid2.eltMain.find('.mg2_tabs li').get(1);
+                            elt.style.animation = '';
+                            setTimeout(function() {
+                                elt.style.animation = 'flash 2s 1';
+                            }, 5);
+                            metadataGrid2.eltTabs.jqxTabs('select', 1);
+                            alert('No dependent metadata found!')
+                            return;
+                        }
+                        //metadataGrid2.addItemsIfMissing(dependencies);
+                        var currentTab = metadataGrid2.eltTabs.jqxTabs('selectedItem');
+                        var idx_allItems = [];
+                        var cleanDependencies = [];
+                        var types = [];
+                        for(i=0 ; i < metadataGrid2.allMetaData.length ; i++ ) {
+                            e = metadataGrid2.allMetaData[i];
+                            idx_allItems[e.t+' '+e.n] = e;
+                            if(!types.includes(e.t)){
+                                types.push(e.t);
+                            }
+                        }
+                        console.log('types===> ',types);
+                        metadataGrid2.eltGrid.jqxGrid('setcolumnproperty', 't', 'filteritems',types.sort());
+
+                        for(i=0 ; i < dependencies.length ; i++) {
+                            e = metadataGrid2.allMetaData.length[i];
+                            if(idx_allItems) {
+                                e =  idx_allItems[dependencies[i].t+' '+dependencies[i].n];
+                                if(!e)
+                                    continue; // the element selected might not be in allMetaData, just ignore it.
+                            }
+                            cleanDependencies.push(e)
+                        }
+                        metadataGrid2.reloadSelectionsJSON(cleanDependencies,currentTab);
+                        metadataGrid2._reapplyFilters();
+                        var elt = metadataGrid2.eltMain.find('.mg2_tabs li').get(1);
+                        elt.style.animation = '';
+                        setTimeout(function() {
+                            elt.style.animation = 'flash 2s 1';
+                        }, 5);
+                        metadataGrid2.eltTabs.jqxTabs('select', 1);
+                    }
+                    unlockScreen();
+                }
+            </script>
+        </apex:outputPanel>-->
     </apex:form>
 
     <script>

@@ -69,8 +69,6 @@ global with sharing class CICD_FetchCommitFromJiraManager extends CICD_AuraRespo
         string responseToReturn;
         try{
             string apiKey = Label.CICD_CopadoAPIKey;
-            copado__User_Story__c userStory = [select id,Name,copado__User_Story_Title__c  from copado__User_Story__c where id=:userStoryId ];
-           commitMessage =  userStory.Name + ': ' + userStory.copado__User_Story_Title__c;
             string endPoint = 'https://app-api.copa.do/json/v1/webhook/commitFiles/' + userStoryId +
                            '?api_key=' +apiKey+ '&commitMessage=' + EncodingUtil.urlEncode( commitMessage, 'UTF-8') ;
    

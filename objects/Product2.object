@@ -128,15 +128,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>ReadWrite</externalSharingModel>
-    <fields>
-        <fullName>CanUseQuantitySchedule</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>CanUseRevenueSchedule</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
     <fields>
         <fullName>CurrencyIsoCode</fullName>
         <trackHistory>false</trackHistory>
@@ -172,37 +163,13 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>NumberOfQuantityInstallments</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>NumberOfRevenueInstallments</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>ProductCode</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>QuantityInstallmentPeriod</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>QuantityScheduleType</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>QuantityUnitOfMeasure</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>RevenueInstallmentPeriod</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>RevenueScheduleType</fullName>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>StockKeepingUnit</fullName>

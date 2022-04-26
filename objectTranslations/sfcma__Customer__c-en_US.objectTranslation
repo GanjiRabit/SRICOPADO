@@ -9,6 +9,7 @@
         <value>Checkout Customers</value>
     </caseValues>
     <fields>
+        <help><!-- test11 --></help>
         <label><!-- Additional Email Addresses --></label>
         <name>sfcma__AdditionalEmailAddresses__c</name>
     </fields>

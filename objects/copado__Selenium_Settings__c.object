@@ -153,14 +153,13 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Default_Org_Credential__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>This Org Credential will be used for Quick Runs. Each user has their own Quick Settings. Quick Settings are used when running tests using the Quick Run button.</inlineHelpText>
-        <label>Default Credential</label>
+        <label>Default Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Selenium Settings</relationshipLabel>
         <relationshipName>SeleniumSettings</relationshipName>

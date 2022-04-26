@@ -7,8 +7,7 @@ global class CICD_BatchJob implements
     global List<String> releaseIds = new List<String>();
     global Map<String, String> jiraSfUSMap = new Map<String, String>();
     global List<AppLog__c> appLogs = new List<AppLog__c>();
-    global static boolean isSyncFromJira = false;
-   
+
     global Iterable<sObject> start(Database.BatchableContext bc) {    
         String query = 'SELECT Id, Name, copado__Project__c from copado__Release__c WHERE CICD_SyncRelease__c = true';     
         return Database.query(query);

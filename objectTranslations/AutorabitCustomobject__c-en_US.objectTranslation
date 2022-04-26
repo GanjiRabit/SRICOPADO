@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AutorabitCustomobject</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AutorabitCustomobjects</value>
+    </caseValues>
+    <fields>
+        <label><!-- List of roles --></label>
+        <name>List_of_topics__c</name>
+        <picklistValues>
+            <masterLabel>admin</masterLabel>
+            <translation><!-- admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>dev</masterLabel>
+            <translation><!-- dev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>release manager</masterLabel>
+            <translation><!-- release manager --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New List --></label>
+        <name>New_List__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

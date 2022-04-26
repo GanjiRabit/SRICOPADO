@@ -25,22 +25,4 @@
         <label>New</label>
         <closed>false</closed>
     </standardValue>
-    <standardValue>
-        <fullName>in Progress test</fullName>
-        <default>false</default>
-        <label>in Progress test</label>
-        <closed>false</closed>
-    </standardValue>
-    <standardValue>
-        <fullName>Validated</fullName>
-        <default>false</default>
-        <label>Validated</label>
-        <closed>false</closed>
-    </standardValue>
-    <standardValue>
-        <fullName>Completed</fullName>
-        <default>false</default>
-        <label>Completed</label>
-        <closed>false</closed>
-    </standardValue>
 </StandardValueSet>

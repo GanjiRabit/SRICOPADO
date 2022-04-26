@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Assaignee --></label>
-        <name>Assaignee__c</name>
-        <relationshipLabel><!-- Cases --></relationshipLabel>
+        <label><!-- CaseNumber --></label>
+        <name>CaseNumber__c</name>
     </fields>
     <fields>
         <label><!-- ChatKey --></label>
@@ -24,29 +23,4 @@
         <name>Live_Chat_Transcript__c</name>
         <relationshipLabel><!-- Cases --></relationshipLabel>
     </fields>
-    <fields>
-        <label><!-- Work --></label>
-        <name>agf__ADM_Work__c</name>
-        <relationshipLabel><!-- Cases --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Thankful Case Status --></label>
-        <name>thankful__ThankfulCaseStatus__c</name>
-        <picklistValues>
-            <masterLabel>Closed</masterLabel>
-            <translation><!-- Closed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>In Progress</masterLabel>
-            <translation><!-- In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Open</masterLabel>
-            <translation><!-- Open --></translation>
-        </picklistValues>
-    </fields>
-    <recordTypes>
-        <label><!-- test --></label>
-        <name>test</name>
-    </recordTypes>
 </CustomObjectTranslation>

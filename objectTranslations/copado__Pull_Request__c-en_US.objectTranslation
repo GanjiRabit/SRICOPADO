@@ -5,18 +5,6 @@
         <name>Approved_PR_Count__c</name>
     </fields>
     <fields>
-        <label><!-- PRCreatedDateInGit --></label>
-        <name>PRCreatedDateInGit__c</name>
-    </fields>
-    <fields>
-        <label><!-- PR count --></label>
-        <name>PR_count__c</name>
-    </fields>
-    <fields>
-        <label><!-- block_save --></label>
-        <name>block_save__c</name>
-    </fields>
-    <fields>
         <label><!-- Assignees --></label>
         <name>copado__Assignees__c</name>
     </fields>

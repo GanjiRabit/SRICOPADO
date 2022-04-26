@@ -39,7 +39,7 @@
         <name>copado__Highest_Severity__c</name>
     </fields>
     <fields>
-        <label><!-- Credential --></label>
+        <label><!-- Org Credential --></label>
         <name>copado__Org_Credential__c</name>
         <relationshipLabel><!-- Compliance Scan Results --></relationshipLabel>
     </fields>

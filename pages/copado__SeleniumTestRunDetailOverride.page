@@ -102,7 +102,7 @@
                         });
                         </script>
 
-						<apex:pageBlock id="pb" title="{!$Label.copado__last_results_summary}" rendered="{!OR($Setup.copado__Copado_License__c.copado__Enable_Copado__c, $Setup.copado__Copado_License__c.copado__Enable_CST__c)}">
+                        <apex:pageBlock id="pb" title="Last Result Summary" rendered="{!OR($Setup.copado__Copado_License__c.copado__Enable_Copado__c, $Setup.copado__Copado_License__c.copado__Enable_CST__c)}">
                             <apex:pageBlockSection columns="2" collapsible="false">
                                 <apex:pageBlockSectionItem >
                                     <apex:outputPanel ></apex:outputPanel>

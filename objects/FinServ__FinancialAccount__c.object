@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
         <fullName>FSC_Client_AutoLoan</fullName>
         <description>Client profile&apos;s Financials tab.</description>

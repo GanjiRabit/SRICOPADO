@@ -11,4 +11,5 @@
 
         component.set("v.commitsToPromote" , count);
     }
+    
 })

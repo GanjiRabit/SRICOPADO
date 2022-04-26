@@ -22,9 +22,9 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Destination Credential --></label>
+        <label><!-- Destination Org Credential --></label>
         <name>copado__Destination_Org_Credential__c</name>
-        <relationshipLabel><!-- Snapshot Differences (Destination Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Snapshot Differences (Destination Org Credential) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Salesforce configuration files are in the XML format. You can change it to a different format for a faster comparison time and better readability of the differences. --></help>
@@ -70,7 +70,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Source Credential --></label>
+        <label><!-- Source Org Credential --></label>
         <name>copado__Source_Org_Credential__c</name>
         <relationshipLabel><!-- Snapshot Differences --></relationshipLabel>
     </fields>

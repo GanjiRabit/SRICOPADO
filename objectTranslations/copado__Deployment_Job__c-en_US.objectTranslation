@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Step Formula --></label>
-        <name>Step_Formula__c</name>
-    </fields>
-    <fields>
-        <label><!-- block_save --></label>
-        <name>block_save__c</name>
-    </fields>
-    <fields>
         <label><!-- Async Job ID --></label>
         <name>copado__Async_Job_ID__c</name>
     </fields>
@@ -17,11 +9,7 @@
         <name>copado__Deployed__c</name>
     </fields>
     <fields>
-        <label><!-- Destination Id --></label>
-        <name>copado__Destination_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- Destination Credential --></label>
+        <label><!-- Destination Org --></label>
         <name>copado__Destination_Org__c</name>
         <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
     </fields>
@@ -54,24 +42,6 @@
         <name>copado__External_Status__c</name>
     </fields>
     <fields>
-        <label><!-- Repository Id --></label>
-        <name>copado__Git_Repository__c</name>
-    </fields>
-    <fields>
-        <help><!-- Latest result with more details of the job execution. --></help>
-        <label><!-- Last Result --></label>
-        <name>copado__Last_Result__c</name>
-        <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Pipeline Id --></label>
-        <name>copado__Pipeline_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- Source Id --></label>
-        <name>copado__Source_Id__c</name>
-    </fields>
-    <fields>
         <label><!-- Status Flag --></label>
         <name>copado__Status_Flag__c</name>
     </fields>
@@ -101,7 +71,7 @@
         <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- To Credential Name --></label>
+        <label><!-- To Org Name --></label>
         <name>copado__To_Org_Name__c</name>
     </fields>
     <fields>
@@ -109,8 +79,4 @@
         <label><!-- Validation ID --></label>
         <name>copado__Validation_ID__c</name>
     </fields>
-    <validationRules>
-        <errorMessage><!-- Stop Job creation --></errorMessage>
-        <name>stop_creation</name>
-    </validationRules>
 </CustomObjectTranslation>

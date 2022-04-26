@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Expected_Result__c</fullName>
         <deprecated>false</deprecated>
@@ -179,7 +178,7 @@
         <fullName>copado__Org__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Credential</label>
+        <label>Org</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>

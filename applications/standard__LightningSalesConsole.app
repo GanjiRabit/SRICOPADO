@@ -21,7 +21,10 @@
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
     <tabs>AppLog__c</tabs>
-    <tabs>MarketingFlyer__c</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -29,7 +32,13 @@
             <tab>AppLog__c</tab>
         </mappings>
         <mappings>
-            <tab>MarketingFlyer__c</tab>
+            <tab>Child_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Parent_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Template__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>
@@ -69,6 +78,9 @@
         </mappings>
         <mappings>
             <tab>standard-report</tab>
+        </mappings>
+        <mappings>
+            <tab>testForDeletion__c</tab>
         </mappings>
     </workspaceConfig>
 </CustomApplication>

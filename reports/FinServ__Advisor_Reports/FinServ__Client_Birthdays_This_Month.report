@@ -47,6 +47,7 @@
     <columns>
         <field>Account.Contacts$LastName</field>
     </columns>
+    <currency>USD</currency>
     <description>Client birthdays this month</description>
     <filter>
         <criteriaItems>
@@ -58,7 +59,12 @@
         </criteriaItems>
         <language>en_US</language>
     </filter>
-    <format>Summary</format>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Contacts$FinServ__Age__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Account.Contacts$Name</field>

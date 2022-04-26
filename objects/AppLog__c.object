@@ -153,10 +153,9 @@
     <enableSearch>true</enableSearch>
     <enableSharing>false</enableSharing>
     <enableStreamingApi>false</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>AppCat__c</fullName>
-        <description>Application/category</description>
+        <description>Application/category (test)</description>
         <externalId>false</externalId>
         <inlineHelpText>Identifies the application and sub category, E.g., cft.forecasterappcontroller.certifytable</inlineHelpText>
         <label>App Category</label>
@@ -180,6 +179,7 @@
         <fullName>Severity__c</fullName>
         <description>Error severity</description>
         <externalId>false</externalId>
+        <inlineHelpText>test</inlineHelpText>
         <label>Severity</label>
         <required>true</required>
         <trackTrending>false</trackTrending>
@@ -230,6 +230,11 @@
         <columns>Message__c</columns>
         <columns>CREATEDBY_USER</columns>
         <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

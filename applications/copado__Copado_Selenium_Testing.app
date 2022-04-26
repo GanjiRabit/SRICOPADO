@@ -17,5 +17,8 @@
     <tabs>copado__Scheduled_Job__c</tabs>
     <tabs>copado__Selenium_Locator__c</tabs>
     <tabs>AppLog__c</tabs>
-    <tabs>MarketingFlyer__c</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
 </CustomApplication>

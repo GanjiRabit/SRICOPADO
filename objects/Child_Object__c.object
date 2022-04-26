@@ -152,7 +152,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
@@ -172,6 +171,18 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Object__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Object</label>
+        <referenceTo>Parent_Object__c</referenceTo>
+        <relationshipLabel>Child Objects</relationshipLabel>
+        <relationshipName>Child_Objects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Phone__c</fullName>
@@ -201,9 +212,25 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>test_Field__c</fullName>
+        <externalId>false</externalId>
+        <label>test Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Child Object</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>Phone__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Parent_Object__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -213,6 +240,16 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Child Objects</pluralLabel>
+    <recordTypes>
+        <fullName>Record_Type1</fullName>
+        <active>true</active>
+        <label>Record Type1</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_Type2</fullName>
+        <active>true</active>
+        <label>Record Type2</label>
+    </recordTypes>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

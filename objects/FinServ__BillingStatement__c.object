@@ -175,11 +175,12 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>FinServ__BalanceTransfers__c</fullName>
+        <complianceGroup>HIPAA</complianceGroup>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>test</inlineHelpText>
         <label>Balance Transfers</label>
         <precision>18</precision>
         <required>false</required>
@@ -189,6 +190,7 @@
     </fields>
     <fields>
         <fullName>FinServ__BillingPeriodEnd__c</fullName>
+        <complianceGroup>HIPAA</complianceGroup>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Billing Period End</label>

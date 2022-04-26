@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
         <fullName>copado__CBM_Fields</fullName>
         <availableFields>
@@ -246,16 +245,6 @@
         <label>CBM Fields</label>
     </fieldSets>
     <fields>
-        <fullName>ExternalID__c</fullName>
-        <externalId>true</externalId>
-        <label>ExternalID</label>
-        <length>44</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>copado__Changes__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -338,7 +327,7 @@
         <fullName>copado__Org__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Credential</label>
+        <label>Org</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Snapshot Commits</relationshipLabel>
         <relationshipName>Git_Org_Commits</relationshipName>

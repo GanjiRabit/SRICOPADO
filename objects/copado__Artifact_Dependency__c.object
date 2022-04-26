@@ -153,7 +153,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Dependent_Artifact__c</fullName>
         <deprecated>false</deprecated>

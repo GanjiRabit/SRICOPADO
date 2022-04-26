@@ -154,25 +154,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
-    <fields>
-        <fullName>Copado_Allow_Validation_Only__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>the checkbox verifies if the user has access to validate to a particular destination environment</description>
-        <externalId>false</externalId>
-        <label>Allow Validation Only</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Regulated_Environment__c</fullName>
-        <externalId>false</externalId>
-        <formula>copado__Environment__r.Regulated_Environment__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Regulated Environment</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
     <fields>
         <fullName>copado__Allow_Deployments__c</fullName>
         <defaultValue>true</defaultValue>

@@ -6,6 +6,9 @@ methods, variables, and properties.
 To enable code to compile, all methods return null.
 */
 global class WorkManager {
+    global WorkManager() {
+
+    }
     global static copado.WorkManager.PanelPlusJson addConfig(String selectedState, String occupiedState, String AdditionalQuery, String dmlType) {
         return null;
     }

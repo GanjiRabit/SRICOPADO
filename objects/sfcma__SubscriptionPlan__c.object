@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Read</externalSharingModel>
     <fields>
         <fullName>sfcma__Active__c</fullName>
         <defaultValue>true</defaultValue>

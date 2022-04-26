@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fieldSets>
         <fullName>CHANNEL_ORDERS__Custom_Fields</fullName>
         <description>Custom fields to be included in the View and Create/​Update Service Order pages.</description>

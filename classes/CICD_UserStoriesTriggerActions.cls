@@ -1,6 +1,5 @@
 public with sharing class CICD_UserStoriesTriggerActions {
 
-
     public static void defaultUsCredentials(List<copado__User_Story__c> userStoryRecords){
         //will be called from before triggers, so no additional DML required
         Map<string,user> ownerData = getUserDataBasedOnId( getOwnerIds(userStoryRecords) );
@@ -92,36 +91,7 @@ public with sharing class CICD_UserStoriesTriggerActions {
 
         if(environmentIds.size() > 0 ) calculateWorkflowStatus( userStoriesForStatusCalc , environmentIds);
     }
-    
-    
-    public static void updateServiceNow(Map<id,copado__User_Story__c> newMap, Map<id,copado__User_Story__c> oldMap){
-        Map<string,object> message;
-      
-        for(copado__User_Story__c userStory : newMap.values()){
-            if(userStory.CICD_JiraIssueId__c != null){
-                
-                message = new Map<String,object>();
-				message.put( 'short_description' , userStory.copado__User_Story_Title__c);
-                message.put( 'description' , userStory.Description__c);
-                message.put( 'u_copado_url' , 'https://b5gpartner.lightning.force.com/' + userStory.Id);
-                            //    message.put( 'state' , userStory.Snow_Stage__c );
 
-                                  
-
-                sendMessageToSnow(userStory.CICD_JiraIssueId__c  , JSON.serialize(message));
-              
-                
-            }
-        }
-    }
-    
-    @future(callout = true)
-    public static void sendMessageToSnow(string id , string message){
-          string baseEndpoint = 'callout:ServiceNow_Connect/incident/';
-        Map<String,string> headerInfo = new Map<string,string>{'Content-Type' => 'application/json'};
-              CICD_Utils.doRestCallout( baseEndpoint + id, headerInfo  , 'PUT'  , message);
-            
-    }
     public static void updateJira(Map<id,copado__User_Story__c> newMap, Map<id,copado__User_Story__c> oldMap){
         Map<string , List<string> > fieldsToTrack = new Map<string,List<string>>(); // variation based fields those needs to be tracked
         List<String> fieldsToQuery = new List<string>(); // list of fields across all variations those needs to be queried
@@ -129,21 +99,20 @@ public with sharing class CICD_UserStoriesTriggerActions {
         set<id> usersStoriesToSync = new set<id>(); // list of user stories that needs field sync other than status
         set<id> userStoriesToTransition = new set<id>(); // list o fuser stories those need to have status field in jira updated
         Map<string , string > variationFieldMapping = new  Map<string , string >(); // mapping between salesforce & jira field per variation
-        string variationKey , syncVariationKey; 
+        string variationKey; 
 
         for(CICD_JiraSyncConfiguration__mdt setting : [select id,DeveloperName,CICD_ParentObject__c,CICD_SfFieldApiName__c,CICD_JiraIssueFieldName__c,CICD_SyncVariationKey__c from CICD_JiraSyncConfiguration__mdt where CICD_SfObjectApiName__c='copado__User_Story__c' and CICD_SyncToJira__c = true]){
                  field = setting.CICD_SfFieldApiName__c;
                  field = field.contains('__r') ? field.substring( 0 , field.indexOf('.')).replace('__r' , '__c') : field;
-                 syncVariationKey = setting.CICD_SyncVariationKey__c == null ? 'blank' : setting.CICD_SyncVariationKey__c;
-            
-                 if( fieldsToTrack.keyset().contains( syncVariationKey ) ){
-                     fieldsToTrack.get(  syncVariationKey ).add( field );
+                 
+                 if( fieldsToTrack.keyset().contains( setting.CICD_SyncVariationKey__c ) ){
+                     fieldsToTrack.get(  setting.CICD_SyncVariationKey__c ).add( field );
                  }else{
-                     fieldsToTrack.put( syncVariationKey , new List<string> { field } );
+                     fieldsToTrack.put( setting.CICD_SyncVariationKey__c , new List<string> { field } );
                  }
 
                 fieldsToQuery.add(setting.CICD_SfFieldApiName__c);
-                variationFieldMapping.put( (syncVariationKey + field).trim() ,  setting.CICD_JiraIssueFieldName__c );
+                variationFieldMapping.put( setting.CICD_SyncVariationKey__c + field ,  setting.CICD_JiraIssueFieldName__c );
                 
          }//end of sync configuration loop
 
@@ -152,18 +121,16 @@ public with sharing class CICD_UserStoriesTriggerActions {
                 variationKey = setting.CICD_SfFieldApiName__c;
          }
 
-        system.debug('>>> variationFieldMapping ' + variationFieldMapping);
-        system.debug('>>> fieldsToTrack ' + fieldsToTrack);
          set<id> userStoryIds = newMap.keyset();
         
         //for the user stories based on variation check if the field has been changed
         for( copado__User_Story__c record : Database.query( preapareUserStoryQuery( fieldsToQuery ) )  ){                      
             //process record only if it is synced to jira
             if( record.CICD_JiraIssueId__c != null ){
-                string variation = variationKey == null ? 'blank' : (string) CICD_Utils.getSobjectValue( record ,  variationKey);
+                string variation = (string) CICD_Utils.getSobjectValue( record ,  variationKey);
                 for( string fieldToTrack : fieldsToTrack.get( variation ) ){
                  if(  record.get(fieldToTrack) != oldMap.get(record.id).get(fieldToTrack) ){                      
-                     if( variationFieldMapping.get( (variation + fieldToTrack).trim() ).startsWith('status.') ){                         
+                     if( variationFieldMapping.get( variation + fieldToTrack ).startsWith('status.') ){                         
                          userStoriesToTransition.add( record.id );
                      }else{
                          usersStoriesToSync.add(record.id);
@@ -242,13 +209,12 @@ public with sharing class CICD_UserStoriesTriggerActions {
             'INT' => 'UAT',
             'UAT' => 'PROD'
         };
-     
         for(copado__User_Story__c userStory : userStoryRecords){
             environmentType = environmentData.get( userStory.copado__Environment__c ).CICD_EnvironmentType__c;
             if(userStory.CICD_LastDeploymentStatus__c == 'Completed with errors'){
-                userStory.CICD_WorkflowStatus__c = deployementFailedStatus + upperEnvironmentMap.get(environmentType);
+                userStory.CICD_WorkflowStatus__c = deployementFailedStatus + environmentType;
             }else if(userStory.CICD_PostDeploymentManualTasksComplete__c || userStory.CICD_PostDeploymentManualTasks__c == null){
-                 userStory.CICD_WorkflowStatus__c = readyForTestStatus + environmentType ; 
+                 userStory.CICD_WorkflowStatus__c = readyForTestStatus + upperEnvironmentMap.get(environmentType);
             }else{
                  userStory.CICD_WorkflowStatus__c = deployedStatus + environmentType;
             }

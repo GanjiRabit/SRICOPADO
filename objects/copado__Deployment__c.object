@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
         <fullName>copado__Copado_Header_Fields</fullName>
         <availableFields>
@@ -483,6 +482,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>copado__Deployment_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>copado__Deployment_command_sent__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -538,11 +542,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>RecordTypeId</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>copado__Promotion__r.copado__Release__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -563,12 +562,12 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>copado__Source_Environment__c</field>
+            <field>copado__Promotion__r.copado__Source_Environment__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>copado__Promotion__r.copado__Source_Environment__c</field>
+            <field>copado__Source_Environment__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -615,62 +614,6 @@
         </displayedFields>
         <label>Pipeline Deployment Modal</label>
     </fieldSets>
-    <fields>
-        <fullName>Copado_Block_Save__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>checks the deployment creation</description>
-        <externalId>false</externalId>
-        <label>Copado Block Save</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>ExternalID__c</fullName>
-        <externalId>true</externalId>
-        <label>ExternalID</label>
-        <length>22</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Active__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Only Active Templates are available when searching for them, for example in deployment steps</inlineHelpText>
-        <label>Active</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>copado__ApiName__c</fullName>
-        <caseSensitive>false</caseSensitive>
-        <deprecated>false</deprecated>
-        <externalId>true</externalId>
-        <inlineHelpText>This is a mandatory field if you intend to publish your automation template as copado extension package</inlineHelpText>
-        <label>Api Name</label>
-        <length>80</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>true</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Attach_Deployment_File__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Attach Deployment File</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
     <fields>
         <fullName>copado__Build_Task__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -824,76 +767,16 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>copado__Description__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Description</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Do_Not_Update_Promotion__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Do Not Update Promotion</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>copado__Execution_Context__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Execution Context</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Deployment</fullName>
-                    <default>true</default>
-                    <label>Deployment</label>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                    <label>Other</label>
-                </value>
-                <value>
-                    <fullName>Commit</fullName>
-                    <default>false</default>
-                    <isActive>false</isActive>
-                    <label>Commit</label>
-                </value>
-                <value>
-                    <fullName>Promotion</fullName>
-                    <default>false</default>
-                    <isActive>false</isActive>
-                    <label>Promotion</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>copado__Flag_Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>CASE( copado__Status__c, &quot;Completed Successfully&quot;, &quot;/resource/&quot; + IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)
-+ &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-check.png&quot;,
-&quot;In progress&quot;, &quot;/img/loading.gif&quot;,
-&quot;Completed with Errors&quot;, &quot;/resource/&quot; + IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)
-+ &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-cross.png&quot;,
-&quot;/resource/&quot; + IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)
-+ &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-paused.png&quot;)</formula>
+ + &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-check.png&quot;, 
+&quot;In progress&quot;, &quot;/img/loading.gif&quot;, 
+&quot;Completed with Errors&quot;, &quot;/resource/&quot; +  IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)
+ + &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-cross.png&quot;, 
+&quot;/resource/&quot; +  IF($Setup.copado__Settings__c.copado__Namespace__c!=&apos;none&apos;,&apos;copado__&apos;, &apos;&apos;)
+ + &quot;SetupDashboardIcons/PipelineSvgIcons/pipeline-paused.png&quot;)</formula>
         <label>Flag Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -906,7 +789,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Source Credential</label>
+        <label>Source Org</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -917,24 +800,12 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
             <isOptional>true</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Deployments (From Credential)</relationshipLabel>
+        <relationshipLabel>Deployments (From Org)</relationshipLabel>
         <relationshipName>Deployments_From_Org</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Git_Repository__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>IF(NOT(ISBLANK(copado__Promotion__r.copado__Project__c)), copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c,  copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c )</formula>
-        <label>Git Repository</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__Last_Compliance_Scan_Date__c</fullName>
@@ -945,32 +816,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
-    </fields>
-    <fields>
-        <fullName>copado__Last_Deployment_Execution_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Last Deployment Execution Id</label>
-        <length>18</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__Parent_Deployment__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Parent Deployment</label>
-        <referenceTo>copado__Deployment__c</referenceTo>
-        <relationshipLabel>Deployments (Parent Deployment)</relationshipLabel>
-        <relationshipName>Deployments</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Paused__c</fullName>
@@ -985,19 +830,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>copado__Platform__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>copado__Promotion__r.copado__Platform__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Platform</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>copado__Promotion__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -1006,22 +838,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <referenceTo>copado__Promotion__c</referenceTo>
         <relationshipLabel>Deployments</relationshipLabel>
         <relationshipName>Deployments</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Rolled_back_Deployment__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Identifies the original deployment that was rolled back for reporting purposes</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Identifies the original deployment that was rolled back for reporting purposes</inlineHelpText>
-        <label>Rolled back Deployment</label>
-        <referenceTo>copado__Deployment__c</referenceTo>
-        <relationshipLabel>Deployments (Rolled back Deployment)</relationshipLabel>
-        <relationshipName>RolledBackDeployments</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -1146,44 +962,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <fields>
-        <fullName>copado__Template__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>The automation template that defined the steps of this deployment.</inlineHelpText>
-        <label>Template</label>
-        <referenceTo>copado__Deployment__c</referenceTo>
-        <relationshipLabel>Template Execution</relationshipLabel>
-        <relationshipName>Templates</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <label>Deployment</label>
-    <listViews>
-        <fullName>X2020</fullName>
-        <columns>NAME</columns>
-        <columns>copado__Date__c</columns>
-        <columns>copado__Status__c</columns>
-        <columns>copado__Deployed__c</columns>
-        <columns>copado__Completed__c</columns>
-        <columns>copado__From_Org__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>LAST_UPDATE</field>
-            <operation>greaterThan</operation>
-            <value>1/1/2020 12:00 AM</value>
-        </filters>
-        <filters>
-            <field>LAST_UPDATE</field>
-            <operation>lessThan</operation>
-            <value>12/31/2020 12:00 AM</value>
-        </filters>
-        <label>2020</label>
-    </listViews>
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
@@ -1193,12 +972,9 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <columns>copado__Completed__c</columns>
         <columns>copado__From_Org__c</columns>
         <columns>CREATED_DATE</columns>
-        <columns>copado__Deployment_Type__c</columns>
-        <columns>copado__Git_Repository__c</columns>
-        <columns>UPDATEDBY_USER</columns>
-        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Deployment Name</label>
@@ -1206,227 +982,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <type>Text</type>
     </nameField>
     <pluralLabel>Deployments</pluralLabel>
-    <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <recordTypes>
-        <fullName>copado__Advanced_multi_step</fullName>
-        <active>true</active>
-        <description>Create multiple types of deployment steps. (Technical knowledge needed)</description>
-        <label>Advanced (multi-step)</label>
-        <picklistValues>
-            <picklist>copado__Execution_Context__c</picklist>
-            <values>
-                <fullName>Deployment</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Schedule__c</picklist>
-            <values>
-                <fullName>Deploy later</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deploy now</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Status__c</picklist>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed Successfully</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed with Errors</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Draft</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>In progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Scheduled</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>copado__Automation_Template</fullName>
-        <active>true</active>
-        <description>Group of steps to be executed in the future.</description>
-        <label>Automation Template</label>
-        <picklistValues>
-            <picklist>copado__Execution_Context__c</picklist>
-            <values>
-                <fullName>Deployment</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Schedule__c</picklist>
-            <values>
-                <fullName>Deploy later</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deploy now</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Status__c</picklist>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed Successfully</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed with Errors</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Draft</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>In progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Scheduled</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>copado__Data_Deployment</fullName>
-        <active>true</active>
-        <description>Select a Data Template to be deployed in a point and click process.</description>
-        <label>Data Deployment</label>
-        <picklistValues>
-            <picklist>copado__Execution_Context__c</picklist>
-            <values>
-                <fullName>Deployment</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Schedule__c</picklist>
-            <values>
-                <fullName>Deploy later</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deploy now</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Status__c</picklist>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed Successfully</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed with Errors</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Draft</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>In progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Scheduled</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>copado__Metadata_Deployment</fullName>
-        <active>true</active>
-        <description>Select the metadata manually to be deployed in a point and click process.</description>
-        <label>Metadata Deployment</label>
-        <picklistValues>
-            <picklist>copado__Execution_Context__c</picklist>
-            <values>
-                <fullName>Deployment</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Schedule__c</picklist>
-            <values>
-                <fullName>Deploy later</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deploy now</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Status__c</picklist>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed Successfully</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed with Errors</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Draft</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>In progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Scheduled</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Date__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__From_Org__c</customTabListAdditionalFields>
@@ -1445,13 +1000,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <searchResultsAdditionalFields>copado__Schedule__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
-    <validationRules>
-        <fullName>Copado_BlockDeploymentCreationOrUpdation</fullName>
-        <active>true</active>
-        <description>Blocks the deployment creation for user</description>
-        <errorConditionFormula>Copado_Block_Save__c = TRUE</errorConditionFormula>
-        <errorMessage>Insufficient Privileges : You do not have access to create a Deployment for requested Environment</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Cancel_Deployment</fullName>
@@ -1483,18 +1031,5 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <openType>noSidebar</openType>
         <protected>false</protected>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}deploymentWizard?id={!copado__Deployment__c.Id}&amp;gotoStep=deploynow</url>
-    </webLinks>
-    <webLinks>
-        <fullName>copado__Import_Template</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Import Template</masterLabel>
-        <openType>sidebar</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>/flow/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}Import_Template</url>
     </webLinks>
 </CustomObject>

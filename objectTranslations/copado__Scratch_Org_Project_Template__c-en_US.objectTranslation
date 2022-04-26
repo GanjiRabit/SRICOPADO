@@ -109,7 +109,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Developer Hub Credential --></label>
+        <label><!-- Developer Hub Org --></label>
         <name>copado__Developer_Hub_Org__c</name>
         <relationshipLabel><!-- Scratch Org Project Templates (Developer Hub Org) --></relationshipLabel>
     </fields>
@@ -158,8 +158,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Source Credential --></label>
+        <label><!-- Source Org Credential --></label>
         <name>copado__Source_Org_Credential__c</name>
-        <relationshipLabel><!-- Scratch Org Project Templates (Source Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Scratch Org Project Templates (Source Org Credential) --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

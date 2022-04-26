@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Child User Story Release --></label>
-        <name>copado__Child_User_Story_Release__c</name>
-        <relationshipLabel><!-- User Story Dependencies (Child User Story Release) --></relationshipLabel>
-    </fields>
-    <fields>
         <help><!-- The Status of the child user story --></help>
         <label><!-- Child User Story Status --></label>
         <name>copado__Child_User_Story_Status__c</name>
@@ -49,7 +44,7 @@
     </fields>
     <fields>
         <help><!-- The Team that is dependent on another team to provide the User Story. --></help>
-        <label><!-- Child User Story Team --></label>
+        <label><!-- Dependent Team --></label>
         <name>copado__Dependent_Team__c</name>
         <relationshipLabel><!-- User Story Dependencies (Dependent Team) --></relationshipLabel>
     </fields>
@@ -74,7 +69,7 @@
     </fields>
     <fields>
         <help><!-- The team that will provide the deliverable to fulfill this dependency. --></help>
-        <label><!-- Parent User Story Team --></label>
+        <label><!-- Provider Team --></label>
         <name>copado__Provider_Team__c</name>
         <relationshipLabel><!-- User Story Dependencies (Provider Team) --></relationshipLabel>
     </fields>
@@ -85,28 +80,7 @@
         <relationshipLabel><!-- Child User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Enter the value for the Parent-Child relationship type for your User Stories. By default, the field value is set to &quot;Relates-to.&quot; You can add other values, as this is an unrestricted list. --></help>
-        <label><!-- Relationship Type --></label>
-        <name>copado__Relationship_Type__c</name>
-        <picklistValues>
-            <masterLabel>blocking</masterLabel>
-            <translation><!-- blocking --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>duplicating</masterLabel>
-            <translation><!-- duplicating --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>fixing</masterLabel>
-            <translation><!-- fixing --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>relates to</masterLabel>
-            <translation><!-- relates to --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Parent User Story Release --></label>
+        <label><!-- Release --></label>
         <name>copado__Release__c</name>
         <relationshipLabel><!-- User Story Dependencies --></relationshipLabel>
     </fields>

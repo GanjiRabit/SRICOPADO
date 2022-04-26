@@ -156,7 +156,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Priority__c</field>
+            <field>copado__Priority__c</field>
             <table>copado__User_Story__c</table>
         </columns>
         <columns>

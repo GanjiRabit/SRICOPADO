@@ -165,7 +165,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>FinServ__Account__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>

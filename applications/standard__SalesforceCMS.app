@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
@@ -11,11 +10,20 @@
     <tabs>standard-CmsChannel</tabs>
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
-    <tabs>MarketingFlyer__c</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
         <mappings>
-            <tab>MarketingFlyer__c</tab>
+            <tab>Child_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Parent_Object__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Template__c</tab>
         </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>
@@ -28,6 +36,9 @@
         </mappings>
         <mappings>
             <tab>standard-CmsWorkspaces</tab>
+        </mappings>
+        <mappings>
+            <tab>testForDeletion__c</tab>
         </mappings>
     </workspaceConfig>
 </CustomApplication>

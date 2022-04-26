@@ -120,7 +120,9 @@
             <apex:outputPanel id="pnlScript" rendered="{!AND(!showOptions, !showError)}">
                 <apex:pageMessage id="redirectMsg" severity="INFO" summary="{!$Label.copado__loading}" />
                 <script>
+                    console.log('mainBranch: {!mainBranch}');
                         window.location='/apex/{!JSENCODE(namespace)}{!JSENCODE(targetPage)}?{!JSENCODE(additionalParams)}snapshotId={!JSENCODE(snapshotId)}&repoId={!JSENCODE(repoId)}&orgId={!JSENCODE(orgId)}&userStoryId={!JSENCODE(userStory.Id)}&mainBranch={!JSENCODE(mainBranch)}';
+
                 </script>
             </apex:outputPanel>
         </apex:outputPanel>

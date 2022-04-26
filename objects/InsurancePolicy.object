@@ -128,7 +128,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AuditTerm</fullName>
         <trackHistory>false</trackHistory>
@@ -356,11 +355,6 @@
     </fields>
     <fields>
         <fullName>SourceOpportunityId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>SourceQuoteId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>

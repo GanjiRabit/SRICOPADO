@@ -8,7 +8,7 @@
                         inputElem[i].checked = cb.checked;
                     }
                 }
-            }   
+            }
         </script>
         <apex:stylesheet value="{!URLFOR($Resource.copado__CopadoLightningCSS)}" />
     </head>
@@ -17,7 +17,7 @@
 
     	    <apex:sectionHeader title="{!$ObjectType.copado__Git_Org_Commit__c.LabelPlural}" subtitle="{!orgName} ➠ {!repoName} / {!branch}"/>
     	    <apex:pageMessages />
-    	        
+
     	    <apex:pageBlock id="pb_selectGitCommits"  mode="edit" helpUrl="http://docs.copado.com" helpTitle="{!$Label.copado__help_for_this_page}" title="{!$Label.copado__select_commits}">
 
     		    <apex:pageblockButtons id="pbButtons">

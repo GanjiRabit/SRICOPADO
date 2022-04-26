@@ -60,11 +60,11 @@
         </apex:pageBlock>
 
         <script type="text/javascript">
-            copadoStreamingService.ns = '{!JSENCODE(namespace)}';
+            copadoStreamingService.ns = '{!namespace}';
             copadoStreamingService.init();
-            statusManager.ns = '{!JSENCODE(namespace)}';
-            statusManager.herokuServer = '{!JSENCODE(herokuServer)}';
-            statusManager.urlParameters = '{!JSENCODE(urlParameters)}';
+            statusManager.ns = '{!namespace}';
+            statusManager.herokuServer = '{!herokuServer}';
+            statusManager.urlParameters = '{!urlParameters}';
             statusManager.sessionId = __sfdcSessionId;
             statusManager.parentId = '{!JSENCODE(copado__User_Story__c.copado__Org_Credential__c)}';
             statusManager.waitTimeout = 10000;

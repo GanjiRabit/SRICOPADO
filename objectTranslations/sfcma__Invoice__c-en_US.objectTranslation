@@ -99,10 +99,6 @@
         <name>sfcma__Subtotal__c</name>
     </fields>
     <fields>
-        <label><!-- Tax Amount --></label>
-        <name>sfcma__TaxAmount__c</name>
-    </fields>
-    <fields>
         <label><!-- Transaction --></label>
         <name>sfcma__Transaction__c</name>
         <relationshipLabel><!-- Invoices --></relationshipLabel>

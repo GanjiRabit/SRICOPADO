@@ -154,7 +154,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
         <fullName>LifeEventRequired</fullName>
         <description>Life event form required fields.</description>

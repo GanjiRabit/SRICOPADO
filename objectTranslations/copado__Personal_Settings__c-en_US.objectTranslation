@@ -22,17 +22,4 @@
         <label><!-- DeployConnectionBox width --></label>
         <name>copado__DeployConnectionBox_width__c</name>
     </fields>
-    <fields>
-        <help><!-- Disables Auto-Resolve from Online Conflict Resolution --></help>
-        <label><!-- Disable Auto-Resolve --></label>
-        <name>copado__Disable_Auto_Resolve__c</name>
-    </fields>
-    <fields>
-        <label><!-- Disable Re-Create Feature Branch in US --></label>
-        <name>copado__Disable_Re_Create_Feature_Branch_in_US__c</name>
-    </fields>
-    <fields>
-        <label><!-- Mask API Key --></label>
-        <name>copado__MaskApiKey__c</name>
-    </fields>
 </CustomObjectTranslation>

@@ -99,7 +99,6 @@
         <type>Default</type>
     </actionOverrides>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AgentId</fullName>
         <type>Lookup</type>

@@ -34,7 +34,7 @@
                 <apex:pageBlockSection title="{!$Label.copado__createquicktestsettings}" columns="1">
                     <script>
                         if(confirm("{!$Label.copado__warning2createseleniumsetting}")){
-                            location.href = '{!JSENCODE(hostUrl)}/apex/editSeleniumSettingOverride'+location.search+'&fromQuickRun={!JSENCODE($User.Alias)}';
+                            location.href = '{!hostUrl}/apex/editSeleniumSettingOverride'+location.search+'&fromQuickRun={!$User.Alias}';
                         }else{
                             history.back();
                         }

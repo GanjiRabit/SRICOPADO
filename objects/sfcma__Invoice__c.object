@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>sfcma__Amount__c</fullName>
         <deprecated>false</deprecated>
@@ -245,9 +244,9 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Discount Percentage</label>
-        <precision>5</precision>
+        <precision>3</precision>
         <required>false</required>
-        <scale>2</scale>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Percent</type>
     </fields>
@@ -373,19 +372,6 @@
         <externalId>false</externalId>
         <label>Subtotal</label>
         <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>sfcma__TaxAmount__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Tax amount applied to the invoice</description>
-        <externalId>false</externalId>
-        <label>Tax Amount</label>
-        <precision>11</precision>
         <required>false</required>
         <scale>2</scale>
         <trackTrending>false</trackTrending>

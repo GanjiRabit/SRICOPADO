@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>CHANNEL_ORDERS__Pricebook_Entry_Id__c</fullName>
         <caseSensitive>false</caseSensitive>

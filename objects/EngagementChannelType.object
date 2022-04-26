@@ -128,7 +128,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>ContactPointType</fullName>
         <inlineHelpText>The contact point type record associated with the engagement channel type.</inlineHelpText>

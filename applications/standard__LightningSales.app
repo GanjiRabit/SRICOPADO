@@ -9,7 +9,6 @@
     <label>Sales</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
-    <tabs>Dashbaord</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Task</tabs>
@@ -26,7 +25,9 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Forecasting3</tabs>
     <tabs>AppLog__c</tabs>
-    <tabs>MarketingFlyer__c</tabs>
-    <tabs>standard-Quote</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

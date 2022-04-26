@@ -16,9 +16,4 @@
         <default>false</default>
         <label>Question</label>
     </standardValue>
-    <standardValue>
-        <fullName>Bugfix</fullName>
-        <default>false</default>
-        <label>Bugfix</label>
-    </standardValue>
 </StandardValueSet>

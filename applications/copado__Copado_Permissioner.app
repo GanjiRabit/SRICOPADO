@@ -9,5 +9,8 @@
     <tabs>copado__Persona__c</tabs>
     <tabs>copado__Permission_Set_Explorer</tabs>
     <tabs>AppLog__c</tabs>
-    <tabs>MarketingFlyer__c</tabs>
+    <tabs>testForDeletion__c</tabs>
+    <tabs>Parent_Object__c</tabs>
+    <tabs>Child_Object__c</tabs>
+    <tabs>Template__c</tabs>
 </CustomApplication>

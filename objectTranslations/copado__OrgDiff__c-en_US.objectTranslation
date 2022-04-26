@@ -11,9 +11,9 @@
     </fields>
     <fields>
         <help><!-- Select the Source Org for which you would like to compare the Metadata. This Org will be the Org from which you would like to migrate Metadata. --></help>
-        <label><!-- Source Credential --></label>
+        <label><!-- Source Org --></label>
         <name>copado__From_Org__c</name>
-        <relationshipLabel><!-- Org Differences (Source Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Org Differences (From Org) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- If a value is entered, only modifications from this user will be included in the Diff. Use the user Full Name --></help>
@@ -32,9 +32,9 @@
     </fields>
     <fields>
         <help><!-- Select the Destination Org for which you would like to compare the Metadata and would like to migrate Metadata to. The resulting grid will show a list of differences with &apos;create&apos;, &apos;update&apos; and &apos;delete&apos; which apply to this Org. --></help>
-        <label><!-- Destination Credential --></label>
+        <label><!-- Destination Org --></label>
         <name>copado__To_Org__c</name>
-        <relationshipLabel><!-- Org Differences (Destination Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Org Differences (To Org) --></relationshipLabel>
     </fields>
     <validationRules>
         <errorMessage><!-- The Org&apos;s to be compared can not be the same. --></errorMessage>

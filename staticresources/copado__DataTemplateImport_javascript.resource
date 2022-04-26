@@ -263,7 +263,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                 var childRelationKey = {};
 
                 if (response.records) {
-                    contents = convertBase64toObject(response.records.Body);
+                    contents = JSON.parse(sforce.Base64Binary.prototype.decode(response.records.Body));
                     if (dataObject.importedObject.values.relationList.length > 0) {
                         if (contents.childrenObjectsReferenceList.length > 0) {
                             contents.childrenObjectsReferenceList.forEach((childrenRelation) => {
@@ -304,7 +304,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                         }
                     }
 
-                    response.records.Body = convertObjectToBase64(contents);
+                    response.records.Body = btoa(JSON.stringify(contents));
 
                     var result = sforce.connection.update([response.records]);
                 }
@@ -562,7 +562,6 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             templateBatchSize: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Batch_Size__c'],
             templateFilterLogic: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Filter_Logic__c'],
             templateAttachmentOption: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Attachment_Options__c'],
-            templateSelectedAttachmentType: attachmentBodyData.importedObj.dataTemplate.templateAttachmentType
         };
 
         var resultData = {
@@ -613,7 +612,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         }
 
         var populatedData = createDataTemplateAttachmentBody(attachmentBodyData);
-        blobValue = convertObjectToBase64(populatedData.attachmentBody);
+        blobValue = btoa(JSON.stringify(populatedData.attachmentBody));
         templateDetailAttachment.Body = blobValue;
         attachmentArray.push(templateDetailAttachment);
 
@@ -621,7 +620,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         var sobjectAttachment = new sforce.SObject("Attachment");
         sobjectAttachment.ParentId = attachmentData.parentId;
         sobjectAttachment.Name = 'ADD_Describe_SObject_Result';
-        blobValue = convertObjectToBase64(JSON.parse(populatedData.describeResult));
+        blobValue = btoa(populatedData.describeResult);
         sobjectAttachment.Body = blobValue;
         attachmentArray.push(sobjectAttachment);
 
@@ -630,7 +629,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             var globalAttachment = new sforce.SObject("Attachment");
             globalAttachment.ParentId = attachmentData.parentId;
             globalAttachment.Name = 'ADD_Describe_Global_Result';
-            blobValue = convertObjectToBase64(JSON.parse(attachmentData.globalDescribe));
+            blobValue = btoa(attachmentData.globalDescribe);
             globalAttachment.Body = blobValue;
             attachmentArray.push(globalAttachment);
         }
@@ -639,13 +638,6 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         cbOnEnd && cbOnEnd();
     };
 
-    const convertObjectToBase64 = (obj) => {
-        return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
-    }
-
-    const convertBase64toObject = (body) => {
-        return JSON.parse(decodeURIComponent(escape(sforce.Base64Binary.prototype.decode((body)))));
-    }
 
     // it is used to create data template record for each imported data template json
     var createDataTemplate = (creationData, cbOnEnd) => {
@@ -724,7 +716,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                 requestHeaders: {
                     'userId': dataObject.userId,
                     'orgId': dataObject.organizationId,
-                    'token2': dataObject.token2
+                    'token': dataObject.token
                 },
                 method: 'GET',
                 onSuccess: (response) => {
@@ -801,7 +793,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                 sourceOrgId: existingDataObject.sourceOrgId,
                 userId: existingDataObject.userId,
                 organizationId: existingDataObject.organizationId,
-                token2: existingDataObject.token2,
+                token: existingDataObject.token,
                 endpoint: existingDataObject.endpoint,
                 globalDescribe: existingDataObject.globalDescribe,
                 namespace: existingDataObject.namespace ? existingDataObject.namespace : ''
@@ -866,7 +858,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                 sourceOrgId: parsedData.sourceOrgId,
                 userId: parsedData.userId,
                 organizationId: parsedData.organizationId,
-                token2: parsedData.token2,
+                token: parsedData.token,
                 endpoint: parsedData.objectCalloutEndpoint,
                 namespace: parsedData.namespace ? parsedData.namespace : ''
             };
@@ -878,7 +870,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                         requestHeaders: {
                             'userId': parsedData.userId,
                             'orgId': parsedData.organizationId,
-                            'token2': parsedData.token2
+                            'token': parsedData.token
                         },
                         method: 'GET',
                         onSuccess: (response) => {

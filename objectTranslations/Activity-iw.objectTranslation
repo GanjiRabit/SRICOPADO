@@ -14,6 +14,7 @@
         <name>FinServ__NextSteps__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Objectives --></label>
         <name>FinServ__Objectives__c</name>
     </fields>
@@ -36,13 +37,5 @@
             <masterLabel>Service</masterLabel>
             <translation>שירות</translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Channel --></label>
-        <name>thankful__Channel__c</name>
-    </fields>
-    <fields>
-        <label><!-- Is Internal --></label>
-        <name>thankful__IsInternal__c</name>
     </fields>
 </CustomObjectTranslation>

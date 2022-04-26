@@ -159,7 +159,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>CHANNEL_ORDERS__Account__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>

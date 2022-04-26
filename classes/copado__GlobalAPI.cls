@@ -9,34 +9,16 @@ global class GlobalAPI {
     global GlobalAPI() {
 
     }
-    global static void authenticateGitRepository(Id gitRepositoryId, String username, String password) {
-
-    }
     global String createUserAPIKey() {
         return null;
     }
     global Boolean deleteCopadoLicense(Id userId) {
         return null;
     }
-    global String getCopadoServerUrl() {
-        return null;
-    }
     global copado.GlobalAPI.CopadoLicenses getLicenseInformation() {
         return null;
     }
-    global List<copado.SourceMemberResult> getRecentChanges(String orgId) {
-        return null;
-    }
-    global List<copado.SourceMemberResult> getRecentChanges(String orgId, Datetime dateTimeToRetrieveChanges) {
-        return null;
-    }
     global List<copado.GlobalAPI.UserLicense> listCopadoLicenses() {
-        return null;
-    }
-    global copado.GlobalAPI.ProxyOrgResponse proxyOrgRequest(copado.GlobalAPI.ProxyOrgRequest proxyRequest) {
-        return null;
-    }
-    global copado.GlobalAPI.ProxyOrgResponse proxyOrgRequestSoap(copado.GlobalAPI.ProxyOrgRequest proxyRequest) {
         return null;
     }
     global copado.GlobalAPI.LicenseOperationResult upsertCopadoLicense(copado.GlobalAPI.UserLicense licenseDetails) {
@@ -133,25 +115,6 @@ global class LicenseOperationResult {
 
     }
     global LicenseOperationResult(Boolean isSuccessParam, Boolean isCreatedParam, Boolean isUpdatedParam, String errorStringParam) {
-
-    }
-}
-global class ProxyOrgRequest {
-    global String endPointUrlService;
-    global String logLabelIdentifier;
-    global String orgCredentialId;
-    global String requestPayload;
-    global String requestType;
-    global ProxyOrgRequest() {
-
-    }
-}
-global class ProxyOrgResponse {
-    global String content;
-    global String errorCode;
-    global String errorMessage;
-    global Integer statusCode;
-    global ProxyOrgResponse() {
 
     }
 }

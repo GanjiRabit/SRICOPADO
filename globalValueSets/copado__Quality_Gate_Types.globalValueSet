@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Automation</fullName>
-        <default>true</default>
-        <label>Automation</label>
-    </customValue>
-    <customValue>
         <fullName>Apex Test with Validation</fullName>
         <default>false</default>
         <label>Apex Test with Validation</label>

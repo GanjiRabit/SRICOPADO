@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>CICD_ComponentNameExpression__c</field>
-        <value xsi:type="xsd:string">(?&lt;=lwc\/)[A-Za-z0-9_]*</value>
+        <value xsi:type="xsd:string">(?&lt;=\/lwc\/[A-Za-z0-9_]*\/)[A-Za-z0-9_]*(?=.js)</value>
     </values>
     <values>
         <field>CICD_JoinString__c</field>

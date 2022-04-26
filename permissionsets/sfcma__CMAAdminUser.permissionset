@@ -5,34 +5,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>sfcma__CMAAddContactsController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__CMABuildSiteController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__CMAImportDataController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__CMALearnAboutDashboardModelController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__CMANotificationSettingsController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__CMAStepsContainerController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sfcma__ConnectStripeController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>sfcma__EmailNotificationController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -359,11 +331,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>sfcma__Invoice__c.sfcma__Subtotal__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>sfcma__Invoice__c.sfcma__TaxAmount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

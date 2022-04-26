@@ -2,13 +2,12 @@
 var dts = dts || {};
 var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : undefined;
 
-(app => {
+((app) => {
     'use strict';
     var tablesList = ['objectsTable', 'relatedParentObjectsTable', 'relatedChildObjectsTable'];
     var tableIdPaginationObject = {};
 
-    var iconsList = [
-        {
+    var iconsList = [{
             svgButtonsClass: 'warningToastIcon',
             styleClass: 'slds-icon_x-small',
             name: 'warning'
@@ -57,7 +56,8 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
 
     var svgStruct = [];
 
-    var createTooltip = event => {
+
+    var createTooltip = (event) => {
         var elem = event.currentTarget;
         var text = elem.getAttribute('tooltip-text');
 
@@ -75,40 +75,46 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
 
         var offset = 6;
         var linkProps = $copado(elem).offset();
-        var leftPosition = linkProps.left - elemWidth / 2 > 0 ? linkProps.left - elemWidth / 2 : linkProps.left;
+        var leftPosition = linkProps.left - (elemWidth / 2) > 0 ? linkProps.left - (elemWidth / 2) : linkProps.left;
         var topPosition = linkProps.top - offset;
+
 
         tooltipWrap.setAttribute('style', 'top:' + topPosition + 'px;' + 'left:' + leftPosition + 'px;');
 
         var timeout = setTimeout(() => {
-            tooltipWrap.style.transform = 'translateY(-100%) scale(1)';
+            tooltipWrap.style.transform = "translateY(-100%) scale(1)";
             clearTimeout(timeout);
-        }, 0);
-    };
 
-    var destroyTooltip = event => {
+        }, 0);
+    }
+
+
+    var destroyTooltip = (event) => {
         var elem = event.currentTarget;
         elem.removeAttribute('tooltip');
         document.querySelector('.co-tooltip').remove();
-    };
+
+    }
+
 
     app.tooltipHandler = () => {
         var tooltipList = $copado('.copado-tooltip');
         tooltipList.each((index, tp) => {
+
             if (tp.getAttribute('tooltip-text') !== '') {
                 tp.addEventListener('mouseenter', createTooltip);
                 tp.addEventListener('mouseleave', destroyTooltip);
             }
         });
+    }
+
+
+    app.toggleAdvanceDeploymentSettings = (event) => {
+        $copado('#advanceDeploymentSettings').toggleClass('slds-show').toggleClass('slds-hide')
     };
 
-    app.toggleAdvanceDeploymentSettings = event => {
-        $copado('#advanceDeploymentSettings')
-            .toggleClass('slds-show')
-            .toggleClass('slds-hide');
-    };
 
-    app.renderSVG = elemId => {
+    app.renderSVG = (elemId) => {
         var elem = $copado(elemId);
         var struct = svgStruct[elemId];
         var imageURL, SVG, SVGUse;
@@ -116,7 +122,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         if (struct) {
             imageURL = struct.imageURL;
             SVG = $copado('<svg/>', {
-                class: struct.class
+                class: struct.class,
             });
             SVGUse = $copado('<use/>');
 
@@ -128,7 +134,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
 
     app.applyRenderSVG = () => {
         if (iconsList) {
-            iconsList.forEach(element => {
+            iconsList.forEach((element) => {
                 app.renderSVG('.' + element.svgButtonsClass);
             });
         }
@@ -137,7 +143,8 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
     app.setSVGStruct = () => {
         var className;
         if (globalSldsResourcePath) {
-            iconsList.forEach(item => {
+
+            iconsList.forEach((item) => {
                 className = item.styleClass ? `slds-button__icon ${item.styleClass}` : 'slds-button__icon';
                 svgStruct['.' + item.svgButtonsClass] = {
                     imageURL: `${globalSldsResourcePath}/icons/utility-sprite/svg/symbols.svg#${item.name}`,
@@ -152,7 +159,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         $copado('.slds-checkbox.row-select', table).prop('checked', $copado(`#${elemid}`).prop('checked'));
     };
 
-    app.expandDataTable = tableId => {
+    app.expandDataTable = (tableId) => {
         var rows, activePaginationSelected, table;
         var info = {};
         var currentPage = 0;
@@ -160,104 +167,93 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         var sortOrderArray = [];
         var searchValue = searchInput.val();
 
-        activePaginationSelected = $copado(`#${tableId}_length`)
-            .find('select')
-            .val();
+        activePaginationSelected = $copado(`#${tableId}_length`).find('select').val();
 
         var table = $copado(`#${tableId}`).DataTable();
         // dataTable is the oldschool dataTables constructur, which returns a jQuery object. This jQuery object is enriched with a set of API methods in hungarian notation format, such as fnFilter, fnDeleteRow and so on.
-        sortOrderArray = $copado(`#${tableId}`)
-            .dataTable()
-            .fnSettings().aaSorting;
+        sortOrderArray = $copado(`#${tableId}`).dataTable().fnSettings().aaSorting;
         var tableData = {
             paginationSize: activePaginationSelected,
             currentPage: table.page.info().page,
             searchValue: searchValue,
             sortOrderArray: sortOrderArray
         };
-        table.search('').draw();
-        $copado(`#${tableId}_length`)
-            .find('select')
-            .val(-1)
-            .trigger('change');
+        table.search( '' ).draw();
+        $copado(`#${tableId}_length`).find('select').val(-1).trigger('change');
         tableIdPaginationObject[tableId] = tableData;
     };
 
     app.expandDataTables = () => {
-        tablesList.forEach(tableId => {
+        tablesList.forEach((tableId) => {
             app.expandDataTable(tableId);
         });
     };
 
-    app.contractDataTable = tableId => {
+    app.contractDataTable = (tableId) => {
         var table = $copado(`#${tableId}`).DataTable();
         var searchInput = $copado(`#${tableId}_wrapper #${tableId}_filter`).find('input');
 
-        $copado(`#${tableId}_length`)
-            .find('select')
-            .val(tableIdPaginationObject[tableId].paginationSize)
-            .trigger('change');
+        $copado(`#${tableId}_length`).find('select').val(tableIdPaginationObject[tableId].paginationSize).trigger('change');
         // dataTable is the oldschool dataTables constructur, which returns a jQuery object. This jQuery object is enriched with a set of API methods in hungarian notation format, such as fnFilter, fnDeleteRow and so on.
-        $copado(`#${tableId}`)
-            .dataTable()
-            .fnSort(tableIdPaginationObject[tableId].sortOrderArray);
+        $copado(`#${tableId}`).dataTable().fnSort( tableIdPaginationObject[tableId].sortOrderArray );
 
-        table
-            .page(tableIdPaginationObject[tableId].currentPage)
-            .search(tableIdPaginationObject[tableId].searchValue)
-            .draw(false);
+        table.page(tableIdPaginationObject[tableId].currentPage).search( tableIdPaginationObject[tableId].searchValue ).draw(false);
     };
 
     app.contractDataTables = () => {
-        tablesList.forEach(tableId => {
+        tablesList.forEach((tableId) => {
             app.contractDataTable(tableId);
         });
     };
 
-    app.startDataTable = tableId => {
+    app.startDataTable = (tableId) => {
         $copado(`#${tableId}`).dataTable({
-            paging: true,
-            scrollCollapse: true,
-            order: [
-                [1, 'desc'],
+            'paging': true,
+            'scrollCollapse': true,
+            'order': [
+                [1, "desc"],
                 [2, 'asc']
             ],
-            columnDefs: [
-                { orderable: false, targets: 0 },
-                { orderable: false, targets: -1 } // -1 is to remove sorting from last column
+            'columnDefs': [
+                { 'orderable': false, 'targets': 0 },
+                { 'orderable': false, 'targets': -1 } // -1 is to remove sorting from last column
             ],
-            lengthMenu: [
+            'lengthMenu': [
                 [10, 25, 50, -1],
                 [10, 25, 50, 'All']
             ],
-            language: {
+            'language': {
                 search: '',
                 searchPlaceholder: 'Search...',
                 emptyTable: 'Please select the Template Source Org and Main Object before adding related fields and objects.'
             },
-            fnPreDrawCallback: () => {
+            'fnPreDrawCallback': () => {
                 $copado('#progress').show();
             },
-            fnInitComplete: () => {
+            'fnInitComplete': () => {
                 $copado(`#${tableId}`).show();
                 $copado('#progress').hide();
             },
-            dom: '<"top"f>rt<"bottom"ilp><"clear">'
+            'dom': '<"top"f>rt<"bottom"ilp><"clear">'
         });
+
     };
 
+
     app.startDataTables = () => {
-        tablesList.forEach(tableId => {
+        tablesList.forEach((tableId) => {
             if ($copado(`#${tableId}`).dataTable) {
                 app.startDataTable(tableId);
             }
         });
     };
 
+
     app.onClickFunction = () => {
         lockScreen();
         app.expandDataTables();
     };
+
 
     app.onCompleteFunctionToreRender = () => {
         dts.applyRenderSVG();
@@ -268,18 +264,11 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
     };
 
     var getTableId = () => {
-        var activeTabId = $copado('.tabs > ul')
-            .find('.slds-is-active > a')
-            .attr('id');
+        var activeTabId = $copado('.tabs > ul').find('.slds-is-active > a').attr('id');
         var data = {
-            tableId: $copado(`#${activeTabId}-content`)
-                .find('table')
-                .attr('id'),
-            selectAllInputId: $copado(`#${activeTabId}-content`)
-                .find('table > thead')
-                .find('input')
-                .attr('id')
-        };
+            tableId:  $copado(`#${activeTabId}-content`).find('table').attr('id'),
+            selectAllInputId: $copado(`#${activeTabId}-content`).find('table > thead').find('input').attr('id')
+        }
         return data;
     };
 
@@ -287,55 +276,38 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         var table = $copado(`#${tableId}`);
         var lst = $copado('.slds-checkbox.row-select', table);
         var count = 0;
-        lst.each(function() {
+        lst.each( function() {
             if ($copado(this).prop('checked') === true) {
-                count++;
+                count++ ;
             }
         });
         var checkedBool = lst.length === count;
         $copado(`#${elemId}`).prop('checked', checkedBool);
     };
 
-    app.setTab = tab => {
-        var tabList = [
-            'template-details',
-            'object-fields',
-            'related-parent-objects',
-            'related-child-objects',
-            'main-object-filter',
-            'deployment-tasks-content'
-        ];
+    app.setTab = (tab) => {
+        var tabList = ['template-details', 'object-fields', 'related-parent-objects', 'related-child-objects', 'main-object-filter', 'deployment-tasks-content'];
         var tabId = tabList[tab];
         var tabs = $copado('.tabs').find('li');
 
         tabs.each((index, tab) => {
             if ($copado(tab).hasClass('slds-is-active')) {
                 $copado(tab).removeClass('slds-is-active');
-                $copado(tab)
-                    .find('a')
-                    .attr('aria-selected', false);
+                $copado(tab).find('a').attr('aria-selected', false);
             }
         });
 
-        tabList.forEach(tab => {
+        tabList.forEach((tab) => {
             if (tab === tabId) {
-                $copado(`#${tab}-content`)
-                    .addClass('slds-show')
-                    .removeClass('slds-hide');
+                $copado(`#${tab}-content`).addClass('slds-show').removeClass('slds-hide');
             } else {
-                $copado(`#${tab}-content`)
-                    .addClass('slds-hide')
-                    .removeClass('slds-show');
+                $copado(`#${tab}-content`).addClass('slds-hide').removeClass('slds-show');
             }
         });
 
         $copado(tabs[tab]).addClass('slds-is-active');
-        $copado(tabs[tab])
-            .find('a')
-            .attr('aria-selected', true);
-        $copado(tabs[tab])
-            .find('a')
-            .attr('aria-selected', true);
+        $copado(tabs[tab]).find('a').attr('aria-selected', true);
+        $copado(tabs[tab]).find('a').attr('aria-selected', true);
 
         var data = getTableId();
         if (data.tableId) {
@@ -345,57 +317,46 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         }
     };
 
+
     app.tabsHandler = () => {
         var tabs = $copado('.tabs').find('li.slds-tabs_default__item');
         var tabId = '';
         var tab = 0;
 
         // tabs click event
-        tabs.click(event => {
-            tabId = $copado(event.currentTarget)
-                .find('a')
-                .attr('id');
-            tab = $copado('.tabs')
-                .find('li>a')
-                .index($copado(`#${tabId}`));
+        tabs.click((event) => {
+            tabId = $copado(event.currentTarget).find('a').attr('id');
+            tab = $copado('.tabs').find('li>a').index($copado(`#${tabId}`));
             app.setTab(tab);
         });
     };
 
+
     app.handleActiveCheckbox = () => {
         var dataTemplateName = $copado('[id$=dataTemplateName]').val() != null && $copado('[id$=dataTemplateName]').val() != '';
         var mainObject = $copado('[id$=mainObject]').val() != null || $copado('[id$=mainObjOutput]').text() != null;
-        var schemaOrg =
-            ($copado('[id$=schemaOrg]').val() != null && $copado('[id$=schemaOrg]').val() != '') || $copado('[id$=orgOutput]').text() != null;
+        var schemaOrg = ($copado('[id$=schemaOrg]').val() != null && $copado('[id$=schemaOrg]').val() != '') || $copado('[id$=orgOutput]').text() != null;
         if (dataTemplateName && mainObject && schemaOrg) {
             $copado('[id$=activeTemplate]').prop('disabled', false);
         }
     };
 
-    app.handlePicklist = event => {
+
+    app.handlePicklist = (event) => {
         var elem = event.currentTarget;
         var list, elemsList, value;
         var currElem = null;
 
-        if (
-            $copado(elem)
-                .parent()
-                .hasClass('slds-is-open')
-        ) {
-            $copado(elem)
-                .parent()
-                .removeClass('slds-is-open');
+        if ($copado(elem).parent().hasClass('slds-is-open')) {
+            $copado(elem).parent().removeClass('slds-is-open');
+
         } else {
-            $copado(elem)
-                .parent()
-                .addClass('slds-is-open');
+            $copado(elem).parent().addClass('slds-is-open');
 
             list = $copado(elem).siblings('div');
-            elemsList = $copado(elem)
-                .siblings()
-                .find('li');
+            elemsList = $copado(elem).siblings().find('li');
 
-            $copado(document).mousedown(e => {
+            $copado(document).mousedown((e) => {
                 currElem = null;
 
                 if ($copado(e.target).closest('.slds-dropdown').length > 0) {
@@ -405,47 +366,36 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
 
             $copado(elem).blur(() => {
                 if (currElem === null) {
-                    $copado(elem)
-                        .parent()
-                        .removeClass('slds-is-open');
+                    $copado(elem).parent().removeClass('slds-is-open');
                 }
             });
 
-            $copado(elemsList).click(event => {
+            $copado(elemsList).click((event) => {
                 if ($copado(event.currentTarget).hasClass('slds-dropdown__item')) {
-                    value = $copado(event.currentTarget)
-                        .text()
-                        .trim();
-                    $copado(elem)
-                        .find('span')
-                        .text(value);
-                    $copado(elem)
-                        .parent()
-                        .find('input')
-                        .val(value);
+                    value = $copado(event.currentTarget).text().trim();
+                    $copado(elem).find('span').text(value);
+                    $copado(elem).parent().find('input').val(value);
 
                     renderRelationAction();
                 }
 
-                $copado(elem)
-                    .parent()
-                    .removeClass('slds-is-open');
+                $copado(elem).parent().removeClass('slds-is-open');
             });
         }
     };
 
-    app.openModals = (param, contentValue) => {
-        if (contentValue === 'none') {
-            return;
-        }
+
+    app.openModals = (param) => {
         $copado('[id=modal' + param + ']').show();
         $copado('[id=backDrop' + param + ']').show();
     };
 
-    app.closeModals = param => {
+
+    app.closeModals = (param) => {
         $copado('[id=modal' + param + ']').hide();
         $copado('[id=backDrop' + param + ']').hide();
     };
+
 
     app.createAutocomplete = (comboboxId, inputHiddenId) => {
         $copado.widget('custom.combobox', {
@@ -475,22 +425,24 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                             $copado('ul.ui-menu').width(this.input.innerWidth());
                         },
                         create: function() {
+
                             $copado(this).data('ui-autocomplete')._renderItem = function(ul, item) {
-                                var re = new RegExp('(' + this.term + ')', 'gi'),
+
+                                var re = new RegExp("(" + this.term + ")", "gi"),
                                     cls = 'ui-state-highlight',
                                     template = "<span class='" + (this.term.length > 0 ? cls : '') + "'>$1</span>",
                                     label = item.label.replace(re, template),
-                                    $li = $copado('<li/>').appendTo(ul);
+                                    $li = $copado("<li/>").appendTo(ul);
 
                                 // Create and return the custom menu item content.
-                                $copado('<div>')
+                                $copado("<div>")
                                     .html(label)
                                     .appendTo($li);
                                 return $li;
-                            };
+                            }
                         }
-                    })
-                    .focus(event => {
+
+                    }).focus((event) => {
                         if (event.currentTarget.value === '--None--') {
                             event.currentTarget.value = '';
                         }
@@ -504,6 +456,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
 
                 this._on(this.input, {
                     autocompleteselect: function(event, ui) {
+
                         ui.item.option.selected = true;
                         this._trigger('select', event, {
                             item: ui.item.option
@@ -511,35 +464,31 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                         $copado(`[id$=${inputHiddenId}]`).val(ui.item.option.value);
                         lockScreen();
                         renderTabsAfterObjectSelection();
-                        // this.input.blur();
+                       // this.input.blur();
                     },
                     autocompletechange: '_removeIfInvalid'
                 });
             },
 
             _source: function(request, response) {
-                var fieldVal = $copado('#mainObject')
-                    .siblings('span')
-                    .find('.ui-autocomplete-input')
-                    .val();
+
+                var fieldVal = $copado('#mainObject').siblings('span').find('.ui-autocomplete-input').val();
 
                 if (request.term.trim() == '' && fieldVal.length > 0) {
                     request.term = fieldVal;
                 }
                 var matcher = new RegExp($copado.ui.autocomplete.escapeRegex(request.term), 'i');
 
-                response(
-                    this.element.children('option').map(function() {
-                        var text = $copado(this).text();
-                        if (this.value && (!request.term || matcher.test(text))) {
-                            return {
-                                label: text,
-                                value: text,
-                                option: this
-                            };
-                        }
-                    })
-                );
+                response(this.element.children('option').map(function() {
+                    var text = $copado(this).text();
+                    if (this.value && (!request.term || matcher.test(text))) {
+                        return {
+                            label: text,
+                            value: text,
+                            option: this
+                        };
+                    }
+                }));
             },
 
             _removeIfInvalid: function(event, ui) {
@@ -553,11 +502,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                     valueLowerCase = value.toLowerCase(),
                     valid = false;
                 this.element.children('option').each(function() {
-                    if (
-                        $copado(this)
-                            .text()
-                            .toLowerCase() === valueLowerCase
-                    ) {
+                    if ($copado(this).text().toLowerCase() === valueLowerCase) {
                         this.selected = valid = true;
                         return false;
                     }
@@ -578,20 +523,6 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         $copado(`#${comboboxId}`).combobox();
     };
 
-    app.redirectToRelationalDiagramLWC = (dataTemplateId, namespace) => {
-        // for dev orgs it need to have c: but for namespace context in managed package it should be copado
-        namespace = namespace == '' ? 'c' : 'copado';
-        var compDefinition = {
-            componentDef: `${namespace}:addRelationalDiagramContainer`,
-            attributes: {
-                recordId: dataTemplateId
-            }
-        };
-        // Base64 encode the compDefinition JS object
-        var encodedCompDef = btoa(JSON.stringify(compDefinition));
-        window.open(`/one/one.app#${encodedCompDef}`, '_blank');
-    };
-
     var wholeResponse = [];
     var wholeArrayParam = [];
     var exportName = '';
@@ -601,9 +532,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         var regexValue;
         for (let i = 0; i < wholeResponse.length; i++) {
             var key = wholeResponse[i].templateUUId;
-            var newKey = ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-                (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
-            );
+            var newKey = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
             regexValue = new RegExp(key, 'g');
             dataStr = dataStr.replace(regexValue, newKey);
         }
@@ -627,7 +556,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             byteArrays.push(byteArray);
         }
 
-        var blob = new Blob(byteArrays, { type: contentType });
+        var blob = new Blob(byteArrays, {type: contentType});
         var blobUrl = URL.createObjectURL(blob);
         var exportFileDefaultName = exportName;
 
@@ -637,7 +566,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         linkElement.click();
     };
 
-    var createContentForEachTemplate = content => {
+    var createContentForEachTemplate = (content) => {
         var newContent = {
             objectFields: [],
             parentObjects: [],
@@ -647,7 +576,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         if (content.selectableFieldsMap) {
             var fields = content.selectableFieldsMap;
             var objFields = {};
-            for (var key in fields) {
+            for(var key in fields) {
                 var parentObjectApiNameMap = fields[key].parentObjectApiNameMap;
                 if (fields[key].isSelected && parentObjectApiNameMap && Object.keys(parentObjectApiNameMap).length == 0) {
                     objFields = {
@@ -655,42 +584,38 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                         apiName: fields[key].name
                     };
 
-                    if (fields[key].useAsExternalId) {
+                    if(fields[key].useAsExternalId) {
                         objFields['useAsExternalId'] = true;
                     }
 
-                    if (fields[key].contentValueUpdateValues) {
+                    if(fields[key].contentValueUpdateValues){
                         objFields['contentValueUpdateValues'] = fields[key].contentValueUpdateValues;
                     }
 
-                    if (fields[key].fieldContentUpdate && fields[key].fieldContentUpdate !== 'none') {
+                    if(fields[key].fieldContentUpdate && fields[key].fieldContentUpdate !== 'none') {
                         objFields['fieldContentUpdate'] = fields[key].fieldContentUpdate;
 
-                        if (fields[key].fieldContentUpdate === 'replace') {
-                            if (fields[key].replaceValue) {
+                        if(fields[key].fieldContentUpdate === 'replace') {
+                            if(fields[key].replaceValue) {
                                 objFields['replaceValue'] = fields[key].replaceValue;
                             }
 
-                            if (fields[key].replaceValueDate) {
+                            if(fields[key].replaceValueDate) {
                                 objFields['replaceValueDate'] = fields[key].replaceValueDate;
                             }
 
-                            if (fields[key].replaceValueDatetime) {
+                            if(fields[key].replaceValueDatetime) {
                                 objFields['replaceValueDatetime'] = fields[key].replaceValueDatetime;
                             }
 
-                            if (fields[key].replaceValueNumber && fields[key].replaceValueNumber > 0) {
+                            if(fields[key].replaceValueNumber && fields[key].replaceValueNumber > 0) {
                                 objFields['replaceValueNumber'] = fields[key].replaceValueNumber;
                             }
                         }
                     }
+
                     newContent.objectFields.push(objFields);
-                } else if (
-                    fields[key].isSelected &&
-                    parentObjectApiNameMap &&
-                    Object.keys(parentObjectApiNameMap).length != 0 &&
-                    (fields[key].deploymentTemplate !== 'Select Template' || Object.keys(parentObjectApiNameMap).indexOf('User') >= 0)
-                ) {
+                } else if (fields[key].isSelected && parentObjectApiNameMap && Object.keys(parentObjectApiNameMap).length != 0 && fields[key].deploymentTemplate !== 'Select Template') {
                     objFields = {
                         name: fields[key].label,
                         apiName: fields[key].name
@@ -700,7 +625,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             }
             // child object field mapping
             var childRelations = content.selectableChildRelationsMap;
-            for (var key in childRelations) {
+            for(var key in childRelations) {
                 if (childRelations[key].isSelected && childRelations[key].deploymentTemplate !== 'Select Template') {
                     objFields = {
                         field: childRelations[key].field,
@@ -713,12 +638,13 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             }
         }
         return newContent;
-    };
+    }
 
     var queryAttachment = (param, cbOnEnd) => {
         var returnObj = new Object();
         var wholeObj = new Object();
-        sforce.connection.query("SELECT Id,Name,Body FROM Attachment WHERE ParentId='" + param + "' AND Name = 'Template Detail' LIMIT 1", {
+        sforce.connection.query('SELECT Id,Name,Body FROM Attachment WHERE ParentId=\'' + param + '\' AND Name = \'Template Detail\' LIMIT 1', {
+
             onSuccess: function(res) {
                 var contents = null;
                 var relations = [];
@@ -752,8 +678,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                         templateMatchOwners: contents.dataTemplate.templateMatchOwners,
                         templateMatchRecordTypes: contents.dataTemplate.templateMatchRecordTypes,
                         templateContinueOnError: contents.dataTemplate.templateContinueOnError,
-                        templateActive: contents.dataTemplate.templateActive,
-                        templateAttachmentType: contents.dataTemplate.templateSelectedAttachmentType
+                        templateActive: contents.dataTemplate.templateActive
                     };
 
                     contents.queryFilterList.forEach(function(filterItem) {
@@ -765,16 +690,16 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
                             finalValue: filterItem.finalValue
                         };
 
-                        if (filterItem.input) {
+                        if(filterItem.input) {
                             filterObject['input'] = filterItem.input;
                         }
-                        if (filterItem.numberInput) {
+                        if(filterItem.numberInput) {
                             filterObject['numberInput'] = filterItem.numberInput;
                         }
-                        if (filterItem.dateInput) {
+                        if(filterItem.dateInput) {
                             filterObject['dateInput'] = filterItem.dateInput;
                         }
-                        if (filterItem.dateTimeInput) {
+                        if(filterItem.dateTimeInput) {
                             filterObject['dateTimeInput'] = filterItem.dateTimeInput;
                         }
 
@@ -803,7 +728,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
     app.exportTemplate = (arrayParam, mainName) => {
         wholeArrayParam = wholeArrayParam.concat(arrayParam);
         var deferredArray = [];
-        if (mainName) {
+        if(mainName) {
             exportName = mainName;
         }
 
@@ -830,7 +755,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             } else {
                 var newArrayParam = [];
                 for (let i = 0; i < nextArrayParam.length; i++) {
-                    if (wholeArrayParam.indexOf(nextArrayParam[i]) == -1) {
+                    if(wholeArrayParam.indexOf(nextArrayParam[i]) == -1) {
                         newArrayParam.push(nextArrayParam[i].templateUUId);
                     }
                 }
@@ -838,6 +763,7 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             }
         });
     };
+
 
     $(document).ready(() => {
         app.setSVGStruct();
@@ -848,4 +774,5 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         app.handleActiveCheckbox();
         app.tooltipHandler();
     });
+
 })(dts);

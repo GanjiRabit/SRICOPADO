@@ -154,12 +154,13 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>FinServ__Account__c</fullName>
+        <complianceGroup>HIPAA;GDPR;COPPA</complianceGroup>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>test Static code</inlineHelpText>
         <label>Account</label>
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Alerts</relationshipLabel>
@@ -170,15 +171,18 @@
     </fields>
     <fields>
         <fullName>FinServ__Active__c</fullName>
+        <complianceGroup>PII;PCI</complianceGroup>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>testactive..</inlineHelpText>
         <label>Active</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>FinServ__Claim__c</fullName>
+        <complianceGroup>GDPR</complianceGroup>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -306,6 +310,17 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XXXAlert__c</fullName>
+        <externalId>false</externalId>
+        <label>XXXAlert</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <label>Alert</label>

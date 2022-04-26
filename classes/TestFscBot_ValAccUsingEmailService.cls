@@ -11,11 +11,15 @@ public class TestFscBot_ValAccUsingEmailService {
         
         List<FscBot_ValidateAccntWithEmailCtrl.ValidationRequest> validationRequests = new List<FscBot_ValidateAccntWithEmailCtrl.ValidationRequest>();
         FscBot_ValidateAccntWithEmailCtrl.ValidationRequest request = new FscBot_ValidateAccntWithEmailCtrl.ValidationRequest();
+        
+        
         request.email ='test@test.com';
         request.lastDigitsOfAccount = '123123';
         request.noOfRetries = 0;
         request.verificationMethod = 'Email';
         validationRequests.add(request);
+        
+        
         
         Test.startTest();
         
@@ -25,18 +29,38 @@ public class TestFscBot_ValAccUsingEmailService {
         FscBot_ValidateAccntWithEmailCtrl.ValidationResponse response = responses.get(0);
         
         System.assertEquals(1, response.noOfAccounts, 'Unexpected number of accounts');
-        System.assertEquals(1, response.noOfRetries, 'Unexpected number of retries');        
+                
         System.assertEquals('0000123123', response.faccountNumber, 'Unexpected financial account number');        
-        System.assertEquals(false, response.transferToAgent, 'Unexpected transfer to agent');
+        
+        System.assertEquals(1, response.noOfRetries, 'Unexpected number of retries');
         System.assertEquals(false, response.retryEmailvalidation, 'Unexpected request to retry email validation');
         System.assertEquals(true, response.sendVerificationCode, 'Unexpected email validation failure');
         System.assertEquals('test@test.com', response.contact.Email, 'Unexpected email id');
         System.assertEquals('9999999999', response.contact.MobilePhone, 'Unexpected mobile number');        
-        
+        System.assertEquals(false, response.transferToAgent, 'Unexpected transfer to agent');
         Test.stopTest();
 
     }
 
+    
+    
+    @isTest static void testValidateAccountWithNullRequest(){
+        
+        Test.startTest();
+        
+        List<FscBot_ValidateAccntWithEmailCtrl.ValidationResponse> responses = FscBot_ValidateAccntWithEmailCtrl.validateAccountWithEmail(null);
+        System.assertEquals(1, responses.size(), 'Unexpected number of responses');
+        
+        FscBot_ValidateAccntWithEmailCtrl.ValidationResponse response = responses.get(0);
+        System.assertEquals(null, response.noOfAccounts, 'Unexpected number of accounts');
+        System.assertEquals(null, response.noOfRetries, 'Unexpected number of retries');        
+        System.assertEquals(null, response.transferToAgent, 'Unexpected transfer to agent');
+        System.assertEquals(null, response.retryEmailValidation, 'Unexpected request to retry phone validation');
+        System.assertEquals(null, response.sendVerificationCode, 'Unexpected mobile validation failure');
+        
+        Test.stopTest();
+
+    }
     @isTest static void testValidateAccountUsingWrongEmail(){
         
         List<FscBot_ValidateAccntWithEmailCtrl.ValidationRequest> validationRequests = new List<FscBot_ValidateAccntWithEmailCtrl.ValidationRequest>();
@@ -53,29 +77,12 @@ public class TestFscBot_ValAccUsingEmailService {
         System.assertEquals(1, responses.size(), 'Unexpected number of responses');
         
         FscBot_ValidateAccntWithEmailCtrl.ValidationResponse response = responses.get(0);
-        System.assertEquals(0, response.noOfAccounts, 'Unexpected number of accounts');
-        System.assertEquals(1, response.noOfRetries, 'Unexpected number of retries');        
         System.assertEquals(false, response.transferToAgent, 'Unexpected transfer to agent');
         System.assertEquals(true, response.retryEmailvalidation, 'Unexpected request to retry email validation');
         System.assertEquals(false, response.sendVerificationCode, 'Unexpected email validation failure');
+        System.assertEquals(0, response.noOfAccounts, 'Unexpected number of accounts');
+        System.assertEquals(1, response.noOfRetries, 'Unexpected number of retries');        
         
-        Test.stopTest();
-
-    }
-    
-    @isTest static void testValidateAccountWithNullRequest(){
-        
-        Test.startTest();
-        
-        List<FscBot_ValidateAccntWithEmailCtrl.ValidationResponse> responses = FscBot_ValidateAccntWithEmailCtrl.validateAccountWithEmail(null);
-        System.assertEquals(1, responses.size(), 'Unexpected number of responses');
-        
-        FscBot_ValidateAccntWithEmailCtrl.ValidationResponse response = responses.get(0);
-        System.assertEquals(null, response.noOfAccounts, 'Unexpected number of accounts');
-        System.assertEquals(null, response.noOfRetries, 'Unexpected number of retries');        
-        System.assertEquals(null, response.transferToAgent, 'Unexpected transfer to agent');
-        System.assertEquals(null, response.retryEmailValidation, 'Unexpected request to retry phone validation');
-        System.assertEquals(null, response.sendVerificationCode, 'Unexpected mobile validation failure');
         
         Test.stopTest();
 

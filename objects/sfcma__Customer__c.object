@@ -154,12 +154,12 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Read</externalSharingModel>
     <fields>
         <fullName>sfcma__AdditionalEmailAddresses__c</fullName>
         <deprecated>false</deprecated>
         <description>Stores the additional email addresses of the customer.</description>
         <externalId>false</externalId>
+        <inlineHelpText>test11</inlineHelpText>
         <label>Additional Email Addresses</label>
         <length>131072</length>
         <trackTrending>false</trackTrending>
@@ -216,6 +216,7 @@
     </fields>
     <fields>
         <fullName>sfcma__Email__c</fullName>
+        <complianceGroup>PII;GDPR</complianceGroup>
         <deprecated>false</deprecated>
         <description>Customer&apos;s current email address.</description>
         <externalId>false</externalId>

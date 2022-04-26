@@ -5,13 +5,13 @@
 <apex:page id="NewScratchOrgDefinition" standardController="copado__Scratch_Org_Definition__c"
            extensions="copado.ScratchOrgDefinitionController" lightningStyleSheets="true"
            docType="html-5.0" sidebar="true" applyBodyTag="false">
-        <apex:slds />
+    <apex:slds />
 
         <head>
             <title>New Scratch Org Definition Template</title>
             <c:IncludeStaticsResourceComponent addJQuery="true" />
         </head>
-        <body class="slds-scope">
+        <body>
             <apex:form >
                 <c:ScreenLocker msg="{!$Label.copado__loading}"/>
                 <apex:outputPanel layout="block" id="container">

@@ -154,11 +154,11 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Details__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>test2</inlineHelpText>
         <label>Details</label>
         <length>32768</length>
         <trackTrending>false</trackTrending>
@@ -181,7 +181,7 @@
         <fullName>copado__Org__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Credential</label>
+        <label>Org</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Apex Test Results</relationshipLabel>
         <relationshipName>Apex_Test_Results</relationshipName>

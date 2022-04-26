@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Developer_Hub_Org__c</fullName>
         <deprecated>false</deprecated>
@@ -167,7 +166,7 @@
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
-            <infoMessage>Only developer hub credentials can be selected</infoMessage>
+            <infoMessage>Only developer hub org credentials can be selected</infoMessage>
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>

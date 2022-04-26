@@ -751,7 +751,22 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>tessttt__c</field>
+            <field>Dummy__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Test_Field__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Test_Field2_c__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>New_Field_test__c</field>
             <table>Account</table>
         </columns>
         <masterLabel>Accounts</masterLabel>

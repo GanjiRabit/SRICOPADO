@@ -135,8 +135,7 @@
                     <div class="buttons">
                         <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__back}" action="{!goToPreviousStep}"  onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent,chevronRightPanel" />
                         <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__save_and_close}" action="{!saveStepAndClose}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent,chevronRightPanel" />
-                        <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="Review Filters" action="{!confirmAndGoNextStep}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent,chevronRightPanel" />
-                        <apex:commandButton styleClass="slds-button slds-button_brand" onClick="lockScreen();" value="{!$Label.copado__confirm_selection}" action="{!confirmAndGoOverride}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent,chevronRightPanel" />
+                        <apex:commandButton styleClass="slds-button slds-button_brand" onClick="lockScreen();" value="{!$Label.copado__confirm_selection}" action="{!confirmAndGoNextStep}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent,chevronRightPanel" />
                     </div>
                 </div>
                 <div class="slds-col slds-size_3-of-12"></div>

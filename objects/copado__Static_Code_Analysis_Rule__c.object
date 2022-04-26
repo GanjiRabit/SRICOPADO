@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Message__c</fullName>
         <deprecated>false</deprecated>
@@ -388,24 +387,8 @@
                     <default>false</default>
                     <label>WhileLoopsMustUseBraces</label>
                 </value>
-                <value>
-                    <fullName>OperationWithLimitsInLoop</fullName>
-                    <default>false</default>
-                    <label>OperationWithLimitsInLoop</label>
-                </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>copado__Rule_Reference__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Rule Reference</label>
-        <length>255</length>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__Static_Code_Analysis_Settings__c</fullName>

@@ -45,15 +45,18 @@
         <name>WM_Household_RelatedAccounts</name>
     </fieldSets>
     <fields>
+        <help><!-- Test validation test --></help>
         <label><!-- Account --></label>
         <name>FinServ__Account__c</name>
         <relationshipLabel><!-- Account Account Relations (Account) --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- true or false.55 --></help>
         <label><!-- Active --></label>
         <name>FinServ__Active__c</name>
     </fields>
     <fields>
+        <help><!-- 1234 --></help>
         <label><!-- Association Type --></label>
         <name>FinServ__AssociationType__c</name>
         <picklistValues>
@@ -70,6 +73,7 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- end date --></help>
         <label><!-- End Date --></label>
         <name>FinServ__EndDate__c</name>
     </fields>
@@ -78,6 +82,7 @@
         <name>FinServ__ExternalId__c</name>
     </fields>
     <fields>
+        <help><!-- test12345 --></help>
         <label><!-- InverseRelationship --></label>
         <name>FinServ__InverseRelationship__c</name>
         <relationshipLabel><!-- Account Account Relations --></relationshipLabel>

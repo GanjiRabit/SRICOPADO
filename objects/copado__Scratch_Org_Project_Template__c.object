@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Api_Version__c</fullName>
         <deprecated>false</deprecated>
@@ -304,7 +303,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Developer Hub Credential</label>
+        <label>Developer Hub Org</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -312,11 +311,10 @@
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
-            <infoMessage>Only developer hub credentials can be selected</infoMessage>
+            <infoMessage>Only developer hub org credentials can be selected</infoMessage>
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Scratch Org Project Templates (Developer Hub Org)</relationshipLabel>
         <relationshipName>Scratch_Org_Artifacts_Templates</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -413,9 +411,9 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Source Credential</label>
+        <label>Source Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Scratch Org Project Templates (Source Credential)</relationshipLabel>
+        <relationshipLabel>Scratch Org Project Templates (Source Org Credential)</relationshipLabel>
         <relationshipName>Scratch_Org_Project_Templates</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>

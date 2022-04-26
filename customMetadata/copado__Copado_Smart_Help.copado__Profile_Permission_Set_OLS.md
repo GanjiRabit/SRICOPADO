@@ -3,16 +3,8 @@
     <label>Profile Permission Set OLS</label>
     <protected>false</protected>
     <values>
-        <field>copado__Active__c</field>
-        <value xsi:type="xsd:boolean">true</value>
-    </values>
-    <values>
         <field>copado__Base_Page__c</field>
         <value xsi:type="xsd:string">GitCommitChanges</value>
-    </values>
-    <values>
-        <field>copado__Help_Text_Url__c</field>
-        <value xsi:nil="true"/>
     </values>
     <values>
         <field>copado__Help_Text__c</field>
@@ -21,10 +13,6 @@
     <values>
         <field>copado__Triggering_Action__c</field>
         <value xsi:type="xsd:string">Copado Metadata Grid selection</value>
-    </values>
-    <values>
-        <field>copado__Triggering_Metadata_Items__c</field>
-        <value xsi:nil="true"/>
     </values>
     <values>
         <field>copado__Triggering_Value__c</field>

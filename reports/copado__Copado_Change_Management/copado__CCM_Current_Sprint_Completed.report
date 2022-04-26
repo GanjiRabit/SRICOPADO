@@ -58,7 +58,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>100.0</value>
+            <value>100</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

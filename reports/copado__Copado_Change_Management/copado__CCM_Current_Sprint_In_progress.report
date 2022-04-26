@@ -58,7 +58,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>100.0</value>
+            <value>100</value>
         </criteriaItems>
         <criteriaItems>
             <column>copado__User_Story__c.copado__Status__c</column>

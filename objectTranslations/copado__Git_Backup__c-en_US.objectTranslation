@@ -90,7 +90,7 @@
     </fields>
     <fields>
         <help><!-- A validated Org Credential used to retrieve the metadata that will be committed to the specified Branch in the Git Snapshot. --></help>
-        <label><!-- Credential --></label>
+        <label><!-- Org Credential --></label>
         <name>copado__Org__c</name>
         <relationshipLabel><!-- Git Snapshots --></relationshipLabel>
     </fields>

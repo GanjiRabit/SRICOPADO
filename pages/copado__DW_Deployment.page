@@ -16,10 +16,11 @@
         var currentStepValue = '{!currentStepValue}';
 
         var Copado_Licenses = {!CurrentUserLicenses};
+
         var renderGridForError = () => {
             var openErrorPanel = $copado('[id$=statusAction]').val();
             if (openErrorPanel == 'Error') {
-                var jobId = '{!JSENCODE(DeploymentJobId)}';
+                var jobId = '{!DeploymentJobId}';
                 dw.prepareErrorGrid(jobId);
             }
             dw.buttonOnComplete();
@@ -27,7 +28,7 @@
 
         $copado(document).ready(function() {
             startPoller();
-            var depJobId = "{!JSENCODE(DeploymentJobId)}";
+            var depJobId = "{!DeploymentJobId}";
             if (depJobId.length > 0) {
                 dw.prepareErrorGrid(depJobId);
             }
@@ -290,9 +291,7 @@
                             </apex:outputPanel>
 
                             <div class="buttons slds-m-top--xx-large">
-                                <apex:outputPanel layout="none" rendered="{!!isRollback}">
-                                    <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__review_source_target}" action="{!goToSourceStep}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent" />
-                                </apex:outputPanel>
+                                <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__review_source_target}" action="{!goToSourceStep}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent" />
                                 <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!IF(deploymentInterface.StepGeneralHeader == $Label.copado__new_data_deployment, $Label.copado__review_data_template, $Label.copado__review_metadata)}" action="{!goToSelectChangesStep}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent" />
                                 <apex:outputPanel layout="none" rendered="{!deploymentActionName == 'validation'}">
                                     <apex:commandButton styleClass="slds-button slds-button_brand" onClick="lockScreen();" value="{!$Label.copado__restart_validation}" action="{!deploymentDMLs}" onComplete="restartDeployment();" reRender="nothingtorender" />

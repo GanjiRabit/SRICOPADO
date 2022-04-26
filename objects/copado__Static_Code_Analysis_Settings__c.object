@@ -58,8 +58,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Standard</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
@@ -154,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Cloud_Organization__c</fullName>
         <deprecated>false</deprecated>
@@ -216,15 +214,6 @@ On-premise SonarQube requires your SonarQube instance to be accesible through in
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>copado__ReportIssuesFromLatestCommit__c</fullName>
-        <defaultValue>true</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Report Issues From Latest Commit</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <label>Static Code Analysis Settings</label>
     <listViews>

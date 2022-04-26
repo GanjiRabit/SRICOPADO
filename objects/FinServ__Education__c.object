@@ -161,7 +161,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>FinServ__Contact__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>

@@ -18,6 +18,7 @@
         <name>Message__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Severity --></label>
         <name>Severity__c</name>
         <picklistValues>

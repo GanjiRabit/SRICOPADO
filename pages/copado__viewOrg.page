@@ -9,8 +9,7 @@
         <c:WizardUtils />
         <c:IncludeStaticsResourceComponent addJquery="true" />
         <script type="text/javascript">
-            var Copado_Licenses = {!CurrentUserLicenses}; 
-
+            var Copado_Licenses = {!CurrentUserLicenses};
         </script>
         <c:IncludeConnectionJsComponent />
         <apex:stylesheet value="{!IF($User.UIThemeDisplayed == 'Theme4d',URLFOR($Resource.copado__CopadoLightningCSS),'')}" />
@@ -73,22 +72,22 @@
         </style>
 
         <script>
-                function openOrg() {
-                    var url = "{!urlfor('/apex/' + jsencode(namespace) + 'ScratchOrgOpen?id=' + copado__Org__c.Id)}";
-                    var win = window.open(url);
-                }
+            function openOrg() {
+                var url = "{!urlfor('/apex/' + jsencode(namespace) + 'ScratchOrgOpen?id=' + copado__Org__c.Id)}";
+                var win = window.open(url);
+            }
             function openApexTestResultsSummary() {
                 if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)) {
-                    sforce.one.navigateToURL('/apex/{!JSENCODE(namespace)}OrgApexTestResultsSummary?id={!copado__Org__c.Id}');
+                    sforce.one.navigateToURL('/apex/{!namespace}OrgApexTestResultsSummary?id={!copado__Org__c.Id}');
                 } else {
-                    window.location.href = '/apex/{!JSENCODE(namespace)}OrgApexTestResultsSummary?id={!copado__Org__c.Id}';
+                    window.location.href = '/apex/{!namespace}OrgApexTestResultsSummary?id={!copado__Org__c.Id}';
                 }
             }
             function openStaticCodeAnalysisSummary() {
                 if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)) {
-                    sforce.one.navigateToURL('/apex/{!JSENCODE(namespace)}StaticCodeAnalysisSummary?id={!copado__Org__c.Id}&entity=Org');
+                    sforce.one.navigateToURL('/apex/{!namespace}StaticCodeAnalysisSummary?id={!copado__Org__c.Id}&entity=Org');
                 } else {
-                    window.location.href = '/apex/{!JSENCODE(namespace)}StaticCodeAnalysisSummary?id={!copado__Org__c.Id}&entity=Org';
+                    window.location.href = '/apex/{!namespace}StaticCodeAnalysisSummary?id={!copado__Org__c.Id}&entity=Org';
                 }
             }
 
@@ -197,7 +196,7 @@
 
                 <apex:form id="theForm" rendered="{!AND(showOptions,!showError)}" styleClass="copado-lightning-container" style="padding-top:12px;">
                     <c:ScreenLocker msg="{!$Label.copado__loading}" />
-                    <apex:pageBlock id="pb_createOrg" mode="view" helpUrl="https://docs.copado.com/org-credentials/how-to-create-an-org-credential"
+                    <apex:pageBlock id="pb_createOrg" mode="view" helpUrl="https://docs.copa.do/org-credentials/how-to-create-an-org-credential"
                         helpTitle="{!$Label.copado__help_for_this_page}">
                         <div>
                             <center>
@@ -275,6 +274,7 @@
                             }
                             //if not is forced to be opened
                             !location.href.split('_mtf')[1] &&
+                                //close the metadata filtes 
                                 twistSection($copado('[id$="typesSection"]').find('img')[0]);
 
                         </script>

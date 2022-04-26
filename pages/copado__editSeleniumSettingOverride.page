@@ -8,20 +8,20 @@
         <c:IncludeJqxResourceComponent addjqxAlljs="true" addjqxBasecss="true"/>
         <apex:includeScript value="{!URLFOR($Resource.utilsV2) }" />
         <script type="text/javascript" src="{!URLFOR($Resource.seleniumSettings)}"></script>
-
+        
         <script type="text/javascript">
             var Copado_Licenses = {!CurrentUserLicenses};
         </script>
         <c:IncludeConnectionJsComponent />
         <apex:stylesheet value="{!IF($User.UIThemeDisplayed == 'Theme4d',URLFOR($Resource.copado__CopadoLightningCSS),'')}" />
     </head>
-
+    
     <body>
         <div class="copado-lightning-VF">
             <apex:sectionHeader id="theHeader" title="Copado Selenium Testing" subtitle="{!IF(ISBLANK(copado__Selenium_Settings__c.Name), $Label.copado__new+' '+$ObjectType.copado__Selenium_Settings__c.Label, copado__Selenium_Settings__c.Name)}" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"/>
             <apex:pageMessages id="pmessage" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"/>
             <apex:outputPanel layout="block" styleClass="slds-scope copado-lightning-container" rendered="{!$User.UIThemeDisplayed == 'Theme4d'}">
-
+                    
                 <div class="slds-page-header">
                   <apex:outputPanel layout="block" id="pageMessages">
                     <apex:pagemessages id="msg"/>
@@ -45,13 +45,13 @@
                     <!-- ACTION BUTTONS -->
                     <div class="slds-col slds-no-flex slds-grid slds-align-top ">
                       <div class="slds-button-group" role="group">
-
+                        
                       </div>
                     </div>
                     <!-- / ACTION BUTTONS -->
                     <div class="slds-col slds-no-flex slds-grid slds-align-top ">
                       <div class="slds-button-group" role="group">
-
+                        
                       </div>
                     </div>
                     <!-- / ACTION BUTTONS -->
@@ -81,18 +81,18 @@
                             <apex:inputField id="if_provider" value="{!copado__Selenium_Settings__c.copado__Provider__c}" onchange="seleniumSettings.getPlatforms(this)" style="width:50%;" required="true" />
                             <apex:inputField id="if_wd_url" value="{!copado__Selenium_Settings__c.copado__Webdriver_URL__c}" required="true" style="width:50%;" />
                             <apex:inputField id="if_wd_proxy" value="{!copado__Selenium_Settings__c.copado__Webdriver_Proxy__c}" />
-                            <apex:inputField id="if_desiredCaps" value="{!copado__Selenium_Settings__c.copado__Desired_Capabilities__c}" style="width:50%;" rendered="true"/>
+                            <apex:inputField id="if_desiredCaps" value="{!copado__Selenium_Settings__c.copado__Desired_Capabilities__c}" style="width:50%;" rendered="false"/><!-- NOT PART OF BETA FOR NOW -->
                             <apex:inputField id="if_orgCred" value="{!copado__Selenium_Settings__c.copado__Default_Org_Credential__c}" required="{!isDefOrgCredRequired}" style="width:50%;" />
                             <script>
                                 (function(){
-                                    var hasId = "{!JSENCODE(copado__Selenium_Settings__c.Id)}";
+                                    var hasId = "{!copado__Selenium_Settings__c}";
                                     if($copado('[id$="if_name"]').val().length > 0 && hasId.length == 0){
                                         $copado('[id$="if_name"]').prop('disabled',true).prop('readOnly',true);
                                     }
                                 })()
                             </script>
                         </apex:pageBlockSection>
-
+                        
                         <br />
                         <div id="jqxGrid" style="display:none;">
                             <div id="loading">
@@ -124,7 +124,7 @@
                     seleniumSettings.labels.RESOLUTION = copadoLabels.RESOLUTION;
                     seleniumSettings.labels.SELECTALL = copadoLabels.select_all;
                     seleniumSettings.labels.UNSELECTALL = copadoLabels.unselect_all;
-
+                    
                     seleniumSettings.data.selectedProvider = '{!JSENCODE(copado__Selenium_Settings__c.copado__Provider__c)}';
                     seleniumSettings.data.selections = '{!JSENCODE(copado__Selenium_Settings__c.copado__Selected_Platforms__c)}';
                     seleniumSettings.doCallout();
@@ -135,7 +135,7 @@
                         'page': '/EditSeleniumSettingOverride',
                         'title': 'Selenium Setting Edit Override'
                     });
-                </script>
+                </script> 
             </apex:outputPanel>
         </div>
     </body>

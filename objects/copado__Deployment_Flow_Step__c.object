@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Automatically_Merge_and_Deploy__c</fullName>
         <defaultValue>false</defaultValue>
@@ -517,15 +516,6 @@
     <pluralLabel>Pipeline Connections</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
-    <validationRules>
-        <fullName>copado__EnvironmentAndPipelinePlatformMustBeSame</fullName>
-        <active>true</active>
-        <errorConditionFormula>OR( 
-    BLANKVALUE(TEXT(copado__Destination_Environment__r.copado__Platform__c), &apos;Salesforce&apos;) &lt;&gt; BLANKVALUE(TEXT(copado__Deployment_Flow__r.copado__Platform__c), &apos;Salesforce&apos;), 
-    BLANKVALUE(TEXT(copado__Source_Environment__r.copado__Platform__c), &apos;Salesforce&apos;) &lt;&gt; BLANKVALUE(TEXT(copado__Deployment_Flow__r.copado__Platform__c), &apos;Salesforce&apos;)
-)</errorConditionFormula>
-        <errorMessage>Platform for pipeline and Environment must match</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Select_Branch</fullName>

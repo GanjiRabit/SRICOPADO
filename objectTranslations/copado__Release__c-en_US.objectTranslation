@@ -5,10 +5,6 @@
         <name>copado__Copado_Header_Fields</name>
     </fieldSets>
     <fields>
-        <label><!-- BlockSave --></label>
-        <name>BlockSave__c</name>
-    </fields>
-    <fields>
         <label><!-- Promote --></label>
         <name>CICD_Promote__c</name>
     </fields>
@@ -20,20 +16,8 @@
             <translation><!-- All --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>CRM</masterLabel>
-            <translation><!-- CRM --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Devops</masterLabel>
             <translation><!-- Devops --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>ISRO</masterLabel>
-            <translation><!-- ISRO --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>NASA</masterLabel>
-            <translation><!-- NASA --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -53,18 +37,6 @@
     <fields>
         <label><!-- CICD Sync Release --></label>
         <name>CICD_SyncRelease__c</name>
-    </fields>
-    <fields>
-        <label><!-- Current Release --></label>
-        <name>Current_Release__c</name>
-    </fields>
-    <fields>
-        <label><!-- Is Current Release --></label>
-        <name>Is_Current_Release__c</name>
-    </fields>
-    <fields>
-        <label><!-- Is Hotfix --></label>
-        <name>Is_Hotfix__c</name>
     </fields>
     <fields>
         <help><!-- All user story feature branches are created out of the main branch of the Deployment Flow. If a Release base branch is specified, all feature branches of user stories linked to the Release will be created out of the base branch. --></help>
@@ -109,25 +81,13 @@
         <label><!-- Version --></label>
         <name>copado__Version__c</name>
     </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>copadoccmint__External_Id__c</name>
-    </fields>
     <validationRules>
         <errorMessage><!-- The format of the Release Name must be &quot;SFDC &quot; + Release date formatted as YYYY-MM-DD.  If this a hotfix release then add &quot;Hotfix&quot; as a suffix. --></errorMessage>
         <name>CICD_ReleaseNameFormatCheck</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Only 1 release can be Current Release at a time --></errorMessage>
-        <name>OnlyOneCurrentRelease</name>
-    </validationRules>
-    <validationRules>
         <errorMessage><!-- Start Date can not be greater than release date --></errorMessage>
         <name>StartDate_ReleaseDate_Check</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- please dont include spaces in version field --></errorMessage>
-        <name>copado__Validate_spaces_in_version</name>
     </validationRules>
     <webLinks>
         <label><!-- Mass_add_to_Release --></label>

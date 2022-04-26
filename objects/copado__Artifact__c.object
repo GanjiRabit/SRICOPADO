@@ -141,17 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>copado__PackageCompactLayout</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>copado__PackageCompactLayout</fullName>
-        <fields>Name</fields>
-        <fields>copado__Pipeline__c</fields>
-        <fields>copado__Package_Type__c</fields>
-        <fields>copado__Artifact_Version__c</fields>
-        <fields>copado__DefaultBranch__c</fields>
-        <fields>copado__DefaultPath__c</fields>
-        <label>Package Compact Layout</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -163,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Artifact_Repository__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
@@ -202,45 +191,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>copado__DataJSON__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Data JSON</label>
-        <length>131072</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>7</visibleLines>
-    </fields>
-    <fields>
-        <fullName>copado__DefaultBranch__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
-        <label>Default Branch</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__DefaultPath__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
-        <label>Default Path</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -251,18 +201,6 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
-        <fullName>copado__LastJobExecutionId__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Last Job Execution Id</label>
-        <length>18</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__No_Namespace__c</fullName>
@@ -282,9 +220,8 @@
         <externalId>false</externalId>
         <inlineHelpText>The org credential where the metadata of the Artifact is going to be retrieved from, for unlocked packages and 2GP.
 The org credential where the unmanaged package is created from.</inlineHelpText>
-        <label>Source Credential</label>
+        <label>Source Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Artifacts</relationshipLabel>
         <relationshipName>Artifacts</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -348,20 +285,6 @@ The org credential where the unmanaged package is created from.</inlineHelpText>
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>copado__Pipeline__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Pipeline</label>
-        <referenceTo>copado__Deployment_Flow__c</referenceTo>
-        <relationshipLabel>Packages</relationshipLabel>
-        <relationshipName>Packages</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Sfdc_Login_Url__c</fullName>
@@ -1061,206 +984,6 @@ The org credential where the unmanaged package is created from.</inlineHelpText>
             </values>
         </picklistValues>
     </recordTypes>
-    <recordTypes>
-        <fullName>copado__User_Story_Bundle</fullName>
-        <active>true</active>
-        <description>User Story Bundle</description>
-        <label>User Story Bundle</label>
-        <picklistValues>
-            <picklist>copado__Package_Type__c</picklist>
-            <values>
-                <fullName>Second-Generation Package</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unlocked</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>copado__Source_Api_Version__c</picklist>
-            <values>
-                <fullName>1%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>10%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>11%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>12%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>13%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>14%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>15%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>16%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>17%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>18%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>19%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>20%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>21%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>22%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>23%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>24%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>25%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>26%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>27%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>28%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>29%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>3%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>30%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>31%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>32%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>33%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>34%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>35%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>36%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>37%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>38%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>39%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>4%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>40%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>41%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>42%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>43%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>44%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>45%2E0</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>5%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>6%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>7%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>8%2E0</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>9%2E0</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
@@ -1274,16 +997,10 @@ The org credential where the unmanaged package is created from.</inlineHelpText>
         <active>true</active>
         <description>Package Repository null control depending of Package Type</description>
         <errorConditionFormula>IF(
-	AND(	
-		RecordType.DeveloperName != &apos;User_Story_Bundle&apos;,
-		OR(
-			AND(
-				ISBLANK(copado__Artifact_Repository__c), 
-				(ISPICKVAL(copado__Package_Type__c, &apos;Unlocked&apos;) || ISPICKVAL(copado__Package_Type__c, &apos;Second-Generation Package&apos;))
-			),
-			(NOT(ISBLANK(copado__Artifact_Repository__c)) &amp;&amp; ISPICKVAL(copado__Package_Type__c, &apos;First-Generation Package&apos;) )
-		)
-	), true, false
+OR(
+AND(ISBLANK(copado__Artifact_Repository__c), 
+(ISPICKVAL(copado__Package_Type__c, &apos;Unlocked&apos;) || ISPICKVAL(copado__Package_Type__c, &apos;Second-Generation Package&apos;))),
+(NOT(ISBLANK(copado__Artifact_Repository__c)) &amp;&amp; ISPICKVAL(copado__Package_Type__c, &apos;First-Generation Package&apos;))), true, false
 )</errorConditionFormula>
         <errorDisplayField>copado__Artifact_Repository__c</errorDisplayField>
         <errorMessage>Repository relation for packages is required for Unlocked and Second Generation Packages and should be empty for First Second Generation Packages</errorMessage>

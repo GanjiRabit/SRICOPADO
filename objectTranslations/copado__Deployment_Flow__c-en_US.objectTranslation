@@ -28,12 +28,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- Select the Job Template that implements the commit action for this Pipeline --></help>
-        <label><!-- Commit Job Template --></label>
-        <name>copado__CommitJobTemplate__c</name>
-        <relationshipLabel><!-- Pipelines (Commit Job Template) --></relationshipLabel>
-    </fields>
-    <fields>
         <help><!-- Selected DX mode will determine scratch metadata sources. --></help>
         <label><!-- Copado DX Mode --></label>
         <name>copado__Copado_DX_Mode__c</name>
@@ -55,19 +49,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Deployment Automation --></label>
-        <lookupFilter>
-            <errorMessage><!-- Only active automation templates are allowed --></errorMessage>
-        </lookupFilter>
-        <name>copado__Deployment_Automation__c</name>
-        <relationshipLabel><!-- Pipelines (Deployment Automation) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Deployment Job Template --></label>
-        <name>copado__Deployment_Job_Template__c</name>
-        <relationshipLabel><!-- Pipelines (Deployment Job Template) --></relationshipLabel>
-    </fields>
-    <fields>
         <help><!-- If checked, Deployment Flow Steps best practices validations will be disabled. --></help>
         <label><!-- Disable Validations --></label>
         <name>copado__Disable_Validations__c</name>
@@ -75,11 +56,6 @@
     <fields>
         <label><!-- Enable Copado DX --></label>
         <name>copado__Enable_Copado_DX__c</name>
-    </fields>
-    <fields>
-        <help><!-- If unchecked, Copado will stop applying Smart Conflict resolution during the promotion process and users will have to manually resolve conflicts again in every subsequent promotion. --></help>
-        <label><!-- Enable Smart Conflict Resolution --></label>
-        <name>copado__Enable_Smart_Conflict_Resolution__c</name>
     </fields>
     <fields>
         <help><!-- If checked, Environment names must equal their corresponding Branches in the Deployment Flow Steps. --></help>
@@ -168,44 +144,11 @@ This value will prefill the order by field on related Promotion record creation 
         <name>copado__Order_by__c</name>
     </fields>
     <fields>
-        <label><!-- Platform --></label>
-        <name>copado__Platform__c</name>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Salesforce</masterLabel>
-            <translation><!-- Salesforce --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Promotion Automation --></label>
-        <lookupFilter>
-            <errorMessage><!-- Only active automation templates are allowed --></errorMessage>
-        </lookupFilter>
-        <name>copado__Promotion_Automation__c</name>
-        <relationshipLabel><!-- Pipelines --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Promotion Job Template --></label>
-        <name>copado__Promotion_Job_Template__c</name>
-        <relationshipLabel><!-- Pipelines --></relationshipLabel>
-    </fields>
-    <fields>
         <help><!-- Static Code Analysis settings used whenever the analysis is run in Environments or User Stories linked to the Deployment Flow. --></help>
         <label><!-- Static Code Analysis Settings --></label>
         <name>copado__Static_Code_Analysis_Settings__c</name>
         <relationshipLabel><!-- Pipelines --></relationshipLabel>
     </fields>
-    <validationRules>
-        <errorMessage><!-- A pipeline cannot have the same job template for Commit, Promote and Deploy. --></errorMessage>
-        <name>copado__Unique_Job_Template</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- A pipeline cannot have the same template for both Promote and Deploy --></errorMessage>
-        <name>copado__Unique_Template_for_promote_and_deploy</name>
-    </validationRules>
     <webLinks>
         <label><!-- Find_Replace_Rule_Editor --></label>
         <name>copado__Find_Replace_Rule_Editor</name>
@@ -221,10 +164,6 @@ This value will prefill the order by field on related Promotion record creation 
     <webLinks>
         <label><!-- Manage_Regression_Tests --></label>
         <name>copado__Manage_Regression_Tests</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Pipeline_Wizard --></label>
-        <name>copado__Pipeline_Wizard</name>
     </webLinks>
     <webLinks>
         <label><!-- Select_Main_Branch --></label>

@@ -188,10 +188,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -232,6 +228,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -248,12 +248,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -281,7 +285,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -292,12 +295,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -410,10 +415,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -454,6 +455,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -470,12 +475,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -503,7 +512,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -514,12 +522,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -636,10 +646,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -680,6 +686,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -696,12 +706,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -730,7 +744,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -741,12 +754,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -859,10 +874,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -903,6 +914,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -919,12 +934,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -952,7 +971,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -963,12 +981,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1085,10 +1105,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1129,6 +1145,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -1145,12 +1165,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1179,7 +1203,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1190,12 +1213,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1308,10 +1333,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1352,6 +1373,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -1368,12 +1393,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1401,7 +1430,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1412,12 +1440,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1534,10 +1564,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1578,6 +1604,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -1594,12 +1624,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1628,7 +1662,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1639,12 +1672,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1757,10 +1792,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1801,6 +1832,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -1817,12 +1852,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1850,7 +1889,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1861,12 +1899,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -1882,7 +1922,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>false</hasProductFamily>
         <isAmount>true</isAmount>
-        <isAvailable>true</isAvailable>
+        <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
         <masterLabel>Opportunity Revenue Schedule Date</masterLabel>
         <name>OpportunityRevenueScheduleDate</name>
@@ -1983,10 +2023,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2027,6 +2063,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -2043,12 +2083,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2077,7 +2121,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2088,12 +2131,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -2109,7 +2154,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>false</hasProductFamily>
         <isAmount>false</isAmount>
-        <isAvailable>true</isAvailable>
+        <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
         <masterLabel>Opportunity Quantity Schedule Date</masterLabel>
         <name>OpportunityQuantityScheduleDate</name>
@@ -2206,10 +2251,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2250,6 +2291,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -2266,12 +2311,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2299,7 +2348,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2310,12 +2358,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -2331,7 +2381,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>true</hasProductFamily>
         <isAmount>true</isAmount>
-        <isAvailable>true</isAvailable>
+        <isAvailable>false</isAvailable>
         <isQuantity>false</isQuantity>
         <masterLabel>Line Item Revenue Schedule Date</masterLabel>
         <name>LineItemRevenueScheduleDate</name>
@@ -2432,10 +2482,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2476,6 +2522,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -2492,12 +2542,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2526,7 +2580,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2537,12 +2590,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
@@ -2558,7 +2613,7 @@
         <forecastingDateType>ScheduleDate</forecastingDateType>
         <hasProductFamily>true</hasProductFamily>
         <isAmount>false</isAmount>
-        <isAvailable>true</isAvailable>
+        <isAvailable>false</isAvailable>
         <isQuantity>true</isQuantity>
         <masterLabel>Line Item Quantity Schedule Date</masterLabel>
         <name>LineItemQuantityScheduleDate</name>
@@ -2655,10 +2710,6 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>SYNCEDQUOTE.NAME</field>
-            <label>Synced Quote</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2699,6 +2750,10 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004QYl3</field>
+            <label>Checkbox</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N3i00000C6JkG</field>
             <label>External Referrer</label>
         </opportunityListFieldsLabelMappings>
@@ -2715,12 +2770,16 @@
             <label>Internal Referrer</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcS</field>
-            <label>Opp_AutoNumber</label>
+            <field>00Ng0000004fUGT</field>
+            <label>Opp_ExternalId</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1F00000JvLcX</field>
-            <label>Opp_ExternalId</label>
+            <field>00Ng0000004QYJx</field>
+            <label>Test</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00Ng0000004hWML</field>
+            <label>test2</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2748,7 +2807,6 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
-            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2759,12 +2817,14 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
+            <field>00Ng0000004QYl3</field>
             <field>00N3i00000C6JkG</field>
             <field>00N3i00000C6JkE</field>
             <field>00N3i00000C6JkF</field>
             <field>00N3i00000C6JkH</field>
-            <field>00N1F00000JvLcS</field>
-            <field>00N1F00000JvLcX</field>
+            <field>00Ng0000004fUGT</field>
+            <field>00Ng0000004QYJx</field>
+            <field>00Ng0000004hWML</field>
         </opportunityListFieldsUnselectedSettings>
     </forecastingTypeSettings>
     <globalAdjustmentsSettings>

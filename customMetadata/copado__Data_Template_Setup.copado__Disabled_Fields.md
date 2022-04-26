@@ -4,6 +4,6 @@
     <protected>false</protected>
     <values>
         <field>copado__API_Names__c</field>
-        <value xsi:type="xsd:string">OwnerId,CreatedDate,LastModifiedDate,SystemModstamp,LastActivityDate,LastReferencedDate,LastViewedDate,IsDeleted,IsArchived,CreatedById,LastModifiedById,Id</value>
+        <value xsi:type="xsd:string">OwnerId,CreatedDate,LastModifiedDate,SystemModstamp,LastActivityDate,LastReferencedDate,LastViewedDate,IsDeleted,IsArchived,CreatedById,LastModifiedById,Id,BillingAddress,ShippingAddress</value>
     </values>
 </CustomMetadata>

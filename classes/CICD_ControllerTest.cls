@@ -14,7 +14,6 @@ public with sharing class CICD_ControllerTest {
         copado__Release__c rel = [SELECT Id, Name from copado__Release__c LIMIT 1];   
        
         CICD_Controller.getCopadoStories(rel.Id, null);
-        CICD_Controller.getCopadoStoriesByEnv(rel.Id);
         CICD_Controller.upsertStories(rel.Name, rel.Id);   
         CICD_Controller.getReleaseById(rel.Id);
 
@@ -30,11 +29,6 @@ public with sharing class CICD_ControllerTest {
        
         CICD_Controller.markPostDeploysComplete(storyIdStr); 
         CICD_Controller.checkStoryChanges(storyIdStr);
-
-        List<String> emails = new List<String>();
-        emails.add('test@aol.com');
-        String emailStr = JSON.serialize(emails);
-        CICD_Controller.notifyTeam(emailStr, storyIdStr, 'subject', 'comments', 'releasename'); 
 
         Test.stopTest();        
     

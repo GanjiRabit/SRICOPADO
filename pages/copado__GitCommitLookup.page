@@ -86,16 +86,6 @@
                     console.info('Mode set to ', me.mode);
                     me.doSearch();
                 },
-                escape: function(s){
-                    var tagsToReplace = {
-                        '&': '&amp;',
-                        '<': '&lt;',
-                        '>': '&gt;'
-                    };
-                    return s.replace(/[&<>]/g, function(tag) {
-                        return tagsToReplace[tag] || tag;
-                    });
-                },
                 objectifyRecord: function(r, t){
                     var me = copadoApp;
                     var record = {},
@@ -108,7 +98,7 @@
                     record.r = isGitCommit? r[me.ns+'Git_Repository__r'].Name :r[me.ns+'Git_Backup__r'][me.ns+'Git_Repository__r'].Name;
                     record.b = isGitCommit? r[me.ns+'Branch__c'] : r[me.ns+'Git_Backup__r'][me.ns+'Branch__c'];
                     record.d = r[me.ns+'Commit_Date__c'];
-                    record.m = me.escape(r[me.ns+'Commit_Message__c']);
+                    record.m = r[me.ns+'Commit_Message__c'];
                     record.i = r[me.ns+'Commit_Id__c'];
                     record.rid = isGitCommit? r[me.ns+'Git_Repository__c'] : r[me.ns+'Git_Backup__r'][me.ns+'Git_Repository__c'];
                     record.cid = r.Id;
@@ -239,6 +229,7 @@
                     $grid = $copado('<div>');
 
                     $copado("#jqxgrid").html($grid);
+
                     $grid.jqxGrid({
                         width: '100%',
                         source: dataAdapter,
@@ -305,7 +296,7 @@
 
     <script>
             $copado(document).ready(function() {
-                copadoApp.ns = '{!JSENCODE(namespace)}';
+                copadoApp.ns = '{!namespace}';
                 copadoApp.init();
             });
         </script>

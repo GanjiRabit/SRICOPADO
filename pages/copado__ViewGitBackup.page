@@ -33,7 +33,7 @@
              * @type {Object}
              */
             var copadoApp = {
-                ns: '{!JSENCODE(namespace)}',
+                ns: '{!namespace}',
                 data: {
                     snapshotPermissions: '{!JSENCODE(Git_Backup__c.Git_Snapshot_Permissions__c)}'
                 },
@@ -147,8 +147,8 @@
                     <c:JobsManager matchingKeys="GIT-{!copado__Git_Backup__c.copado__Git_Repository__c}-{!copado__Git_Backup__c.copado__Branch__c}" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"
                     />
 
-                    <apex:pageBlock id="pb_viewGitBackup" mode="detail" helpUrl="https://docs.copado.com/git-snapshot/git-snapshot-overview"
-                        helpTitle="{!$Label.copado__help_for_this_page}" rendered="{!AND(showOptions,!showError)}" title="{!$Label.copado__details}">
+                    <apex:pageBlock id="pb_viewGitBackup" mode="detail" helpUrl="https://docs.copa.do/git-snapshot/git-snapshot-overview" helpTitle="{!$Label.copado__help_for_this_page}"
+                        rendered="{!AND(showOptions,!showError)}" title="{!$Label.copado__details}">
                         <apex:pageblockButtons id="pbbs" rendered="{!isBackupEnabled}">
                             <apex:commandButton id="btnEdit" value="{!$Label.site.edit}" action="{!edit}" disabled="{!!isValid}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}"
                             />

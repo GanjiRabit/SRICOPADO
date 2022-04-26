@@ -9,11 +9,13 @@
         <value>Waarschuwingen</value>
     </caseValues>
     <fields>
+        <help><!-- test Static code --></help>
         <label><!-- Account --></label>
         <name>FinServ__Account__c</name>
         <relationshipLabel><!-- Alerts --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- testactive.. --></help>
         <label><!-- Active --></label>
         <name>FinServ__Active__c</name>
     </fields>
@@ -75,6 +77,10 @@
     <fields>
         <label><!-- Source System Id --></label>
         <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- XXXAlert --></label>
+        <name>XXXAlert__c</name>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Naam van waarschuwing</nameFieldLabel>

@@ -9,7 +9,7 @@
                 'title': 'Selenium Getting Started Page'
             });
         </script>
-        <apex:stylesheet value="{!IF($User.UIThemeDisplayed == 'Theme4d',URLFOR($Resource.copado__CopadoLightningCSS),'')}" /> 
+        <apex:stylesheet value="{!IF($User.UIThemeDisplayed == 'Theme4d',URLFOR($Resource.copado__CopadoLightningCSS),'')}" />
     </head>
 
     <body>
@@ -43,7 +43,7 @@
                     <!-- ACTION BUTTONS -->
                     <div class="slds-col slds-no-flex slds-grid slds-align-top ">
                       <div class="slds-button-group" role="group">
-                        
+
                       </div>
                     </div>
                     <!-- / ACTION BUTTONS -->
@@ -57,17 +57,17 @@
                     <!-- Header details buffer-->
                   </div>
                 </div>
-            </apex:outputPanel>            
-            
+            </apex:outputPanel>
+
             <apex:outputPanel layout="block" styleClass="copado-lightning-container copado-lightning-radius">
-                
+
                 <apex:outputPanel rendered="{!$Setup.copado__Copado_License__c.copado__Enable_CST__c}">
                     <br/>
                     <div id="copadoRecorderExtensionInstalled" style="display:none">
                         <apex:form >
                             <apex:outputPanel rendered="{!APIKey!=''}" layout="none">
                                 <!-- non-classic button -->
-                                <apex:commandButton action="{!cstBindExtensionToOrg}" html-href="{!LinkCstBindExtensionToOrg}" value="{!$Label.copado__selenium_getting_started_bind} ({!$Organization.Name})" immediate="true" styleClass="slds-button slds-button--neutral" rendered="{!$User.UIThemeDisplayed != 'Theme3'}" />
+                                <apex:commandButton action="{!cstBindExtensionToOrg}" value="{!$Label.copado__selenium_getting_started_bind} ({!$Organization.Name})" immediate="true" styleClass="slds-button slds-button--neutral" rendered="{!$User.UIThemeDisplayed != 'Theme3'}" />
                                 <!-- classic button -->
                                 <apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme3'}" layout="none">
                                 <a id="copadoRecorderExtensionNotInstalled1" href="{!LinkCstBindExtensionToOrg}" class="slds-button slds-button--neutral"><apex:outputText value="{!$Label.copado__selenium_getting_started_bind} ({!$Organization.Name})"></apex:outputText></a>
@@ -75,7 +75,7 @@
                             </apex:outputPanel>
                             <!-- common to both, disabled button -->
                             <apex:commandButton action="{!cstBindExtensionToOrg}" value="{!$Label.copado__selenium_getting_started_apikey}" rendered="{!APIKey=''}" immediate="true" onclick="return false;" styleClass="slds-button slds-button--neutral" />
-                        </apex:form>                        
+                        </apex:form>
                     </div>
 
                     <div id="copadoRecorderExtensionNotInstalled">
@@ -101,7 +101,7 @@
                     </div>
                     <p>&nbsp;</p>
                 </apex:outputPanel>
-                
+
                 <iframe frameBorder="0" src="https://docs.copado.com/copado-selenium-testing/selenium-setup" style="width: 100%; min-height: 1200px"></iframe>
             </apex:outputPanel>
         </div>

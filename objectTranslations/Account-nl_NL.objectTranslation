@@ -21,28 +21,56 @@
         <name>WM_Client_Relationship_Groups</name>
     </fieldSets>
     <fields>
+        <label><!-- A2B --></label>
+        <name>A2B__c</name>
+    </fields>
+    <fields>
         <label><!-- AAA2 --></label>
         <name>AAA2__c</name>
     </fields>
     <fields>
-        <label><!-- AAA --></label>
+        <help><!-- BKPR --></help>
+        <label><!-- AAA3 --></label>
+        <name>AAA3__c</name>
+    </fields>
+    <fields>
+        <label><!-- AAABK1 --></label>
         <name>AAA__c</name>
     </fields>
     <fields>
-        <label><!-- ADD AutoNumber --></label>
-        <name>ADD_AutoNumber__c</name>
+        <help><!-- Test123456677 --></help>
+        <label><!-- ABCD2 --></label>
+        <name>ABCD__c</name>
     </fields>
     <fields>
+        <help><!-- Test123456 --></help>
+        <label><!-- ABC --></label>
+        <name>ABC__c</name>
+    </fields>
+    <fields>
+        <help><!-- test --></help>
         <label><!-- ADD External ID --></label>
         <name>ADD_External_ID__c</name>
     </fields>
     <fields>
-        <label><!-- Abs --></label>
-        <name>Abs__c</name>
+        <label><!-- Account test --></label>
+        <name>Account_test__c</name>
     </fields>
     <fields>
-        <label><!-- Dummy1 --></label>
-        <name>Dummy_1__c</name>
+        <label><!-- BLANK --></label>
+        <name>BLANK__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEMOFIELD --></label>
+        <name>DEMOFIELD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destructive change --></label>
+        <name>Destructive_change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dummy --></label>
+        <name>Dummy__c</name>
     </fields>
     <fields>
         <label><!-- External_19_03 --></label>
@@ -740,20 +768,148 @@
         <name>FinServ__WalletShare__c</name>
     </fields>
     <fields>
+        <label><!-- FlowCustom --></label>
+        <name>FlowCustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last name --></label>
+        <name>Last_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middlename --></label>
+        <name>Middlename__c</name>
+    </fields>
+    <fields>
+        <label><!-- NewAccField --></label>
+        <name>NewAccField__c</name>
+    </fields>
+    <fields>
+        <label><!-- NewCustom1 --></label>
+        <name>NewCustom1__c</name>
+    </fields>
+    <fields>
+        <label><!-- NewCustom --></label>
+        <name>NewCustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Field test --></label>
+        <name>New_Field_test__c</name>
+    </fields>
+    <fields>
+        <label><!-- OOPS --></label>
+        <name>OOPS__c</name>
+    </fields>
+    <fields>
+        <label><!-- test Field 2 --></label>
+        <name>Test_Field2_c__c</name>
+    </fields>
+    <fields>
         <label><!-- Test Field --></label>
         <name>Test_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Text --></label>
+        <name>Test_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test picklist --></label>
+        <name>Test_picklist__c</name>
+        <picklistValues>
+            <masterLabel>Test Value1</masterLabel>
+            <translation><!-- Test Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Value2</masterLabel>
+            <translation><!-- Test Value2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Value3</masterLabel>
+            <translation><!-- Test Value3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Value4</masterLabel>
+            <translation><!-- Test Value4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test the back promotion 3 --></label>
+        <name>Test_the_back_promotion_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test the back promotion --></label>
+        <name>Test_the_back_promotion__c</name>
+    </fields>
+    <fields>
+        <label><!-- accountserialno --></label>
+        <name>accountserialno__c</name>
+    </fields>
+    <fields>
+        <label><!-- checktopic --></label>
+        <name>checktopic__c</name>
+    </fields>
+    <fields>
+        <label><!-- coreected list --></label>
+        <name>coreected_list__c</name>
+    </fields>
+    <fields>
+        <label><!-- date of birth --></label>
+        <name>date_of_birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- dateamount --></label>
+        <name>dateamount__c</name>
+    </fields>
+    <fields>
+        <label><!-- label1 --></label>
+        <name>label1__c</name>
+    </fields>
+    <fields>
+        <label><!-- listofaccounts --></label>
+        <name>listofaccounts__c</name>
+        <picklistValues>
+            <masterLabel>account name</masterLabel>
+            <translation><!-- account name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>accountno</masterLabel>
+            <translation><!-- accountno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>bank details</masterLabel>
+            <translation><!-- bank details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>personal account</masterLabel>
+            <translation><!-- personal account --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- newTest --></label>
+        <name>newTest__c</name>
     </fields>
     <fields>
         <label><!-- shell --></label>
         <name>shell__c</name>
     </fields>
     <fields>
-        <label><!-- tessttt --></label>
-        <name>tessttt__c</name>
+        <label><!-- test Back 4 --></label>
+        <name>test_Back_4__c</name>
     </fields>
     <fields>
-        <label><!-- test Account --></label>
-        <name>test_Account__c</name>
+        <label><!-- test QG --></label>
+        <name>test_QG__c</name>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation><!-- test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test1</masterLabel>
+            <translation><!-- test1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- testnum --></label>
+        <name>testnum__c</name>
     </fields>
     <recordTypes>
         <label><!-- Account --></label>

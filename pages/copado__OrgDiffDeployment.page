@@ -12,14 +12,14 @@
 
         <script>
             //todo get url by method
-            var diffDeployment = {}; 
+            var diffDeployment = {};
             $copado(function(){
                 diffDeployment.apiUrl = '{!JSENCODE(deploy_url)}';
                 diffDeployment.onSuccess = function(d){
                     $copado('.js-diffDeployment').fadeOut();
                     console.log(11,d);
                     if(d.deploymentId != null){
-                        window.location.replace('/'+d.deploymentId+'/e');   
+                        window.location.replace('/'+d.deploymentId+'/e');
                     }
                     else{
                         $copado('.js-diffDeployment').fadeOut();
@@ -36,7 +36,7 @@
                     showMessage('ERROR',d);
                     //TODO: save result
                 };
-                
+
                 dw.u.getRemote(diffDeployment.apiUrl,diffDeployment.onSuccess,false,false, diffDeployment.onError);
 
             });
@@ -46,11 +46,11 @@
     <body>
         <apex:form id="theForm" styleClass="copado-lightning-container">
         <apex:sectionHeader title="{!$ObjectType.copado__OrgDiff__c.Label} {!$ObjectType.copado__Deployment__c.Label}" subtitle="{!copado__OrgDiff__c.Name}"/>
-        
+
         <apex:actionFunction name="showMessage" action="{!showMessage}" rerender="pg_all">
             <apex:param name="errorLevel" assignTo="{!errorLevel}" value="" />
             <apex:param name="messageName" assignTo="{!messageName}" value="" />
-        </apex:actionFunction> 
+        </apex:actionFunction>
         <apex:pageBlock helpUrl="https://docs.copado.com/org-differences/org-differences-overview" helpTitle="{!$Label.copado__help_for_this_page}" id="pg_all" title="{!$Label.copado__details}">
             <apex:pageMessages />
             <apex:pageBlockSection title="">

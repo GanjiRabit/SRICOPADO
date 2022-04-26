@@ -31,14 +31,6 @@
                 <behavior>Edit</behavior>
                 <field>CurrencyIsoCode</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Copado_Block_Step__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Block_Step_Update__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -145,17 +137,6 @@
         <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>copado__Scan_Start__c</fields>
-        <fields>copado__Scan_End__c</fields>
-        <fields>copado__Status__c</fields>
-        <fields>copado__Findings__c</fields>
-        <fields>copado__Environment__c</fields>
-        <fields>copado__Highest_Severity__c</fields>
-        <fields>copado__Highest_Rule_Action__c</fields>
-        <relatedList>copado__Compliance_Scan_Result__c.copado__Deployment_Step__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
@@ -183,7 +164,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h3i000002cNcQ</masterLabel>
+        <masterLabel>00h0Y000000l6Vo</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

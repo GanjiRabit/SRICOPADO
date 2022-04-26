@@ -8,7 +8,7 @@
         <apex:stylesheet value="{!URLFOR($Resource.copado__CopadoLightningCSS)}" />
         <apex:includeScript value="{!URLFOR($Resource.utilsV2) }"/>
         <apex:includeScript value="{!URLFOR($Resource.UserStorySelectedMetadata) }"/>
-        <script> 
+        <script>
             var Copado_Licenses = {!CurrentUserLicenses};
         </script>
         <c:IncludeConnectionJsComponent />
@@ -40,15 +40,14 @@
                 server: {
                     USgitMetadataUrl: '{!JSENCODE(urlBase)}userStoryGitMetadata/__USERSTORYID__{!JSENCODE(urlParameters)}&repositoryId=__repoId__&branch=__branch__'
                 },
-                ns: '{!JSENCODE(namespace)}',
-                platform: '{!JSENCODE(copado__User_Story__c.Org_Credential__r.copado__Platform__c)}',
+                ns: '{!JSENCODE(namespace)}'
             };
             var copadoApp = {
                 init: function(){
                     USselectedMetadata.init(_config);
                 }
             }
-            copadoApp.init( );
+            copadoApp.init();
         </script>
     </apex:form>
     

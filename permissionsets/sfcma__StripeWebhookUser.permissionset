@@ -329,11 +329,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>sfcma__Invoice__c.sfcma__TaxAmount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>sfcma__Invoice__c.sfcma__Transaction__c</field>
         <readable>true</readable>

@@ -89,7 +89,7 @@
                 var j;
                 var selectDatasetName = 'dataset-' + row.Id + '-' + rowId;
                 row._selectDatasetName = selectDatasetName;
-                var options_datasetnames = ['<select id="' + selectDatasetName + '" data-uid="' + rowId + '" onchange="datasetChanged(this)">', '<option value="">{!JSENCODE($Label.NONE_SELECTED)}</option>'];
+                var options_datasetnames = ['<select id="' + selectDatasetName + '" data-uid="' + rowId + '" onchange="datasetChanged(this)">', '<option value="">{!$Label.NONE_SELECTED}</option>'];
                 row.datasets = row.datasets || [];
 
                 for (j = 0; j < row.datasets.length; j++) {
@@ -108,8 +108,8 @@
                     '<td class="dataCell" id="row' + order + '-col2">' + name + '</td>' +
                     '<td class="dataCell" id="row' + order + '-col2">' + row.Version + '</td>' +
                     '<td class="dataCell" id="row' + rowId + '-col3">' + (options_datasetnames.join('\n')) + '</td>' +
-                    '<td class="dataCell"><button id="btnViewEdit-' + order + '" class="btn' + copadoLightningClass + '" onClick="cps.testcaseViewEdit(\'' + rowId + '\');return false;">{!JSENCODE($Label.VIEW)}</button></td>' +
-                    '<td class="dataCell"><button id="btnDeleted-' + order + '" class="btn' + copadoLightningClass + '" onClick="cps.removeRow(\'' + rowId + '\');return false;">{!JSENCODE($Label.REMOVE)}</button></td>' +
+                    '<td class="dataCell"><button id="btnViewEdit-' + order + '" class="btn' + copadoLightningClass + '" onClick="cps.testcaseViewEdit(\'' + rowId + '\');return false;">{!$Label.VIEW}</button></td>' +
+                    '<td class="dataCell"><button id="btnDeleted-' + order + '" class="btn' + copadoLightningClass + '" onClick="cps.removeRow(\'' + rowId + '\');return false;">{!$Label.REMOVE}</button></td>' +
                     '</tr>';
             };
 
@@ -139,7 +139,7 @@
 
             }
 
-            cps.data.jsonSelectedTestCases = JSON.parse('{!JSENCODE(LookupTestCases)}');
+            cps.data.jsonSelectedTestCases = {!LookupTestCases};
 
             $copado.each(cps.data.jsonSelectedTestCases, function(idx, v) {
                 v.uid = 'uid' + (uid_counter++);
@@ -252,7 +252,7 @@
                     <!-- ACTION BUTTONS -->
                     <div class="slds-col slds-no-flex slds-grid slds-align-top ">
                       <div class="slds-button-group" role="group">
-
+                        
                       </div>
                     </div>
                     <!-- / ACTION BUTTONS -->
@@ -268,7 +268,7 @@
                 </div>
             </apex:outputPanel>
 
-            <apex:outputPanel layout="block" styleClass="copado-lightning-container copado-lightning-radius">
+            <apex:outputPanel layout="block" styleClass="copado-lightning-container copado-lightning-radius">     
                 <apex:form id="theForm" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_CST__c}" styleClass="copado-lightning-container" style="padding-top:12px;">
                     <apex:pageBlock id="pb" title="{!$Label.copado__add_remove_test_case_description}">
                         <apex:pageBlockButtons >
@@ -286,7 +286,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table id="resultTable" border="0" cellspacing="0" cellpadding="0" style="{!IF($User.UIThemeDisplayed=='Theme3','width:100%','')}" class="list">
+                                                <table id="resultTable" boder="0" cellspacing="0" cellpadding="0" style="{!IF($User.UIThemeDisplayed=='Theme3','width:100%','')}" class="list">
                                                     <thead>
                                                         <tr class="headerRow" scope="col">
                                                             <th></th>
@@ -316,13 +316,13 @@
                     </script>
                 </apex:form>
                 <link href="{!URLFOR($Resource.CopadoChangeManagement, 'Assets/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css')}" rel="stylesheet" type="text/css" />
-
+            	
                 <script>
                     ga('send', 'pageview', {
                         'page': '/SeleniumTestCasePerSuite',
                         'title': 'Selenium Test Case Per Suite'
                     });
-                </script>
+                </script> 
             </apex:outputPanel>
         </div>
     </body>

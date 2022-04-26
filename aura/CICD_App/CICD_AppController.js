@@ -20,7 +20,6 @@
                     if(response.length > 0){
                         component.set('v.release',response[0]);
                         helper.loadStories(component, event, helper);
-                        helper.loadStoriesForBtns(component, event, helper);
                     }else{ //NO RESULTS..SHOW ERROR
                         component.set('v.appError', 'No Release with that Id found');
                         component.set('v.loading',false);
@@ -86,32 +85,6 @@
     closeSuccessMsg : function(component, event, helper){
         component.set('v.successMsg', '');
         helper.checkStoryChanges(component, event, helper);
-    }, 
-
-    showEnvModal : function(component, event, helper){
-
-        var env = event.getSource().get("v.value"); 
-        var stories = [];
-
-        switch(env){
-            case 'DEV': 
-                stories = component.get('v.storiesDev');
-            break;
-            case 'INT': 
-                stories = component.get('v.storiesInt');
-            break;
-            case 'UAT': 
-                stories = component.get('v.storiesUat');
-            break;
-            case 'PROD': 
-                stories = component.get('v.storiesProd');
-            break;
-        }
-
-        component.set('v.envStories',stories);
-        component.set('v.envModal',true);
     }
-
-    
     
 })

@@ -26,10 +26,6 @@ global class CopadoSmartHelpController {
         get;
         set;
     }
-    global String tipValue {
-        get;
-        set;
-    }
     global String vfPageName {
         get;
         set;
@@ -55,10 +51,6 @@ global class SmartHelp {
         get;
         set;
     }
-    global String helpUrl {
-        get;
-        set;
-    }
     global String label {
         get;
         set;
@@ -72,9 +64,6 @@ global class SmartHelp {
         set;
     }
     global SmartHelp(String apiName, String label, String t_action, String t_value, String helpText) {
-
-    }
-    global SmartHelp(String apiName, String label, String t_action, String t_value, String helpText, String helpUrl) {
 
     }
 }

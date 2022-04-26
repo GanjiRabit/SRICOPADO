@@ -7,13 +7,14 @@
                 margin: 1px !important;
                 padding: 2px !important;
             }
+
         </style>
     </head>
     <body class="slds-scope">
     <apex:form >
         <apex:pageMessages id="msg" />
         <!-- SLDS-Grid -->
-        <apex:outputPanel id="headerGrid" layout="block" styleClass="slds-grid" rendered="{!!showLicenseError}">
+        <apex:outputPanel id="headerGrid" layout="block" styleClass="slds-grid">
             <apex:outputPanel id="flowSteps" layout="block" styleClass="slds-tabs--path" html-role="application">
                 <ul class="slds-tabs--path__nav" role="listbox" aria-orientation="horizontal">
                     <apex:variable value="0" var="stepIndex" />

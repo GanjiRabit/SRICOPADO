@@ -44,7 +44,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>false</isUnlocked>
             <operator>greaterThan</operator>
-            <value>1.00</value>
+            <value>1</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account$RecordType</column>

@@ -154,7 +154,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
         <fullName>WM_Household_RelatedAccounts</fullName>
         <description>Household profile&apos;s Relationships tab</description>
@@ -187,9 +186,11 @@
     </fieldSets>
     <fields>
         <fullName>FinServ__Account__c</fullName>
+        <complianceGroup>PII;HIPAA;COPPA</complianceGroup>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>Test validation test</inlineHelpText>
         <label>Account</label>
         <referenceTo>Account</referenceTo>
         <relationshipName>RelatedFromAccounts</relationshipName>
@@ -202,6 +203,7 @@
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>true or false.55</inlineHelpText>
         <label>Active</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -210,6 +212,7 @@
         <fullName>FinServ__AssociationType__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>1234</inlineHelpText>
         <label>Association Type</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -238,8 +241,10 @@
     </fields>
     <fields>
         <fullName>FinServ__EndDate__c</fullName>
+        <complianceGroup>HIPAA;GDPR;PCI</complianceGroup>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>end date</inlineHelpText>
         <label>End Date</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -259,10 +264,12 @@
     </fields>
     <fields>
         <fullName>FinServ__InverseRelationship__c</fullName>
+        <complianceGroup>PII;HIPAA;GDPR</complianceGroup>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Uniquely identifies the relationship between Account__c and RelatedAccount__c so that it can be referenced by a trigger that creates the inverse relationship record.</description>
         <externalId>false</externalId>
+        <inlineHelpText>test12345</inlineHelpText>
         <label>InverseRelationship</label>
         <referenceTo>FinServ__AccountAccountRelation__c</referenceTo>
         <relationshipLabel>Account Account Relations</relationshipLabel>

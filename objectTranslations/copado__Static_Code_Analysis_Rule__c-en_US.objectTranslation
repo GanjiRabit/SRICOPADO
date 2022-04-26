@@ -153,10 +153,6 @@
             <translation><!-- NcssTypeCount --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>OperationWithLimitsInLoop</masterLabel>
-            <translation><!-- OperationWithLimitsInLoop --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>StdCyclomaticComplexity</masterLabel>
             <translation><!-- StdCyclomaticComplexity --></translation>
         </picklistValues>
@@ -172,10 +168,6 @@
             <masterLabel>WhileLoopsMustUseBraces</masterLabel>
             <translation><!-- WhileLoopsMustUseBraces --></translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Rule Reference --></label>
-        <name>copado__Rule_Reference__c</name>
     </fields>
     <fields>
         <label><!-- Static Code Analysis Settings --></label>

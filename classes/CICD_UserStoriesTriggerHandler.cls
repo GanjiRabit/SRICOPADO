@@ -15,32 +15,24 @@ public class CICD_UserStoriesTriggerHandler implements CICD_TriggerInterface {
     }
 
     public void beforeInsert(){
-        
-        //remove stories with manual deployment
-        List<copado__User_Story__c> stories = CICD_Utils.removeManual(trigger.new);
+         //Step - 1
+         CICD_UserStoriesTriggerActions.populateOwner( trigger.new );
 
-        //Step - 1
-        CICD_UserStoriesTriggerActions.populateOwner( stories );
-
-        //Step - 2       
-        CICD_UserStoriesTriggerActions.defaultUsCredentials( stories );
+         //Step - 2       
+         CICD_UserStoriesTriggerActions.defaultUsCredentials( trigger.new );
          
 
     }
 
     public void beforeUpdate(){
-
-        Map<id,copado__User_Story__c> triggerNewMap = CICD_Utils.removeManualMap((Map<id,copado__User_Story__c>) trigger.newMap);
-        Map<id,copado__User_Story__c> triggerOldMap = CICD_Utils.removeManualMap((Map<id,copado__User_Story__c>) trigger.oldMap);
-
          //Step -1
-         CICD_UserStoriesTriggerActions.checkForReopenAndDefault( triggerNewMap, triggerOldMap );
+         CICD_UserStoriesTriggerActions.checkForReopenAndDefault( (Map<id,copado__User_Story__c>) trigger.newMap, (Map<id,copado__User_Story__c>) trigger.oldMap );
 
          //Step-2
-         CICD_UserStoriesTriggerActions.resetPostDeploymentCheck( triggerNewMap, triggerOldMap ); 
+         CICD_UserStoriesTriggerActions.resetPostDeploymentCheck( (Map<id,copado__User_Story__c>) trigger.newMap, (Map<id,copado__User_Story__c>) trigger.oldMap  ); 
 
          //Step -3
-         CICD_UserStoriesTriggerActions.udpateWorkflowStatus( triggerNewMap, triggerOldMap );
+         CICD_UserStoriesTriggerActions.udpateWorkflowStatus( (Map<id,copado__User_Story__c>) trigger.newMap, (Map<id,copado__User_Story__c>) trigger.oldMap );
     }
 
     public void beforeDelete(){
@@ -52,12 +44,8 @@ public class CICD_UserStoriesTriggerHandler implements CICD_TriggerInterface {
     }
 
     public void afterUpdate(){
-        Map<id,copado__User_Story__c> triggerNewMap = CICD_Utils.removeManualMap((Map<id,copado__User_Story__c>) trigger.newMap);
-        Map<id,copado__User_Story__c> triggerOldMap = CICD_Utils.removeManualMap((Map<id,copado__User_Story__c>) trigger.oldMap); 
         //Step -1
-       if( !System.isBatch() && !System.isQueueable() && !System.isFuture() && !CICD_BatchJob.isSyncFromJira) CICD_UserStoriesTriggerActions.updateJira(triggerNewMap, triggerOldMap );
-        
-        CICD_UserStoriesTriggerActions.updateServiceNow((Map<id,copado__User_Story__c>) trigger.newMap , (Map<id,copado__User_Story__c>)trigger.OldMap);
+       if( !System.isBatch() && !System.isQueueable() && !System.isFuture() ) CICD_UserStoriesTriggerActions.updateJira( (Map<id,copado__User_Story__c>) trigger.newMap, (Map<id,copado__User_Story__c>) trigger.oldMap );
     }   
 
     public void afterDelete(){

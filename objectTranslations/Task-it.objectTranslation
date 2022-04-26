@@ -14,20 +14,13 @@
         <name>FinServ__NextSteps__c</name>
     </fields>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Objectives --></label>
         <name>FinServ__Objectives__c</name>
     </fields>
     <fields>
         <label><!-- Regarding --></label>
         <name>FinServ__Regarding__c</name>
-    </fields>
-    <fields>
-        <label><!-- Channel --></label>
-        <name>thankful__Channel__c</name>
-    </fields>
-    <fields>
-        <label><!-- Is Internal --></label>
-        <name>thankful__IsInternal__c</name>
     </fields>
     <recordTypes>
         <description><!-- Default task record type for Advisor profile --></description>

@@ -5,7 +5,7 @@
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Attachment Actions --></label>
+        <label><!-- Attachment Options --></label>
         <name>copado__Attachment_Options__c</name>
         <picklistValues>
             <masterLabel>Insert Attachments</masterLabel>
@@ -35,10 +35,6 @@
             <masterLabel>Continue deployment until blocker issue</masterLabel>
             <translation><!-- Continue deployment until blocker issue --></translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Stop deployment on first issue</masterLabel>
-            <translation><!-- Stop deployment on first issue --></translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Description --></label>
@@ -65,7 +61,7 @@
         <name>copado__Max_Record_Limit__c</name>
     </fields>
     <fields>
-        <label><!-- Template Schema Credential --></label>
+        <label><!-- Template Source Org --></label>
         <name>copado__Template_Source_Org__c</name>
         <relationshipLabel><!-- Data Templates --></relationshipLabel>
     </fields>

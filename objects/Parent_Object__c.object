@@ -152,19 +152,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
-    <fields>
-        <fullName>Child_Object__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Child Object</label>
-        <referenceTo>Child_Object__c</referenceTo>
-        <relationshipLabel>Parent Objects</relationshipLabel>
-        <relationshipName>Parent_Objects</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
@@ -237,6 +224,12 @@
     <label>Parent Object</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>Phone__c</columns>
+        <columns>Status__c</columns>
+        <columns>Parent_Object__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

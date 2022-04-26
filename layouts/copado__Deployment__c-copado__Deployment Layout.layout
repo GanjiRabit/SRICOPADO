@@ -31,10 +31,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>ExternalID__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>CurrencyIsoCode</field>
             </layoutItems>
         </layoutColumns>
@@ -193,12 +189,6 @@
         <relatedList>copado__Deployment_History__c.copado__Deployment__c</relatedList>
         <sortField>NAME</sortField>
         <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>copado__Project__c</fields>
-        <fields>copado__Status__c</fields>
-        <relatedList>copado__Promotion__c.Deployment__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>

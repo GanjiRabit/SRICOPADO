@@ -154,14 +154,12 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>copado__Compliance_Rule__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Compliance Rule</label>
         <referenceTo>copado__Compliance_Rule__c</referenceTo>
-        <relationshipLabel>Compliance Findings</relationshipLabel>
         <relationshipName>Compliance_Incidences</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -184,22 +182,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>copado__Rule_Error_Message__c</fullName>
-        <deprecated>false</deprecated>
-        <description>This field is populated with error message from its Compliance Rule Error Message</description>
-        <externalId>false</externalId>
-        <label>Rule Error Message</label>
-        <length>32768</length>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
         <fullName>copado__Severity__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>TEXT(copado__Compliance_Rule__r.copado__Severity__c)</formula>
-        <label>Rule Severity</label>
+        <label>Severity</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>

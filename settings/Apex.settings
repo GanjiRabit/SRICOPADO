@@ -4,14 +4,14 @@
     <enableApexAccessRightsPref>false</enableApexAccessRightsPref>
     <enableApexApprovalLockUnlock>false</enableApexApprovalLockUnlock>
     <enableApexCtrlImplicitWithSharingPref>false</enableApexCtrlImplicitWithSharingPref>
-    <enableApexPropertyGetterPref>true</enableApexPropertyGetterPref>
-    <enableAuraApexCtrlAuthUserAccessCheckPref>true</enableAuraApexCtrlAuthUserAccessCheckPref>
+    <enableApexPropertyGetterPref>false</enableApexPropertyGetterPref>
+    <enableAuraApexCtrlAuthUserAccessCheckPref>false</enableAuraApexCtrlAuthUserAccessCheckPref>
     <enableAuraApexCtrlGuestUserAccessCheckPref>false</enableAuraApexCtrlGuestUserAccessCheckPref>
     <enableCompileOnDeploy>false</enableCompileOnDeploy>
     <enableDisableParallelApexTesting>false</enableDisableParallelApexTesting>
     <enableDoNotEmailDebugLog>false</enableDoNotEmailDebugLog>
     <enableGaplessTestAutoNum>false</enableGaplessTestAutoNum>
-    <enableMngdCtrlActionAccessPref>true</enableMngdCtrlActionAccessPref>
+    <enableMngdCtrlActionAccessPref>false</enableMngdCtrlActionAccessPref>
     <enableNonCertifiedApexMdCrud>false</enableNonCertifiedApexMdCrud>
     <enableSecureNoArgConstructorPref>false</enableSecureNoArgConstructorPref>
 </ApexSettings>

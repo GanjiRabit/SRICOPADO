@@ -260,7 +260,6 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>ReadWriteTransfer</externalSharingModel>
     <fieldSets>
         <fullName>FSC_Business_Referrals_Made</fullName>
         <description>Business Client profile&apos;s Referrals tab</description>

@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
-        <label><!-- Bundle --></label>
-        <name>copado__Bundle</name>
-    </fieldSets>
-    <fieldSets>
-        <label><!-- Bundle Sync Fields --></label>
-        <name>copado__Bundle_Sync_Fields</name>
-    </fieldSets>
-    <fieldSets>
         <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
     <fieldSets>
         <label><!-- Commit Files Information --></label>
         <name>copado__Commit_Files_Information</name>
-    </fieldSets>
-    <fieldSets>
-        <label><!-- Commit Page --></label>
-        <name>copado__Commit_Page</name>
     </fieldSets>
     <fieldSets>
         <label><!-- Copado Header Fields --></label>
@@ -41,10 +29,6 @@
         <name>copado__PromotionRelatedList</name>
     </fieldSets>
     <fieldSets>
-        <label><!-- Promotion Related List Datatable --></label>
-        <name>copado__Promotion_Related_List_Datatable</name>
-    </fieldSets>
-    <fieldSets>
         <label><!-- SprintWall_MassUpdate --></label>
         <name>copado__SprintWall_MassUpdate</name>
     </fieldSets>
@@ -64,26 +48,6 @@
         <label><!-- Work Manager Relations --></label>
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
-    <fields>
-        <label><!-- Active PR Count --></label>
-        <name>Active_PR_Count__c</name>
-    </fields>
-    <fields>
-        <label><!-- Agile Accelerator ID --></label>
-        <name>Agile_Accelerator_ID__c</name>
-    </fields>
-    <fields>
-        <label><!-- Approved PR Count --></label>
-        <name>Approved_PR_Count__c</name>
-    </fields>
-    <fields>
-        <label><!-- BlockRelease --></label>
-        <name>BlockRelease__c</name>
-    </fields>
-    <fields>
-        <label><!-- Block Save --></label>
-        <name>Block_Save__c</name>
-    </fields>
     <fields>
         <label><!-- ByPassPRValidation --></label>
         <name>ByPassPRValidation__c</name>
@@ -254,45 +218,8 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- CI Job Status --></label>
-        <name>CIJobStatus__c</name>
-    </fields>
-    <fields>
-        <label><!-- CI Job Test Cases Passed --></label>
-        <name>CI_Job_Test_Cases_Passed__c</name>
-    </fields>
-    <fields>
-        <label><!-- CI Job Total Test Cases --></label>
-        <name>CI_Job_Total_Test_Cases__c</name>
-    </fields>
-    <fields>
-        <label><!-- Case --></label>
-        <name>Case__c</name>
-        <relationshipLabel><!-- User Stories --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- User Story Title --></label>
-        <name>Concatenate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Copado Block Save --></label>
-        <name>Copado_Block_Save__c</name>
-    </fields>
-    <fields>
-        <label><!-- CountOfCommits --></label>
-        <name>CountOfCommits__c</name>
-    </fields>
-    <fields>
-        <label><!-- Desc-SG --></label>
-        <name>Desc_SG__c</name>
-    </fields>
-    <fields>
         <label><!-- Description --></label>
         <name>Description__c</name>
-    </fields>
-    <fields>
-        <label><!-- ExternalID --></label>
-        <name>ExternalID__c</name>
     </fields>
     <fields>
         <label><!-- JIRA URL --></label>
@@ -303,185 +230,9 @@
         <name>Jira_Key__c</name>
     </fields>
     <fields>
-        <label><!-- Jira test Key --></label>
-        <name>Jira_test_Key__c</name>
-    </fields>
-    <fields>
-        <label><!-- Latest PR Number --></label>
-        <name>Latest_PR_Number__c</name>
-    </fields>
-    <fields>
-        <label><!-- No of times US re-opened --></label>
-        <name>No_of_times_US_re_opened__c</name>
-    </fields>
-    <fields>
-        <label><!-- NumberOfPRApproved --></label>
-        <name>NumberOfPRApproved__c</name>
-    </fields>
-    <fields>
-        <label><!-- Number of Components --></label>
-        <name>Number_of_Components__c</name>
-    </fields>
-    <fields>
-        <label><!-- PR Required --></label>
-        <name>PR_Required__c</name>
-    </fields>
-    <fields>
         <label><!-- Peer Auditor --></label>
         <name>Peer_Auditor__c</name>
         <relationshipLabel><!-- User Stories (Peer Auditor) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Priority --></label>
-        <name>Priority__c</name>
-        <picklistValues>
-            <masterLabel>High</masterLabel>
-            <translation><!-- High --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Highest</masterLabel>
-            <translation><!-- Highest --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Low</masterLabel>
-            <translation><!-- Low --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Lowest</masterLabel>
-            <translation><!-- Lowest --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Medium</masterLabel>
-            <translation><!-- Medium --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Re-opened --></label>
-        <name>Re_opened__c</name>
-    </fields>
-    <fields>
-        <label><!-- Release Date --></label>
-        <name>Release_Date__c</name>
-    </fields>
-    <fields>
-        <label><!-- Service Now Url --></label>
-        <name>Service_Now_Url__c</name>
-    </fields>
-    <fields>
-        <label><!-- Snow Stage --></label>
-        <name>Snow_Stage__c</name>
-        <picklistValues>
-            <masterLabel>Canceled</masterLabel>
-            <translation><!-- Canceled --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Closed</masterLabel>
-            <translation><!-- Closed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>In Progress</masterLabel>
-            <translation><!-- In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>New</masterLabel>
-            <translation><!-- New --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>On Hold</masterLabel>
-            <translation><!-- On Hold --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Resolved</masterLabel>
-            <translation><!-- Resolved --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- CI Job Test Cases Failed --></label>
-        <name>TestCasesFailed__c</name>
-    </fields>
-    <fields>
-        <label><!-- Trigger CI Job --></label>
-        <name>Trigger_CI_Job__c</name>
-    </fields>
-    <fields>
-        <label><!-- US Priority --></label>
-        <name>US_Priority__c</name>
-    </fields>
-    <fields>
-        <label><!-- Value Stream Status --></label>
-        <name>Value_Stream_Status__c</name>
-        <picklistValues>
-            <masterLabel>Cancelled</masterLabel>
-            <translation><!-- Cancelled --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Completed</masterLabel>
-            <translation><!-- Completed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Design In Progress</masterLabel>
-            <translation><!-- Design In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Development In Progress</masterLabel>
-            <translation><!-- Development In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Draft</masterLabel>
-            <translation><!-- Draft --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Investigation in Progress</masterLabel>
-            <translation><!-- Investigation in Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Planning In Progress</masterLabel>
-            <translation><!-- Planning In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Design</masterLabel>
-            <translation><!-- Ready for Design --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Development</masterLabel>
-            <translation><!-- Ready for Development --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Investigation</masterLabel>
-            <translation><!-- Ready for Investigation --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Planning</masterLabel>
-            <translation><!-- Ready for Planning --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Release</masterLabel>
-            <translation><!-- Ready for Release --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Technical Review</masterLabel>
-            <translation><!-- Ready for Technical Review --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Ready for Testing</masterLabel>
-            <translation><!-- Ready for Testing --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Release In Progress</masterLabel>
-            <translation><!-- Release In Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Released</masterLabel>
-            <translation><!-- Released --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Technical Review in Progress</masterLabel>
-            <translation><!-- Technical Review in Progress --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Testing In Progress</masterLabel>
-            <translation><!-- Testing In Progress --></translation>
-        </picklistValues>
     </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
@@ -502,11 +253,6 @@
     <fields>
         <label><!-- Acceptance Criteria --></label>
         <name>copado__Acceptance_Criteria__c</name>
-    </fields>
-    <fields>
-        <help><!-- Use this field to split your User Story&apos;s actual effort on implementation, reviews, testing, and documentation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope. --></help>
-        <label><!-- Actual Points Other --></label>
-        <name>copado__Actual_Points_Other__c</name>
     </fields>
     <fields>
         <help><!-- Coverage of the Apex Classes added or committed within the User Story. --></help>
@@ -627,11 +373,6 @@
         <name>copado__Failing_Methods__c</name>
     </fields>
     <fields>
-        <label><!-- Feature --></label>
-        <name>copado__Feature__c</name>
-        <relationshipLabel><!-- User Stories --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
@@ -649,17 +390,9 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Git Repository --></label>
-        <name>copado__Git_Repository__c</name>
-    </fields>
-    <fields>
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
         <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
-    </fields>
-    <fields>
-        <label><!-- Is Bundle --></label>
-        <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
         <help><!-- Latest Compliance Scan execution date. --></help>
@@ -672,7 +405,7 @@
     </fields>
     <fields>
         <help><!-- Status of the latest validation Deployment for the User Story. --></help>
-        <label><!-- Last Validation Status --></label>
+        <label><!-- Last Validation Deployment Status --></label>
         <name>copado__Last_Validation_Deployment_Status__c</name>
     </fields>
     <fields>
@@ -1043,23 +776,13 @@
     </fields>
     <fields>
         <help><!-- Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment. --></help>
-        <label><!-- Credential --></label>
+        <label><!-- Org Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- User Stories (Credential) --></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Org Credential) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Parent Epic Title --></label>
         <name>copado__Parent_Epic_Title__c</name>
-    </fields>
-    <fields>
-        <help><!-- Use this field to split your User Story effort estimation among different scopes. Example: Dev and QA, Frontend and Backend. You can label this field to match your scope. --></help>
-        <label><!-- Planned Points Other --></label>
-        <name>copado__Planned_Points_Other__c</name>
-    </fields>
-    <fields>
-        <help><!-- This field auto-populates and displays the pipeline platform --></help>
-        <label><!-- Platform --></label>
-        <name>copado__Platform__c</name>
     </fields>
     <fields>
         <help><!-- Numeric value to determine which User Stories are more urgent and should be completed first. --></help>
@@ -1140,16 +863,28 @@
         <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting Approval</masterLabel>
+            <translation><!-- Awaiting Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backburner</masterLabel>
+            <translation><!-- Backburner --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Backlog</masterLabel>
             <translation><!-- Backlog --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Completed</masterLabel>
-            <translation><!-- Completed --></translation>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Done</masterLabel>
-            <translation><!-- Done --></translation>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
@@ -1160,32 +895,12 @@
             <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Selected For Development</masterLabel>
-            <translation><!-- Selected For Development --></translation>
+            <masterLabel>Ready for testing</masterLabel>
+            <translation><!-- Ready for testing --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>To Do</masterLabel>
-            <translation><!-- To Do --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Validated</masterLabel>
-            <translation><!-- Validated --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>in DEV</masterLabel>
-            <translation><!-- in DEV --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>in INT</masterLabel>
-            <translation><!-- in INT --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>in PROD</masterLabel>
-            <translation><!-- in PROD --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>in UAT</masterLabel>
-            <translation><!-- in UAT --></translation>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1194,11 +909,11 @@
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
-        <label><!-- Planned Points --></label>
+        <label><!-- Story Points Other --></label>
         <name>copado__Story_Points_Other__c</name>
     </fields>
     <fields>
-        <label><!-- Actual Points --></label>
+        <label><!-- Story Points SFDC --></label>
         <name>copado__Story_Points_SFDC__c</name>
     </fields>
     <fields>
@@ -1223,23 +938,13 @@
         <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Sum of Actual Points and Actual Points Other. Use this field along with Actual Points Other if you need to split your User Story effort among different scopes. --></help>
-        <label><!-- Total Actual Points --></label>
-        <name>copado__Total_Actual_Points__c</name>
-    </fields>
-    <fields>
-        <label><!-- Total Planned Points --></label>
+        <label><!-- Total Story Points --></label>
         <name>copado__Total_Story_Points__c</name>
     </fields>
     <fields>
         <help><!-- Number of triggers without the minimum required coverage. --></help>
         <label><!-- Triggers Without Coverage --></label>
         <name>copado__Triggers_Without_Coverage__c</name>
-    </fields>
-    <fields>
-        <label><!-- Feature --></label>
-        <name>copado__US_Feature__c</name>
-        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Short description of the User Story or requirement. Technical and non-technical team members should be able to understand the description. --></help>
@@ -1267,18 +972,6 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
-    </fields>
-    <fields>
-        <label><!-- Enable Logs --></label>
-        <name>copadoccmint__Enable_Logs__c</name>
-    </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>copadoccmint__External_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA key --></label>
-        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <fields>
         <label><!-- is Validated --></label>
@@ -1316,53 +1009,17 @@
         <label><!-- User Story --></label>
         <name>copado__User_Story</name>
     </recordTypes>
-    <recordTypes>
-        <label><!-- Utility --></label>
-        <name>copado__Utility</name>
-    </recordTypes>
     <validationRules>
-        <errorMessage><!-- You do not have permission to deploy your code to next Org --></errorMessage>
-        <name>Block_Save_Check_Permission</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Insufficient Privilege: User is Validate Only User or has no access to deploy to next Environment --></errorMessage>
-        <name>Copado_BlockUserStoryUpdation</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Peer Auditor is Mandatory for No Code deployment --></errorMessage>
-        <name>Peer_Auditor_is_Mandatory_for_No_Code</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- You do not have permission to deploy your code to next Org --></errorMessage>
-        <name>PreventSave_Check_permission</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Pull Request is required before promoting to next Org. --></errorMessage>
-        <name>Pull_Request_Check_for_Sensitive_Orgs</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Pull request must be created and get it approved by one Peer. --></errorMessage>
+        <errorMessage><!-- Compliance Check Not Met --></errorMessage>
         <name>Pull_request_Approval_check</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Pull request must be created and approved by at least one Peer OR Assign Peer Auditor for any Configuration changes. --></errorMessage>
-        <name>Pull_request_Approval_check_Goosehead</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please note that Release is a required Field --></errorMessage>
-        <name>Release_Is_Mandatory</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Please start Title with Jira Key --></errorMessage>
+        <errorMessage><!-- Please Start with Jira Key --></errorMessage>
         <name>Title_Starts_with_Jira_Key</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- A cancellation reason must be given. --></errorMessage>
         <name>copado__Cancellation_reason_required</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- The credential must belong to the environment. --></errorMessage>
-        <name>copado__CredentialsMustBelongToTheEnvironment</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- This User Story does not meet the required Apex coverage threshold to be promoted. --></errorMessage>
@@ -1393,10 +1050,6 @@
         <name>copado__Assign_to_Release</name>
     </webLinks>
     <webLinks>
-        <label><!-- Commit_Data --></label>
-        <name>copado__Commit_Data</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Commit_Files --></label>
         <name>copado__Commit_Files</name>
     </webLinks>
@@ -1405,20 +1058,12 @@
         <name>copado__Copado_DX</name>
     </webLinks>
     <webLinks>
-        <label><!-- Create_Bundle --></label>
-        <name>copado__Create_Bundle</name>
-    </webLinks>
-    <webLinks>
         <label><!-- Create_Scratch_Org --></label>
         <name>copado__Create_Scratch_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Import_to_User_Story --></label>
         <name>copado__Import_to_User_Story</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- MC_Commit_Changes --></label>
-        <name>copado__MC_Commit_Changes</name>
     </webLinks>
     <webLinks>
         <label><!-- Manage_Selenium_Tests --></label>
@@ -1431,10 +1076,6 @@
     <webLinks>
         <label><!-- Mass_Add_User_Stories_Sprint --></label>
         <name>copado__Mass_Add_User_Stories_Sprint</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Open_Org --></label>
-        <name>copado__Open_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Perform_Validation --></label>
@@ -1459,9 +1100,5 @@
     <webLinks>
         <label><!-- Select_Base_Branch --></label>
         <name>copado__Select_Base_Branch</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- run_test --></label>
-        <name>run_test</name>
     </webLinks>
 </CustomObjectTranslation>

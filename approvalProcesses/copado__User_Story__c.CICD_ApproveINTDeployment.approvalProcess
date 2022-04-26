@@ -32,6 +32,10 @@
                 <type>FieldUpdate</type>
             </action>
             <action>
+                <name>CICD_SetRecordTypeToPost</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
                 <name>CICD_UpdateWorkflowStatusToApproved</name>
                 <type>FieldUpdate</type>
             </action>

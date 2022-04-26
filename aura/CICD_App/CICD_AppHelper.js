@@ -15,44 +15,6 @@
         });    
     }, //end getUSbyReleaseId  
 
-    loadStoriesForBtns : function(component, event, helper){
-        
-        var releaseId = helper.shared.getUrlParams('c__releaseid'); 
-
-        var params =  {             
-            'releaseId' : releaseId
-        }
-
-        helper.shared.callApex('c.getCopadoStoriesByEnv', params, function(response){
-           
-            var envs = {
-                'DEV' : [], 
-                'INT' : [], 
-                'UAT' : [], 
-                'PROD' : []
-            };
-            
-            const keys = Object.keys(envs)
-
-            for(var i=0; i<response.length; i++){     
-                var respEnv = response[i].copado__Environment__r.CICD_EnvironmentType__c;            
-                if(respEnv){                  
-                    for(var x=0; x<keys.length; x++){
-                        if(respEnv == keys[x]){
-                            envs[keys[x]].push(response[i])
-                        }
-                    }
-                }                
-            }   
-
-            component.set('v.storiesDev', envs.DEV);
-            component.set('v.storiesInt', envs.INT);
-            component.set('v.storiesUat', envs.UAT);
-            component.set('v.storiesProd', envs.PROD);
-
-        });
-    },
-
     getCopadoStories : function(component, event, helper){
 
         component.set('v.selectedUserStories', []);
@@ -114,7 +76,7 @@
                     component.set('v.postDeploySteps', postDeploySteps);
                 }                 
                 helper.hideLoading(component);
-                // console.log(parsedResponse);
+                console.log(parsedResponse);
             }                
     });
     },

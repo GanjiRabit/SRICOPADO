@@ -1,6 +1,8 @@
 public class Amount {
-//Comment123
-//Comment2
+//Comment12345
+//Comment234
+////test class
+////testclass 2
 
 public void newLead() {
 

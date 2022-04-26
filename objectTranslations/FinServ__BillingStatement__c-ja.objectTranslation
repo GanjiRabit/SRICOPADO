@@ -5,6 +5,7 @@
         <value>請求書</value>
     </caseValues>
     <fields>
+        <help><!-- test --></help>
         <label><!-- Balance Transfers --></label>
         <name>FinServ__BalanceTransfers__c</name>
     </fields>

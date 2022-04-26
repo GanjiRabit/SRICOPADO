@@ -24,15 +24,6 @@
 }
 
 
-.THIS .envBtns li {
-    float: left;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-.THIS .envBtns li strong {
-    margin-right:2px;
-}
-
 .THIS .steps strong {
     border-bottom: 1px solid #616161;
     margin-bottom: 8px;

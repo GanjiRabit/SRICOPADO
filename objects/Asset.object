@@ -100,7 +100,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackHistory>false</trackHistory>
@@ -108,6 +107,7 @@
     </fields>
     <fields>
         <fullName>AssetLevel</fullName>
+        <complianceGroup>HIPAA</complianceGroup>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -172,6 +172,7 @@
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <inlineHelpText>xxx</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -237,6 +238,16 @@
         <fullName>Uuid</fullName>
         <inlineHelpText>Unique string identifying the asset.</inlineHelpText>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>test__c</fullName>
+        <externalId>false</externalId>
+        <label>test</label>
+        <length>33</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllAssets</fullName>

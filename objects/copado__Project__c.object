@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>CICD_JiraProjectKey__c</fullName>
         <caseSensitive>false</caseSensitive>
@@ -166,43 +165,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>true</unique>
-    </fields>
-    <fields>
-        <fullName>Description_test__c</fullName>
-        <externalId>false</externalId>
-        <label>Description_test</label>
-        <length>32768</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Html</type>
-        <visibleLines>25</visibleLines>
-    </fields>
-    <fields>
-        <fullName>Schedule_Date_test__c</fullName>
-        <externalId>false</externalId>
-        <label>Schedule Date-test</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Target_Date_test__c</fullName>
-        <externalId>false</externalId>
-        <label>Target Date-test</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>URL_test__c</fullName>
-        <externalId>false</externalId>
-        <label>URL_test</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Url</type>
     </fields>
     <fields>
         <fullName>copado__Deployment_Flow__c</fullName>
@@ -328,120 +290,17 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <fields>
-        <fullName>copadoccmint__Copado_Integration_Setting__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Copado Integration Setting</label>
-        <referenceTo>copadoccmint__Copado_Integration_Setting__c</referenceTo>
-        <relationshipLabel>Projects</relationshipLabel>
-        <relationshipName>Projects</relationshipName>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Enable_Community_User__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Enable to sync User Stories assigned to community users.</inlineHelpText>
-        <label>Enable Community Users</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Enable_Logs__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>If you are fetching more then 500 records from the third party platform, we recommend you to disable this checkbox to be able to prevent heap size too large issue.</inlineHelpText>
-        <label>Enable Logs</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__JQL_Extended_Filter__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>If you want to add an additional filter to your JIRA callout, you can just modify this field.
-Usage exp: issueType=Story and resolution=Duplicate</inlineHelpText>
-        <label>JQL Extended Filter</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Project_External_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Project External Id</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Sprint_Per_Batch_Chunk_Size__c</fullName>
-        <defaultValue>50</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>If in case, you are getting too many callout issue due to more number of User Stories per Sprint or due to more number of sprint.
-    You can reduce the batch size in this field.</inlineHelpText>
-        <label>Sprint Per Batch Chunk Size</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Team_Info__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Comma separated Team Name/Id to fetch Team sprints. Exp: Frontend Team,Backend Team,QA Team</inlineHelpText>
-        <label>Team Info</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copadoccmint__Workspace_Id__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Workspace Id</label>
-        <length>255</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <label>Project</label>
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
+        <columns>copado__Start_Date__c</columns>
+        <columns>copado__End_Date__c</columns>
         <columns>copado__Status__c</columns>
         <columns>copado__Deployment_Flow__c</columns>
-        <columns>CREATEDBY_USER.ALIAS</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>OWNER.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Project Name</label>
@@ -470,26 +329,4 @@ Usage exp: issueType=Story and resolution=Duplicate</inlineHelpText>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
-    <webLinks>
-        <fullName>copadoccmint__Sync_External_User_Stories</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>Sync External User Stories</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <url>/apex/copadoccmint__SyncUserStories?pid={!copado__Project__c.Id}&amp;isSprint=false</url>
-    </webLinks>
-    <webLinks>
-        <fullName>copadoccmint__Sync_External_User_Stories_With_Sprint</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>Sync External User Stories With Sprint</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <url>/apex/copadoccmint__SyncUserStories?pid={!copado__Project__c.Id}&amp;isSprint=true</url>
-    </webLinks>
 </CustomObject>

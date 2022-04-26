@@ -14,8 +14,4 @@ global class ReturnObject {
     global static String doGet() {
         return null;
     }
-    @HttpPost
-    global static String manageSensitiveInformation() {
-        return null;
-    }
 }

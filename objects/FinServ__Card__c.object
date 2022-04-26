@@ -162,7 +162,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>FinServ__AccountHolder__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>

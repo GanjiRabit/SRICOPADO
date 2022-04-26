@@ -33,10 +33,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Current_Release__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>CurrencyIsoCode</field>
             </layoutItems>
         </layoutColumns>
@@ -52,10 +48,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Description__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Is_Current_Release__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -135,11 +127,6 @@
             <actionType>CustomButton</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Sync_Release</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <excludeButtons>New</excludeButtons>
@@ -149,6 +136,7 @@
         <fields>copado__Last_Promotion_Date__c</fields>
         <fields>copado__Status__c</fields>
         <fields>CICD_JiraIssueUrl__c</fields>
+        <fields>copado__Developer__c</fields>
         <fields>copado__Project__c</fields>
         <relatedList>copado__User_Story__c.copado__Release__c</relatedList>
         <sortField>NAME</sortField>
@@ -170,7 +158,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h3i000002cNc3</masterLabel>
+        <masterLabel>00h41000005CXXC</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

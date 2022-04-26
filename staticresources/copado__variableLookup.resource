@@ -5,12 +5,11 @@ variableLookup.data = variableLookup.data || {};
 variableLookup.data.destinationOrg = [];
 variableLookup.data.copadoOrg = [];
 variableLookup.data.deployment = [];
-variableLookup.data.resumeUrl = [];
 
 variableLookup.data.destinationOrg = [
     {label: 'Org Id', value: 'DestinationOrg.OrgId' },
     {label: 'Name', value: 'DestinationOrg.Name' },
-    {label: 'Session Id', value: 'DestinationOrg.SessionId' },
+    {label: 'Sessison Id', value: 'DestinationOrg.SessionId' },
     {label: 'Endpoint', value: 'DestinationOrg.Endpoint' },
     {label: 'Record Id', value: 'DestinationOrg.RecordId' }];
 variableLookup.data.copadoOrg = [
@@ -20,9 +19,8 @@ variableLookup.data.copadoOrg = [
     {label: 'Endpoint', value: 'copadoOrg.Endpoint' }];
 variableLookup.data.deployment = [
     {label: 'Name', value: 'Deployment.Name' },
-	{label: 'Record Id', value: 'Deployment.RecordId' }];
-variableLookup.data.resumeUrl = [
-	{label: 'Resume URL', value: 'ResumeUrl'}];
+    {label: 'Record Id', value: 'Deployment.RecordId' }];
+
 
 variableLookup.bindings.bindActions = function(){
 	variableLookup.bindings.bindLevel1();
@@ -40,9 +38,6 @@ variableLookup.bindings.bindLevel1 = function(){
 				break;
 			case 'deployment':
 				variableLookup.bindings.listLevel2(variableLookup.data.deployment);
-				break;
-			case 'resumeUrl':
-				variableLookup.bindings.listLevel2(variableLookup.data.resumeUrl);
 				break;
 			default: //default child option is blank
 				$copado('#js-selectorLevel2').html('');

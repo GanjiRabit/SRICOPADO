@@ -4,9 +4,4 @@
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>FSC Bot Test Page</label>
-    <packageVersions>
-        <majorNumber>214</majorNumber>
-        <minorNumber>3</minorNumber>
-        <namespace>FinServ</namespace>
-    </packageVersions>
 </ApexPage>

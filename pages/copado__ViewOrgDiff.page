@@ -23,17 +23,17 @@
           $copado(document).ready(function(){
                   //Buttons To middle No PBtitle
                   if( (typeof sforce != 'undefined') && sforce && (!!sforce.one) ) {
-                  var mTitle = $copado('.pbTitle');
+                  var mTitle = $copado('.pbTitle')[0];
                   if(mTitle){
                     mTitle.remove();
-                    var tdrow = $copado($copado('.pbButton'));
+                    var tdrow = $copado($copado('.pbButton')[0]);
                     if(tdrow){
                         tdrow.css( "text-align", "center" );
-                    }  
-                  } 
+                    }
+                  }
               }
             });
-        </script>   
+        </script>
     </head>
     <body>
         <div class="copado-lightning-VF">
@@ -75,7 +75,7 @@
                     <apex:outputPanel layout="block" style="background: white;" id="headerFields">
                     <ul class="slds-grid slds-page-header__detail-row">
                       <apex:variable value="{!1}" var="rowNum"/>
-                      <apex:repeat value="{!$ObjectType.copado__OrgDiff__c.FieldSets.copado__Copado_Header_Fields}" var="f"> 
+                      <apex:repeat value="{!$ObjectType.copado__OrgDiff__c.FieldSets.copado__Copado_Header_Fields}" var="f">
                         <apex:outputPanel layout="block" rendered="{!rowNum < 8}">
                         <li class="slds-page-header__detail-block slds-truncate" style="padding-right: 2em; padding-left: 2em;">
                             <c:LightningReadyOutputFields dividerBottom="false" SObject="{!copado__OrgDiff__c}" Field="{!f}"></c:LightningReadyOutputFields>
@@ -94,14 +94,14 @@
                             <apex:commandButton action="{!edit}" value="{!$Label.site.edit}" rendered="{!isDiffEnabled}"/>
                             <apex:commandButton action="{!deploy}" value="{!$Label.copado__create} {!$ObjectType.copado__Deployment__c.Label}" rendered="{!isDiffEnabled}"/>
                             <apex:commandButton action="{!delete}" value="{!$Label.copado__delete}"  rendered="{!isDiffEnabled}"/>
-                            <input value="{!$Label.CLONE}" class="btn" name="Clone" 
-                                onclick="navigateToUrl('/{!copado__OrgDiff__c.Id}/e?clone=1&id={!OrgDiff__c.id}&retURL=%2F{!OrgDiff__c.id}')" 
+                            <input value="{!$Label.CLONE}" class="btn" name="Clone"
+                                onclick="navigateToUrl('/{!copado__OrgDiff__c.Id}/e?clone=1&id={!OrgDiff__c.id}&retURL=%2F{!OrgDiff__c.id}')"
                                 title="{!$Label.CLONE}" type="button" rendered="{!isDiffEnabled}"/>
                             <apex:commandButton value="{!$Label.copado__share}" action="{!URLFOR($Action.Org__c.Share,OrgDiff__c.Id)}" rendered="{!isShareable}"/>
                         </apex:pageBlockButtons>
-                        <!--apex:tabPanel > 
+                        <!--apex:tabPanel >
                             <apex:tab label="{!$Label.copado__basic_information}"-->
-                                <apex:pageBlockSection showHeader="true" title="{!$Label.copado__basic_information}"> 
+                                <apex:pageBlockSection showHeader="true" title="{!$Label.copado__basic_information}">
                                     <apex:outputField value="{!copado__OrgDiff__c.Name}"/>
                                     <apex:outputField value="{!copado__OrgDiff__c.copado__From_Date__c}"/>
                                     <apex:outputField value="{!copado__OrgDiff__c.copado__From_Org__c}"/>
@@ -123,7 +123,7 @@
                                         <apex:inputCheckbox value="{!withUpdate}" id="label_update"/>
                                     </apex:pageBlockSectionItem>
                                 </apex:pageBlockSection>
-                                <apex:pageBlockSection title="{!$Label.copado__advanced_metadata_filters}" 
+                                <apex:pageBlockSection title="{!$Label.copado__advanced_metadata_filters}"
                                     collapsible="true"
                                     showHeader="true"
                                     id="typesSection"
@@ -132,7 +132,7 @@
                                         <apex:column value="{!t}"> <apex:facet name="header">{!$ObjectType.copado__Org__c.fields.copado__Metadata_Types__c.Label}</apex:facet> </apex:column>
                                     </apex:pageBlockTable>
                                 </apex:pageBlockSection>
-                                <script> 
+                                <script>
                                     function twistSection(twisty, sectionId) {
                                         //twistSection code from salesforce.com
                                         var parentDiv = twisty;
@@ -141,15 +141,15 @@
                                         var div = parentDiv.nextSibling;
                                         var elemWasOn = false;
                                         if (div.style.display != 'none'){
-                                        div.style.display = 'none';
-                                        twisty.className ='showListButton';
-                                        twisty.alt = twisty.title = 'Show Section - '+twisty.name;
-                                        elemWasOn = true;
+                                            div.style.display = 'none';
+                                            twisty.className ='showListButton';
+                                            twisty.alt = twisty.title = 'Show Section - '+twisty.name;
+                                            elemWasOn = true;
                                         } else{
-                                        div.style.display = 'block';
-                                        twisty.className ='showListButton';
-                                        twisty.alt = twisty.title = 'Show Section - '+twisty.name;
-                                        elemWasOn = false;
+                                            div.style.display = 'block';
+                                            twisty.className ='showListButton';
+                                            twisty.alt = twisty.title = 'Show Section - '+twisty.name;
+                                            elemWasOn = false;
                                         }
                                     }
                                     twistSection( $copado('[id$="typesSection"]').find('img')[0]);
@@ -163,7 +163,7 @@
                                 </apex:pageBlockSection>
                             </apex:tab>
                         </apex:tabPanel-->
-                            
+
                         <apex:actionFunction name="validateOrgs_JS" action="{!validateOrgs}" rerender="pmessages"/>
                         <apex:outputPanel id="pbs_metadata" rendered="{!isDiffEnabled}">
                                    <c:DiffOrgGrid diffId="{!copado__OrgDiff__c.Id}"/>

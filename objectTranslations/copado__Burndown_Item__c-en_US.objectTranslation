@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <help><!-- date --></help>
         <label><!-- Date --></label>
         <name>copado__Date__c</name>
     </fields>

@@ -17,6 +17,11 @@
         <name>External_Id__c</name>
     </fields>
     <fields>
+        <label><!-- Parent Object --></label>
+        <name>Parent_Object__c</name>
+        <relationshipLabel><!-- Child Objects --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Phone --></label>
         <name>Phone__c</name>
     </fields>
@@ -28,5 +33,17 @@
         <label><!-- test Field 2 --></label>
         <name>test_Field_2__c</name>
     </fields>
+    <fields>
+        <label><!-- test Field --></label>
+        <name>test_Field__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Record Type1 --></label>
+        <name>Record_Type1</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Record Type2 --></label>
+        <name>Record_Type2</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

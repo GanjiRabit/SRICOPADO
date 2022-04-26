@@ -162,7 +162,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>FinServ__AnnualIncome__c</fullName>
         <deprecated>false</deprecated>

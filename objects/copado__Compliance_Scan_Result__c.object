@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fieldSets>
         <fullName>copado__Compliance_Result_Tab</fullName>
         <availableFields>
@@ -321,7 +320,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Credential</label>
+        <label>Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Compliance Scan Results</relationshipLabel>
         <relationshipName>Compliance_Scan_Results</relationshipName>

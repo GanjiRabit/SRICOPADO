@@ -128,7 +128,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <externalSharingModel>ReadSelect</externalSharingModel>
     <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
@@ -139,7 +138,6 @@
     </fields>
     <fields>
         <fullName>IsStandard</fullName>
-        <businessOwnerUser>{!Environment.Account_Summary}</businessOwnerUser>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

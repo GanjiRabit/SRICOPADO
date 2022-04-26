@@ -14,7 +14,7 @@
     <body>
         <script>
             copadoApp = {
-                ns: '{!JSENCODE(namespace)}',
+                ns: '{!namespace}',
                 deploymentId: '{!JSENCODE(Deployment__c.Id)}',
                 deployment: [],
                 jobIds: [],
@@ -106,6 +106,7 @@
                     adjustWith();
                 },
                 getAttachments: function(){
+                    console.log('Querying attachments...');
                     var me = copadoApp;
                     var doneCount = me.jobIds.length;
                     for(var i=0; i<me.jobIds.length; i++){
@@ -146,7 +147,7 @@
                 init: function(){
                     var me = copadoApp;
                     if(me.deploymentId != ''){
-                        var s = $copado("[data-stepType='MetaData'], [data-stepType='Git MetaData'], [data-stepType='Git Promotion'],[data-stepType='Rollback']");
+                        var s = $copado("[data-stepType='MetaData'], [data-stepType='Git MetaData'], [data-stepType='Git Promotion']");
                         for(var i=0; i<s.length; i++){
                             me.jobIds.push(s[i].id.split('_')[1]);
                             console.log('Data',s[i].id.split('_')[1]);
@@ -199,7 +200,7 @@
                 cancelDeployment: function(jobId){
                     var orgId = $copado('#orgId_'+jobId).val();
                     var asyncJobId = $copado('#asyncJobId_'+jobId).val();
-                    var url= '{!JSENCODE(settings.urlBase)}cancelDeployment/'+orgId+'/'+asyncJobId+'{!JSENCODE(settings.urlParameters)}&jobId='+jobId;
+                    var url= '{!settings.urlBase}cancelDeployment/'+orgId+'/'+asyncJobId+'{!settings.urlParameters}&jobId='+jobId;
                     console.log("Cancel URL:", url);
                     sforce.connection.remoteFunction({
                         url : url,

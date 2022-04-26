@@ -11,11 +11,7 @@
         <relationshipLabel><!-- Compliance Findings --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Rule Error Message --></label>
-        <name>copado__Rule_Error_Message__c</name>
-    </fields>
-    <fields>
-        <label><!-- Rule Severity --></label>
+        <label><!-- Severity --></label>
         <name>copado__Severity__c</name>
     </fields>
     <recordTypes>

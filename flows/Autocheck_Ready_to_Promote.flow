@@ -43,6 +43,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>copado__Promote_Change__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>copado__Promote_and_Deploy__c</field>
             <value>
                 <booleanValue>true</booleanValue>

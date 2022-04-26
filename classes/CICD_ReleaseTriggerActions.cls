@@ -153,7 +153,7 @@ public static void restrictProjectSelection(List<copado__Release__c> releaseReco
             Map<string,string> headers = new Map<string,string>();
             headers.put('Content-Type','application/json');
 
-          string baseUrl = 'callout:Devops_JiraConnector/api/2/version';
+           string baseUrl = 'callout:Devops_JiraConnector/api/2/version';
            string endpoint;
 
             for(string releaseCode : releaseCodes){
@@ -235,7 +235,7 @@ public static void restrictProjectSelection(List<copado__Release__c> releaseReco
             Map<string,string> headers = new Map<string,string>();
             headers.put('Content-Type','application/json');
 
-          string endpoint = 'callout:Devops_JiraConnector/api/2/version';
+           string endpoint = 'callout:Devops_JiraConnector/api/2/version';
 
             for(string projectCode : projectCodes){
                    //target is not bulkified, so the callout is being made in a for loop

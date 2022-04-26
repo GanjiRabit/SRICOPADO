@@ -1,0 +1,7 @@
+<apex:component >
+
+    <div> 
+        This is from Component 1
+    </div>
+
+</apex:component>

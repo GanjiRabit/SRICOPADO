@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
-    <authorizeUrl>https://auth.atlassian.com/authorize?audience=api.atlassian.com&amp;prompt=consent</authorizeUrl>
+    <authorizeUrl>https://auth.atlassian.com/authorize?audience=api.atlassian.com</authorizeUrl>
     <consumerKey>qyynZlnmf1AbeW0Qybo7deLcdO49OZ3y</consumerKey>
     <consumerSecret>vVCPGjy88ECo4QALZffXyKpRvN3jGDMZhXMm0ifaHO3avvBa1H7ebeIlCZi/opNlGCgQzXv/r3pKOTTHXD98z3BBGPdiC2rX</consumerSecret>
-    <defaultScopes>read:jira-user read:jira-work manage:jira-project manage:jira-configuration write:jira-work manage:jira-data-provider offline_access access_token</defaultScopes>
+    <defaultScopes>read:jira-user read:jira-work write:jira-work offline_access manage:jira-data-provider manage:jira-project offline access_token</defaultScopes>
     <friendlyName>Jira Connector</friendlyName>
     <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
     <providerType>OpenIdConnect</providerType>

@@ -4,7 +4,6 @@ public with sharing class CICD_Controller {
     public static Boolean hasPermissions() {
         return FeatureManagement.checkPermission('CICD_ReleaseManager');
     }    
-
     
     @auraEnabled
     public static List<copado__Release__c> getReleaseById(String releaseid) {
@@ -18,120 +17,6 @@ public with sharing class CICD_Controller {
 			];		 
 			return release;
     }  
-    
-    @auraEnabled
-    public static List<copado__User_Story__c> getCopadoStoriesByEnv(String releaseId) {
-        
-        List<copado__User_Story__c> stories = [SELECT
-			Id, 
-            Name, 
-			copado__User_Story_Title__c, 
-            copado__Environment__r.CICD_EnvironmentType__c,
-            copado__Last_Promotion_Date__c, 
-            copado__Status__c, 
-            copado__Developer__r.Name, 
-            copado__Project__r.Name, 
-            CICD_PrimaryDeveloperEmail__c,
-            CICD_JiraIssueUrl__c           
-			FROM
-			copado__User_Story__c
-			WHERE copado__Release__c = :releaseId
-			];		 
-    
-		return stories;
-    }
-
-    @auraEnabled
-    public static String notifyTeam(String emails, String stories, String comments, String subject, String releaseName) {
-
-        String resp = '';
-
-        List<String> emailAddresses = (List<String>) JSON.deserialize(emails, List<String>.class);
-        String theSubject = subject == '' || subject == null ? 
-            'Copado User Story Notification' : subject;
-        List<String> storiesList = (List<String>) JSON.deserialize(stories, List<String>.class);
-
-        String body = '';
-        body += '<h3>Release</h3>'; 
-        body += releaseName + '\n\n\n';        
-        body += '<h3>Comments</h3>'; 
-        body += comments + '\n\n\n';             
-        
-        if(storiesList.size() > 0){
-
-            List<copado__User_Story__c> storyListObj = [SELECT
-                Id, 
-                Name, 
-                copado__User_Story_Title__c, 
-                copado__Environment__r.CICD_EnvironmentType__c,
-                copado__Last_Promotion_Date__c, 
-                copado__Status__c, 
-                copado__Developer__r.Name, 
-                copado__Project__r.Name, 
-                CICD_PrimaryDeveloperEmail__c,
-                CICD_JiraIssueUrl__c           
-                FROM
-                copado__User_Story__c
-			    WHERE Id = :storiesList
-			];	          
-            
-            String baseUrl = System.URL.getSalesforceBaseUrl().toExternalForm(); 
-
-            body += '<h3>User Stories</h3>';       
-            body += '<table cellpadding=3 border=1 cellspacing=3 style="width:100%">';
-            body += '<thead><tr>'; 
-                body += '<td>Name</td>'; 
-                body += '<td>Title</td>'; 
-                body += '<td>Environment</td>'; 
-                body += '<td>Last Promotion Date</td>';
-                body += '<td>Status</td>';
-                body += '<td>Developer Email</td>';
-                body += '<td>Jira URL</td>';
-            body += '</tr></thead>';
-            for(copado__User_Story__c stry : storyListObj){                 
-                
-                String na = '--'; 
-
-                body += '<tr>'; 
-                    body += '<td><a href="'+baseUrl+'/'+stry.Id+'">'+stry.Name+'</a></td>';
-                    body += '<td>'+stry.copado__User_Story_Title__c+'</td>';
-                    body += '<td>'+stry.copado__Environment__r.CICD_EnvironmentType__c+'</td>';
-                    if(stry.copado__Last_Promotion_Date__c == null){
-                        body += '<td>'+na+'</td>';
-                    }else{
-                        body += '<td>'+stry.copado__Last_Promotion_Date__c+'</td>';
-                    }                    
-                    body += '<td>'+stry.copado__Status__c+'</td>';                    
-                     if(stry.CICD_PrimaryDeveloperEmail__c == null){
-                        body += '<td>'+na+'</td>';
-                    }else{
-                        body += '<td>'+stry.CICD_PrimaryDeveloperEmail__c+'</td>';
-                    }  
-                    body += '<td>'+stry.CICD_JiraIssueUrl__c+'</td>';
-                body += '</tr>';
-            }
-            body += '</table>';
-        }       
-        
-        try{
-            Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();           
-            mail.setToAddresses(emailAddresses);
-            mail.setSubject(theSubject);
-            mail.setHtmlBody(body);
-            if(!Test.isRunningTest()){
-                Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
-            } 
-            resp = 'success'; 
-
-        }
-        catch (Exception ex) {
-            System.debug(ex);
-            resp = ex.getMessage();
-        }
-
-        return resp;
-    }
-
 
     @auraEnabled
     public static List<copado__User_Story__c> getCopadoStories(String releaseId, String sourceOrg) {
@@ -179,7 +64,7 @@ public with sharing class CICD_Controller {
         List<String> releaseIds = new List<String>();
         Map<String, String> JiraSfUSMap = new Map<String, String>();
         List<AppLog__c> appLogs = new List<AppLog__c>();       
-        CICD_BatchJob.isSyncFromJira = true;
+
         CICD_BatchJob.syncStoriesFromJira(versionId , versionName , JiraIds , JiraSfUSMap , appLogs , releaseIds);
         performPostSyncOperations( JiraIds , JiraSfUSMap , JSON.serialize(appLogs) , releaseIds);
  

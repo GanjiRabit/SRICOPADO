@@ -153,7 +153,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fieldSets>
         <fullName>copado__Copado_Header_Fields</fullName>
         <availableFields>
@@ -250,9 +249,9 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Select the Source Org for which you would like to compare the Metadata. This Org will be the Org from which you would like to migrate Metadata.</inlineHelpText>
-        <label>Source Credential</label>
+        <label>Source Org</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Org Differences (Source Credential)</relationshipLabel>
+        <relationshipLabel>Org Differences (From Org)</relationshipLabel>
         <relationshipName>FromOrgDiffs</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -297,9 +296,9 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Select the Destination Org for which you would like to compare the Metadata and would like to migrate Metadata to. The resulting grid will show a list of differences with &apos;create&apos;, &apos;update&apos; and &apos;delete&apos; which apply to this Org.</inlineHelpText>
-        <label>Destination Credential</label>
+        <label>Destination Org</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Org Differences (Destination Credential)</relationshipLabel>
+        <relationshipLabel>Org Differences (To Org)</relationshipLabel>
         <relationshipName>ToOrgDiffs</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>

@@ -9,11 +9,6 @@
         <value>Parent Objects</value>
     </caseValues>
     <fields>
-        <label><!-- Child Object --></label>
-        <name>Child_Object__c</name>
-        <relationshipLabel><!-- Parent Objects --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Description --></label>
         <name>Description__c</name>
     </fields>

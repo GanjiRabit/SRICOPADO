@@ -154,7 +154,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fieldSets>
         <fullName>copado__Copado_Header_Fields</fullName>
         <availableFields>
@@ -285,15 +284,6 @@
         </displayedFields>
         <label>Custom Fields</label>
     </fieldSets>
-    <fields>
-        <fullName>copado__Allow_Functions_Git_Cache__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Allow Functions Git Cache</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
     <fields>
         <fullName>copado__Branch_Base_URL__c</fullName>
         <deprecated>false</deprecated>
@@ -431,14 +421,6 @@
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
         <columns>copado__URI__c</columns>
-        <columns>copado__Branch_Base_URL__c</columns>
-        <columns>copado__Commit_Base_URL__c</columns>
-        <columns>copado__Git_Provider__c</columns>
-        <columns>UPDATEDBY_USER</columns>
-        <columns>CREATED_DATE</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>copado__Pull_Request_Base_URL__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

@@ -3,7 +3,7 @@
     <apiVersion>36.0</apiVersion>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>12</minorNumber>
+        <minorNumber>10</minorNumber>
         <namespace>sfcma</namespace>
     </packageVersions>
     <status>Active</status>

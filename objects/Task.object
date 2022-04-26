@@ -456,6 +456,10 @@
                 <fullName>Other</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>test Task</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>

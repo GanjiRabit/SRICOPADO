@@ -151,10 +151,9 @@
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>copado__Blocker__c</fullName>
         <deprecated>false</deprecated>
@@ -448,7 +447,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Credential</label>
+        <label>Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Static Code Analysis Results</relationshipLabel>
         <relationshipName>Static_Code_Analysis_Results</relationshipName>
@@ -607,19 +606,6 @@
         <type>Summary</type>
     </fields>
     <label>Static Code Analysis Result</label>
-    <listViews>
-        <fullName>copado__All</fullName>
-        <columns>NAME</columns>
-        <columns>copado__Number_of_Violations__c</columns>
-        <columns>copado__Score_v11__c</columns>
-        <columns>copado__User_Story__c</columns>
-        <columns>copado__Org_Credential__c</columns>
-        <columns>copado__Deployment_Step__c</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <displayFormat>SCA-{00000}</displayFormat>
         <label>Static Code Analysis Result Name</label>
