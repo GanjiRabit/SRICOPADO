@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="License List"></lightning-card>
+    <table>
+        <tr>
+        <th>isCADenabled</th>
+        <th>isCCHenabled</th>
+        <th>isCCMenabled</th>
+        <th>isCopadoEnabled</th>
+        <th>isCSTenabled</th>
+        <th>userId</th>
+    </tr>
+     <template for:each={responsedata} for:item="licenseInfo1">
+         <tr key={licenseInfo1.userId}>
+             <td>{licenseInfo1.isCADenabled}</td>
+             <td>{licenseInfo1.isCCHenabled}</td>
+             <td>{licenseInfo1.isCCMenabled}</td>
+            <td>{licenseInfo1.isCopadoEnabled}</td>
+            <td>{licenseInfo1.isCSTenabled}</td>
+            <td>{licenseInfo1.userId}</td>
+    </tr>
+    </template>
+</table>
+</template>

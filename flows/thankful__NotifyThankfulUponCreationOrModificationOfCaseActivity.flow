@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <description>Notifies Thankful Webhook Upon Case Activity Creation or Modification</description>
+    <label>Notify Thankful Upon Creation or Modification of Case Activity</label>
+    <processType>Workflow</processType>
+</Flow>

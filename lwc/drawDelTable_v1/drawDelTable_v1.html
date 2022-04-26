@@ -1,0 +1,27 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <template if:true={loaded}>
+        <lightning-layout>
+            <lightning-layout-item class="slds-size_1-of-1">
+                <div class="delContainer custom-box slds-box slds-text-align_center">
+                    <table class="tableDelClass slds-table slds-table_cell-buffer slds-table_bordered display nowrap"
+                        style="position:relative;display:block;box-sizing:border-box;overflow-x:scroll;">
+                    </table>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </template>
+    
+        <template if:false={loaded}>
+            <div class="spinnerHolder">
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </div>
+        </template>
+    
+</template>

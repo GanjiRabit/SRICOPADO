@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sobject Trigger Handler Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sobject Trigger Handler Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Handler Class --></label>
+        <name>CICD_HandlerClass__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sobject Name --></label>
+        <name>CICD_SobjectName__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

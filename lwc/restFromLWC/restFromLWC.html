@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-15-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+           My IP
+        </h3>
+        <div slot="footer">
+
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button label="Get My IP" onclick={getIP}></lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-textarea readonly value={myIp} rows="7" style="height:150px;"></lightning-textarea>
+        </div>   
+    </lightning-card>
+</template>

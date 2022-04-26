@@ -1,0 +1,10 @@
+.THIS {
+    text-align: center;
+}
+.THIS .slds-progress{
+    max-width: 350px;
+}
+.THIS .inlineBlock{
+    display:  inline-block;
+    min-width:  60px;
+}

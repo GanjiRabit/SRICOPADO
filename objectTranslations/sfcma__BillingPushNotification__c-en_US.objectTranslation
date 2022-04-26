@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Checkout Billing Push Notification</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Checkout Billing Push Notifications</value>
+    </caseValues>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>sfcma__ErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Content --></label>
+        <name>sfcma__EventContent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Type --></label>
+        <name>sfcma__EventType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Live Mode --></label>
+        <name>sfcma__LiveMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retries --></label>
+        <name>sfcma__Retries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sfcma__Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid</masterLabel>
+            <translation><!-- Invalid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processed</masterLabel>
+            <translation><!-- Processed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stripe Event Id --></label>
+        <name>sfcma__StripeEventIdUnique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Event Id (deprecated) --></label>
+        <name>sfcma__StripeEventId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>sfcma__Subscription__c</name>
+        <relationshipLabel><!-- Billing Push Notifications --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>Checkout Billing Push Notification Name</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

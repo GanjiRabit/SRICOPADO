@@ -1,0 +1,113 @@
+<aura:component>
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>        
+<aura:attribute name="envModal" type="String"  />  
+<aura:attribute name="envStories" type="List" default="[]"  />
+<aura:attribute name="selectedStories" type="List" default="[]"  />
+<aura:attribute name="loading" type="String" default="true"  />
+<aura:attribute name="loadingMessage" type="String"  />
+<aura:attribute name="release" type="Object" default="{}"  /> 
+<aura:attribute name="recordError" type="List" default="[]"  />
+
+<c:CICD_Shared aura:id="CICD_Shared"/> 
+
+<div class="slds-backdrop slds-backdrop--open"></div>
+    <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large">
+        <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                        <h1 style="font-size: 16px;font-weight: 900;">Release: {!v.release.Name}</h1>
+                <button 		  
+                    onclick="{! c.closeEnvModal}"
+                    class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                    title="Close">
+                <lightning:icon
+                    class="modalCloseBtn"		
+                    iconName="utility:close"/>
+                <span class="slds-assistive-text">Close</span>
+                </button>
+                </div><!--END MODAL HEADER-->
+                <div class="slds-modal__content slds-p-around--small">	 
+                    <lightning:input aura:id="emails" class="email-addresses" 
+                        label="Email Addresses (separate by comma)"></lightning:input>
+                    <lightning:input aura:id="subject" class="email-subject" 
+                        label="Email Subject" value="{! 'Notice for Release : ' + v.release.Name}"></lightning:input>
+                    <lightning:textarea aura:id="comments" class="comments" label="Comments"></lightning:textarea>
+                    <lightning:button onclick="{! c.notifyBtnClicked}" class="notify-button"  variant="brand">Notify Project Team</lightning:button>
+                    
+                    <div class="grid-container">
+                        <aura:if isTrue="{! !empty(v.envStories)}">        
+                            <div class="slds-grid slds-gutters slds-wrap reset-margins">	
+                                <div class="table-head slds-col slds-large-size_4-of-12">
+                                        User Story / Title / Environment 
+                                </div>
+                                <div class="table-head slds-col slds-large-size_2-of-12">
+                                        Last Promotion Date
+                                </div>
+                                <div class="table-head slds-col slds-large-size_2-of-12">
+                                        Status
+                                </div>
+                                <div class="table-head slds-col slds-large-size_1-of-12">
+                                        Project
+                                </div>			
+                                <div class="table-head slds-col slds-large-size_2-of-12">
+                                        Developer Email
+                                </div>
+                                <div class="table-head slds-col slds-large-size_1-of-12">                                        
+                                        Jira URL
+                                </div>                                        
+                            </div>	
+                            <aura:iteration items="{!v.envStories}" var="story" indexVar="indx">	
+            
+                                    <div  class="slds-grid slds-gutters slds-wrap story"> 
+                                            
+                                        <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_4-of-12">
+                                                <small class="mobile-label story-name">User Story / Title / Environment</small>        
+                                                <lightning:input 
+                                                    checked="true"
+                                                    class="story-select"
+                                                    type="checkbox"
+                                                    value="{! story.Id}"  
+                                                    onchange="{!c.selectStory}" />                                        
+                                                <h3 class="story-name">{!story.Name} 
+                                                / {!story.copado__User_Story_Title__c} 
+                                                / {!story.copado__Environment__r.CICD_EnvironmentType__c}</h3>
+                                        </div>
+                                            <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_2-of-12">
+                                                    <small class="mobile-label">Last Promotion Date</small>
+                                                    <aura:if isTrue="{!story.copado__Last_Promotion_Date__c}">
+                                                    <lightning:formattedDateTime 
+                                                            value="{!story.copado__Last_Promotion_Date__c}" 
+                                                            timeZone="UTC"/>
+                                                    </aura:if>                               
+                                            </div>
+                                            <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_2-of-12">
+                                                    <small class="mobile-label">Status</small>
+                                                    {!story.copado__Status__c}
+                                            </div>	
+                                            <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                                    <small class="mobile-label">Project</small>
+                                                    {!story.copado__Project__r.Name}
+                                            </div>						
+                                            <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_2-of-12">
+                                                    <small class="mobile-label">Developer Email</small>
+                                                    {!story.CICD_PrimaryDeveloperEmail__c}
+                                            </div>
+                                            <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                                    <small class="mobile-label">Jira URL</small>                                                     
+                                                    <aura:unescapedHtml value="{!story.CICD_JiraIssueUrl__c}" />
+                                            </div>
+                                        </div>
+                                </aura:iteration>	
+                                                        
+                                <aura:set attribute="else">
+                                        No user stories found      
+                                </aura:set>
+                            </aura:if>
+                        </div><!--end grid container-->
+                </div>
+                <div class="slds-modal__footer">
+                </div><!--END MODAL FOOTER-->
+        </div>
+</div>
+
+</aura:component>

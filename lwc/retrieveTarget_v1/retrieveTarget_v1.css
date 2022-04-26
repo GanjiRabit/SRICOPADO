@@ -1,0 +1,13 @@
+.slds-form-element__control {
+    padding-left: 2%;
+    margin-right:2%;
+    max-width: 84%;
+    
+  }
+  /*
+    max-width: 865%;
+*/
+  .slds-form-element__label {
+    padding-right: 2%;
+    margin-left:2%
+  }

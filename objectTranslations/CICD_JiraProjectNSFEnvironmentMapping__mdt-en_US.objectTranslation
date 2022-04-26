@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Jira Project And SF Environment Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Jira Project And SF Environment Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- SF Dev Environment --></label>
+        <name>CICD_SfDefaultEnvironment__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Org Credential is calculated as Environment plus developers first + last name.  If that credential does not exist this fallback credential will be used. --></help>
+        <label><!-- SF Dev Fallback Org Credential --></label>
+        <name>CICD_SfDevOrgCredential__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

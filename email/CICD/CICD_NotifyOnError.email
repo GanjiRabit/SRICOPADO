@@ -1,0 +1,10 @@
+<div>A CICD error has occurred.</div>
+<br/>
+<table>
+<tr><td>Name:</td><td>{!AppLog__c.Name}</td></tr>
+<tr><td>App Category:</td><td>{!AppLog__c.AppCat__c}</td></tr>
+<tr><td>Severity:</td><td>{!AppLog__c.Severity__c}</td></tr>
+<tr><td>Message:</td><td>{!AppLog__c.Message__c}</td></tr>
+<tr><td>Created By:</td><td>{!AppLog__c.CreatedBy}</td></tr>
+<tr><td>Record Link:</td><td>{!AppLog__c.Link}</td></tr>
+</table>

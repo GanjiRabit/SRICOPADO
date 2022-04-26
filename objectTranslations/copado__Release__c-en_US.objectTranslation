@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Copado Header Fields --></label>
+        <name>copado__Copado_Header_Fields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- BlockSave --></label>
+        <name>BlockSave__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promote --></label>
+        <name>CICD_Promote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Projects --></label>
+        <name>CICD_RelatedProjects__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRM</masterLabel>
+            <translation><!-- CRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Devops</masterLabel>
+            <translation><!-- Devops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISRO</masterLabel>
+            <translation><!-- ISRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NASA</masterLabel>
+            <translation><!-- NASA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Release Ids --></label>
+        <name>CICD_ReleaseIds__c</name>
+    </fields>
+    <fields>
+        <help><!-- Whether the release has been deployed to Prod and is closed. --></help>
+        <label><!-- Released --></label>
+        <name>CICD_Released__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date of the Release --></help>
+        <label><!-- Start Date --></label>
+        <name>CICD_StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- CICD Sync Release --></label>
+        <name>CICD_SyncRelease__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Release --></label>
+        <name>Current_Release__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Current Release --></label>
+        <name>Is_Current_Release__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Hotfix --></label>
+        <name>Is_Hotfix__c</name>
+    </fields>
+    <fields>
+        <help><!-- All user story feature branches are created out of the main branch of the Deployment Flow. If a Release base branch is specified, all feature branches of user stories linked to the Release will be created out of the base branch. --></help>
+        <label><!-- Base Branch --></label>
+        <name>copado__Base_Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Date --></label>
+        <name>copado__Planned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>copado__Project__c</name>
+        <relationshipLabel><!-- Releases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned</masterLabel>
+            <translation><!-- Planned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Released</masterLabel>
+            <translation><!-- Released --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- When a Promotion linked to this Release is merged into the Main Branch of the deployment flow, Copado will tag the Main Branch with this version number. This value is typically a major (e.g. v7), minor (v7.3) or patch (v7.3.2) release. --></help>
+        <label><!-- Version --></label>
+        <name>copado__Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- The format of the Release Name must be &quot;SFDC &quot; + Release date formatted as YYYY-MM-DD.  If this a hotfix release then add &quot;Hotfix&quot; as a suffix. --></errorMessage>
+        <name>CICD_ReleaseNameFormatCheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only 1 release can be Current Release at a time --></errorMessage>
+        <name>OnlyOneCurrentRelease</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date can not be greater than release date --></errorMessage>
+        <name>StartDate_ReleaseDate_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- please dont include spaces in version field --></errorMessage>
+        <name>copado__Validate_spaces_in_version</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Mass_add_to_Release --></label>
+        <name>copado__Mass_add_to_Release</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Select_Base_Branch --></label>
+        <name>copado__Select_Base_Branch</name>
+    </webLinks>
+</CustomObjectTranslation>

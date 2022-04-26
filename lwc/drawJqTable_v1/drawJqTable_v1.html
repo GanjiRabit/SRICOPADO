@@ -1,0 +1,32 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <lightning-layout>
+        <lightning-layout-item class="slds-size_1-of-1">
+
+            <div class="allContainer">
+                <c-draw-all-table_v1></c-draw-all-table_v1>
+            </div>
+            <div class="addContainer" style="display:none;">
+                <c-draw-add-table_v1></c-draw-add-table_v1>
+            </div>
+            <div class="delContainer" style="display:none;">
+                <c-draw-del-table_v1></c-draw-del-table_v1>
+            </div>
+            <div class="modContainer" style="display:none;">
+                <c-draw-mod-table_v1></c-draw-mod-table_v1>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <template if:false={loaded}>
+        <div class="spinnerHolder">
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </div>
+    </template>
+
+</template>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>BugfixRecordtypeid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BugfixRecordtypeid</shortDescription>
+        <value>0123i000000QfIU</value>
+    </labels>
+    <labels>
+        <fullName>CICD_CopadoAPIKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CICD Copado API Key</shortDescription>
+        <value>68ccaf67515c0c63c5b697c6ebaa7e72</value>
+    </labels>
+    <labels>
+        <fullName>CICD_CredentialsForTestClass</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CICD_CredentialsForTestClass</shortDescription>
+        <value>salesforce.deployer@parsons.com%uat</value>
+    </labels>
+    <labels>
+        <fullName>CICD_DefaultReleaseProjects</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CICD_DefaultReleaseProjects</shortDescription>
+        <value>CRM;DEV;ISRO;NASA</value>
+    </labels>
+    <labels>
+        <fullName>CICD_DeploymentFlowNameForTestClass</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CICD_DeploymentFlowNameForTestClass</shortDescription>
+        <value>MockMainFlow</value>
+    </labels>
+    <labels>
+        <fullName>CICD_ParsonsJiraDomain</fullName>
+        <categories>Jira CICD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CICD_ParsonsJiraDomain</shortDescription>
+        <value>https://blue5green.atlassian.net/</value>
+    </labels>
+    <labels>
+        <fullName>Code</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Code</shortDescription>
+        <value>ApexPage, ApexTrigger, ApexComponent, ApexClass, AuraDefinitionBundle</value>
+    </labels>
+    <labels>
+        <fullName>Copado_Project_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Project Name</shortDescription>
+        <value>Jira Copado Sanket</value>
+    </labels>
+    <labels>
+        <fullName>Environment_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Environment Name</shortDescription>
+        <value>Dev1</value>
+    </labels>
+    <labels>
+        <fullName>INT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INT</shortDescription>
+        <value>INT</value>
+    </labels>
+    <labels>
+        <fullName>LogUIMessages</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LogUIMessages</shortDescription>
+        <value>true</value>
+    </labels>
+    <labels>
+        <fullName>MPGJiraDomain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MPGJiraDomain</shortDescription>
+        <value>https://jira.mlp.com</value>
+    </labels>
+    <labels>
+        <fullName>NasdaqJiraDomain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NasdaqJiraDomain</shortDescription>
+        <value>https://jira.global.org.nasdaqomx.com</value>
+    </labels>
+    <labels>
+        <fullName>PasswordResetEmailids</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PasswordResetEmailids</shortDescription>
+        <value>srujana@blue5green.com.partner.dev3</value>
+    </labels>
+    <labels>
+        <fullName>Select_Data_Set</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Data Set</shortDescription>
+        <value>Please select a data set to compare its versions</value>
+    </labels>
+    <labels>
+        <fullName>Step_Types</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Step Types</shortDescription>
+        <value>MetaData, Full Profiles, Full Permission Sets, Users, Translations, Data, Bulk Data, Delete MetaData, Custom Settings, Apex, URL Callout</value>
+    </labels>
+    <labels>
+        <fullName>TEST_Update</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TEST Update</shortDescription>
+        <value>Hello</value>
+    </labels>
+    <labels>
+        <fullName>USRecordtypeid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>USRecordtypeid</shortDescription>
+        <value>0123i000000QfIW</value>
+    </labels>
+    <labels>
+        <fullName>abc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>abc</shortDescription>
+        <value>Draft</value>
+    </labels>
+    <labels>
+        <fullName>copado_environment_type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>copado_environment_type</shortDescription>
+        <value>Production/Developer</value>
+    </labels>
+    <labels>
+        <fullName>copado_userstory_status_prod</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>copado_userstory_status_prod</shortDescription>
+        <value>Completed</value>
+    </labels>
+    <labels>
+        <fullName>copado_userstory_status_uat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>copado_userstory_status_uat</shortDescription>
+        <value>Validated</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_bot_data_setup_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_bot_data_setup_complete</shortDescription>
+        <value>Bot data setup completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_bot_permset_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_bot_permset_complete</shortDescription>
+        <value>Bot PermSet assignment completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_live_agent_setup_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_live_agent_setup_complete</shortDescription>
+        <value>LiveAgent setup completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_live_agent_setup_exist</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_live_agent_setup_exist</shortDescription>
+        <value>Looks like you have already completed this setup.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_permset_assignnment_revoke</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_permset_assignnment_revoke</shortDescription>
+        <value>PermSet assignment has been revoked.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_active_travel_requests</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_active_travel_requests</shortDescription>
+        <value>You have registered the following travel plan</value>
+    </labels>
+    <labels>
+        <fullName>ibot_case_submit_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_case_submit_message</shortDescription>
+        <value>Your request has been submitted, and your reference number is</value>
+    </labels>
+    <labels>
+        <fullName>ibot_could_find_the_info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_could_find_the_info</shortDescription>
+        <value>I couldn&apos;t find a match with the information you provided.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_exceeded_max_attempts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_exceeded_max_attempts</shortDescription>
+        <value>You have exceeded the maximum no of attempts.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_field_not_editable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_field_not_editable</shortDescription>
+        <value>Field is not editable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_field_not_readable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_field_not_readable</shortDescription>
+        <value>Field is not readable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_lost_card_case_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_lost_card_case_subject</shortDescription>
+        <value>Lost Card ending with</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_createable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_createable</shortDescription>
+        <value>Object is not createable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_deleteable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_deleteable</shortDescription>
+        <value>Object is not Deleteable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_readable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_readable</shortDescription>
+        <value>Object is not readable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_updateable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_updateable</shortDescription>
+        <value>Object is not updateable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_travel_request_case_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_travel_request_case_subject</shortDescription>
+        <value>Travel Request for the Card ending with</value>
+    </labels>
+    <labels>
+        <fullName>ibot_verification_code_desc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_verification_code_desc</shortDescription>
+        <value>Your Verification code is :</value>
+    </labels>
+    <labels>
+        <fullName>ibot_verification_code_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_verification_code_subject</shortDescription>
+        <value>Verification Code</value>
+    </labels>
+    <labels>
+        <fullName>us_ready_to_promote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>us_ready_to_promote</shortDescription>
+        <value>Draft</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,17 @@
+<aura:component>
+    
+<aura:attribute name="recordError" type="List" />
+
+<aura:if isTrue="{!not(empty(v.recordError))}">
+<div class="record-error">
+<h3>An unexpected error occurred. Please see the following messages:</h3> 
+    <ul>
+        <aura:iteration items="{!v.recordError}" var="err">
+        <li>{!err}</li>
+        </aura:iteration>                            
+    </ul>
+</div>
+</aura:if> 
+
+
+</aura:component>

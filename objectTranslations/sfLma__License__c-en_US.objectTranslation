@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>sfLma__Account__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>sfLma__Contact__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>sfLma__Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration --></label>
+        <name>sfLma__Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Help --></label>
+        <name>sfLma__Help__c</name>
+    </fields>
+    <fields>
+        <label><!-- Install Date --></label>
+        <name>sfLma__Install_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Salesforce instance or pod on which this subscriber organization currently resides. --></help>
+        <label><!-- Instance --></label>
+        <name>sfLma__Instance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sandbox --></label>
+        <name>sfLma__Is_Sandbox__c</name>
+    </fields>
+    <fields>
+        <help><!-- The last time the organization information on this page was updated. --></help>
+        <label><!-- Information Current As Of --></label>
+        <name>sfLma__Last_Modified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>sfLma__Lead__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- License Status --></label>
+        <name>sfLma__License_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Type --></label>
+        <name>sfLma__License_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Licensed Seats --></label>
+        <name>sfLma__Licensed_Seats__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Edition --></label>
+        <name>sfLma__Org_Edition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Instance --></label>
+        <name>sfLma__Org_Instance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Status Formula --></label>
+        <name>sfLma__Org_Status_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Status --></label>
+        <name>sfLma__Org_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Trial Expiration --></label>
+        <name>sfLma__Org_Trial_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Type --></label>
+        <name>sfLma__Org_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package License ID --></label>
+        <name>sfLma__Package_License_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Version Number --></label>
+        <name>sfLma__Package_Version_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Version --></label>
+        <name>sfLma__Package_Version__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>sfLma__Package__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proxy User --></label>
+        <name>sfLma__Proxy_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seats --></label>
+        <name>sfLma__Seats__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sfLma__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suspended</masterLabel>
+            <translation><!-- Suspended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uninstalled</masterLabel>
+            <translation><!-- Uninstalled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subscriber Org ID --></label>
+        <name>sfLma__Subscriber_Org_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber Org Is Sandbox --></label>
+        <name>sfLma__Subscriber_Org_Is_Sandbox__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the subscriber organization is a trial, the date it expires. --></help>
+        <label><!-- Org Expiration Date --></label>
+        <name>sfLma__Trial_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used Licenses --></label>
+        <name>sfLma__Used_Licenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version Number --></label>
+        <name>sfLma__Version_Number__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Active --></label>
+        <name>sfLma__Active</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expired --></label>
+        <name>sfLma__Expired</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Suspended --></label>
+        <name>sfLma__Suspended</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Trial --></label>
+        <name>sfLma__Trial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Uninstalled --></label>
+        <name>sfLma__Uninstalled</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Login_to_Partner_BT --></label>
+        <name>sfLma__Login_to_Partner_BT</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Modify_License --></label>
+        <name>sfLma__Modify_License</name>
+    </webLinks>
+</CustomObjectTranslation>

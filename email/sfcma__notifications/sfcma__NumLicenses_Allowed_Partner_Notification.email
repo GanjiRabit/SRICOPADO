@@ -1,0 +1,72 @@
+<messaging:emailTemplate subject="{!relatedTo.Customer__r.sfcma__CustomerName__c} is using more licenses than allowed" recipientType="Contact" relatedToType="sfcma__Subscription__c">
+<messaging:htmlEmailBody >
+<html>
+
+    <body>
+        <style type="text/css">
+            #outlook a { padding: 0; }
+            /* hotmail */
+            .ReadMsgBody { width: 100%; }
+            .ExternalClass { width: 100%; }
+            .ExternalClass * { line-height: 100%; }
+            body {
+                /* outlook */
+                mso-line-height-rule: exactly;
+                -webkit-text-size-adjust: none;
+            }
+            @-ms-viewport {
+                width: device-width;
+            }
+            .appleLinks a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            body {
+                background-color: #f4f6f9;
+            }
+        </style>
+
+
+        <!-- center -->
+        <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#f4f6f9">
+          <tr>
+            <td valign="top" align="center" style="font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 14px; color: #333333;">
+
+              &nbsp;<br />&nbsp;<br />
+
+              <table cellpadding="0" cellspacing="0" border="0" style="border: 0; padding: 0; margin: 0; min-width: 280px; max-width: 500px;">
+
+                <c:emailNotificationLogo />
+
+                <!-- START: content row -->
+                <tr>
+                  <td bgcolor="#ffffff" style="padding: 0px 20px 14px 20px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-bottom: 1px solid #d8dde6; border-left: 1px solid #eceef3; border-right: 1px solid #eceef3;">
+                    <p style="color: #333333; font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 21px; margin: 0 0 14px 0; padding: 0; line-height: 150%;">
+                        {!relatedTo.Customer__r.sfcma__CustomerName__c} is using more licenses than allowed
+                    </p>
+                    <p style="color: #333333; font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 14px; margin: 14px 0; padding: 0; line-height: 150%;">
+                        {!relatedTo.Customer__r.CustomerName__c} is using more licenses than they are being billed for in their {!relatedTo.ListingName__c} subscription.
+                        You may want to reach out to the customer to investigate the issue.
+                    </p>
+                    <p style="color: #333333; font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 14px; margin: 14px 0; padding: 0; line-height: 150%;">
+                        If you no longer want to receive these email notifications, log in to your Salesforce org and open the Checkout Management App.
+                        Then select Notification Settings to update your email preferences.
+                    </p>
+                  </td>
+                </tr>
+                <!-- END: content row -->
+
+              </table>
+
+              &nbsp;<br />&nbsp;<br />
+
+            </td>
+          </tr>
+        </table>
+        <!-- /center -->
+
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

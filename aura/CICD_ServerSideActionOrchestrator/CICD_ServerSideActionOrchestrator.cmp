@@ -1,0 +1,12 @@
+<aura:component extensible="true" abstract="true" >
+    <aura:attribute name="serverScriptsLoaded" type="boolean" default="false" />
+    <aura:attribute name="displaySpinner" type="boolean" default="true" />
+    <ltng:require scripts="/resource/CICD_Icons/serverSideActionHelper.js"
+                  afterScriptsLoaded="{!c.enableComponentLoad}" />
+
+    <aura:dependency resource="force:showToast" type="EVENT"/>
+    <div>
+        
+        {!v.body}
+         </div>
+</aura:component>

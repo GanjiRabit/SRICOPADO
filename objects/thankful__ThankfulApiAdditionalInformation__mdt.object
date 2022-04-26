@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Object to hold additional information that needs to be sent over related to case</description>
+    <fields>
+        <fullName>thankful__AdditionalInformationLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Label that needs to be used by Thankful API</inlineHelpText>
+        <label>Additional Information Label</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>thankful__CaseFieldApiName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>API Name of the field on Case that needs to be sent over to Thankful</inlineHelpText>
+        <label>Case Field Api Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>thankful__IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Thankful API Additional Information</label>
+    <listViews>
+        <fullName>thankful__All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>thankful__AdditionalInformationLabel__c</columns>
+        <columns>thankful__CaseFieldApiName__c</columns>
+        <columns>thankful__IsActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Thankful API Additional Information</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

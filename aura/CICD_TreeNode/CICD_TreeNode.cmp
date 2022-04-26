@@ -1,0 +1,32 @@
+<aura:component access="global">
+    
+    <aura:attribute name="item" type="object"  access="global"/>
+    <aura:attribute name="parentIndex" type="integer" default="0" access="global"/>
+
+    <aura:registerEvent name="deleteNodeEvent" type="c:CICD_RemoveNode"/>
+    <aura:if isTrue="{! !v.item.isDeleted}">
+        <li role="treeitem" aria-level="{!v.parentIndex}" aria-expanded="false">
+            <div class="slds-tree__item">       
+            <aura:if isTrue="{!v.item.items.length > 0}" >
+                <lightning:buttonIcon iconName="utility:chevronright" variant="bare"  size="medium" class="toggleSwitch"  onclick="{! c.toggleSelection }" alternativeText="Expand" />
+            </aura:if>
+            <aura:if isTrue="{! and( !v.item.isDeleted , v.item.items == null) }">
+                    <lightning:icon iconName="utility:delete" size="xx-small" variant="error" onclick="{!c.removeItem}"/>
+            </aura:if>
+                <span class="slds-has-flexi-truncate">
+                    <span class="slds-tree__item-label slds-truncate" title="{!v.item.label}">
+                        {!v.item.label}
+                        <aura:if isTrue="{!v.item.items.length > 0}">
+                                ( {!v.item.count} )
+                        </aura:if>
+                        
+                    </span>
+                </span>
+            </div>
+        
+            <c:CICD_TreeNodeHeader items="{!v.item.items}" parentIndex="{!v.parentIndex + 1}"/>
+        
+        </li>
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,5 @@
+<p>Dear {!copado__Deployment__c.OwnerFullName},&nbsp;</p>
+<p>A task could not be run on Copado. Please carefully review the below information as the User does not have right access to perform the task.&nbsp;</p>
+<p><strong>Details:&nbsp;</strong>The Deployment record {!copado__Deployment__c.Name} was not created successfully.</p>
+<p><strong>Error:&nbsp;</strong>The User, {!copado__Deployment__c.OwnerFullName} is <strong>Validate Only User</strong> and does not have access to perform deployment to the Destination Environment.&nbsp;</p>
+<p>Please reach out to your Release Manager for more info &nbsp;</p>

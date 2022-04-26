@@ -1,0 +1,69 @@
+<messaging:emailTemplate subject="Successfully imported Stripe data" recipientType="User" >
+<messaging:htmlEmailBody >
+<html>
+
+    <body>
+
+        <style type="text/css">
+            #outlook a { padding: 0; }
+            /* hotmail */
+            .ReadMsgBody { width: 100%; }
+            .ExternalClass { width: 100%; }
+            .ExternalClass * { line-height: 100%; }
+            body {
+                /* outlook */
+                mso-line-height-rule: exactly;
+                -webkit-text-size-adjust: none;
+            }
+            @-ms-viewport {
+                width: device-width;
+            }
+            .appleLinks a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            body {
+                background-color: #f4f6f9;
+            }
+        </style>
+
+
+        <!-- center -->
+        <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#f4f6f9">
+          <tr>
+            <td valign="top" align="center" style="font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 14px; color: #333333;">
+
+              &nbsp;<br />&nbsp;<br />
+
+              <table cellpadding="0" cellspacing="0" border="0" style="border: 0; padding: 0; margin: 0; min-width: 280px; max-width: 500px;">
+
+                <c:emailNotificationLogo />
+
+                <!-- START: content row -->
+                <tr>
+                  <td bgcolor="#ffffff" style="padding: 0px 20px 14px 20px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; border-bottom: 1px solid #d8dde6; border-left: 1px solid #eceef3; border-right: 1px solid #eceef3;">
+                    <p style="color: #333333; font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 21px; margin: 0 0 14px 0; padding: 0; line-height: 150%;">
+                        Successfully imported Stripe data
+                    </p>
+                    <p style="color: #333333; font-family: helvetica neue, helvetica, arial, sans-serif; font-size: 14px; margin: 14px 0; padding: 0; line-height: 150%;">
+                        When you're done configuring the Checkout Management App, verify your data by viewing records.
+                        If something is missing or incorrect, try importing your data again.
+                    </p>
+                  </td>
+                </tr>
+                <!-- END: content row -->
+
+              </table>
+
+              &nbsp;<br />&nbsp;<br />
+
+            </td>
+          </tr>
+        </table>
+        <!-- /center --> 
+
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

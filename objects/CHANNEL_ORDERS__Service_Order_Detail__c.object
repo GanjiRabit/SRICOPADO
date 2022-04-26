@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Application__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0</description>
+        <externalId>false</externalId>
+        <label>App (deprecated)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Default_Contract_Currency__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Current_Licenses__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For internal use by Salesforce. Represents the total number of product licenses assigned to the customer. This field populates with data only for orders created in Channel Order App v2.0 or later.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of licenses that customer currently has on that product</inlineHelpText>
+        <label>Current Licenses (internal use only)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Current_Total_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For internal use by Salesforce. Represents the total value of the customer&apos;s active orders for the product. This field populates with data only for orders created in Channel Order App v2.0 or later.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of total price across all orders</inlineHelpText>
+        <label>Current Total Price (internal use only)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Customer_Price_Per_Month__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Price per unit per month. Required for PNR products.</description>
+        <externalId>false</externalId>
+        <label>Customer Price (Unit/Month)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Customer_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__Customer_Price_Per_Month__c instead.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required if you are ordering a PNR product.  Please provide the monthly customer price per seat of your application.</inlineHelpText>
+        <label>Customer Price (User/Month) (deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Estimated_SFDC_Price_Per_Month__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__SFDC_Price__c instead.</description>
+        <externalId>false</externalId>
+        <formula>IF ( ISPICKVAL(CHANNEL_ORDERS__pc_Pricing_Type__c , &apos;PNR&apos;), 
+            MAX( CHANNEL_ORDERS__Quantity__c * CHANNEL_ORDERS__Customer_Price_Per_Month__c * (CHANNEL_ORDERS__pc_PNR__c / 100), CHANNEL_ORDERS__pc_Floor_Price__c  ) , 
+            CHANNEL_ORDERS__pc_Fixed_Price__c )</formula>
+        <label>Estimated SFDC Price/Month(deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Fixed_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__pc_Fixed_Price__c instead.</description>
+        <externalId>false</externalId>
+        <formula>if( CHANNEL_ORDERS__Pricing_Type__c = &quot;PNR&quot;, &quot; &quot;,
+
+if (round(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Fixed_Price__c,0) = CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Fixed_Price__c, text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Default_Contract_Currency__c) &amp; &quot; &quot; &amp; text(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Fixed_Price__c) &amp; &quot;.00&quot;, 
+
+text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Default_Contract_Currency__c) &amp; &quot; &quot; &amp; text(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Fixed_Price__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fixed Price (deprecated)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Floor_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0.</description>
+        <externalId>false</externalId>
+        <formula>if( CHANNEL_ORDERS__Pricing_Type__c = &quot;FIXED&quot;, &quot; &quot;,
+
+if (round(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Floor_Price__c,0) = CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Floor_Price__c, text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Default_Contract_Currency__c) &amp; &quot; &quot; &amp; text(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Floor_Price__c) &amp; &quot;.00&quot;,
+
+text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Default_Contract_Currency__c) &amp; &quot; &quot; &amp; text(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Floor_Price__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Floor Price (deprecated)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Is_Expired__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Whether the product&apos;s contract is expired. For example, due to a cancellation or the contract expiring.</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(CHANNEL_ORDERS__pc_Contract_Auto_Renew__c) = &apos;Yes&apos;, false, IF( 
+DATE (
+/*YEAR*/
+YEAR(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + FLOOR((MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c - 1)/12),
+/*MONTH*/
+CASE(MOD(MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c, 12), 0, 12, MOD(MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c, 12)),
+/*DAY*/
+MIN(DAY(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c), CASE(MOD(MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c, 12), 9, 30, 4, 30, 6, 30, 11, 30, 2,
+/* return max days for february dependent on if end date is leap year */
+IF(MOD(YEAR(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + FLOOR((MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c)/12), 400) = 0 || (MOD(YEAR(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + FLOOR((MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + 
+CHANNEL_ORDERS__pc_Contract_Length__c)/12), 4) = 0 &amp;&amp; MOD(YEAR(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + FLOOR((MONTH(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Start_Date__c) + CHANNEL_ORDERS__pc_Contract_Length__c)/12), 100) &lt;&gt; 0), 29, 28), 31)) 
+)  &lt;  TODAY()  , true, false ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Expired</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__New_Total_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For internal use by Salesforce. Represents the price of the product after any reductions are applied. This field populates with data only for orders created in Channel Order App v2.0 or later.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The price of the product after reductions have been applied via LIFO (Last order In, First order Out)</inlineHelpText>
+        <label>New Total Price (internal use only)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Number_Of_Users_ISVforce__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0</description>
+        <externalId>false</externalId>
+        <label># of users (ISVforce) (deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Order_Detail_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of the line item.</description>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(CHANNEL_ORDERS__pc_Pricing_Type__c, &apos;FIXED&apos;), CHANNEL_ORDERS__Quantity__c *   CHANNEL_ORDERS__pc_Fixed_Price__c  , CHANNEL_ORDERS__Quantity__c *     CHANNEL_ORDERS__Customer_Price_Per_Month__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Detail Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__PNR__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percent net revenue of the product at the time the order was created. This field must be explicitly set when using the API.</description>
+        <externalId>false</externalId>
+        <formula>CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__PNR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PNR %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Partner_Contract_Term__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the contract from the contract terms associated with the order.</description>
+        <externalId>false</externalId>
+        <formula>CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Partner Contract Term Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Partner_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Lookup to the related service order.</description>
+        <externalId>false</externalId>
+        <label>Service Order</label>
+        <referenceTo>CHANNEL_ORDERS__Service_Order__c</referenceTo>
+        <relationshipLabel>Service Order Detail</relationshipLabel>
+        <relationshipName>Partner_Order_Detail</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Pricing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__pc_Pricing_Type__c instead.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Pricing_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pricing Type (deprecated)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Product_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the product.</description>
+        <externalId>false</externalId>
+        <formula>CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Product_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Product_Line_Desc_Overridden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>True if this detail uses an individual description rather than using SFDC Invoice Description</inlineHelpText>
+        <label>Prod Line Desc Overridden (deprecated)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Product_Line_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Additional invoice details about the product or order. This field is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product Line Description will be displayed on the Invoice</inlineHelpText>
+        <label>SFDC Invoice Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Product_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the related product catalog.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>CHANNEL_ORDERS__Partner_Product_Catalog__c.CreatedDate</field>
+                <operation>greaterThan</operation>
+                <value>1/1/1900, 12:00 AM</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>CHANNEL_ORDERS__Partner_Product_Catalog__c</referenceTo>
+        <relationshipLabel>Service Order Detail</relationshipLabel>
+        <relationshipName>Product_Name</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Product_Special_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Special terms and conditions associated with the product.</description>
+        <externalId>false</externalId>
+        <label>Product Special Terms</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of product catalogs on the service order.</description>
+        <externalId>false</externalId>
+        <label>Total Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__SFDC_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount due to Salesforce for the line item as determined by your contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount to be paid to Salesforce. Based off the % fee paid to Salesforce as specified in the Contract</inlineHelpText>
+        <label>Revenue Share</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Special_Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0.</description>
+        <externalId>false</externalId>
+        <label>Special Instructions (deprecated)</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Billing_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>How often the customer is billed per year. The value must match your Salesforce contract, unless you’ve been granted override permissions.</description>
+        <externalId>false</externalId>
+        <label>Billing Frequency</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Cancellation_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of days the customer has to cancel the contract. The value must match your Salesforce contract, unless you’ve been granted override permissions.</description>
+        <externalId>false</externalId>
+        <label>Cancellation Terms (Days)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Contract_Auto_Renew__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Whether the contract automatically renews at the end of the term. The value must match your Salesforce contract, unless you’ve been granted override permissions.</description>
+        <externalId>false</externalId>
+        <label>Contract Auto Renew</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Contract_Length__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Length of the contract in months. The value must match your Salesforce contract, unless you’ve been granted override permissions.</description>
+        <externalId>false</externalId>
+        <label>Contract Length</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Custom_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom unit value for products with custom pricing.</description>
+        <externalId>false</externalId>
+        <label>Custom Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Fixed_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fixed price of the product at the time the order was created. This field must be explicitly set when using the API.</description>
+        <externalId>false</externalId>
+        <label>Fixed Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Floor_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0.</description>
+        <externalId>false</externalId>
+        <label>Floor Price (deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_PNR__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__PNR__c instead.</description>
+        <externalId>false</externalId>
+        <label>PNR % (deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Partner_Contract_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>ID of the contract from the contract terms associated with the order.</description>
+        <externalId>false</externalId>
+        <label>Partner Contract Term</label>
+        <referenceTo>CHANNEL_ORDERS__Partner_Contract_Terms__c</referenceTo>
+        <relationshipLabel>Service Order Detail</relationshipLabel>
+        <relationshipName>Service_Order_Detail</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Pricing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Pricing model of the product. This field must be explicitly set when using the API.</description>
+        <externalId>false</externalId>
+        <label>Pricing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PNR</fullName>
+                    <default>false</default>
+                    <label>PNR</label>
+                </value>
+                <value>
+                    <fullName>FIXED</fullName>
+                    <default>false</default>
+                    <label>FIXED</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Pricing_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>For internal use by Salesforce. Represents the per-unit pricing method of the product. This field populates with data only for orders created in Channel Order App v2.0 or later.</description>
+        <externalId>false</externalId>
+        <label>Unit (deprecated)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>User</fullName>
+                    <default>false</default>
+                    <label>User</label>
+                </value>
+                <value>
+                    <fullName>Org</fullName>
+                    <default>false</default>
+                    <label>Org</label>
+                </value>
+                <value>
+                    <fullName>Custom</fullName>
+                    <default>false</default>
+                    <label>Custom</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Product_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field retired in Channel Order App v2.0. Use CHANNEL_ORDERS__Product_ID__c instead.</description>
+        <externalId>false</externalId>
+        <label>Product ID (deprecated)</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pc_Renewal_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Renewal term in months. This value must match your Salesforce contract, unless you’ve been granted override permissions.</description>
+        <externalId>false</externalId>
+        <label>Renewal Terms (Months)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__pct_Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The default contract currency from the contract terms associated with the order. Read-only.</description>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AUD</fullName>
+                    <default>false</default>
+                    <label>AUD</label>
+                </value>
+                <value>
+                    <fullName>EUR</fullName>
+                    <default>false</default>
+                    <label>EUR</label>
+                </value>
+                <value>
+                    <fullName>GBP</fullName>
+                    <default>false</default>
+                    <label>GBP</label>
+                </value>
+                <value>
+                    <fullName>JPY</fullName>
+                    <default>false</default>
+                    <label>JPY</label>
+                </value>
+                <value>
+                    <fullName>SEK</fullName>
+                    <default>false</default>
+                    <label>SEK</label>
+                </value>
+                <value>
+                    <fullName>USD</fullName>
+                    <default>false</default>
+                    <label>USD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Service Order Detail</label>
+    <listViews>
+        <fullName>CHANNEL_ORDERS__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SOD-{0000000000}</displayFormat>
+        <label>Service Order Detail Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Order Detail</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>CHANNEL_ORDERS__Partner_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CHANNEL_ORDERS__Product_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CHANNEL_ORDERS__Quantity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CHANNEL_ORDERS__Customer_Price__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__CancellationTerms_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( CHANNEL_ORDERS__pc_Partner_Contract_Term__r.CHANNEL_ORDERS__Allow_Cancellation_Terms_Override__c,    ISBLANK(CHANNEL_ORDERS__pc_Cancellation_Terms__c)  )</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__pc_Cancellation_Terms__c</errorDisplayField>
+        <errorMessage>Cancellation Terms is a required field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__ContractLength_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(  CHANNEL_ORDERS__pc_Partner_Contract_Term__r.CHANNEL_ORDERS__Allow_Contract_Length_Override__c , ISBLANK( CHANNEL_ORDERS__pc_Contract_Length__c ) )</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__pc_Contract_Length__c</errorDisplayField>
+        <errorMessage>Contract Length is a required field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Customer_Price_Per_Month_Must_Be_Blank</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Customer_Price_Per_Month__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Customer_Price_is_required_if_PNR</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Customer_Price__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__ISVForce_Cust_Price_User_Month_Blank</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Customer_Price__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__ISVForce_Customer_Price_per_month_reqd</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Customer_Price_Per_Month__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__ISVForce_Quantity_Must_Be_Blank</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Quantity__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__ISVForce_num_users_is_required</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Number_Of_Users_ISVforce__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Num_Users_ISVForce_Must_Be_Blank</fullName>
+        <active>false</active>
+        <description>Deprecated</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Number_Of_Users_ISVforce__c</errorDisplayField>
+        <errorMessage>(deprecated)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Order_must_belong_to_contract_terms</fullName>
+        <active>true</active>
+        <errorConditionFormula>CHANNEL_ORDERS__pc_Partner_Contract_Term__c &lt;&gt;  CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__c</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Partner_Order__c</errorDisplayField>
+        <errorMessage>The Service Order you selected is not part of the Contract Term you chose</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Product_must_belong_to_contract_terms</fullName>
+        <active>true</active>
+        <errorConditionFormula>CHANNEL_ORDERS__Partner_Contract_Term__c &lt;&gt;  CHANNEL_ORDERS__Product_Name__r.CHANNEL_ORDERS__Partner_Contract_Terms__r.Name</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Product_Name__c</errorDisplayField>
+        <errorMessage>The Product you selected is not part of the Contract Term you chose on the Service Order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Quantity_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( NOT(ISPICKVAL( CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Type__c  , &apos;ISVForce&apos;) ), NOT(ISPICKVAL( CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Partner_Contract_Rules__r.CHANNEL_ORDERS__Type__c  , &apos;ISV&apos;) ), OR( ISBLANK( CHANNEL_ORDERS__Quantity__c ), ISNULL( CHANNEL_ORDERS__Quantity__c )))</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__Quantity__c</errorDisplayField>
+        <errorMessage>Field can not be empty. You must set a value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__RenewalTerms_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(  CHANNEL_ORDERS__pc_Partner_Contract_Term__r.CHANNEL_ORDERS__Allow_Renewal_Length_Override__c , ISBLANK( CHANNEL_ORDERS__pc_Renewal_Terms__c ) )</errorConditionFormula>
+        <errorDisplayField>CHANNEL_ORDERS__pc_Renewal_Terms__c</errorDisplayField>
+        <errorMessage>Renewal Terms is a required field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CHANNEL_ORDERS__Special_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR(ISCHANGED(CHANNEL_ORDERS__Special_Instructions__c ), ISCHANGED( CHANNEL_ORDERS__Product_Special_Terms__c )) ,Text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Order_Status__c)  !=  &apos;Draft&apos;,Text(CHANNEL_ORDERS__Partner_Order__r.CHANNEL_ORDERS__Service_Order_Status__c)  !=  &apos;Error&apos;)</errorConditionFormula>
+        <errorMessage>Field can not be updated. Service Order status should be: &apos;Error&apos; or &apos;Draft&apos;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

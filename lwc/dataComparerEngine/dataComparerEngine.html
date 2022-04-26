@@ -1,0 +1,112 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <lightning-layout>
+        <lightning-layout-item flexibility="auto">
+            <div class="custom-box slds-box slds-p-around_small slds-text-align_left">        
+                <div class="slds-form">     
+                    <template if:true={listIsNotEmpty}>
+                        
+                            <lightning-card title={titlesLabel}> 
+                            
+                                <div class="slds-form-element slds-form-element_horizontal">
+                                    <label class="slds-form-element__label slds-p-left_small" for="horizontal-input-id-05"><strong>Unique Key : </strong></label>
+                                    <div class="slds-form-element__control slds-p-right_small">                        
+                                        <lightning-combobox
+                                            name="cmContentSourceColumns" class="clsContentSourceKey"
+                                            label=""
+                                            placeholder="Select a Column to Match records"
+                                            value={seletedKey}
+                                            onchange={handleKeyChange}
+                                            options={keyFieldOptions}>
+                                        </lightning-combobox>
+                                        
+                                    </div>
+                                    <lightning-button variant="brand" label="Compare" title="Compare" 
+                                                    onclick={handleCompare} class="slds-text-align_center slds-grid_align-start slds-p-left_small"                     
+                                            >
+                                            </lightning-button>
+                                </div>                
+                                
+                                    
+                                
+                                    <!--div class="slds-page-header slds-form-element slds-form-element_horizontal">
+                                    
+                                        <div class="slds-page-header__row">
+                                            <div class="slds-page-header__col-title">
+                                                <div class="slds-media">
+                                                <div class="slds-media__figure">
+                                                    <span class="slds-icon_container slds-icon-standard-opportunity" title="File Version Data Comparison">
+                                                        <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                                                            </svg>
+                                                            <span class="slds-assistive-text">Data Comparison</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="slds-media__body">
+                                                        <div class="slds-page-header__name">
+                                                            <div class="slds-page-header__name-title">
+                                                                <h1>
+                                                                    <span class="slds-page-header__title slds-truncate" title="Summary">Summary of Changes</span>
+                                                                </h1>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                            <p class="slds-page-header__name-meta">{mainObject} - Added : {added} • Modified : {modified} • Deleted : {deleted}</p>
+                                                            
+                                                        
+                                                    </div>
+                                                    <div class="lgc-bg"> <span>Help</span>
+                                                        
+                                                        <lightning-helptext  content="If any changes found - please hover on highlighted changes or click on a row having modified status to compare old values"></lightning-helptext>
+                                                    
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                                
+                                        </div>
+                                    
+                                    </div--> 
+                            
+                                
+                            </lightning-card>   
+                            <lightning-card class="slds-grid_vertical-align-center"><!--variant="Narrow"  title="Summary of Changes" icon-name="standard:account" -->
+                                <!--lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon-->
+                                <!--p  class="slds-m-top_x-small slds-p-right_small" >{mainObject}</p-->
+                            
+                                <h3 slot="title">
+                                    <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                                    Result: <template if:true={mainObject}>&nbsp; {mainObject} :</template>
+                                </h3>
+                                <lightning-button-group alternative-text="Show More" slot="actions">                                
+                                    <lightning-button label={added} icon-name="utility:add"  alternative-text="Added" variant="success"></lightning-button>
+                                    <lightning-button label={modified} icon-name="utility:edit" alternative-text="Modified" variant="brand"></lightning-button>
+                                    <lightning-button label={deleted} icon-name="utility:delete" alternative-text="Deleted" variant="destructive"></lightning-button>                                
+                                </lightning-button-group>
+                            </lightning-card>
+                        
+                    </template>
+                 
+                    <template if:false={listIsNotEmpty}>  
+                        <lightning-card title="Compare">     
+                            <div class="slds-form">
+                                <div class="slds-form-element slds-text-align_center ">    
+                                    <h1>Please select a source file and a Target file </h1>
+                                    <p>Source and Target file should have at least 1 common unique key column</p>
+                                    <p> File Comparer Tool appears here the moment valid version gets chosen</p>                            
+                                </div> 
+                            </div>  
+                        </lightning-card>          
+                    </template> 
+                </div> 
+            </div> 
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

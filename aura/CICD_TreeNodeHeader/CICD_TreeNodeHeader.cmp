@@ -1,0 +1,15 @@
+<aura:component access="global">
+
+    <aura:attribute name="items" type="object[]"  access="global"/>
+    <aura:attribute name="parentIndex" type="integer"  access="global"/>
+
+    
+    <ul role="group">    
+        <aura:iteration items="{!v.items}" var="item">
+            <aura:if isTrue="{! !item.isDeleted}">
+               <c:CICD_TreeNode item ="{!item}" parentIndex="{!v.parentIndex + 1}"/>
+             </aura:if>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

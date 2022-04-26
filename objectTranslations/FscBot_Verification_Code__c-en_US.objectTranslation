@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Verification Code</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Verification Codes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Verification Codes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expires On --></label>
+        <name>Expires_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used --></label>
+        <name>Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verification Method --></label>
+        <name>Verification_Method__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

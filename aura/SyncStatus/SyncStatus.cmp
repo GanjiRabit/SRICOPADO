@@ -1,0 +1,11 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:dependency resource="force:refreshView" type="EVENT"></aura:dependency>
+    <div style="padding-top: 100px">
+        <div class="slds-is-relative" style="margin:auto;">
+            <lightning:spinner variant="brand" size="medium"></lightning:spinner>
+        </div>
+
+        <c:triggerCIJob recordId="{!v.recordId}" onclosedialog="{!c.closeDialog}"></c:triggerCIJob>
+
+    </div>
+</aura:component>

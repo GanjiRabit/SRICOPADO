@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Checkout 顧客</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Email Addresses --></label>
+        <name>sfcma__AdditionalEmailAddresses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>sfcma__CustomerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Org Id --></label>
+        <name>sfcma__CustomerOrgIdUnique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Org Id (deprecated) --></label>
+        <name>sfcma__CustomerOrgId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>sfcma__Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>sfcma__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Country --></label>
+        <name>sfcma__ShippingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Amount Discounted By Coupon --></label>
+        <name>sfcma__TemporaryAmountDiscountedByCoupon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Billing Country --></label>
+        <name>sfcma__TemporaryBillingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Charge VAT --></label>
+        <name>sfcma__TemporaryChargeVAT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Coupon Discount Type --></label>
+        <name>sfcma__TemporaryCouponDiscountType__c</name>
+        <picklistValues>
+            <masterLabel>dollars</masterLabel>
+            <translation>ドル</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>percent</masterLabel>
+            <translation>パーセント</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Temporary Coupon Lifespan --></label>
+        <name>sfcma__TemporaryCouponLifespan__c</name>
+        <picklistValues>
+            <masterLabel>Forever</masterLabel>
+            <translation>無期限</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Time</masterLabel>
+            <translation>期間限定</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One Time</masterLabel>
+            <translation>1 回</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Temporary Coupon --></label>
+        <name>sfcma__TemporaryCoupon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Listing Id --></label>
+        <name>sfcma__TemporaryListingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Listing Name --></label>
+        <name>sfcma__TemporaryListingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Number Of Times Coupon Applies --></label>
+        <name>sfcma__TemporaryNumberOfTimesCouponApplies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Package Id --></label>
+        <name>sfcma__TemporaryPackageId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Percent Discounted By Coupon --></label>
+        <name>sfcma__TemporaryPercentDiscountedByCoupon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Shipping Country --></label>
+        <name>sfcma__TemporaryShippingCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary Stripe Customer Id --></label>
+        <name>sfcma__TemporaryStripeCustomerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary VAT Number --></label>
+        <name>sfcma__TemporaryVATNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temporary VAT Percentage --></label>
+        <name>sfcma__TemporaryVATPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Contract Value --></label>
+        <name>sfcma__TotalContractValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Licenses --></label>
+        <name>sfcma__TotalLicenses__c</name>
+    </fields>
+    <nameFieldLabel>Checkout 顧客</nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,23 @@
+<aura:component controller="CICD_Controller" >
+
+    <aura:attribute name="recordError" type="List" default="[]"  />
+
+    <aura:method name="getUrlParams" action="{!c.getUrlParams}" > 
+        <aura:attribute name="key" type="String" default="" />
+    </aura:method>
+
+    <aura:method name="callApex" action="{!c.callApex}" > 
+        <aura:attribute name="method" type="String" default="" />
+        <aura:attribute name="parameters" type="Object" default="{}" />
+        <aura:attribute name="cb" type="Function" default="" />
+        <aura:attribute name="isBackground" type="boolean" default="false" />
+    </aura:method>
+
+    <aura:method name="buildDeployText" action="{!c.buildDeployText}" > 
+        <aura:attribute name="nm" type="String" default="" />
+        <aura:attribute name="title" type="String" default="" />
+        <aura:attribute name="step" type="String" default="" />
+    </aura:method>
+ 
+
+</aura:component>

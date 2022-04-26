@@ -1,0 +1,12 @@
+<aura:component implements="lightning:homeTemplate" description="Main column and right sidebar. On a phone, the regions are of equal width">
+    <aura:attribute name="right" type="Aura.Component[]" />
+
+    <div>
+        <div style="height: 80%;    display: inline-block;    width: 100%;">
+        {!v.right}
+        </div>
+                
+        
+    </div>
+    
+</aura:component>

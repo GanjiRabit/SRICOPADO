@@ -1,0 +1,197 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-29-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="spinnerHolder">
+        <template if:true={loaded}>
+            <template if:true={listIsNotEmpty}>
+                <div class="slds-page-header">
+                    <div class="slds-page-header__row">
+                        <div class="slds-page-header__col-title">
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <!--span class="slds-icon_container slds-icon-standard-opportunity">
+                                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                                </svg>
+                            </span-->
+                                    <lightning-icon icon-name="doctype:csv" alternative-text="Compare"
+                                        title="Choose an uniqueue field and Click Compare"></lightning-icon>
+
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-page-header__name">
+                                        <div class="slds-page-header__name-title">
+                                            <h1>
+                                                <template if:true={mainObject}>
+                                                    <span>{mainObject}s</span>
+                                                </template>
+                                                <template if:false={mainObject}>
+                                                    <span>Results</span>
+                                                </template>
+
+                                                <lightning-layout>
+                                                    <lightning-layout-item flexibility="auto">
+                                                        <span class="slds-page-header__title slds-truncate"
+                                                            title="ComparedByUniqueueKey">Compared By </span>
+                                                    </lightning-layout-item>
+                                                    <lightning-layout-item flexibility="auto">
+
+                                                        <lightning-combobox variant="label-hidden"
+                                                            name="cmContentSourceColumns"
+                                                            class="clsContentSourceKey slds-p-left_small" label=""
+                                                            placeholder="Select a Column to Match records"
+                                                            value={selectedKey} onchange={handleKeyChange}
+                                                            options={keyFieldOptions}>
+                                                        </lightning-combobox>
+
+                                                    </lightning-layout-item>
+                                                    <lightning-layout-item flexibility="auto">
+                                                        <lightning-button variant="brand" label="Compare"
+                                                            title="Compare" data-status="Compare"
+                                                            onclick={publishStatus}
+                                                            class="slds-text-align_center slds-grid_align-start slds-p-left_small">
+                                                        </lightning-button>
+                                                    </lightning-layout-item>
+                                                </lightning-layout>
+
+                                            </h1>
+                                        </div>
+
+                                        <!--div class="slds-page-header__name-switcher">
+
+                                <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                    <button class="slds-button slds-button_icon slds-button_icon-small"
+                                        aria-haspopup="true" title="Switch list view">
+                                        <svg class="slds-button__icon slds-icon_x-small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                        </svg>
+                                        <span class="slds-assistive-text">Switch list view</span>
+                                    </button>
+                                </div>
+                            </div-->
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="slds-page-header__col-actions">
+                            <div class="slds-page-header__controls">
+                                <div class="slds-page-header__control">
+                                    <div class="slds-button-group" role="group">
+                                        <div>
+                                            <button class="slds-button slds-button_neutral slds-button_first"
+                                                data-status="" onclick={publishStatus}>All</button>
+                                        </div>
+                                        <div>
+                                            <button class="slds-button slds-button_neutral slds-button_middle"
+                                                data-status="Added" onclick={publishStatus}>Added :
+                                                {added}</button>
+                                        </div>
+                                        <div>
+                                            <button class="slds-button slds-button_neutral slds-button_middle"
+                                                data-status="Modified" onclick={publishStatus}>Modified :
+                                                {modified}</button>
+                                        </div>
+                                        <div>
+                                            <button class="slds-button slds-button_neutral slds-button_last"
+                                                data-status="Deleted" onclick={publishStatus}>Deleted :
+                                                {deleted}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="slds-page-header__row">
+            <div class="slds-page-header__col-meta">
+                <p class="slds-page-header__meta-text">10 items • Updated 13 minutes ago</p>
+            </div>
+            <div class="slds-page-header__col-controls">
+                <div class="slds-page-header__controls">
+                    <div class="slds-page-header__control">
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true"
+                                aria-expanded="false" title="List View Controls">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                                </svg>
+                                <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                </svg>
+                                <span class="slds-assistive-text">List View Controls</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="slds-page-header__control">
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                            <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true"
+                                aria-expanded="false" title="Change view">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"></use>
+                                </svg>
+                                <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Change view</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="slds-page-header__control">
+                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Edit List">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Edit List</span>
+                        </button>
+                    </div>
+                    <div class="slds-page-header__control">
+                        <button class="slds-button slds-button_icon slds-button_icon-border-filled"
+                            title="Refresh List">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Refresh List</span>
+                        </button>
+                    </div>
+                    <div class="slds-page-header__control">
+                        <ul class="slds-button-group-list">
+                            <li>
+                                <button class="slds-button slds-button_icon slds-button_icon-border-filled"
+                                    title="Charts">
+                                    <svg class="slds-button__icon" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chart"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Charts</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="slds-button slds-button_icon slds-button_icon-border-filled"
+                                    title="Filters">
+                                    <svg class="slds-button__icon" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Filters</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div-->
+                </div>
+            </template>
+
+        </template>
+        <template if:false={loaded}>
+            <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+
+        </template>
+    </div>
+</template>

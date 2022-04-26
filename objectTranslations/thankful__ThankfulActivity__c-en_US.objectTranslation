@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Case --></label>
+        <name>thankful__Case__c</name>
+        <relationshipLabel><!-- Thankful Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>thankful__Channel__c</name>
+        <picklistValues>
+            <masterLabel>API</masterLabel>
+            <translation><!-- API --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chat</masterLabel>
+            <translation><!-- Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook</masterLabel>
+            <translation><!-- Facebook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In App</masterLabel>
+            <translation><!-- In App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thankful Chat</masterLabel>
+            <translation><!-- Thankful Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twitter</masterLabel>
+            <translation><!-- Twitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content --></label>
+        <name>thankful__ContentRtf__c</name>
+    </fields>
+    <fields>
+        <label><!-- Content - -  DEPRECATED --></label>
+        <name>thankful__Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- From --></label>
+        <name>thankful__From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Internal --></label>
+        <name>thankful__IsInternal__c</name>
+    </fields>
+    <fields>
+        <label><!-- To --></label>
+        <name>thankful__To__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Emails --></label>
+        <name>thankful__UserEmails__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Id --></label>
+        <name>thankful__UserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Name --></label>
+        <name>thankful__UserName__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Phones --></label>
+        <name>thankful__UserPhones__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Type --></label>
+        <name>thankful__UserType__c</name>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

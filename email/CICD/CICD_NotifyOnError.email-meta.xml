@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>CICD Error has occurred</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CICD_NotifyOnError</name>
+    <style>none</style>
+    <subject>CICD Error has occurred</subject>
+    <textOnly>A CICD error has occurred.
+
+Name: {!AppLog__c.Name}
+App Category: {!AppLog__c.AppCat__c}
+Severity: {!AppLog__c.Severity__c}
+Message: {!AppLog__c.Message__c}
+Created By: {!AppLog__c.CreatedBy}
+Record Link: {!AppLog__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

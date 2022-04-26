@@ -1,0 +1,112 @@
+<template>
+    <div class="b5gApp homePage">
+        <lightning-tabset>
+            <lightning-tab label="Authentication &amp; Global Defaults">
+                <div>
+                    <form autocomplete="off">
+                        <template if:true={readyToDisplay}>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                                    <lightning-combobox options={authTypeOptions} label="Authenticaiton Mehcanism"
+                                        variant="label-stacked" data-bind="config.accelQAuthType"
+                                        onchange={handleInputChange} required placeholder="Select"
+                                        value={config.accelQAuthType}>
+                                    </lightning-combobox>
+                                    <template if:true={showManualDetails}>
+                                        <lightning-input type="text" label="AccelQ UserName" variant="label-stacked"
+                                            data-bind="config.accelQUserName" value={config.accelQUserName}
+                                            onchange={handleInputChange} required autocomplete="none"
+                                            aria-autocomplete="none">
+                                        </lightning-input>
+
+                                        <lightning-input type="password" label="AccelQ Password" variant="label-stacked"
+                                            data-bind="config.accelQPassword" value={config.accelQPassword}
+                                            onchange={handleInputChange} required autocomplete="none"
+                                            aria-autocomplete="none">
+                                        </lightning-input>
+
+                                        <lightning-input type="url" label="AccelQ Url" variant="label-stacked"
+                                            data-bind="config.accelQUrl" value={config.accelQUrl}
+                                            onchange={handleInputChange} required autocomplete="none"
+                                            aria-autocomplete="none">
+                                        </lightning-input>
+                                    </template>
+                                </div>
+                                <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                                    <template if:false={isSaveDisabled}>
+                                        <lightning-input type="text" label="Default Project" variant="label-stacked"
+                                            disabled value={config.accelQTenant} onchange={handleInputChange}>
+                                        </lightning-input>
+
+                                        <lightning-combobox options={projectOptions} label="Default Project"
+                                            variant="label-stacked" data-bind="config.accelQDefaultProject"
+                                            onchange={handleInputChange} required placeholder="Select"
+                                            value={config.accelQDefaultProject}>
+                                        </lightning-combobox>
+
+                                        <lightning-input type="text" label="Default CI Job Number"
+                                            variant="label-stacked" data-bind="config.accelQDefaultCIJob"
+                                            value={config.accelQDefaultCIJob} onchange={handleInputChange} required
+                                            autocomplete="none" aria-autocomplete="none">
+                                        </lightning-input>
+
+                                        <lightning-input type="text" label="Default Run Time Attributes"
+                                            variant="label-stacked" data-bind="config.accelQDefualtRunTimeAttributes"
+                                            value={config.accelQDefualtRunTimeAttributes} onchange={handleInputChange}
+                                            autocomplete="none" aria-autocomplete="none">
+                                        </lightning-input>
+
+                                    </template>
+                                </div>
+                            </div>
+
+
+                            <div class="slds-tex-align_center">
+                                <button class="slds-button slds-button_brand" disabled={isVerifyDisabled}
+                                    onclick={verifyEnteredCredentials}> Verify
+                                    Credentials
+                                </button>
+
+                                <button class="slds-button slds-button_brand" disabled={isSaveDisabled}
+                                    onclick={saveCredentials}> Save </button>
+                            </div>
+
+                        </template>
+                    </form>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Assocaite Jobs With Objects" title="2nd tab extended title">
+                <div>
+                    <form autocomplete="off">
+                        <template if:true={showJobFieldDefaults}>
+
+                            <div class="inline">
+                                <lightning-combobox options={config.objectsInfo} label="Select Sobject Type"
+                                    variant="label-stacked" data-bind="sobjectVariant" onchange={handleInputChange}
+                                    placeholder="Select" value={sobjectVariant}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="configBlock">
+                                <div>
+                                    <template if:true={sobjectVariant}>
+                                        <c-sobject-mapping sobject-a-p-i-name={sobjectVariant}>
+                                        </c-sobject-mapping>
+                                    </template>
+                                </div>
+                            </div>
+
+                        </template>
+                    </form>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
+
+
+        <template if:true={showSpinner}>
+            <lightning-spinner variant="brand" alternative-text="waiting for response..." size="medium">
+            </lightning-spinner>
+        </template>
+
+        <c-metadata-provider></c-metadata-provider>
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-09-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+    <lightning-card title="Data File Versions - Choose Version to Compare">
+        <lightning-combobox
+            name="cmContentDocumentVersion"
+            label="Select Version to Compare"
+            placeholder="Choose A Data Set Related to the user Story"
+            value={selectedSourceFileVersionOption}
+            onchange={handleContentDocumentChange}
+            options={contentDocumentNames}>
+        </lightning-combobox>
+        <lightning-combobox
+            name="cmContentDocumentVersionWith"
+            label="Select Version to Compare With"
+            placeholder="Choose A Data Set Related to the user Story"
+            value={selectedTargetFileVersionOption}
+            onchange={handleContentDocumentTargetChange}
+            options={contentDocumentNames}>
+        </lightning-combobox>
+        
+    </lightning-card>
+</template>

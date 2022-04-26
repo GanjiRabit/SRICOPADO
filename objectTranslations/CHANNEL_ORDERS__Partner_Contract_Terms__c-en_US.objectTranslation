@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Allow Auto Renew Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Auto_Renew_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Cancellation Terms Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Cancellation_Terms_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Contract Length Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Contract_Length_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Renewal Length Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Renewal_Length_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow to Sell to Existing Org --></label>
+        <name>CHANNEL_ORDERS__Allow_to_Sell_to_Existing_Org__c</name>
+    </fields>
+    <fields>
+        <label><!-- COA Sync timestamp --></label>
+        <name>CHANNEL_ORDERS__COA_Sync_timestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Auto Renew Policy --></label>
+        <name>CHANNEL_ORDERS__Default_Auto_Renew_Policy__c</name>
+        <picklistValues>
+            <masterLabel>Always Auto Renew</masterLabel>
+            <translation><!-- Always Auto Renew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Auto Renew</masterLabel>
+            <translation><!-- Never Auto Renew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Selection</masterLabel>
+            <translation><!-- Partner Selection --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Billing Frequency (Months) --></label>
+        <name>CHANNEL_ORDERS__Default_Billing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Cancellation Terms (Days) --></label>
+        <name>CHANNEL_ORDERS__Default_Cancellation_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Contract Auto Renew --></label>
+        <name>CHANNEL_ORDERS__Default_Contract_Auto_Renew__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Contract Currency --></label>
+        <name>CHANNEL_ORDERS__Default_Contract_Currency__c</name>
+        <picklistValues>
+            <masterLabel>AUD</masterLabel>
+            <translation><!-- AUD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JPY</masterLabel>
+            <translation><!-- JPY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEK</masterLabel>
+            <translation><!-- SEK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Contract Length (Months) --></label>
+        <name>CHANNEL_ORDERS__Default_Contract_Length_Months__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24</masterLabel>
+            <translation><!-- 24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>36</masterLabel>
+            <translation><!-- 36 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Default Contract Length (Months) --></label>
+        <name>CHANNEL_ORDERS__Default_Contract_Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Renewal Length (Months) --></label>
+        <name>CHANNEL_ORDERS__Default_Renewal_Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Level --></label>
+        <name>CHANNEL_ORDERS__Override_Level__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order</masterLabel>
+            <translation><!-- Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Item</masterLabel>
+            <translation><!-- Order Item --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partner API Key --></label>
+        <name>CHANNEL_ORDERS__Partner_API_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contract Term External ID --></label>
+        <name>CHANNEL_ORDERS__Partner_Contract_Term_External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CHANNEL_ORDERS__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired (Add-ons Only)</masterLabel>
+            <translation><!-- Retired (Add-ons Only) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>CHANNEL_ORDERS__Type__c</name>
+        <picklistValues>
+            <masterLabel>ISVforce</masterLabel>
+            <translation><!-- ISVforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation><!-- OEM --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,46 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <p><code></code> </p>
+
+    <div class="custom-box slds-box slds-text-align_left">
+        <div class="slds-box slds-theme_default">
+            <lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection}
+                allow-multiple-sections-open active-section-name="secSearchData">
+                <lightning-accordion-section name="secSearchData" label="Compare Data Template Versions">
+                    <lightning-layout>
+                        <lightning-layout-item flexibility="auto" class="slds-size_1-of-2">
+                            <c-retrieve-source_v1 titles-label='Source' record-id={recordId}
+                                latest-version-of-source=true
+                                within-data-set=true></c-retrieve-source_v1>
+                        </lightning-layout-item>
+                        <lightning-layout-item flexibility="auto" class="slds-size_1-of-2">
+                            <c-retrieve-target_v1 titles-label='Target'
+                                latest-version-of-source=false></c-retrieve-target_v1>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-accordion-section>
+            </lightning-accordion>
+        </div>
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" class="slds-size_2-of-2">
+                <c-data-comparer-engine_v1 titles-label='Compare'>
+                </c-data-comparer-engine_v1>
+
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" class="slds-size_2-of-2">
+                <c-draw-jq-table_v1></c-draw-jq-table_v1>
+                
+                    <!--template if:true={isModFilter}>we would have kept the modTable component within this - however if ura false then jQuery DataTable does not load as it does not know where to draw the table  kept the </template-->    
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </div>
+</template>

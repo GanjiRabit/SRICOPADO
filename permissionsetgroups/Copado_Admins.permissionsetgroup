@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Copado Admins</label>
+    <permissionSets>CHANNEL_ORDERS__COA_Admin_User</permissionSets>
+    <permissionSets>Copado_Session_Based_PS_Test</permissionSets>
+    <permissionSets>copado__Commit_Changes</permissionSets>
+    <permissionSets>copado__Compliance_Hub</permissionSets>
+    <permissionSets>sfcma__CMAAdminUser</permissionSets>
+    <permissionSets>sfcma__CMAStandardUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

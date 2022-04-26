@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://dev98595.service-now.com/oauth_auth.do</authorizeUrl>
+    <consumerKey>01dafb0f378b40109bbb008078345491</consumerKey>
+    <consumerSecret>tv4vyfuLea9+vOo2Tl727g==</consumerSecret>
+    <defaultScopes>useraccount</defaultScopes>
+    <friendlyName>ServiceNow_Connect</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://dev98595.service-now.com/oauth_token.do</tokenUrl>
+</AuthProvider>

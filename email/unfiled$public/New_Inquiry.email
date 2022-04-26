@@ -1,0 +1,11 @@
+Name :  {!MarketingFlyerLead__c.Name__c}
+
+Company : {!MarketingFlyerLead__c.Company__c}
+
+Role :  {!MarketingFlyerLead__c.Role__c}
+
+Phone :  {!MarketingFlyerLead__c.Phone__c}
+
+Email :  {!MarketingFlyerLead__c.Email__c}
+
+Query: {!MarketingFlyerLead__c.Query__c}

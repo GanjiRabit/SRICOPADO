@@ -1,0 +1,42 @@
+<aura:component access="global">
+
+<aura:attribute name="steps" type="object[]" default="[]" />
+<aura:attribute name="stepTitle" type="string" default="" />
+
+<div>
+    <aura:if isTrue="{!v.stepTitle.length > 0}">
+        <div class="slds-text-heading_large slds-p-around_small borderBottom">
+            <div class="slds-is-relative slds-p-around_small inlineBlock">
+                    
+                <div class="slds-spinner slds-spinner_brand slds-spinner--small" aria-hidden="false" role="alert">
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+                      
+            </div>
+            {!v.stepTitle}
+        </div>
+    </aura:if>
+    <div class="slds-progress slds-progress_vertical slds-p-around_small">
+        <ol class="slds-progress__list">
+            <aura:iteration items="{!v.steps}" var="step">
+                <li class="{!step.isCompleted ? 'slds-progress__item slds-is-completed' : step.isActive ? 'slds-progress__item slds-is-active' : 'slds-progress__item'}">
+                    <aura:if isTrue="{!step.isCompleted}">
+                            <lightning:icon iconName="utility:success" size="xx-small" class="slds-icon_container slds-icon-utility-success slds-progress__marker slds-progress__marker_icon slds-progress__marker_icon-success" />
+                        <aura:set attribute="else">
+                            <div class="slds-progress__marker">
+                                <aura:if isTrue="{!step.isActive}">
+                                    <span class="slds-assistive-text">Active</span>
+                                </aura:if>
+                            </div>
+                        </aura:set>
+                    </aura:if>                        
+                    <div class="slds-progress__item_content slds-grid slds-grid_align-spread">                                   
+                        {!step.title}                                    
+                    </div>
+                </li>
+            </aura:iteration>                
+        </ol>
+    </div>                    
+</div>
+</aura:component>

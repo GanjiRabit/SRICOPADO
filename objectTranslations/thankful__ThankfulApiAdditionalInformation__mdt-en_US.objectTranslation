@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Label that needs to be used by Thankful API --></help>
+        <label><!-- Additional Information Label --></label>
+        <name>thankful__AdditionalInformationLabel__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of the field on Case that needs to be sent over to Thankful --></help>
+        <label><!-- Case Field Api Name --></label>
+        <name>thankful__CaseFieldApiName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>thankful__IsActive__c</name>
+    </fields>
+</CustomObjectTranslation>

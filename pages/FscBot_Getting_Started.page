@@ -1,0 +1,353 @@
+<apex:page showHeader="true" controller="FscBot_LiveAgentSetupCtrl" standardStylesheets="false" sidebar="false" docType="html-5.0">
+<!--test1112-->    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-Frame-Options" content="deny" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+    </head>
+    <apex:slds />
+    <style>
+        .slds-list_ordered li{
+            padding: 0.3rem;
+        }
+        .slds-notify_container.slds-is-relative{
+            margin-bottom: 1%;
+        }
+        .hide{
+            display: none !important;
+        }
+    </style>
+    
+    <div class="slds-scope slds-p-around_medium">
+    <apex:form >
+        <apex:outputPanel layout="none" rendered="{!hasPageMessages}">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_success">
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small "> 
+                            {!pageMessage}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_large">Getting Started with 
+                            "Einstein Bots for Financial Services Cloud"</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Live Agent and Test data Setup</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                You can use the below 3 buttons to setup Live Agent, create test data and assign bot permset to the bot user to see the bot working. Please make sure you create test data only in non production environment.<br/>
+                Before clicking the below buttons please add the current orgs url ({!sfdcUrl}) to remote site setting.
+                <br/><br/>
+                
+                    <apex:commandButton action="{!createLiveAgentSetup}" value="Live Agent Setup" styleClass="slds-button slds-button_brand" id="theButton1"/>
+                    <apex:commandButton action="{!createFscBotData}" value="Create FscBot Test Data" styleClass="slds-button slds-button_brand" id="theButton2"/>
+                    <apex:commandButton action="{!assignBotPermSet}" value="Assign Bot PermSet" styleClass="slds-button slds-button_brand" id="theButton3"/>
+                
+            </div>
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Package Un-installtion Steps</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <h3>Before un-installation of package, execute below steps:</h3>
+                <ol class="slds-list_ordered">
+                    <li>
+                        Button to remove chatbot permset for integration user<br/>
+                        
+                            <apex:commandButton action="{!revokeBotPermSet}" value="Revoke PermSet Assignment" styleClass="slds-button slds-button_brand" id="theButton4"/>
+                        
+                    </li>
+                    <li>
+                        Detach "Einstein Bots for FSC" and "FscBot_Einstein" image from "FSC Chat Button"
+                        <ol class="slds-list_dotted">
+                            <li>Go to Setup -> Chat Buttons and Invitiations -> FSC Chat Button -> Edit</li>
+                            <li>Clear "Einstein Bots for FSC" lookup and save.</li>
+                            <li>Clear "FscBot_Einstein" lookup and save.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Remove <code>FscBot_Landing</code> page from the sites you have added earlier in Package Post Installation Steps.
+                    </li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Live Agent and Test data Setup</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                You can use the below 3 buttons to setup Live Agent, create test data and assign bot permset to the bot user to see the bot working. Please make sure you create test data only in non production environment.<br/>
+                Before clicking the below buttons please add the current orgs url ({!sfdcUrl}) to remote site setting.
+                <br/><br/>
+                
+                    <apex:commandButton action="{!createLiveAgentSetup}" value="Live Agent Setup" styleClass="slds-button slds-button_brand" id="theButton5"/>
+                    <apex:commandButton action="{!createFscBotData}" value="Create FscBot Test Data" styleClass="slds-button slds-button_brand" id="theButton6"/>
+                    <apex:commandButton action="{!assignBotPermSet}" value="Assign Bot PermSet" styleClass="slds-button slds-button_brand" id="theButton7"/>
+                
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Package Post Installation Steps</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <ol class="slds-list_ordered">
+                    <li>
+                        Create an orgwide email address and verify it. Once verified, go to Setup &gt; Build &gt; Develop &gt; Custom Metadata Types &gt; FscBot_Settings AND click&nbsp;<code>Manage Records.</code>
+                    </li>
+                    <li>
+                        Find "BotOrgWideEmailAddress" and update the value with the orgwide email address created above.
+                    </li>
+                    <li>
+                        Find "NoReplyEmailAddress" and update the value with the no-reply email address of your company. You can provide any valid email address if you don't have a no-reply email address.
+                    </li>
+                    <li>If you don't have force.com sites, register one and add the vf page 'FSCBot_Landing' to your site to test the bot. If you have an existing site, you can add the vf page to that site.</li>
+                    <li>Go to Lightning Setup &gt; Security &gt; CORS and add a new whilelisted origin with value <code>https://*.visualforce.com</code></li>
+                    <li>Go to Lightning Setup &gt; Einstein Bots</li>
+                    <li>In Deployment channel section under <code>Live Agent</code> click Edit and select Enable Live Agent Channel and Enable Einstein Bots Options Menu and save the changes.</li>
+                    <li>Go to Classic Setup &gt; Live Agent &gt; Chat Buttons &amp; Invitations &gt; Click the&nbsp;<code>FSC Chat Button</code>&nbsp;link.</li>
+                    <li>Click Edit, Scroll down to the&nbsp;<code>Einstein Bots Settings</code>&nbsp;and set the Einstein Bots Configuration to&nbsp;<code>Einstein Bots for FSC</code>&nbsp;.</li>
+                    <li>Go to Lightning Setup &gt; Einstein Bots &gt;&nbsp;<code>Einstein Bots for FSC</code>&nbsp;and click "Edit".</li>
+                    <li>Next click the&nbsp;<code>Build Model</code>&nbsp;button in the overview page and wait for 100% completion.</li>
+                    <li>Once training is completed. Click the&nbsp;<code>Activate</code>&nbsp;button.</li>
+                    <li>Add Live Chat Transcript field to your existing Case Layouts or use the FSC Bot Case Page Layout from the package.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Snap-ins</span>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <ol class="slds-list_ordered">
+                    <li>
+                        You can use snap-ins to test the bot.
+                    </li>
+                    <li>Go to Lightning Setup &gt; Service &gt; Snap-ins&nbsp;.</li>
+                    <li>Next click the&nbsp;<code>New Deployment</code>&nbsp;button.</li>
+                    <li> Give the "Snap-in Deployment Name" and select the site end point as the one created in the above steps and save.</li>
+                    <li> Under "Live Agent Settings" click "Start" and select "Live Agent Deployment" as "FSC Live Chat Deployment" and "Live Agent Button" as "FSC Chat Button" and click save.</li>
+                    <li> Go back to the snap-in detail page and click "Get Code" button. Copy the chat code snippet on to your clipboard and paste it in the &nbsp;<code>FscBot_Landing</code>&nbsp; vf page before the end of the body tag.</li>
+                    <li>Visit&nbsp;<code>[YOUR_SITE_URL]/apex/FSCBot_Landing</code></li>
+                    <li>Click "Chat with an Expert" button at the bottom right corner.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Live Agent Button Code(Optional)</span>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <ol class="slds-list_ordered">
+                    <li>
+                        In case snap-ins doesn't work, you can use Live Agent button code to test the Einstein Bot.
+                    </li>
+                    <li>Go to Classic Setup &gt; Live Agent &gt; Chat Buttons &amp; Invitations &gt; Click the&nbsp;<code>FSC Chat Button</code>&nbsp;link</li>
+                    <li>In the same screen, under "Site for Resources" select the site created above. Under "Onine Image" select "FscBot_Einstein" which is a part of this package. Save the changes.</li>
+                    <li>Copy the &lt;script&gt; tag code under Chat Button and paste into the&nbsp;<code>FscBot_Landing</code>&nbsp;visualforce page on line number 8</li>
+                    <li>Copy the &lt;img&gt; tag code under Chat Button and paste into the&nbsp;<code>FscBot_Landing</code>&nbsp;visualforce page on line number 185</li>
+                    <li>Go to Customize &gt; Live Agent &gt; Deployments and click&nbsp;<code>FscBot_LiveChatDeployment</code></li>
+                    <li>Copy the &lt;script&gt; code under the Deployment Code section and paste into&nbsp;<code>FscBot_Landing</code>&nbsp;visualforce page on line number 9</li>
+                    <li>Visit&nbsp;<code>[YOUR_SITE_URL]/apex/FSCBot_Landing</code>&nbsp;</li>
+                    <li>Click the Einstein image on the top right corner which intiates a chat with the Einstein bot.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Test data to be used with Chatbot Workflows
+                            </span>                           
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <ol class="slds-list_ordered">
+                    <li>Last 6 digits of the Account Number: 909192</li>
+                    <li>Email Address: (Email address of the user who created "FscBot Test Data")</li>
+                    <li>OTP: Use OTP that will be send to the above email address.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Instructions for chatting with the Einstein Bots for FSC
+                            </span>                           
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <ol class="slds-list_ordered">
+                    <li>1. Launch the force.com site created above: </li>
+                    <li>Navigate to [YOUR_SITE_URL]/FSCBot_Landing</li>
+                    <li>At the bottom right corner of the site, notice the “Chat with Expert” snap-in button.</li>
+                    <li>Click on the “Chat with Expert” snap-in button.</li>
+                    <li>In case “Chat with Expert” doesn't load click the Einstein image on the top right corner.</li>
+                    <li>Execute the below Chatbot Workflows.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Chatbot Workflows
+                            </span>                           
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                Report Lost Card
+                <ol class="slds-list_ordered">
+                    <li>Launch Einstein Bots for FSC.</li>
+                    <li>Start “Report Lost Card” Workflow by clicking “Report Lost Card” button.</li>
+                    <li>Confirm by clicking “Yes - Report Lost Card” button.</li>
+                    <li>Enter last 6 digits of your account number as "909192".</li>
+                    <li>Enter the email address of the user who created "FscBot Test Data".</li>
+                    <li>Your should receive OTP on the above email address. Please check the OTP sent.</li>
+                    <li>Enter the OTP received on the above email address.</li>
+                    <li>Select the card that you lost by clicking on one of the listed cards. Eg: XXXX-XXXX-XXXX-4444 - Gold Card (FscBot)</li>
+                    <li>Confirm the card selected by clicking on “Yes - That's correct” button.</li>
+                    <li>Note the case number for your request. Eg: 00001039</li>
+                    <li>Click “X” button at the top right corner of the chat window.</li>
+                    <li>Click “End Chat” button, followed by “Close Chat” Button to close the Chat Window.</li>
+                    <li>You can launch the Einstein Bots for FSC lightning app and check cases/Lost Cards tabs and observe the records created by bot during chat.</li>
+                    <li>You can notice the Live Chat Transcript lookup populated on the case created by bot.</li>
+                </ol>
+                <br/>
+                <br/>
+                Register Travel Plan
+                <ol class="slds-list_ordered">
+                    <li>Launch Einstein Bots for FSC Window.</li>
+                    <li>Start "Register Travel Plan" Workflow by clicking "Register Travel Plan" button.</li>
+                    <li>Confirm by clicking "Yes - Register New Travel Plan" button.</li>
+                    <li>Enter last 6 digits of your account number as "909192".</li>
+                    <li>Enter the email address of the user who created "FscBot Test Data".</li>
+                    <li>Your should receive OTP on the above email address. Please check the OTP sent.</li>
+                    <li>Enter the OTP received on the above email address.</li>
+                    <li>Select the card that you want to enable the travel plan by clicking on one of the listed cards. Eg: XXXX-XXXX-XXXX-4444 - Gold Card (FscBot)</li>
+                    <li>Confirm the card selected by clicking on “Yes - That's correct” button.</li>
+                    <li>Enter the name of the country you are traveling to as "India". (Make sure you enter a valid country name)</li>
+                    <li>Enter "12/12/2018" as your travel start date.</li>
+                    <li>Enter "12/25/2018" as your travel end date.</li>
+                    <li>Note the case number for your request. Eg: 00001040</li>
+                    <li>Click “X” button at the top right corner of the chat window.</li>
+                    <li>Click “End Chat” button, followed by “Close Chat” Button to close the Chat Window.</li>
+                    <li>You can launch the Einstein Bots for FSC lightning app and check cases/Travel Plans tabs and observe the records created by bot during chat.</li>
+                    <li>You can notice the Live Chat Transcript lookup populated on the case created by bot.</li>
+                </ol>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Overriding the out of the box Email service</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                If you want to override the Out of the box Email service write you own service by implementing the corresponding interface. For Eg:
+                <code>
+                    <p>
+                    public class CustomEmailService implements EmailInterface{</p>
+                    <p>&nbsp; &nbsp; public void sendEmail(Decimal verificationCode, String email){ }</p>
+                    <p>}</p>
+                </code>
+                <p>Update "FscBot_Settings.EmailService" custom metadata type and give the value as 'CustomEmailService'. Rest of the things are auto wired by the bot package at run time.</p>
+            </div>
+        </article>
+        <article class="slds-card hide">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span class="slds-text-heading_small">Package Un-installtion Steps</span>                            
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <h3>Before un-installation of package, execute below steps:</h3>
+                <ol class="slds-list_ordered">
+                    <li>
+                        Button to remove chatbot permset for integration user<br/>
+                        
+                            <apex:commandButton action="{!revokeBotPermSet}" value="Revoke PermSet Assignment" styleClass="slds-button slds-button_brand" id="theButton8"/>
+                        
+                    </li>
+                    <li>
+                        Detach "Einstein Bots for FSC" and "FscBot_Einstein" image from "FSC Chat Button"
+                        <ol class="slds-list_dotted">
+                            <li>Go to Setup -> Chat Buttons and Invitiations -> FSC Chat Button -> Edit</li>
+                            <li>Clear "Einstein Bots for FSC" lookup and save.</li>
+                            <li>Clear "FscBot_Einstein" lookup and save.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Remove <code>FscBot_Landing</code> page from the sites you have added earlier in Package Post Installation Steps.
+                    </li>
+                </ol>
+            </div>
+        </article>
+        </apex:form>    
+    </div>
+</apex:page>

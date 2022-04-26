@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>User Stories are ready for back deploy after release to Prod</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CICD_UserStoriesReadyForBackDeploy</name>
+    <style>none</style>
+    <subject>User Stories are ready for back deploy after release to Prod</subject>
+    <textOnly>User Stories related to release &quot;{!copado__Release__c.Name}&quot; are ready for back deploy to your development sandboxes.
+
+Please use the &quot;Pipelines&quot; tab to review the user stories that are waiting for back deploy to your development sandboxes.  Only include user stories that are in the &quot;prod&quot; environment.  Then back deploy them.
+
+Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

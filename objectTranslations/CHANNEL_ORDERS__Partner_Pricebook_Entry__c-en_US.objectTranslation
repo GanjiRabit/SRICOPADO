@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- This is the pricebook entry Id of the associated data in org62 --></help>
+        <label><!-- Pricebook Entry Id --></label>
+        <name>CHANNEL_ORDERS__Pricebook_Entry_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the Product Name of the associated data in org62. --></help>
+        <label><!-- Product Name --></label>
+        <name>CHANNEL_ORDERS__Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>CHANNEL_ORDERS__Type__c</name>
+        <picklistValues>
+            <masterLabel>Bundle</masterLabel>
+            <translation><!-- Bundle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Historic</masterLabel>
+            <translation><!-- Historic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance</masterLabel>
+            <translation><!-- Performance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlimited</masterLabel>
+            <translation><!-- Unlimited --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

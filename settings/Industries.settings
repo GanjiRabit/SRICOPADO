@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMultipleProducersToWorkOnSamePolicy>false</allowMultipleProducersToWorkOnSamePolicy>
+    <enableAccessToMasterListOfCoverageTypes>false</enableAccessToMasterListOfCoverageTypes>
+    <enableAccountScoreEnabled>false</enableAccountScoreEnabled>
+    <enableCalculationUsingParentPolicyOnly>false</enableCalculationUsingParentPolicyOnly>
+    <enableDealManagement>false</enableDealManagement>
+    <enableEventManagementOrgPref>false</enableEventManagementOrgPref>
+    <enableEventWriteOrgPref>false</enableEventWriteOrgPref>
+    <enableFSCInsuranceReport>false</enableFSCInsuranceReport>
+    <enableFinancialDealRoleHierarchy>false</enableFinancialDealRoleHierarchy>
+    <enableManyToManyRelationships>false</enableManyToManyRelationships>
+    <enableMultiResourceOrgPref>false</enableMultiResourceOrgPref>
+    <enableOverbookingOrgPref>false</enableOverbookingOrgPref>
+    <enableTopicTimeSlot>false</enableTopicTimeSlot>
+</IndustriesSettings>

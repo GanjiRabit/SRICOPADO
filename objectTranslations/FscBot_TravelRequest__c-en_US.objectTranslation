@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Travel Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Travel Plans</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- TravelRequests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- TravelRequests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- FinancialAccountNumber --></label>
+        <name>FinancialAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- FromDate --></label>
+        <name>FromDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsActive --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- ToDate --></label>
+        <name>ToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Travelling Country --></label>
+        <name>Travelling_Country__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

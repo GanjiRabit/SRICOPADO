@@ -1,0 +1,8 @@
+<div>Release "{!copado__Release__c.Name}" has been created.</div>
+<div>&nbsp;</div>
+<table>
+<tr><td style="font-weight:bold">Description:</td><td>{!copado__Release__c.copado__Description__c}</td></tr>
+<tr><td style="font-weight:bold">Related Projects:</td><td>{!copado__Release__c.CICD_RelatedProjects__c}</td></tr>
+<tr><td style="font-weight:bold">Start Date:</td><td>{!copado__Release__c.CICD_StartDate__c}</td></tr>
+<tr><td style="font-weight:bold">Release Date:</td><td>{!copado__Release__c.copado__Planned_Date__c}</td></tr>
+</table>

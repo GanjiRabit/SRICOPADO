@@ -1,0 +1,11 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId"
+                extends="c:CICD_ServerSideActionOrchestrator" access="global"
+                controller="CICD_Utils">
+	    <aura:handler name="change" value="{!v.serverScriptsLoaded}" action="{!c.initiateSync}"  />
+    <aura:dependency resource="force:closeQuickAction" type="EVENT" />
+    <div class="slds-is-relative">
+        <lightning:spinner size="medium" variant="brand"/>
+        
+        
+    </div>
+</aura:component>

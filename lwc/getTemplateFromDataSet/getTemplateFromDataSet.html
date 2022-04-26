@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-08-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+    <lightning-card title="Data Set File Comparer">
+        <lightning-combobox
+            name="cmDataTemplates"
+            label="Choose a File Related to the Selected Data Sets"
+            placeholder="Choose A Data Set Related to the user Story"
+            value={seletedDataTemplate}
+            onchange={handleDataTemplateChange}
+            options={dataTemplateNames}>
+        </lightning-combobox>
+        
+    </lightning-card>
+</template>

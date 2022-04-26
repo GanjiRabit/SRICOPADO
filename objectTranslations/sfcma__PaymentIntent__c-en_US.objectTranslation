@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount --></label>
+        <name>sfcma__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created At --></label>
+        <name>sfcma__Created_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>sfcma__Currency__c</name>
+        <picklistValues>
+            <masterLabel>CAD</masterLabel>
+            <translation><!-- CAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JPY</masterLabel>
+            <translation><!-- JPY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>sfcma__Invoice__c</name>
+        <relationshipLabel><!-- Payment Intents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Code --></label>
+        <name>sfcma__PaymentErrorCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Message --></label>
+        <name>sfcma__PaymentErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Type --></label>
+        <name>sfcma__PaymentErrorType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Code --></label>
+        <name>sfcma__Payment_Error_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Message --></label>
+        <name>sfcma__Payment_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Error Type --></label>
+        <name>sfcma__Payment_Error_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sfcma__Status__c</name>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete</masterLabel>
+            <translation><!-- Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processing</masterLabel>
+            <translation><!-- Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Succeeded</masterLabel>
+            <translation><!-- Succeeded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stripe Payment Intent Id --></label>
+        <name>sfcma__StripePaymentIntentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Payment Method --></label>
+        <name>sfcma__StripePaymentMethod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction --></label>
+        <name>sfcma__Transaction__c</name>
+        <relationshipLabel><!-- Payment Intents --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

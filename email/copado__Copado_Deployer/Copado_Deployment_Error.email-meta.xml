@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The email is used to convey that the Validate only user tries deployment, not steps are created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Copado Deployment Error</name>
+    <style>none</style>
+    <subject>[Copado] User Notification: No Steps Created for the Deployment Record</subject>
+    <textOnly>Dear {!copado__Deployment__c.OwnerFullName}, 
+
+A task could not be run on Copado. Please carefully review the below information as the User does not have right access to perform the task. 
+
+Details: The Deployment record {!copado__Deployment__c.Name} was not created successfully.
+
+Error: The User, {!copado__Deployment__c.OwnerFullName} is Validate Only User and does not have access to perform deployment to the Destination Environment. 
+
+Please reach out to your Release Manager for more info</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

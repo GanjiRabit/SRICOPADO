@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Customer Auto-Renewal Reminder --></label>
+        <name>sfcma__CustomerAutoRenewal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Cancellation Confirmation --></label>
+        <name>sfcma__CustomerCancellationConfirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Free Trial Signup --></label>
+        <name>sfcma__CustomerFreeTrialSignup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer License Changes --></label>
+        <name>sfcma__CustomerLicenseChanges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Payment Confirmation --></label>
+        <name>sfcma__CustomerPaymentConfirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Payment Declined --></label>
+        <name>sfcma__CustomerPaymentDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Purchase Confirmation --></label>
+        <name>sfcma__CustomerPurchaseConfirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Refund Notification --></label>
+        <name>sfcma__CustomerRefundNotification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Trial Expiring Soon --></label>
+        <name>sfcma__CustomerTrialExpiringSoon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logo for Email Notifications --></label>
+        <name>sfcma__LogoEmailNotifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Cancellation Confirmation --></label>
+        <name>sfcma__PartnerCancellationConfirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Can&apos;t Connect to Stripe --></label>
+        <name>sfcma__PartnerCantConnectStripe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Free Trial Expired --></label>
+        <name>sfcma__PartnerFreeTrialExpired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Free Trial Signup --></label>
+        <name>sfcma__PartnerFreeTrialSignup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner License Changes --></label>
+        <name>sfcma__PartnerLicenseChanges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Purchase Confirmation --></label>
+        <name>sfcma__PartnerPurchaseConfirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Trial Expiring Soon --></label>
+        <name>sfcma__PartnerTrialExpiringSoon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner License Discrepancy --></label>
+        <name>sfcma__Partner_License_Discrepancy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Payment Declined --></label>
+        <name>sfcma__Partner_Payment_Declined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Notifications Job Id --></label>
+        <name>sfcma__ScheduledJobId__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <description>Last wizard step for all Order types, this wrapper will be dynamic and will render content depending on Service Order type.</description>
+</AuraDefinitionBundle>

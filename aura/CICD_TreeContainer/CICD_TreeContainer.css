@@ -1,0 +1,39 @@
+.THIS .slds-tree__item{
+    border : 1px solid #ddd;
+}
+.THIS li ul .slds-tree__item{
+    border: none;
+    background: white;
+    color: black;
+    font-weight: normal;
+}
+.THIS li.cCICD_TreeNode {   
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background: rgba(84,105,141,.97);
+    color: white;
+    font-weight: bold;
+}
+.THIS .slds-tree__item.slds-is-hovered,.THIS .slds-tree__item:hover{
+    background: inherit;
+}
+.THIS li ul .slds-tree__item.slds-is-hovered,.THIS li ul .slds-tree__item:hover{
+    background: white;
+}
+.THIS ul.slds-tree:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.THIS{
+    width : 100% ;
+    max-width: 100%;
+    min-width: 100%;
+}
+.THIS .toggleSwitch svg{
+    fill: white !important;
+}
+.THIS .slds-tree__group-header {    
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+}

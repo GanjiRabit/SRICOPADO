@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Create a Pull Request for lead approval, when ever there is a potential conflict while committing the data</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PotentialConflicts</name>
+    <style>none</style>
+    <subject>Create Pull Request when there are Potentials Conflicts</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

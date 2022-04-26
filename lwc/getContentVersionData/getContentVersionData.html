@@ -1,0 +1,70 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-11-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+    <div class="slds-m-top_small slds-m-bottom_medium ">
+        <lightning-combobox
+            name="cmContentSourceColumns" class="clsContentSourceKey"
+            label="Select a Column of Source File to Match records"
+            placeholder="Select a Column of Source File to Match records"
+            value={seletedSourceKey}
+            onchange={handleSourceKeyChange}
+            options={contentSourceColumns}>
+        </lightning-combobox>
+        <lightning-combobox
+            name="cmContentTargetColumns" class="clsContentTargetKey"
+            label="Select a Column of Target File to Match records"
+            placeholder="Select a Column of Target File to Match records"
+            value={seletedTargetKey}
+            onchange={handleTargetKeyChange}
+            options={contentTargetColumns}>
+        </lightning-combobox>
+        <h1 class="slds-text-heading_small slds-m-bottom_small slds-align_absolute-center">
+            Click the button to Compare the data in the selected File Versions
+        </h1>
+        <lightning-button variant="brand" label="Compare" title="Compare" 
+                onclick={findDiff} class="slds-m-left_x-small slds-align_absolute-center"
+                data-targetversioncontent={selectedTargetFileVersionData}
+                data-targetversioncolumns={selectedTargetFileVersionColumns}
+                data-sourceversioncontent={selectedSourceFileVersionData}
+                data-sourceversioncolumns={selectedSourceFileVersionColumns}
+                
+        ></lightning-button>
+    
+    </div>
+    <lightning-card title="Hover To Review The Old Values">
+        <div class="slds-m-around_medium">
+           <table lwc:dom="manual"
+              class="tableClass slds-table slds-table_cell-buffer slds-table_bordered" 
+              style="width:100%">
+           </table>
+        </div>
+     </lightning-card>
+        <!--p id="targetContent" class="slds-hidden" >
+            
+        <lightning-input
+            label="targetContVersionData"
+            variant="label-hidden"
+            aria-labelledby="otherlabel"
+            value={selectedTargetFileVersionData}
+        >
+        
+        </lightning-input>
+    </p>
+    <p id="sourceContent">
+        
+        <lightning-input
+            label="sourceContVersionData"
+            variant="label-hidden"
+            aria-labelledby="otherlabel"
+            value={selectedSourceFileVersionData}
+        >
+        
+        </lightning-input>
+    </p-->
+</template>

@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		
+		https://parsons--copprd.lightning.force.com/c/Promotion.app?c__releaseid=
+		https://parsons--copprd.lightning.force.com/lightning/n/Release_Promotion?c__releaseid=
+
+	</aura:example>
+</aura:documentation>

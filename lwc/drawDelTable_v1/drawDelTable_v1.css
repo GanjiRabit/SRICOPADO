@@ -1,0 +1,30 @@
+/**
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+**/
+.custom-box {
+  text-align: center;
+  background-color: #f4f6f9;
+  padding: 1rem;
+  border: 1px solid #d8dde6;
+}
+.c-container {
+  border: 1px solid #d8dde6;
+  margin: 10px 0 20px 0;
+}
+
+.Deleted{
+  color:Violet;
+}
+.spinnerHolder{
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+  width: 55px;
+  height:100%;
+  vertical-align: middle;
+  white-space: nowrap;
+}

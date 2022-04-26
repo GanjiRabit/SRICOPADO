@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Configuration Value --></label>
+        <name>thankful__ConfigurationValue__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Configuration Value Cannot be blank --></errorMessage>
+        <name>thankful__Configuration_Value_is_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

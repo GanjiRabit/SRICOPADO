@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://trello.com/1/authorize</authorizeUrl>
+    <consumerKey>fad2c82126961b49d4edf7e492fc1b68</consumerKey>
+    <consumerSecret>Y0tcjjASimZiu6aCv24pjUtABxsTs/p4JboJ7URfuhTNK7jywgqOIYqpum7pCTras7eOY7Nh12QjSEN+u9pYenBBGPdiC2rX</consumerSecret>
+    <friendlyName>Trello</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://trello.com/1/OAuthGetAccessToken</tokenUrl>
+</AuthProvider>

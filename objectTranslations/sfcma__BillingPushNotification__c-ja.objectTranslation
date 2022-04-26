@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Checkout 請求の転送通知</value>
+    </caseValues>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>sfcma__ErrorMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Content --></label>
+        <name>sfcma__EventContent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Type --></label>
+        <name>sfcma__EventType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Live Mode --></label>
+        <name>sfcma__LiveMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retries --></label>
+        <name>sfcma__Retries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sfcma__Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>エラー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid</masterLabel>
+            <translation>無効</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation>なし</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processed</masterLabel>
+            <translation>処理されたドル換算率</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stripe Event Id --></label>
+        <name>sfcma__StripeEventIdUnique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Event Id (deprecated) --></label>
+        <name>sfcma__StripeEventId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>sfcma__Subscription__c</name>
+        <relationshipLabel><!-- Billing Push Notifications --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>Checkout 請求の転送通知名</nameFieldLabel>
+</CustomObjectTranslation>

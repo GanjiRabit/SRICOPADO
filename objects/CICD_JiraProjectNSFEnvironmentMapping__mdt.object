@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CICD_SfDefaultEnvironment__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>SF Dev Environment</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CICD_SfDevOrgCredential__c</fullName>
+        <description>The Org Credential is calculated as Environment plus developers first + last name.  If that credential does not exist this fallback credential will be used.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The Org Credential is calculated as Environment plus developers first + last name.  If that credential does not exist this fallback credential will be used.</inlineHelpText>
+        <label>SF Dev Fallback Org Credential</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Jira Project And SF Environment Mapping</label>
+    <listViews>
+        <fullName>All_Records</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>CICD_SfDefaultEnvironment__c</columns>
+        <columns>CICD_SfDevOrgCredential__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Records</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Jira Project And SF Environment Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

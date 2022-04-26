@@ -1,0 +1,261 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="sourceorgList" type="List" default="INT,UAT" />
+    <aura:attribute name="successMsg" type="String" default=""  />
+    <aura:attribute name="postDeployDisabled" type="String" default="true"  />   
+    <aura:attribute name="storiesDev" type="List" default="[]"  />
+    <aura:attribute name="storiesInt" type="List" default="[]"  />
+    <aura:attribute name="storiesUat" type="List" default="[]"  />
+    <aura:attribute name="storiesProd" type="List" default="[]"  />
+
+    <!--DATABOUND ATTRS-->
+    <aura:attribute name="release" type="Object" default="{}"  />    
+    <aura:attribute name="appError" type="String" default=""  />
+    <aura:attribute name="recordError" type="List" default="[]"  />
+    <aura:attribute name="userStories" type="List" default="[]" />
+    <aura:attribute name="selectedUserStories" type="List" default="[]" />
+    <aura:attribute name="preDeploySteps" type="List" default="[]" />
+    <aura:attribute name="postDeploySteps" type="List" default="[]" />
+    <aura:attribute name="postDeployIds" type="List" default="[]" />
+    <aura:attribute name="postStepCss" type="String" default=""  />
+    <aura:attribute name="selectedSourceOrg" type="String" default="INT" />
+    <aura:attribute name="storiesDisabled" type="String"  />    
+
+    <aura:attribute name="envModal" type="String"  />  
+    <aura:attribute name="envStories" type="List" default="[]"  />
+
+    <aura:attribute name="loading" type="String" default="true"  />
+    <aura:attribute name="loadingMessage" type="String"  />
+
+    <!--END DATABOUND ATTRS-->
+
+    <c:CICD_Shared 
+        recordError="{!v.recordError}"
+        aura:id="CICD_Shared"/> 
+
+    <aura:if isTrue="{!v.loading}">
+        <aura:if isTrue="{!v.loadingMessage}">
+        <span class="application-loading-message">
+            <aura:unescapedHtml value="{!v.loadingMessage}" />
+        </span>
+        </aura:if>
+        <div class="application-loading"></div>
+    </aura:if>    
+
+    <aura:if isTrue="{!v.successMsg}">
+    <div class="slds-backdrop slds-backdrop--open"></div>
+	<div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                <button 		  
+                    onclick="{! c.closeSuccessMsg}"
+                    class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                    title="Close">
+                <lightning:icon
+                    class="modalCloseBtn"		
+                    iconName="utility:close"/>
+                <span class="slds-assistive-text">Close</span>
+                </button>
+                </div><!--END MODAL HEADER-->
+                <div class="slds-modal__content slds-p-around--small">	 
+                    <aura:unescapedHtml value="{!v.successMsg}" />
+                </div>
+                <div class="slds-modal__footer">
+                </div><!--END MODAL FOOTER-->
+        </div>
+    </div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.envModal}">
+        <c:CICD_EnvModal 
+            release="{!v.release}"
+            envModal="{!v.envModal}"
+            envStories="{!v.envStories}"
+            loading="{!v.loading}"
+            loadingMessage="{!v.loadingMessage}"
+            recordError="{!v.recordError}"
+            >
+        </c:CICD_EnvModal>
+    </aura:if>
+
+    <aura:if isTrue="{! !empty(v.appError)}">
+        <div class="app-error slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+            {! v.appError}
+        </div>
+        <aura:set attribute="else">
+            <div class="main-wrap slds-card">
+
+                <c:CICD_Error recordError="{!v.recordError}" ></c:CICD_Error>
+                               
+                <div class="slds-grid slds-gutters slds-wrap release-header">
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <small>Release Name</small>
+                        <h3 class="slds-page-header__title">{!v.release.Name}</h3>
+                    </div>
+                    <div class="slds-col slds-large-size_3-of-12">
+                        <small>Release Date</small>
+                        <h3 class="slds-page-header__title">
+                            <lightning:formattedDateTime 
+                            value="{!v.release.copado__Planned_Date__c}" 
+                            timeZone="UTC"/></h3>
+                    </div>
+                    <div class="slds-col slds-large-size_4-of-12">
+                    <ul class="envBtns">
+                            <li>
+                                <lightning:button 
+                                    value="DEV"
+                                    class="slds-button slds-button_outline-brand"
+                                    onclick="{!c.showEnvModal}">
+                                    <strong>DEV</strong> ({!v.storiesDev.length})
+                                </lightning:button >                            
+                            </li>
+                            <li>
+                                <lightning:button  
+                                    value="INT"
+                                    class="slds-button slds-button_outline-brand"
+                                    onclick="{!c.showEnvModal}">
+                                    <strong>INT</strong> ({!v.storiesInt.length})
+                                </lightning:button >  
+                            </li>
+                            <li>
+                                <lightning:button  
+                                    value="UAT"
+                                    class="slds-button slds-button_outline-brand"
+                                    onclick="{!c.showEnvModal}">
+                                    <strong>UAT</strong> ({!v.storiesUat.length})
+                                </lightning:button>
+                            </li>
+                            <li> 
+                                <lightning:button  
+                                    value="PROD"
+                                    class="slds-button slds-button_outline-brand"
+                                    onclick="{!c.showEnvModal}">
+                                    <strong>PROD</strong> ({!v.storiesProd.length})
+                                </lightning:button >
+                            </li>                        
+                        </ul>
+                    </div>
+
+                </div><!--end release-header-->
+
+                <div class="slds-grid slds-gutters slds-wrap predeploy-container">
+                    <div class="slds-col slds-large-size_6-of-12">
+                        <h3>Pre-Deployment Steps</h3>
+                        <aura:if isTrue="{!v.preDeploySteps.length > 0}">
+                            <ul class="steps">
+                                <aura:iteration items="{!v.preDeploySteps}" var="preStep">
+                                <li><aura:unescapedHtml value="{!preStep}" /></li>
+                                </aura:iteration>
+                            </ul>
+                            <aura:set attribute="else">
+                                <span class="nosteps">No steps found</span>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                    <div class="slds-col slds-large-size_6-of-12">
+                    </div>
+                </div><!--end predeploy container-->
+
+                <div class="slds-grid slds-gutters slds-wrap actions-container">
+                    <div class="slds-col slds-large-size_4-of-12">
+                        <lightning:select 
+                            label="Source Org:" 
+                            aura:id="sourceOrg">
+                            <aura:iteration items="{!v.sourceorgList}" var="sorg">
+                            <option value="{!sorg}">{!sorg}</option>
+                            </aura:iteration>
+                        </lightning:select>    
+
+                        <lightning:select 
+                            class="testLevel"
+                            label="Test Level" 
+                            aura:id="testLevel">
+                            <option value="RunSpecifiedTests">Run Specified Tests</option>
+                            <option value="NoTestRun">No Test Run</option>
+                            <option value="RunLocalTests">Run Local Tests</option>
+                        </lightning:select>    
+
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <div class="slds-grid slds-gutters slds-wrap actions-buttons-container">
+                            <div class="slds-col slds-large-size_6-of-12">
+                                <lightning:button 
+                                    class="fetch-btn"
+                                    onclick="{!c.switchOrgs}"
+                                    variant="brand">Fetch User Stories</lightning:button>   
+                            </div>
+                            <div class="slds-col slds-large-size_3-of-12">
+                                <lightning:button
+                                    class="validate-btn"
+                                    onclick="{!c.validate}"
+                                    variant="brand">Validate</lightning:button>
+                            </div>
+                            <div class="slds-col slds-large-size_3-of-12">
+                                <lightning:button
+                                    onclick="{!c.promote}"
+                                    class="promote-btn"
+                                    variant="success">Promote</lightning:button> 
+                            </div>
+                        </div>                           
+                    </div>
+                    <div class="slds-col slds-large-size_3-of-12 num-stories-container">
+                        <label class="slds-form-element__label">Number of Stories Being Promoted:</label> 
+                        <h3 class="slds-page-header__title">
+                            {!v.selectedUserStories.length}
+                        </h3>
+                    </div>
+                </div><!--end actions-container-->
+                
+                <div class="slds-grid slds-gutters slds-wrap postdeploy-container">
+                    <div class="slds-col slds-large-size_6-of-12">
+                        
+                        <aura:unescapedHtml value="{!v.postStepCss}" /> 
+
+                        <h3>Post-Deployment Steps</h3>
+
+                        <aura:if isTrue="{!v.postDeploySteps.length > 0}">
+                            <ul class="steps">
+                                <aura:iteration items="{!v.postDeploySteps}" var="postStep">
+                                <li class="post-step">
+                                    <aura:unescapedHtml value="{!postStep}" />
+                                </li>
+                                </aura:iteration>
+                            </ul>
+
+                            <lightning:button
+                            class="postdeploy-complete-btn"
+                            onclick="{!c.markComplete}"
+                            disabled="{!v.postDeployDisabled}"
+                            variant="success">Mark Post Deployment Tasks Complete</lightning:button> 
+
+                            <aura:set attribute="else">
+                                <span class="nosteps">No Post Deployment Steps found</span>
+                            </aura:set> 
+                        </aura:if> 
+                       
+                    </div>
+                    <div class="slds-col slds-large-size_6-of-12"></div>
+                </div><!--end postdeploy container-->
+                
+                <div class="user-stories-container">
+                    <c:CICD_UserStories
+                        aura:id="UserStories"
+                        selectedUserStories="{!v.selectedUserStories}"
+                        stories="{!v.userStories}"
+                        preDeploySteps="{!v.preDeploySteps}"
+                        postDeploySteps="{!v.postDeploySteps}"
+                        postDeployIds="{!v.postDeployIds}"
+                        postStepCss="{!v.postStepCss}"
+                        selectedSourceOrg="{!v.selectedSourceOrg}"
+                        storiesDisabled="{!v.storiesDisabled}"
+                        >
+                    </c:CICD_UserStories>
+                </div>
+
+            </div><!--end main-wrap -->
+        </aura:set>
+    </aura:if>
+   
+</aura:component>

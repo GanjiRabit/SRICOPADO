@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <description>Wrapper component of Service Order Wizard, contains its child components and will be in charge of render-hide components depending on Service Order type and current wizard step.</description>
+</AuraDefinitionBundle>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_the_Error_Message_to_the_user_0</name>
+        <label>Email the Error Message to the user</label>
+        <locationX>308</locationX>
+        <locationY>695</locationY>
+        <actionName>copado__Deployment__c.Copado_deployment_Error_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <description>check user access based on Allow deployment check box value</description>
+        <name>Check_the_Type_of_User</name>
+        <label>Check the Type of User</label>
+        <locationX>176</locationX>
+        <locationY>575</locationY>
+        <defaultConnector>
+            <targetReference>Email_the_Error_Message_to_the_user_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Validate Only User attempting Deployment</defaultConnectorLabel>
+        <rules>
+            <name>Deployment_User</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>allowdeploymentid</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>allowdeploymentid</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Validate</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Deployment User</label>
+        </rules>
+    </decisions>
+    <description>Check the user access to allow/block deployment record creation</description>
+    <interviewLabel>Copado-Deployment Before Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Copado-Deployment Before Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Pipeline Permission details with respect to destinationenvid</description>
+        <name>Fetch_Pipeline_Permissions</name>
+        <label>Fetch Pipeline Permissions</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_the_Type_of_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>copado__Environment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>destinationenvid</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>copado__User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <object>copado__Branch_Management_Permission__c</object>
+        <outputAssignments>
+            <assignToReference>allowdeploymentid</assignToReference>
+            <field>copado__Allow_Deployments__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>Fetch Promotion details for the deployment Record Created</description>
+        <name>Fetch_Promotion_Details</name>
+        <label>Fetch Promotion Details</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Fetch_Pipeline_Permissions</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.copado__Promotion__r.Name</elementReference>
+            </value>
+        </filters>
+        <object>copado__Promotion__c</object>
+        <outputAssignments>
+            <assignToReference>destinationenvid</assignToReference>
+            <field>copado__Destination_Environment__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Fetch_Promotion_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>copado__Promotion__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>copado__Deployment__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>allowdeploymentid</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>destinationenvid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

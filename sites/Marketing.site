@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>Marketing_404</authorizationRequiredPage>
+    <bandwidthExceededPage>Marketing_404</bandwidthExceededPage>
+    <browserXssProtection>true</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <clickjackProtectionLevel>NoFraming</clickjackProtectionLevel>
+    <contentSniffingProtection>true</contentSniffingProtection>
+    <enableAuraRequests>true</enableAuraRequests>
+    <favoriteIcon>B5GFavIcon</favoriteIcon>
+    <fileNotFoundPage>Marketing_404</fileNotFoundPage>
+    <genericErrorPage>Marketing_404</genericErrorPage>
+    <inMaintenancePage>Marketing_404</inMaintenancePage>
+    <inactiveIndexPage>Marketing_404</inactiveIndexPage>
+    <indexPage>B5GMarketing</indexPage>
+    <masterLabel>Marketing</masterLabel>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <siteAdmin>balaji.garapati@blue5green.com.partner</siteAdmin>
+    <siteGuestRecordDefaultOwner>balaji.garapati@blue5green.com.partner</siteGuestRecordDefaultOwner>
+    <siteType>Visualforce</siteType>
+    <subdomain>blog-blue5green</subdomain>
+    <urlPathPrefix>Marketing</urlPathPrefix>
+</CustomSite>

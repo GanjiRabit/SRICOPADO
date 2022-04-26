@@ -1,0 +1,36 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <p><code></code> </p>
+    
+    <div class="custom-box slds-box slds-p-around_small slds-text-align_left">  
+    
+    <lightning-layout>
+        <lightning-layout-item flexibility="auto" class="slds-size_1-of-4" >
+            <c-set-context></c-set-context> 
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto" class="slds-size_1-of-4" >
+            <c-retrieve-content-data id="srcRetrieve" titles-label='Source' onversionselect={handleSourceVersionSelection} class="source" latest-version-of-source={latestVersionOfSource}></c-retrieve-content-data>
+        </lightning-layout-item >
+        <lightning-layout-item flexibility="auto" class="slds-size_1-of-4">
+            <c-retrieve-content-data id="trgRetrieve" titles-label='Target' onversionselect={handleTargetVersionSelection} class="target"></c-retrieve-content-data>                        
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto" class="slds-size_1-of-4">
+            <c-data-comparer-engine titles-label='Compare' source-data={sourceData} target-data={targetData}></c-data-comparer-engine>
+            
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout >
+        <lightning-layout-item flexibility="auto" class="slds-size_4-of-4">
+            <c-draw-jq-table></c-draw-jq-table>
+            
+        </lightning-layout-item>
+    </lightning-layout>
+    
+</div>
+</template>

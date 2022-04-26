@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a sample Lightning Message Channel.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is sample message</description>
+        <fieldName>latestVersionOfSource</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>This is the source message</description>
+        <fieldName>withinDataSet</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>This is the source message</description>
+        <fieldName>deploymentId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>This is the source message</description>
+        <fieldName>storyId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>contextChangedChannel</masterLabel>
+</LightningMessageChannel>

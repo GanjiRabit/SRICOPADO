@@ -1,0 +1,98 @@
+<template>
+    <div class="mapping">
+        <template if:true={readyToDisplay}>
+            <div class="sobjectMapping">
+                <div class="sobjectHeader">
+                    {metadataInfo.label} ( {metadataInfo.apiName} )
+                </div>
+                <div>
+                    <div class="slds-grid slds-wrap slds-m-top_medium slds-m-bottom_medium mappingBlock">
+                        <div class="slds-size_1-of-3 paddRight">
+                            <p class="formLabel selfLabel">
+                                Populate the following field, if you like to associate CI Jobs to salesforce Object
+                                based on Parent Id field on Job
+                            </p>
+                            <lightning-combobox options={jobMetadata.availableFields} onchange={handleInputChange}
+                                label="Reference Field" data-bind="selfReference.SourceAPIName__c"
+                                variant="label-hidden" value={selfReference.SourceAPIName__c} class="inline">
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-size_2-of-3 configBlk">
+                            <p class="formLabel selfLabel">
+                                Configure the following mapping to automatically update Parent with Job details
+                            </p>
+                            <table class="slds-table slds-table_bordered " role="grid">
+                                <thead>
+                                    <tr>
+                                        <th class="removeBlock">
+                                            <div class="header">
+                                                Remove
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="header">
+                                                Source Field (CI Job)
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="header">
+                                                Destination Field ( {metadataInfo.label} )
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template if:true={config}>
+                                        <template for:each={config} for:item="mapping">
+                                            <template if:false={mapping.isRemoved}>
+                                                <tr key={mapping.itemIndex}>
+                                                    <td class="removeBlock">
+                                                        <div class="slds-is-relative">
+                                                            <lightning-icon icon-name="utility:delete" variant="error"
+                                                                size="small" alternative-text="Delete"></lightning-icon>
+                                                            <a class="fullFloat" onclick={removeConfig}
+                                                                data-item={mapping.itemIndex}></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <lightning-combobox options={jobMetadata.availableFields}
+                                                            required onchange={handleInputChange} label="Source Field"
+                                                            data-bind="config.SourceAPIName__c" name={mapping.itemIndex}
+                                                            value={mapping.SourceAPIName__c} variant="label-hidden"
+                                                            class="inline">
+                                                        </lightning-combobox>
+                                                    </td>
+                                                    <td>
+                                                        <lightning-combobox options={metadataInfo.availableFields}
+                                                            variant="label-hidden" label="Destination Field" required
+                                                            data-bind="config.FieldAPIName__c" name={mapping.itemIndex}
+                                                            value={mapping.FieldAPIName__c} onchange={handleInputChange}
+                                                            class="inline">
+                                                        </lightning-combobox>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-text-align_center">
+                    <button class="slds-button slds-button_brand slds-m-right_small" onclick={addConfig}>
+                        Add
+                    </button>
+                    <button class="slds-button slds-button_brand" onclick={saveConfig}>
+                        Save Configuration
+                    </button>
+                </div>
+            </div>
+        </template>
+        <c-metadata-provider></c-metadata-provider>
+        <template if:true={showSpinner}>
+            <lightning-spinner variant="brand"></lightning-spinner>
+        </template>
+    </div>
+</template>

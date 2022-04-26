@@ -1,0 +1,70 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+
+<template>
+    <div class="custom-box slds-box slds-text-align_left">
+    <lightning-card title={titlesLabel}>
+        <div class="slds-form">
+            <!--component is within div class="slds-form-element-->
+            <c-search-component 
+                obj-name={searchDataSet.objectName}
+                obj-label={searchDataSet.objectLabel}
+                dynamic-object-label={searchDataSet.dynamicObjectLabel}
+                icon-name={searchDataSet.icon}
+                label-name={searchDataSet.label}
+                placeholder={searchDataSet.placeholder} 
+                fields={searchDataSet.fields}
+                display-fields={searchDataSet.displayFields}
+                value-id={searchDataSet.valueId}
+                value-name={searchDataSet.valueName}
+                onlookup={handleLookup}
+                current-record-id={searchDataSet.currentRecordId}
+                filter={filter}    
+                is-disabled={isSameDataSource}
+                default-record={defaultDataSet}
+                wrapper-display={searchDataSet.wrapperDisplay}            
+            >
+            </c-search-component>
+                        
+                    <div class="slds-form-element slds-form-element_horizontal slds-text-align_left">
+                        
+                            <label class="slds-form-element__label" for="horizontal-input-id-02"><strong>Data Template :</strong></label>
+                        
+                       
+                            <div class="slds-form-element__control  slds-container_right">                        
+                                <lightning-combobox 
+                                    name="cmDataTemplates"
+                                    label=""
+                                    placeholder="Select a Data Template / Generated File"
+                                    value={selctedContDocFile}
+                                    onchange={handleDataTemplateChange}
+                                    options={dataTemplateNames}>
+                                </lightning-combobox>                        
+                            </div>
+                       
+                    </div>
+        
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-03"><strong>Version :</strong></label>
+                <div class="slds-form-element__control slds-container_right">                        
+                    <lightning-combobox
+                        name="cmContentDocumentVersion"
+                        label=""
+                        placeholder="Select A Version"
+                        value={selectedFileVersion}
+                        onchange={handleContDocVersionChange}
+                        options={contentDocumentVersions}
+                        >
+                    </lightning-combobox>
+
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</div>
+</template>

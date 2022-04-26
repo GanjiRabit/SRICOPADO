@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Checkout 請求書</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>sfcma__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attempts --></label>
+        <name>sfcma__Attempts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge VAT? --></label>
+        <name>sfcma__ChargeVAT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed? --></label>
+        <name>sfcma__Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>sfcma__Currency__c</name>
+        <picklistValues>
+            <masterLabel>CAD</masterLabel>
+            <translation><!-- CAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JPY</masterLabel>
+            <translation><!-- JPY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Discount Percentage --></label>
+        <name>sfcma__DiscountPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount Off --></label>
+        <name>sfcma__Discount_Amount_Off__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>sfcma__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ending Balance --></label>
+        <name>sfcma__EndingBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid? --></label>
+        <name>sfcma__IsPaid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Intent --></label>
+        <name>sfcma__PaymentIntent__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>sfcma__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Balance --></label>
+        <name>sfcma__StartingBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Invoice Id --></label>
+        <name>sfcma__StripeInvoiceIdUnique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Invoice Id (deprecated) --></label>
+        <name>sfcma__StripeInvoiceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>sfcma__Subscription__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>sfcma__Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Amount --></label>
+        <name>sfcma__TaxAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction --></label>
+        <name>sfcma__Transaction__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- VAT Number --></label>
+        <name>sfcma__VATNumber__c</name>
+    </fields>
+    <nameFieldLabel>Checkout 請求書名</nameFieldLabel>
+</CustomObjectTranslation>

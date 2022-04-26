@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TriggerDisabled</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TriggerDisabled</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the method name to disable --></help>
+        <label><!-- Method Name --></label>
+        <name>MethodName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Name --></label>
+        <name>TriggerName__c</name>
+        <picklistValues>
+            <masterLabel>CICD_ReleaseTriggerHandler</masterLabel>
+            <translation><!-- CICD_ReleaseTriggerHandler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocument</masterLabel>
+            <translation><!-- ContentDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credential__c</masterLabel>
+            <translation><!-- Credential__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PeopleProfileReferenceData__c</masterLabel>
+            <translation><!-- PeopleProfileReferenceData__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project__c</masterLabel>
+            <translation><!-- Project__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SkillTags__c</masterLabel>
+            <translation><!-- SkillTags__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkExperience__c</masterLabel>
+            <translation><!-- WorkExperience__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- isDisabled --></label>
+        <name>isDisabled__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

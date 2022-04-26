@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Checkout トランザクション</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action --></label>
+        <name>sfcma__Action__c</name>
+        <picklistValues>
+            <masterLabel>authorization</masterLabel>
+            <translation>認証</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>purchase</masterLabel>
+            <translation>購入</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>refund</masterLabel>
+            <translation>返金</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Address City --></label>
+        <name>sfcma__AddressCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Country --></label>
+        <name>sfcma__AddressCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>sfcma__AddressLine1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address State --></label>
+        <name>sfcma__AddressState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Zip Code --></label>
+        <name>sfcma__AddressZipCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 2 --></label>
+        <name>sfcma__Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created At --></label>
+        <name>sfcma__CreatedAt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>sfcma__Currency__c</name>
+        <picklistValues>
+            <masterLabel>CAD</masterLabel>
+            <translation><!-- CAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JPY</masterLabel>
+            <translation><!-- JPY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Failure Code --></label>
+        <name>sfcma__FailureCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Number --></label>
+        <name>sfcma__InvoiceNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice --></label>
+        <name>sfcma__Invoice__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Refunded? --></label>
+        <name>sfcma__IsRefunded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Method of Payment --></label>
+        <name>sfcma__MethodOfPayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Intent --></label>
+        <name>sfcma__PaymentIntent__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>sfcma__PaymentType__c</name>
+        <picklistValues>
+            <masterLabel>ACH</masterLabel>
+            <translation><!-- ACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Card</masterLabel>
+            <translation><!-- Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEPA</masterLabel>
+            <translation><!-- SEPA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Refund Amount --></label>
+        <name>sfcma__RefundAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sfcma__Status__c</name>
+        <picklistValues>
+            <masterLabel>failed</masterLabel>
+            <translation>失敗</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>success</masterLabel>
+            <translation>成功</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stripe Charge Id --></label>
+        <name>sfcma__StripeChargeIdUnique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Charge Id (deprecated) --></label>
+        <name>sfcma__StripeChargeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stripe Invoice Id --></label>
+        <name>sfcma__StripeInvoiceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription --></label>
+        <name>sfcma__Subscription__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Amount --></label>
+        <name>sfcma__TotalAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- VAT Number --></label>
+        <name>sfcma__VATNumber__c</name>
+    </fields>
+    <nameFieldLabel>Checkout トランザクション名</nameFieldLabel>
+</CustomObjectTranslation>

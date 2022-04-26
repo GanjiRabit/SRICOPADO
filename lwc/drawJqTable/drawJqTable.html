@@ -1,0 +1,65 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <!--lightning-layout>
+        <lightning-layout-item class="slds-size_1-of-1">
+            <div class="slds-page-header">
+                <div class="slds-page-header__row">
+                    <div class="slds-page-header__col-title">
+                        <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-opportunity" title="File Version Data Comparison">
+                                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Data Comparison</span>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-page-header__name">
+                                    <div class="slds-page-header__name-title">
+                                        <h1>
+                                            <span class="slds-page-header__title slds-truncate" title="Summary">Differences</span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            
+                                    <p class="slds-page-header__name-meta">Added : {added} • Modified : {modified} • Deleted : {deleted}</p>
+                                    
+                                
+                            </div>
+                            <div class="slds-p-around_medium lgc-bg"> <span class="slds-p-top_small">Help</span>
+                                
+                                <lightning-helptext  content="If any changes found - please hover on highlighted changes or click on a row having modified status to compare old values"></lightning-helptext>
+                            
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                        
+                </div>
+            </div>  
+        </lightning-layout-item>
+    </lightning-layout-->
+    <lightning-layout>
+        <lightning-layout-item class="slds-size_1-of-1">
+            <div class="custom-box slds-box slds-p-around_small slds-text-align_center">
+                <lightning-card title="">
+                    <div class="slds-m-around_small">
+                        
+                    <table lwc:dom="manual" 
+                        class="tableClass slds-table slds-table_cell-buffer slds-table_bordered display nowrap" 
+                        style="position:relative;display:block;box-sizing:border-box;overflow-x:scroll;">
+                    </table>
+                    </div>
+                </lightning-card>
+            </div>
+        </lightning-layout-item>       
+    </lightning-layout>
+</template>

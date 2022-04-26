@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>CHANNEL_ORDERS__Account__c</name>
+        <relationshipLabel><!-- Customers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Annual Order Value (Deprecated) --></label>
+        <name>CHANNEL_ORDERS__Annual_Order_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Account Id --></label>
+        <name>CHANNEL_ORDERS__Customer_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>CHANNEL_ORDERS__Customer_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>CHANNEL_ORDERS__Customer_Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>CHANNEL_ORDERS__Customer_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org ID --></label>
+        <name>CHANNEL_ORDERS__Customer_Org_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province/Region --></label>
+        <name>CHANNEL_ORDERS__Customer_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>CHANNEL_ORDERS__Customer_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZIP/Postal Code --></label>
+        <name>CHANNEL_ORDERS__Customer_ZIP_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- The ISV contracts for this Customer. --></help>
+        <label><!-- ISV Contract --></label>
+        <name>CHANNEL_ORDERS__ISV_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Orders (Deprecated) --></label>
+        <name>CHANNEL_ORDERS__Number_of_Orders__c</name>
+    </fields>
+    <fields>
+        <help><!-- The OEM contracts for this Customer. --></help>
+        <label><!-- OEM Contract --></label>
+        <name>CHANNEL_ORDERS__OEM_Contract__c</name>
+    </fields>
+    <fields>
+        <help><!-- For a customer with multiple contracts, this displays the date of the contract with a future date that is closest to today&apos;s date --></help>
+        <label><!-- Renewal Date (Deprecated) --></label>
+        <name>CHANNEL_ORDERS__Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CHANNEL_ORDERS__Status__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Country_2_letter_code</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Invalid_OrgID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__OrgID_must_be_alphanumeric</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Valid_Canada_State</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Valid_US_State</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Service_Order --></label>
+        <name>CHANNEL_ORDERS__New_Service_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Service_Order_List_View --></label>
+        <name>CHANNEL_ORDERS__New_Service_Order_List_View</name>
+    </webLinks>
+</CustomObjectTranslation>

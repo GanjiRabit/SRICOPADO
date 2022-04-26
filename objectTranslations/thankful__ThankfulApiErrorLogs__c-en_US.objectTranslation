@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Reference to CTP record. Will be populated if notifying to a webhook fails --></help>
+        <label><!-- Case To Process --></label>
+        <name>thankful__CaseToProcess__c</name>
+        <relationshipLabel><!-- Thankful API Error Logs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates the error message from Exception --></help>
+        <label><!-- Error Message --></label>
+        <name>thankful__ErrorMessage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the Exception Type --></help>
+        <label><!-- Exception Type --></label>
+        <name>thankful__ExceptionType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the error happened during the outbound call to thankful API or inbound call from thankful API --></help>
+        <label><!-- Process Impacted --></label>
+        <name>thankful__ProcessImpacted__c</name>
+        <picklistValues>
+            <masterLabel>Handling Post/Put Request</masterLabel>
+            <translation><!-- Handling Post/Put Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notify Webhook</masterLabel>
+            <translation><!-- Notify Webhook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queue Preparation</masterLabel>
+            <translation><!-- Queue Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retrieve Case</masterLabel>
+            <translation><!-- Retrieve Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Contains the Stack Trace of the Exception Occurred --></help>
+        <label><!-- Stack Trace --></label>
+        <name>thankful__StackTrace__c</name>
+    </fields>
+</CustomObjectTranslation>

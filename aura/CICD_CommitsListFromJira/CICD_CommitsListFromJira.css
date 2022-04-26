@@ -1,0 +1,14 @@
+.THIS .addIcon{
+    border : 1px solid rgb(4, 132, 75);
+    background: rgb(4, 132, 75);    
+    padding: 3px;
+
+}
+.THIS .addIcon svg, .THIS .modifyIcon svg {
+    fill : white;
+}
+.THIS .modifyIcon{
+    border : 1px solid rgb(255, 158, 44);    
+    background: rgb(255, 158, 44);    
+    padding: 3px;
+}

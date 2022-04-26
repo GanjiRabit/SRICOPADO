@@ -1,0 +1,26 @@
+<table border="0" cellpadding="10" width="650" cellspacing="5" height="400" >
+<tr valign="top" height="100" >
+<td width="150" tEditID="c1r1" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Product1]]></td>
+<td tEditID="c2r1" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c2r1" locked="0" >
+<![CDATA[Type1]]></td>
+</tr>
+<tr valign="top" height="100" >
+<td width="150" tEditID="c1r2" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[Product2]]></td>
+<td tEditID="c2r2" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c2r2" locked="0" >
+<![CDATA[Type2]]></td>
+</tr>
+<tr valign="top" height="100" >
+<td width="150" tEditID="c1r3" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[Product3]]></td>
+<td tEditID="c2r3" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c2r3" locked="0" >
+<![CDATA[Type3]]></td>
+</tr>
+<tr valign="top" height="100" >
+<td width="150" tEditID="c1r4" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r4" locked="0" >
+<![CDATA[Product4]]></td>
+<td tEditID="c2r4" style=" background-color:#CCCCFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c2r4" locked="0" >
+<![CDATA[Type4]]></td>
+</tr>
+</table>

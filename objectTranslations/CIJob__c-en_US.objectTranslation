@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CI Job</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CI Jobs</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccelQ CI Job Id --></label>
+        <name>AccelQCIJobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- CI Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CI Job Instance Id --></label>
+        <name>CIJobInstanceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Completed On --></label>
+        <name>JobCompletedOn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Started On --></label>
+        <name>JobStartedOn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Id --></label>
+        <name>ParentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+    </fields>
+    <fields>
+        <label><!-- Run Time Attributes --></label>
+        <name>RunTimeAttributes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Updated On --></label>
+        <name>StatusUpdatedOn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Created</masterLabel>
+            <translation><!-- Created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started</masterLabel>
+            <translation><!-- Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- #Test Cases Failed --></label>
+        <name>TestCasesFailed__c</name>
+    </fields>
+    <fields>
+        <label><!-- #Test Cases Not Run --></label>
+        <name>TestCasesNotRun__c</name>
+    </fields>
+    <fields>
+        <label><!-- #Test Cases Passed --></label>
+        <name>TestCasesPassed__c</name>
+    </fields>
+    <fields>
+        <label><!-- #Total Test Cases --></label>
+        <name>TotalTestCases__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>UserStory__c</name>
+        <relationshipLabel><!-- CI Jobs --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

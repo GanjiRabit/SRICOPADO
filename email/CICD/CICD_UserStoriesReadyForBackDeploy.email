@@ -1,0 +1,5 @@
+<div>User Stories related to release "{!copado__Release__c.Name}" are ready for back deploy to your development sandboxes.</div>
+<br/>
+<div>Please use the "Pipelines" tab to review the user stories that are waiting for back deploy to your development sandboxes.  Only include user stories that are in the "prod" environment.  Then back deploy them.</div>
+<br/>
+<div>Thank you.</div>

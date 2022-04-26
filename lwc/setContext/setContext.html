@@ -1,0 +1,70 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+<template>
+    <div class="custom-box slds-box slds-p-around_small slds-text-align_left">
+        <lightning-card title="Context">
+            <c-search-component
+                    obj-name={searchUserStory.objectName}
+                    obj-label={searchUserStory.objectLabel}
+                    dynamic-object-label={searchUserStory.dynamicObjectLabel}
+                    icon-name={searchUserStory.icon}
+                    label-name={searchUserStory.label}
+                    placeholder={searchUserStory.placeholder} 
+                    fields={searchUserStory.fields}
+                    display-fields={searchUserStory.displayFields}
+                    value-id={searchUserStory.valueId}
+                    value-name={searchUserStory.valueName}
+                    onlookup={handleUsLookup}
+                    current-record-id={searchUserStory.currentRecordId}
+                    filter={filterUs}                
+                    >
+                </c-search-component>    
+                <c-search-component
+                    obj-name={searchDeployment.objectName}
+                    obj-label={searchDeployment.objectLabel}
+                    dynamic-object-label={searchDeployment.dynamicObjectLabel}
+                    icon-name={searchDeployment.icon}
+                    label-name={searchDeployment.label}
+                    placeholder={searchDeployment.placeholder} 
+                    fields={searchDeployment.fields}
+                    display-fields={searchDeployment.displayFields}
+                    value-id={searchDeployment.valueId}
+                    value-name={searchDeployment.valueName}
+                    onlookup={handleDeploymentLookup}
+                    current-record-id={searchDeployment.currentRecordId}
+                    filter={filterDeployment}                
+                    >
+                </c-search-component> 
+                <lightning-layout class="slds-size_4-of-4">
+                    <lightning-layout-item class="slds-size_1-of-2 slds-p-left_medium">
+                            <label class="slds-checkbox_toggle slds-grid" >
+                            <span class="slds-form-element__label slds-m-bottom_none">Within Data Set?</span>
+                                <input type="checkbox" name="checkbox-toggle-15" value="checkbox-toggle-15" aria-describedby="checkbox-toggle-15" onchange={handleChangeWithinDataSet} id="single-form-element-id-02"/>
+                                <span id="checkbox-toggle-15" class="slds-checkbox_faux_container" aria-live="assertive">
+                                    <span class="slds-checkbox_faux"></span>
+                                    <span class="slds-checkbox_on" style="display:none">Enabled</span>
+                                    <span class="slds-checkbox_off" style="display:none">Disabled</span>
+                                </span>
+                        </label>    
+                    </lightning-layout-item>
+                    <lightning-layout-item class="slds-size_1-of-2 slds-p-right_medium">
+                            <label class="slds-checkbox_toggle slds-grid">
+                                <span class="slds-form-element__label slds-m-bottom_none">Latest Source?</span>
+                                <input type="checkbox" name="checkbox-toggle-18" value="checkbox-toggle-18" aria-describedby="checkbox-toggle-18" checked="" onchange={handleChangeLatestVersionOfSource} id="single-form-element-id-03"/>
+                                <span id="checkbox-toggle-18" class="slds-checkbox_faux_container" aria-live="assertive">
+                                    <span class="slds-checkbox_faux"></span>
+                                    <span class="slds-checkbox_on" style="display:none">Enabled</span>
+                                    <span class="slds-checkbox_off" style="display:none">Disabled</span>
+                                </span>
+                            </label>                  
+                    </lightning-layout-item>
+                </lightning-layout> 
+                    
+        </lightning-card> 
+    </div>
+</template>

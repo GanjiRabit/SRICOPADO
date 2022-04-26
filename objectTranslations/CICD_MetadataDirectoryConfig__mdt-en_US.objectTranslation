@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Metadata Directory Config</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metadata Directory Config</value>
+    </caseValues>
+    <fields>
+        <label><!-- Component Name Expression --></label>
+        <name>CICD_ComponentNameExpression__c</name>
+    </fields>
+    <fields>
+        <help><!-- Will be used to generate a component name that requires joining Parent &amp; Child Component Names. For eg., &quot;/&quot; will be used to get an email template in CICD folder as &quot;CICD/ReleaseCreated&quot; --></help>
+        <label><!-- Join String --></label>
+        <name>CICD_JoinString__c</name>
+        <picklistValues>
+            <masterLabel>Dot</masterLabel>
+            <translation><!-- Dot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hyphen</masterLabel>
+            <translation><!-- Hyphen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slash</masterLabel>
+            <translation><!-- Slash --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Name Expression --></label>
+        <name>CICD_ParentNameExpression__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this box to recognize the metadata but to restrict it from being automatically added to commit --></help>
+        <label><!-- Restrict Metadata Type --></label>
+        <name>CICD_RestrictMetadataType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restriction Message --></label>
+        <name>CICD_RestrictionMessage__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

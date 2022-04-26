@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CICD_ReleaseDateChange</name>
+    <style>none</style>
+    <subject>Salesforce Release Date changed</subject>
+    <textOnly>Release Date on release &quot;{!copado__Release__c.Name}&quot; has been changed to {!copado__Release__c.copado__Planned_Date__c}.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

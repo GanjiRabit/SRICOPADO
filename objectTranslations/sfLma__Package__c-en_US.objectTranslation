@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Developer Name --></label>
+        <name>sfLma__Developer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Org ID --></label>
+        <name>sfLma__Developer_Org_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Help --></label>
+        <name>sfLma__Help__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the last date the subscriber license records for this package were refreshed.  A package license refresh can only be run once every seven days. --></help>
+        <label><!-- Last License Refresh --></label>
+        <name>sfLma__Last_License_Refresh__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Version --></label>
+        <name>sfLma__Latest_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Manager --></label>
+        <name>sfLma__Lead_Manager__c</name>
+        <relationshipLabel><!-- Packages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Available Refresh --></label>
+        <name>sfLma__Next_Available_Refresh__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package ID --></label>
+        <name>sfLma__Package_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Date --></label>
+        <name>sfLma__Release_Date__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- RefreshLicenses --></label>
+        <name>sfLma__RefreshLicenses</name>
+    </webLinks>
+</CustomObjectTranslation>

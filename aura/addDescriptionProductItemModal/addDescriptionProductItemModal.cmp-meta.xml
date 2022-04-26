@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <description>Modal to add description to a specified Service Order Detail. This fire an event that will set the description on the Service Order Detail and update the description text on the product item.</description>
+</AuraDefinitionBundle>

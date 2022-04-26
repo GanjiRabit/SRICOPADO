@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- App (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Application__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>CHANNEL_ORDERS__Currency__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total number of licenses that customer currently has on that product --></help>
+        <label><!-- Current Licenses (internal use only) --></label>
+        <name>CHANNEL_ORDERS__Current_Licenses__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum of total price across all orders --></help>
+        <label><!-- Current Total Price (internal use only) --></label>
+        <name>CHANNEL_ORDERS__Current_Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Price (Unit/Month) --></label>
+        <name>CHANNEL_ORDERS__Customer_Price_Per_Month__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required if you are ordering a PNR product.  Please provide the monthly customer price per seat of your application. --></help>
+        <label><!-- Customer Price (User/Month) (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Customer_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated SFDC Price/Month(deprecated) --></label>
+        <name>CHANNEL_ORDERS__Estimated_SFDC_Price_Per_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fixed Price (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Fixed_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Price (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Floor_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Expired --></label>
+        <name>CHANNEL_ORDERS__Is_Expired__c</name>
+    </fields>
+    <fields>
+        <help><!-- The price of the product after reductions have been applied via LIFO (Last order In, First order Out) --></help>
+        <label><!-- New Total Price (internal use only) --></label>
+        <name>CHANNEL_ORDERS__New_Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of users (ISVforce) (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Number_Of_Users_ISVforce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Detail Value --></label>
+        <name>CHANNEL_ORDERS__Order_Detail_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- PNR % --></label>
+        <name>CHANNEL_ORDERS__PNR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contract Term Name --></label>
+        <name>CHANNEL_ORDERS__Partner_Contract_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Order --></label>
+        <name>CHANNEL_ORDERS__Partner_Order__c</name>
+        <relationshipLabel><!-- Service Order Detail --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pricing Type (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Pricing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product ID --></label>
+        <name>CHANNEL_ORDERS__Product_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- True if this detail uses an individual description rather than using SFDC Invoice Description --></help>
+        <label><!-- Prod Line Desc Overridden (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Product_Line_Desc_Overridden__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product Line Description will be displayed on the Invoice --></help>
+        <label><!-- SFDC Invoice Description --></label>
+        <name>CHANNEL_ORDERS__Product_Line_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>CHANNEL_ORDERS__Product_Name__c</name>
+        <relationshipLabel><!-- Service Order Detail --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Special Terms --></label>
+        <name>CHANNEL_ORDERS__Product_Special_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Quantity --></label>
+        <name>CHANNEL_ORDERS__Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount to be paid to Salesforce. Based off the % fee paid to Salesforce as specified in the Contract --></help>
+        <label><!-- Revenue Share --></label>
+        <name>CHANNEL_ORDERS__SFDC_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Instructions (deprecated) --></label>
+        <name>CHANNEL_ORDERS__Special_Instructions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Frequency --></label>
+        <name>CHANNEL_ORDERS__pc_Billing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancellation Terms (Days) --></label>
+        <name>CHANNEL_ORDERS__pc_Cancellation_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Auto Renew --></label>
+        <name>CHANNEL_ORDERS__pc_Contract_Auto_Renew__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract Length --></label>
+        <name>CHANNEL_ORDERS__pc_Contract_Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Unit --></label>
+        <name>CHANNEL_ORDERS__pc_Custom_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fixed Price --></label>
+        <name>CHANNEL_ORDERS__pc_Fixed_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Price (deprecated) --></label>
+        <name>CHANNEL_ORDERS__pc_Floor_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- PNR % (deprecated) --></label>
+        <name>CHANNEL_ORDERS__pc_PNR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contract Term --></label>
+        <name>CHANNEL_ORDERS__pc_Partner_Contract_Term__c</name>
+        <relationshipLabel><!-- Service Order Detail --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pricing --></label>
+        <name>CHANNEL_ORDERS__pc_Pricing_Type__c</name>
+        <picklistValues>
+            <masterLabel>FIXED</masterLabel>
+            <translation><!-- FIXED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PNR</masterLabel>
+            <translation><!-- PNR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit (deprecated) --></label>
+        <name>CHANNEL_ORDERS__pc_Pricing_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Org</masterLabel>
+            <translation><!-- Org --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product ID (deprecated) --></label>
+        <name>CHANNEL_ORDERS__pc_Product_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Terms (Months) --></label>
+        <name>CHANNEL_ORDERS__pc_Renewal_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>CHANNEL_ORDERS__pct_Currency__c</name>
+        <picklistValues>
+            <masterLabel>AUD</masterLabel>
+            <translation><!-- AUD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GBP</masterLabel>
+            <translation><!-- GBP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JPY</masterLabel>
+            <translation><!-- JPY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEK</masterLabel>
+            <translation><!-- SEK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Cancellation Terms is a required field. --></errorMessage>
+        <name>CHANNEL_ORDERS__CancellationTerms_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract Length is a required field. --></errorMessage>
+        <name>CHANNEL_ORDERS__ContractLength_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Customer_Price_Per_Month_Must_Be_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Customer_Price_is_required_if_PNR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__ISVForce_Cust_Price_User_Month_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__ISVForce_Customer_Price_per_month_reqd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__ISVForce_Quantity_Must_Be_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__ISVForce_num_users_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (deprecated) --></errorMessage>
+        <name>CHANNEL_ORDERS__Num_Users_ISVForce_Must_Be_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Service Order you selected is not part of the Contract Term you chose --></errorMessage>
+        <name>CHANNEL_ORDERS__Order_must_belong_to_contract_terms</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Product you selected is not part of the Contract Term you chose on the Service Order --></errorMessage>
+        <name>CHANNEL_ORDERS__Product_must_belong_to_contract_terms</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Field can not be empty. You must set a value. --></errorMessage>
+        <name>CHANNEL_ORDERS__Quantity_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Renewal Terms is a required field. --></errorMessage>
+        <name>CHANNEL_ORDERS__RenewalTerms_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Field can not be updated. Service Order status should be: &apos;Error&apos; or &apos;Draft&apos; --></errorMessage>
+        <name>CHANNEL_ORDERS__Special_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

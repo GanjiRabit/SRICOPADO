@@ -1,0 +1,28 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  /*
+  aside#sidebar-wrapper {
+    padding: 5px;
+    width: 300px;
+    border: 2px black solid;
+  }
+  
+  aside#sidebar-wrapper input {
+    width: 100%;
+  }
+  
+  */
+  .lable {
+    margin-bottom: 0px;
+  }
+  .slds-form-element__control {
+    padding-left: 0%;
+  }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This Custom Setting contains the configurations used by COA batch jobs.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Alert_Email__c</fullName>
+        <defaultValue>&quot;coa-notification@salesforce.com&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Email where errors will be sent if some errors happen in the batch jobs.</description>
+        <externalId>false</externalId>
+        <label>Alert Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Batch_Size__c</fullName>
+        <defaultValue>200</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The batch size to use when executing the batch via the scheduler.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The batch size to use when executing the batch via the scheduler.</inlineHelpText>
+        <label>Batch Size</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Cron_Expression__c</fullName>
+        <defaultValue>&quot;0 0 * * * ?&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Cron Expression used for rescheduling batch jobs.</description>
+        <externalId>false</externalId>
+        <label>Cron Expression</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Current_Retries__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If needed, re-tries will be made when callouts to org62 timeout.  This is the current number, which will not exceed the max defined in Max Retries.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If needed, re-tries will be made when callouts to org62 timeout.  This is the current number, which will not exceed the max defined in Max Retries.</inlineHelpText>
+        <label>Current Retries</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Last_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the date and time when the first in a chain of batches was executed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date and time when the first in a chain of batches was executed.</inlineHelpText>
+        <label>Last Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Last_Success_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the timestamp of the completion date for the last successful execution of the batch job.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the timestamp of the completion date for the last successful execution of the batch job.</inlineHelpText>
+        <label>Last Success Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Max_Retries__c</fullName>
+        <defaultValue>5</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If needed, re-tries will be made when callouts to org62 timeout. Re-tries attempts will not exceed this max.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If needed, re-tries will be made when callouts to org62 timeout. Re-tries attempts will not exceed this max.</inlineHelpText>
+        <label>Max Retries</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Query_Size__c</fullName>
+        <defaultValue>200</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Query Size</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CHANNEL_ORDERS__Start_Order_Product_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Order ProductId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>COA Batch Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>sample US report</name>
+    <runningUser>srujana@blue5green.com</runningUser>
+    <sourceReport>unfiled$public/User_Stories_w8j</sourceReport>
+    <targetObject>copado__User_Story__c</targetObject>
+</AnalyticSnapshot>

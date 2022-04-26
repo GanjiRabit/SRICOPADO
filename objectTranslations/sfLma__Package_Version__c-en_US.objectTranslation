@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Help --></label>
+        <name>sfLma__Help__c</name>
+    </fields>
+    <fields>
+        <label><!-- Beta --></label>
+        <name>sfLma__Is_Beta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>sfLma__Package__c</name>
+        <relationshipLabel><!-- Package Versions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Release Date --></label>
+        <name>sfLma__Release_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence --></label>
+        <name>sfLma__Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version ID --></label>
+        <name>sfLma__Version_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version Number --></label>
+        <name>sfLma__Version_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>sfLma__Version__c</name>
+    </fields>
+</CustomObjectTranslation>

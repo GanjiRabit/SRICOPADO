@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Allow Auto Renew Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Auto_Renew_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Cancellation Terms Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Cancellation_Terms_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Contract Length Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Contract_Length_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Renewal Length Override --></label>
+        <name>CHANNEL_ORDERS__Allow_Renewal_Length_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>CHANNEL_ORDERS__Application__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Frequency --></label>
+        <name>CHANNEL_ORDERS__Billing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancellation Terms (Days) --></label>
+        <name>CHANNEL_ORDERS__Cancellation_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Auto Renew --></label>
+        <name>CHANNEL_ORDERS__Contract_Auto_Renew__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract Length --></label>
+        <name>CHANNEL_ORDERS__Contract_Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Unit --></label>
+        <name>CHANNEL_ORDERS__Custom_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fixed Price --></label>
+        <name>CHANNEL_ORDERS__Fixed_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Price --></label>
+        <name>CHANNEL_ORDERS__Floor_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- PNR % --></label>
+        <name>CHANNEL_ORDERS__PNR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Application Name --></label>
+        <name>CHANNEL_ORDERS__Partner_Application_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contract Terms --></label>
+        <name>CHANNEL_ORDERS__Partner_Contract_Terms__c</name>
+        <relationshipLabel><!-- Partner Product Catalog --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Product Name of Price Book Entry on Org62 --></help>
+        <label><!-- Partner Price Book Entry Id --></label>
+        <name>CHANNEL_ORDERS__Partner_Price_Book_Entry_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product Name of Price Book Entry on Org62 --></help>
+        <label><!-- Partner Product Name --></label>
+        <name>CHANNEL_ORDERS__Partner_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Type --></label>
+        <name>CHANNEL_ORDERS__Pricing_Type__c</name>
+        <picklistValues>
+            <masterLabel>FIXED</masterLabel>
+            <translation><!-- FIXED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIST</masterLabel>
+            <translation><!-- LIST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PNR</masterLabel>
+            <translation><!-- PNR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pricing Unit --></label>
+        <name>CHANNEL_ORDERS__Pricing_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Org</masterLabel>
+            <translation><!-- Org --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Description --></label>
+        <name>CHANNEL_ORDERS__Product_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product ID --></label>
+        <name>CHANNEL_ORDERS__Product_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Special Terms --></label>
+        <name>CHANNEL_ORDERS__Product_Special_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Terms (Months) --></label>
+        <name>CHANNEL_ORDERS__Renewal_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Instructions --></label>
+        <name>CHANNEL_ORDERS__Special_Instructions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Partner Pricebook Entry --></label>
+        <name>CHANNEL_ORDERS__Standard_Partner_Pricebook_Entry__c</name>
+        <relationshipLabel><!-- Partner Product Catalog --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CHANNEL_ORDERS__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired (Add-ons Only)</masterLabel>
+            <translation><!-- Retired (Add-ons Only) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>CHANNEL_ORDERS__Unit_Price_Formula__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Fixed Price is required if Pricing Type = FIXED --></errorMessage>
+        <name>CHANNEL_ORDERS__Fixed_Price_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fixed Price must be blank if Pricing Type = PNR --></errorMessage>
+        <name>CHANNEL_ORDERS__Fixed_Price_should_be_blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Floor Price is required if Pricing Type = PNR --></errorMessage>
+        <name>CHANNEL_ORDERS__Floor_price_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PNR % is required if Pricing Type = PNR --></errorMessage>
+        <name>CHANNEL_ORDERS__PNR_percent_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PNR % must be blank if Pricing Type = FIXED --></errorMessage>
+        <name>CHANNEL_ORDERS__PNR_percent_should_be_blank</name>
+    </validationRules>
+</CustomObjectTranslation>

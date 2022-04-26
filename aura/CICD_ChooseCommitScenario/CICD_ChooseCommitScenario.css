@@ -1,0 +1,9 @@
+.THIS .modalHeader{
+    padding : 5px;
+    text-align:center;
+    border-bottom : 2px solid #ddd;
+}
+
+.THIS .slds-button{
+    font-size: 15px;
+}

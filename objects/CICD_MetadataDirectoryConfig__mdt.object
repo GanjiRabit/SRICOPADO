@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CICD_ComponentNameExpression__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Component Name Expression</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CICD_JoinString__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Will be used to generate a component name that requires joining Parent &amp; Child Component Names. For eg., &quot;/&quot; will be used to get an email template in CICD folder as &quot;CICD/ReleaseCreated&quot;</inlineHelpText>
+        <label>Join String</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>/</fullName>
+                    <default>false</default>
+                    <label>Slash</label>
+                </value>
+                <value>
+                    <fullName>.</fullName>
+                    <default>false</default>
+                    <label>Dot</label>
+                </value>
+                <value>
+                    <fullName>-</fullName>
+                    <default>false</default>
+                    <label>Hyphen</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CICD_ParentNameExpression__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Parent Name Expression</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CICD_RestrictMetadataType__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Check this box to recognize the metadata but to restrict it from being automatically added to commit</inlineHelpText>
+        <label>Restrict Metadata Type</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CICD_RestrictionMessage__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Restriction Message</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Metadata Directory Config</label>
+    <listViews>
+        <fullName>All_All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>CICD_ParentNameExpression__c</columns>
+        <columns>CICD_ComponentNameExpression__c</columns>
+        <columns>CICD_JoinString__c</columns>
+        <columns>CICD_RestrictMetadataType__c</columns>
+        <columns>CICD_RestrictionMessage__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Metadata Directory Config</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

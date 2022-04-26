@@ -1,0 +1,247 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Copy Snap-In code here for the Snap-In to be visible on this page. -->
+
+<!-- Copy FSC Chat Button Code script tag here -->
+<!-- Copy FscBot_LiveChatDeployment code here -->
+
+<!-- CSS Styling -->
+<style>
+
+.main-grid-container {
+  display: grid;
+  background-color: white;
+  justify-self: center;
+  align-content: center;
+  align-items: center;
+  font-family: "Salesforce Sans", sans-serif;
+}
+
+.grid-container-header, .grid-container-main-image, .grid-container-about-us-section, .grid-container-contact-us-section {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #009CDB;
+  padding: 0px;
+  justify-self: center;
+  align-content: center;
+  width: 100%;
+}
+
+.grid-container-services-section, .grid-container-services-title-section, .grid-container-contact-us-section {
+  display: grid;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 0px;
+  justify-self: center;
+  align-content: center;
+  width: 100%;
+}
+
+.grid-item {
+  text-align: center;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.bank-logo {
+  grid-row: 1;
+  justify-self: center;
+}
+
+.menu {
+  display: grid;
+  grid-row: 1;
+  justify-items: center;
+}
+
+.menu-item-1{
+  grid-row: 3;
+}
+
+.menu-item-2{
+  grid-row: 3;
+}
+
+.menu-item-3{
+  grid-row: 3;
+}
+
+.search-section {
+  display: grid;
+  grid-row: 1;
+}
+
+.search {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: center;
+}
+
+.chatbot {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: right;
+}
+
+.chatbot img {
+    height: 32px;
+    width: 32px;
+    padding: 0px 10px;
+}
+
+::placeholder {
+  color: #009CDB;
+  font-size: 12px;
+}
+
+.header-blank-small {
+  grid-column: span 10;
+  grid-row: 1;
+}
+
+.main-image {
+  grid-row: span 50;
+}
+
+.aboutus-section {
+  grid-row: span 20;
+}
+
+.blank-left, .blank-right {
+  grid-row: 1 / span 40;
+  grid-column: span 20;
+}
+
+.service-title-text {
+  padding: 30px;
+  font-size: 30px;
+  justify-self: center;
+  align-content: center;
+}
+
+.service-image {
+  grid-row: 1 / span 20;
+  grid-column: span 20;
+}
+
+.service-text {
+  grid-row: 21 / span 20;
+  grid-column: span 20;
+  font-size: 15px;
+  color: gray;
+  width: 80%;
+  justify-self: center;
+  font-size: 20px;
+}
+
+.location-map, .contact-us {
+  grid-row: 1 / span 40;
+}
+
+
+.contact-us-heading { grid-area: contactus; }
+.contact-us-address { grid-area: address; }
+.contact-us-phone { grid-area: callus; }
+.contact-us-name-input { grid-area: name; }
+.contact-us-email-input { grid-area: email; }
+.contact-us-message-input { grid-area: message; }
+
+.grid-contactus-container {
+  display: grid;
+  grid-template-areas:
+    'contactus contactus contactus contactus contactus contactus'
+    'address address address callus callus callus'
+    'name name name name name name'
+    'email email email email email email'
+    'message message message message message message';
+  grid-gap: 10px;
+  background-color: #009CDB;
+  padding: 30px 10px;
+}
+.grid-contactus-container > div {
+  text-align: left;
+  padding: 10px 50px;
+  font-size: 30px;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+  <div class="main-grid-container">
+    <div class="grid-container-header">
+      <div class="bank-logo"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'CumulusBankLogo.png')}" style="max-height:50px; height: 100%;"/></div>
+      <div class="menu">
+            <div class="menu-item-1"><a href="#about-us-section" style="text-decoration: none; color:white">ABOUT</a></div>
+            <div class="menu-item-2"><a href="#services-title-section" style="text-decoration: none; color:white">SERVICES</a></div>
+            <div class="menu-item-3"><a href="#contactus-section" style="text-decoration: none; color:white">CONTACT US</a></div>
+      </div>
+      <div class="search-section">
+            <div class="search"><input type="text" name="search" placeholder="SEARCH" style="height: 30px; width: 100%; border-radius: 15px; padding: 0px 10px;"/></div>
+            <div class="chatbot">
+              <!-- Copy FSC Chat Button Code img tag here -->
+            </div>
+      </div>
+    </div>
+        
+    <div class="grid-container-main-image">
+        <div class="grid-item"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'MainImage.png')}" style="width: 100%;"/></div>
+    </div>
+    <div id="about-us-section" class="grid-container-about-us-section">
+        <div style="color: white; font-size: 30px; text-align: center; width: 70%; justify-self: center; align-content: center; align-items: center; padding: 20px">
+            <apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'borderline.png')}" style="height: 5px; width: 70%; align-items: center"/>
+            <p>
+            Cumulus Bank oaths for Industrial Credit and Investment Corporation of United States of America, 
+            it is an American multinational banking and financial services company headquartered in Chicago, 
+            United States of America, with its registered office in San francisco.
+          </p>
+        </div>
+    </div>
+    <div id="services-title-section" class="grid-container-services-title-section">
+      <div class="service-title-text">
+        <p>
+          Services we offer
+        </p>
+      </div>
+    </div>
+
+    <div id="services-section" class="grid-container-services-section">
+        <div class="grid-item service-image"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'Service1.png')}" style="max-width:80%; width:100%; height:100%; object-fit: cover;"/></div>
+        <div class="grid-item service-text">Accounts and Deposits. Savings Account, FD, RD, Current Account, iWish, Demat. Insurance.</div>
+        <div class="grid-item service-image"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'Service2.png')}" style="max-width:80%; width:100%; height:100%; object-fit: cover;"/></div>
+        <div class="grid-item service-text">Accounts. Savings Account, Pockets wallet + savings account, 3-in-1 Account, NRI Account. Deposits.</div>
+        <div class="grid-item service-image"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'Service3.png')}" style="max-width:80%; width:100%; height:100%; object-fit: cover;"/></div>
+        <div class="grid-item service-text">Transfer Funds. UPI, NEFT, RTGS, IMPS. Pay at Stores.</div>
+    </div>
+    <div id="contactus-section" class="grid-container-contact-us-section">
+        <div class="grid-item location-map"><apex:image value="{!URLFOR($Resource.FscBot_LandingPage_Template, 'Location.png')}" style="height: 100%; width: 100%; object-fit: cover;"/></div>
+        <div class="grid-item contact-us">
+            <div class="grid-contactus-container">
+                <div class="contact-us-heading">Contact us
+                <div style="font-size: 15px;">We're here to help, 24/7.</div>
+                </div>
+                
+                <div class="contact-us-address">
+                <div style="font-size: 16px;"><b>Address</b></div>
+                <div style="font-size: 15px;">489 Daugherty Spur Suite 927,</div>
+                <div style="font-size: 15px;">Cordia Estate apt. 192</div>
+                </div>  
+                <div class="contact-us-phone">
+                <div style="font-size: 16px;"><b>Call us</b></div>
+                <div style="font-size: 15px;">+144 -12654428</div>
+                <div style="font-size: 15px;">+144 -78588191</div>
+                </div>  
+                <div class="contact-us-name-input"><input type="text" name="search" placeholder="Name" style="height: 30px; width: 100%; border-radius: 5px; padding: 10px;"/></div>
+                <div class="contact-us-email-input"><input type="text" name="search" placeholder="Email" style="height: 30px; width: 100%; border-radius: 5px; padding: 10px;"/></div>
+                <div class="contact-us-message-input"><input type="text" name="search" placeholder="Message" style="height: 150px; width: 100%; border-radius: 5px; padding: 10px;"/></div>
+              </div>
+              
+        </div>
+    </div>
+  </div>
+</body>
+
+</apex:page>

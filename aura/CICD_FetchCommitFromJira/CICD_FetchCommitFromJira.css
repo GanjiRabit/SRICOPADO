@@ -1,0 +1,28 @@
+.THIS {
+    padding: 15px;
+    background: white;
+    height: 100%;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+.THIS .timeStamp{
+    font-size: 85%;
+    font-style: italic;
+}
+.THIS .author{
+    font-weight:  bold;
+}
+.THIS .borderBottom{
+    border-bottom: 2px solid #ddd;
+}
+.THIS  .slds-table td{
+    white-space: normal;
+}
+.THIS .spinnerDiv{
+    padding: 6px;
+    margin-right : 10px;
+    display: inline-block;
+}
+.THIS .capitalize{
+    text-transform: capitalize;
+}

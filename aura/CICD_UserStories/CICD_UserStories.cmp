@@ -1,0 +1,142 @@
+<aura:component>
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<aura:attribute name="stories" type="List" default="[]"  />
+<aura:attribute name="selectedUserStories" type="List" default="[]" />
+<aura:attribute name="preDeploySteps" type="List" default="[]" />
+<aura:attribute name="postDeploySteps" type="List" default="[]" />
+<aura:attribute name="postDeployIds" type="List" default="[]" />
+<aura:attribute name="postStepCss" type="String" default=""  />
+<aura:attribute name="selectedSourceOrg" type="String" />
+<aura:attribute name="storiesDisabled" type="String"   />
+<!-- <aura:attribute name="postDeployDisabled" type="String"   /> -->
+
+<aura:attribute name="focusedTab" type="String" default="approvedByQA"  />
+<aura:attribute name="hideShowCss" type="String" default=""  />
+<aura:attribute name="userStoryFilters" type="List" default="[]"/>
+
+<aura:method name="updateFilterTabText" action="{!c.updateFilterTabText}" access="PUBLIC" /> 
+ 
+
+<c:CICD_Shared aura:id="CICD_Shared"/> 
+
+<aura:unescapedHtml value="{!v.hideShowCss}" /> 
+
+<div class="grid-wrap">
+        <aura:if isTrue="{! !empty(v.stories)}">
+        <lightning:radioGroup
+                options="{! v.userStoryFilters }"
+                value="approvedByQA"
+                type="button"
+                onchange="{!c.tabSwitch}"
+                >
+        </lightning:radioGroup>
+        </aura:if>
+    <div class="grid-container">
+        <aura:if isTrue="{! !empty(v.stories)}">        
+                <div class="slds-grid slds-gutters slds-wrap reset-margins">	
+                        <div class="table-head slds-col slds-large-size_3-of-12">
+                                User Story / Title / Environment 
+                        </div>
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Last Promotion Date
+                        </div>
+                        <div class="table-head slds-col slds-large-size_2-of-12">
+                                Salesforce Workflow Status
+                        </div>
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Status
+                        </div>			
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Developer
+                        </div>
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Project
+                        </div>
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Pre-Deployment Steps
+                        </div>
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Post-Deployment Steps
+                        </div>	
+                        <div class="table-head slds-col slds-large-size_1-of-12">
+                                Acceptable Code Coverage
+                        </div>
+                </div>	
+                <aura:iteration items="{!v.stories}" var="story">	
+
+                        <div  class="{! story.className + ' slds-grid slds-gutters slds-wrap story'}"> 
+                                
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_3-of-12">
+                                        <small class="mobile-label story-name">User Story / Title / Environment</small>
+
+                                        <lightning:input 
+                                                class="story-select"
+                                                type="checkbox"
+                                                value="{! story.Id}"  
+                                                checked="{! story.defaultChecked}"
+                                                onchange="{!c.updateChecked}"       
+                                                disabled="{!v.storiesDisabled}"                       
+                                                />       
+                                    <a target="_blank" href="{! '/' + story.Id}">
+                                        <h3 class="story-name">{!story.Name} 
+                                            / {!story.copado__User_Story_Title__c} 
+                                            / {!story.copado__Environment__r.CICD_EnvironmentType__c}</h3>
+                                    </a>
+                                </div>
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Last Promotion Date</small>
+                                        <aura:if isTrue="{!story.copado__Last_Promotion_Date__c}">
+                                        <lightning:formattedDateTime 
+                                                value="{!story.copado__Last_Promotion_Date__c}" 
+                                                timeZone="UTC"/>
+                                        </aura:if>                               
+                                </div>
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_2-of-12">
+                                        <small class="mobile-label">Salesforce Workflow Status</small>
+                                        {!story.CICD_WorkflowStatus__c}
+                                </div>	
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Status</small>
+                                        {!story.copado__Status__c}
+                                </div>						
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Developer</small>
+                                        {!story.copado__Developer__r.Name}
+                                </div>
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Project</small>
+                                        {!story.copado__Project__r.Name}
+                                </div>
+                                <div class="slds-col pad-top pad-btm slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Pre-Deployment Steps</small>
+                                        <lightning:input 
+                                                class="story-checkbox"
+                                                type="checkbox"
+                                                checked="{! !empty(story.CICD_PreDeploymentManualTasks__c)}"
+                                                disabled="true"                             
+                                        />
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Post-Deployment Steps</small>
+                                        <lightning:input 
+                                                class="story-checkbox"
+                                                type="checkbox"
+                                                checked="{! !empty(story.CICD_PostDeploymentManualTasks__c)}"
+                                                disabled="true"                             
+                                        />
+                                </div>  
+                                  <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
+                                        <small class="mobile-label">Select</small>   
+                                        <aura:unescapedHtml value="{!story.CICD_AcceptableCodeCoverage__c}" />                                
+                                  </div>               
+                        </div>
+                </aura:iteration>	
+                                        
+                <aura:set attribute="else">
+                        No stories found
+                </aura:set>
+        </aura:if>
+    </div><!--end grid container-->
+</div><!--end grid wrap-->
+</aura:component>

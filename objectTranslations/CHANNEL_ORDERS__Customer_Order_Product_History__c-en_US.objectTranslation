@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>CHANNEL_ORDERS__Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Number --></label>
+        <name>CHANNEL_ORDERS__Contract_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency Code --></label>
+        <name>CHANNEL_ORDERS__Currency_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>CHANNEL_ORDERS__Customer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tenant Id --></label>
+        <name>CHANNEL_ORDERS__Customer_Tenant_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>CHANNEL_ORDERS__Customer__c</name>
+        <relationshipLabel><!-- Customer Order Product History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>CHANNEL_ORDERS__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exception Reason --></label>
+        <name>CHANNEL_ORDERS__Exception_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Item End Date --></label>
+        <name>CHANNEL_ORDERS__Order_Item_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The OrderItem.Id for the related data in org62. --></help>
+        <label><!-- Order Product Id --></label>
+        <name>CHANNEL_ORDERS__Order_Product_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- The EffectiveDate of the Order. --></help>
+        <label><!-- Order Start Date --></label>
+        <name>CHANNEL_ORDERS__Order_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Pricebook Entry --></label>
+        <name>CHANNEL_ORDERS__Partner_Pricebook_Entry__c</name>
+        <relationshipLabel><!-- Customer Order Product History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>CHANNEL_ORDERS__Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>CHANNEL_ORDERS__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Quantity --></label>
+        <name>CHANNEL_ORDERS__Renewal_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Partner Pricebook Entry --></label>
+        <name>CHANNEL_ORDERS__Standard_Partner_Pricebook_Entry__c</name>
+        <relationshipLabel><!-- Standard Partner Pricebook Entry --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Standard Product Name --></label>
+        <name>CHANNEL_ORDERS__Standard_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>CHANNEL_ORDERS__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tenant Type --></label>
+        <name>CHANNEL_ORDERS__Tenant_Type__c</name>
+        <picklistValues>
+            <masterLabel>Force.com</masterLabel>
+            <translation><!-- Force.com --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>CHANNEL_ORDERS__Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>CHANNEL_ORDERS__Unit_Price__c</name>
+    </fields>
+</CustomObjectTranslation>

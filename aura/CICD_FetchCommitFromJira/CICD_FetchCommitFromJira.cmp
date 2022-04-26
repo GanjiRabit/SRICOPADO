@@ -1,0 +1,198 @@
+<aura:component controller="CICD_FetchCommitFromJiraManager" extends="c:CICD_ServerSideActionOrchestrator" access="global">
+
+    <aura:attribute access="global" name="recordId" type="string" />
+
+    <aura:attribute access="global" name="commits" type="object[]" />
+    
+    <aura:attribute access="global" name="commitsToGetAdditionalFiles" type="object[]" />
+
+    <aura:attribute access="global" name="commitsToProcess" type="object[]" />
+
+    <aura:attribute access="global" name="metadataGrouping" type="object[]" />
+    
+    <aura:attribute access="global" name="metadataConfig" type="object" />
+
+    <aura:attribute access="global" name="noCommitsFound" type="boolean" default="false" /> 
+
+    <aura:attribute access="global" name="filePaths" type="string[]" default="[]" /> 
+    
+    <aura:attribute access="global" name="displaycommitsInformation" type="boolean" default="false" /> 
+    
+    <aura:attribute access="global" name="showCommitProgress" type="boolean" default="false" /> 
+
+    <aura:attribute access="global" name="showFilesSelection" type="boolean" default="false" />     
+
+    <aura:attribute access="global" name="message" type="string" default="false" /> 
+
+    <aura:attribute access="global" name="commitsToPromote" type="integer" default="0" />    
+
+    <aura:attribute access="global" name="copadoCommitStatus" type="object"  />    
+    
+    <aura:attribute access="global" name="restrictedMetadata" type="object[]" default="[]"  />    
+
+    <aura:attribute name="steps" type="object[]" />
+
+    <aura:attribute name="stepTitle" type="string" />
+
+    <aura:attribute name="displaySteps" type="boolean" default="false" />
+
+    <aura:handler name="change" value="{!v.serverScriptsLoaded}" action="{!c.getCommitInformation}"  />
+
+    <aura:handler name="deleteNodeEvent" event="c:CICD_RemoveNode"   action="{!c.removeNodeFromMetadata}"/>
+
+    
+   
+
+    <div>
+ 
+        <!-- show spinner -->
+        <aura:if isTrue="{!v.displaySpinner}">
+            <lightning:spinner variant="brand" size="medium" />          
+        </aura:if>
+
+        <!--to display commits information-->
+        <aura:if isTrue="{!v.displaycommitsInformation}">
+            <div class="slds-p-around_large">
+
+                <div class="slds-text-heading_large slds-text-align_center borderBottom slds-p-around_medium slds-m-bottom_small">
+                    Select the commits from Jira to auto-detect modified files list
+                </div>
+
+                <c:CICD_CommitsListFromJira commits="{!v.commits}" commitsToPromote="{!v.commitsToPromote}" />
+
+                <div class="slds-m-top_large slds-text-align_right">
+
+                        <lightning:button label="Cancel" variant="neutral" onclick="{!c.navigateToRecord}" />    
+
+                        <lightning:button label="Next" variant="brand" disabled="{! v.commitsToPromote == 0 }" onclick="{!c.prepareFilesForCommit}" />                        
+
+                </div>
+            </div>
+        </aura:if>
+
+        <!-- modal to indicate no commits found redirect user -->        
+        <aura:if isTrue="{!v.noCommitsFound}">
+
+                <section role="dialog"  class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                             <div class="slds-text-heading_small slds-text-align_center">       
+                                    <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" size="medium"/>
+                                    No commits found associated to related Jira issue. 
+                            </div>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <div class="slds-text-heading_small slds-p-around_large slds-text-align_center">                                 
+                                 <p> Click Continue to select metadata items manually or Cancel to go back to user story. </p>
+                            </div>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.navigateToRecord}" >Cancel</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.navigateToCopadoCommitSelection}">Continue</button>
+                        </footer>
+                    </div>
+                </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+
+        </aura:if>
+
+        <!-- to show steps -->
+        <aura:if isTrue="{!v.displaySteps}">
+            <c:CICD_VerticalProgressIndicator steps="{!v.steps}" stepTitle="{!v.stepTitle}" />
+        </aura:if>
+
+        <!-- to display the commit progress -->
+        <aura:if isTrue="{!v.showCommitProgress}">    
+            <section role="dialog"  class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                         <div class="slds-text-heading_small slds-text-align_center">       
+                                
+                               Commit Status
+                        </div>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="slds-text-heading_small slds-p-around_large slds-text-align_center slds-is-relative capitalize">                                 
+                                
+                            <aura:if isTrue="{! !v.copadoCommitStatus.isFinished}">
+                                <div class="slds-is-relative spinnerDiv" >
+                                    <lightning:spinner variant="brand" size="small" alternativeText="Wait.."> </lightning:spinner>
+                                </div>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.copadoCommitStatus.isSuccess}">
+                                       <lightning:icon iconName="utility:success" variant="success" />
+                                       <aura:set attribute="else">
+                                        <lightning:icon iconName="utility:error" variant="error" />
+                                       </aura:set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>                            
+                            
+                            {!v.copadoCommitStatus.status}
+
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.navigateToRecord}" > Go back to User Story </button>       
+                        <aura:if isTrue="{!v.copadoCommitStatus.isFinished}">
+                                <button class="slds-button slds-button_brand" onclick="{!c.navigateToCopadoCommitSelection}">Commit Additional Files</button>
+                        </aura:if>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+
+        <!--  to display the files selction process -->
+        <aura:if isTrue="{!v.showFilesSelection}">    
+              <c:CICD_TreeContainer items="{!v.metadataGrouping}" title="Review Metadata for Commit" />
+              <div class="slds-text-align_right slds-p-around_large">
+                    <button class="slds-button slds-button_neutral" onclick="{!c.navigateToRecord}" >Cancel</button>
+                    <button class="slds-button slds-button_neutral" onclick="{!c.prepareFilesForCommit}" >Go Back / Refresh </button>
+                    <button class="slds-button slds-button_brand" onclick="{!c.continueWithCommit}">Continue</button>
+              </div>
+        </aura:if>
+
+        <aura:if isTrue="{!and( v.restrictedMetadata != null , v.restrictedMetadata.length > 0)}">
+            <section role="dialog"  class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                         <div class="slds-text-heading_medium slds-text-align_center">       
+                                
+                              <p>
+                                    <lightning:icon iconName="utility:warning" variant="warning" size="small" class="slds-m-right_small"/> 
+                                    Issue with processing commits 
+                              </p>
+                        </div>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    
+                            <table class="slds-table slds-table_bordered">
+                                <thead>
+                                    <tr>
+                                        <th> Metadata Type </th>
+                                        <th> Message </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.restrictedMetadata}" var="metadataInfo">
+                                        <tr>
+                                            <td> {! metadataInfo.type } </td>
+                                            <td> {! metadataInfo.message } </td>                                            
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}" > I Acknowledge </button>                        
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+        
+        
+    </div>
+</aura:component>

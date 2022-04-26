@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>thankful__ConfigurationValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specify Appropriate Value</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Configuration Value</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <label>Thankful Application Configuration</label>
+    <listViews>
+        <fullName>thankful__All</fullName>
+        <columns>NamespacePrefix</columns>
+        <columns>MasterLabel</columns>
+        <columns>thankful__ConfigurationValue__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Thankful Application Configuration</pluralLabel>
+    <validationRules>
+        <fullName>thankful__Configuration_Value_is_Required</fullName>
+        <active>false</active>
+        <description>Configuration Value is Required</description>
+        <errorConditionFormula>ISNULL(thankful__ConfigurationValue__c)  ||  ISBLANK(thankful__ConfigurationValue__c)</errorConditionFormula>
+        <errorDisplayField>thankful__ConfigurationValue__c</errorDisplayField>
+        <errorMessage>Configuration Value Cannot be blank</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

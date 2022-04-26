@@ -1,0 +1,25 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+
+<div>
+
+    <div class="slds-text-heading_large modalHeader">Choose The Commit Type</div>
+
+    <div class="slds-p-around_large slds-text-align_center">
+        <button class="slds-button slds-button_outline-brand slds-m-around_large" 
+                title="Choose this option if there are any commits associated to this Jira Issue." 
+                 onclick="{!c.navigateToFetchJiraIssue}">
+            Pre-populate from Jira Issue            
+        </button>
+
+        <button class="slds-button slds-button_outline-brand slds-m-around_large" 
+                title="Choose this option if you like to manually add components for commit"
+                onclick="{!c.navigateToCopadoCommitSelection}"> 
+            Manual Selection             
+        </button>
+    </div>
+
+
+
+</div>
+
+</aura:component>

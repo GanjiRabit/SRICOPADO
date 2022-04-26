@@ -1,0 +1,1 @@
+<div>Release Date on release "{!copado__Release__c.Name}" has been changed to {!copado__Release__c.copado__Planned_Date__c}.</div>

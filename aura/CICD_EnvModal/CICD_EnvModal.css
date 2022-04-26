@@ -1,0 +1,96 @@
+.THIS .slds-modal__container .slds-modal__content {
+    font-size: 13px;
+    font-style: normal;    
+    text-align: left;
+}
+
+.THIS .email-addresses,
+.THIS .email-subject, 
+.THIS .comments {
+    margin-bottom:15px;
+}
+.THIS .notify-button {
+    margin-top:5px;
+    margin-bottom:28px;
+}
+
+.THIS.grid-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.THIS.grid-wrap lightning-radio-group {
+    margin-bottom:20px;
+}
+.THIS .grid-container {
+    padding-left:12px;
+    padding-right:12px;
+}
+
+.THIS .table-head {
+    font-weight: bold;
+    padding: 5px 15px;    
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color:#f1f1f1;     
+}
+.THIS .slds-col{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;   
+}
+.THIS .mobile-label {
+    display: none;
+    color:#a2a2a2;
+}
+.THIS .story{
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    position:relative;
+}
+
+.THIS .story-checkbox {
+    position: relative;
+    top:-2px;
+}
+.THIS .slds-checkbox_faux {
+    border: 1px solid rgb(146, 146, 146) !important;
+}
+
+.THIS .story-select {
+    position: absolute;
+    top: 8px;
+}
+
+.THIS .story-name {
+    margin-left:28px;
+}
+@media (min-width: 48em){
+    .THIS .slds-modal__container {
+        width:80% !important;
+       
+    }
+}
+
+
+@media(max-width:1023px){    
+    .THIS .mobile-label {
+        display:block;
+    }
+    .THIS .table-head {
+        display:none;
+    }   
+    .THIS .story .slds-col{
+        padding-left:0;
+        padding-right:0;
+    }
+    .THIS .story-name {
+        margin-left:0px;  
+    }
+    .THIS small.story-name {
+        margin-top:28px;  
+    }
+    .THIS H3.story-name {
+        margin-bottom:10px;
+    }
+}

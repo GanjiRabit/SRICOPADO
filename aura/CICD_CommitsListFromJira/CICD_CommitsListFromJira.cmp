@@ -1,0 +1,132 @@
+<aura:component>
+
+<aura:attribute access="public" name="commits" type="object[]" />
+
+<aura:attribute access="public" name="commitsToPromote" type="integer" />
+
+<aura:attribute access="public" name="selectAllCommits" type="boolean" default="true" />
+
+<aura:attribute access="public" name="showFilesInCommit" type="boolean" default="false" />
+
+<aura:attribute access="global" name="commitSelectedToPreview" type="object" />    
+
+<div>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-max-medium-table_stacked-horizontal">
+                <thead>
+                    <tr class="slds-line-height_reset"> 
+                        <th> 
+                            <div class="slds-truncate" title="Choose All Commits">   
+                                <lightning:input type="checkbox" checked="{!v.selectAllCommits}"  onchange="{!c.toggleSelection}"></lightning:input> 
+                            </div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="Project">Project</div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="Repository">Repository</div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="Is Merge or Commit?"> Commit / Merge</div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="Commit Message">Commit Message </div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="Author">Author </div>
+                        </th>
+                        <th> 
+                            <div class="slds-truncate" title="# Files in commit"> # Files in Commit </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <aura:iteration items="{!v.commits}" var="commit" indexVar="commitNumber">
+                        <tr data-rowId="{!v.commitNumber}">
+                            <td data-label="Select" > 
+                                <lightning:input type="checkbox"  checked="{!commit.isSelected}" onchange="{!c.toggleSelectAll}"></lightning:input>                              
+                            </td>
+                            <td data-label="Project" > {!commit.projectName} </td>
+                            <td data-label="Repository" > {!commit.repoName} </td>
+                            <td data-label="Is Merge" >                                 
+                                <aura:if isTrue="{!commit.isMerge}">
+                                        <img src="{!$Resource.CICD_Icons + '/Merge_Icon.png'}" class="commitType" title="Merge"/>
+                                    <aura:set attribute="else">
+                                            <img src="{!$Resource.CICD_Icons + '/commit_Icon.png'}" class="commitType" title="Commit"/>
+                                    </aura:set>
+                                </aura:if>
+                            </td>
+                            <td data-label="Commit Message"> <a href="{!commit.url}" target="_blank">  {!commit.message}  </a></td>
+                            <td data-label="Author"> 
+                                <div class="author">  {!commit.author} </div>
+                                <div class="timeStamp"> <ui:outputDateTime value="{!commit.timeStamp}"  />  </div>
+                            </td>
+                            <td data-label="#Files in Commit" data-rowId="{!commitNumber}"> 
+                                <a onclick="{!c.showCommitPreview}" data-rowId="{!commitNumber}" >    
+                                    {!commit.fileCount} 
+                                    <aura:if isTrue="{!!commit.isCompleteList}"> + </aura:if>
+                                 </a> 
+                            </td>
+                        </tr>
+                    </aura:iteration>
+
+                </tbody>
+
+            </table>
+
+             <!--  to display the list of files in a commit -->
+         <aura:if isTrue="{!v.showFilesInCommit}">    
+                <section role="dialog" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                          <header class="slds-modal__header">                            
+                            <h2  class="slds-modal__title slds-hyphenate">Commit Preview</h2>
+                            <p class="slds-m-top_x-small slds-text-align_left">                                
+                              <a href="{!v.commitSelectedToPreview.url}" target="_blank"> {!v.commitSelectedToPreview.message} </a>                              
+                              <div>Number of Files in Commit: {!v.commitSelectedToPreview.fileCount } <aura:if isTrue="{!!v.commitSelectedToPreview.isCompleteList}"> + </aura:if> </div>
+                              <div> Is Complete List Of Files : <ui:outputCheckbox value="{!v.commitSelectedToPreview.isCompleteList }" /></div>
+                            </p>
+                          </header>
+                          <div class="slds-modal__content slds-p-around_medium" >
+                                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-max-medium-table_stacked-horizontal">
+                                        <thead>
+                                            <tr class="slds-line-height_reset"> 
+                                                
+                                                <th> 
+                                                    <div class="slds-truncate" title="Add / Modify "> Add / Modify </div>
+                                                </th>
+                                                <th> 
+                                                    <div class="slds-truncate" title="File"> File </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <aura:iteration items="{!v.commitSelectedToPreview.files}" var="file">
+                                                        <tr>
+                                                            <td data-label="Add / Modify" >                                                                 
+                                                                <aura:if isTrue="{!file.changeType == 'ADDED'}">
+                                                                    <lightning:icon iconName="utility:add" size="x-small" title="Added File" class="addIcon"/>
+                                                                </aura:if>                      
+                                                                <aura:if isTrue="{!file.changeType == 'MODIFIED'}">
+                                                                    <lightning:icon iconName="utility:edit" size="x-small" title="Modified File" class="modifyIcon"/>
+                                                                </aura:if>                      
+                                                            </td>
+                                                            <td data-label="File" > 
+                                                                    <a href="{! v.commitSelectedToPreview.url + '#' + file.path}" target="_blank">  {!file.path} </a>                                 
+                                                            </td>
+                                                         </tr>
+                                                </aura:iteration>
+
+                                        </tbody>
+                                    </table>
+                          </div>
+                          <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeCommitPreview}">Okay</button>                            
+                          </footer>
+                        </div>
+                      </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+                
+          </aura:if>
+
+</div>
+</aura:component>

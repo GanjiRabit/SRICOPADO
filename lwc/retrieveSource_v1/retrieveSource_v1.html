@@ -1,0 +1,91 @@
+<!--
+ * author            : Debanjan Mukherjee
+ * last modified   : 11-20-2021 Debanjan Mukherjee
+ * Modifications Log 
+ * Ver   Date         Author       Modification
+ * 1.0   11-20-2021   Debanjan Mukherjee   Initial Version
+-->
+
+<template>
+    <div class="custom-box slds-box slds-text-align_left">
+    <lightning-card title={titlesLabel}>
+        <div class="slds-form">
+            <!--component is within div class="slds-form-element-->
+            <c-search-component
+                obj-name={searchDataSet.objectName}
+                obj-label={searchDataSet.objectLabel}
+                dynamic-object-label={searchDataSet.dynamicObjectLabel}
+                icon-name={searchDataSet.icon}
+                label-name={searchDataSet.label}
+                placeholder={searchDataSet.placeholder} 
+                fields={searchDataSet.fields}
+                display-fields={searchDataSet.displayFields}
+                value-id={searchDataSet.valueId}
+                value-name={searchDataSet.valueName}
+                onlookup={handleLookup}
+                current-record-id={searchDataSet.currentRecordId}
+                filter={filter}    
+                is-disabled={searchDataSet.disables}
+                default-record={defaultDataSet}  
+                 
+                 >
+            </c-search-component>
+                        
+                    <div class="slds-form-element slds-form-element_horizontal slds-text-align_left">
+                        
+                            <label class="slds-form-element__label" for="horizontal-input-id-02"><strong>Data Template :</strong></label>
+                        
+                       
+                            <div class="slds-form-element__control  slds-container_right">                        
+                                <lightning-combobox 
+                                    name="cmDataTemplates"
+                                    label=""
+                                    placeholder="Select a Data Template / Generated File"
+                                    value={selctedContDocFile}
+                                    onchange={handleDataTemplateChange}
+                                    options={dataTemplateNames}>
+                                </lightning-combobox>                        
+                            </div>
+                       
+                    </div>
+            <template if:false={isDisabled}>
+                <div class="slds-form-element slds-form-element_horizontal">
+                    <label class="slds-form-element__label" for="horizontal-input-id-03"><strong>Version :</strong></label>
+                    <div class="slds-form-element__control slds-container_right">                        
+                        <lightning-combobox
+                            name="cmContentDocumentVersion"
+                            label=""
+                            placeholder="Select A Version"
+                            value={selectedFileVersion}
+                            onchange={handleContDocVersionChange}
+                            options={contentDocumentVersions}
+                            disabled={isDisabled}>
+                        </lightning-combobox>
+
+                    </div>
+                </div>
+            </template>
+            <template if:true={isDisabled}>
+                <div class="slds-form-element slds-form-element_horizontal slds-p-left_medium slds-m-top_medium slds-m-bottom_medium">
+                    <lightning-layout>
+                        <lightning-layout-item>
+                            <label class="slds-text-color_weak slds-p-left_medium slds-p-right_medium" for="horizontal-input-id-13"><strong>Compare Same Data Template Version? </strong></label>
+                        
+                        </lightning-layout-item><lightning-layout-item>
+                        <label class="slds-checkbox_toggle slds-grid" >
+                            
+                            <input type="checkbox" name="checkbox-toggle-15" value="checkbox-toggle-15" aria-describedby="checkbox-toggle-15" checked="" onchange={handleChangeWithinDataSet} id="single-form-element-id-02" class="slds-align_absolute-center"/>
+                            <span id="checkbox-toggle-15" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on" style="display:none">Enabled</span>
+                                <span class="slds-checkbox_off" style="display:none">Disabled</span>
+                            </span>
+                        </label>
+                    </lightning-layout-item>
+                    </lightning-layout>    
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</div>
+</template>
