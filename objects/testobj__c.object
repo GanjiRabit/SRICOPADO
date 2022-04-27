@@ -152,6 +152,16 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Person_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Person Name</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>testobj</label>
     <nameField>
         <label>testobj Name</label>
@@ -163,7 +173,7 @@
         <active>true</active>
         <label>Sairecordtype</label>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
