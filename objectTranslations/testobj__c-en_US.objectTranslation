@@ -8,6 +8,10 @@
         <plural>true</plural>
         <value>testobjs</value>
     </caseValues>
+    <fields>
+        <label><!-- Person Name --></label>
+        <name>Person_Name__c</name>
+    </fields>
     <recordTypes>
         <label><!-- Sairecordtype --></label>
         <name>Sairecordtype</name>

@@ -44,6 +44,27 @@
         <value>https://jira.mlp.com</value>
     </labels>
     <labels>
+        <fullName>MyLabelName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>labels</shortDescription>
+        <value>Suraksh</value>
+    </labels>
+    <labels>
+        <fullName>MyLabelName2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label2`</shortDescription>
+        <value>Surakshhh</value>
+    </labels>
+    <labels>
+        <fullName>SaiLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaiLabel</shortDescription>
+        <value>Test</value>
+    </labels>
+    <labels>
         <fullName>fscbot_bot_data_setup_complete</fullName>
         <language>en_US</language>
         <protected>false</protected>

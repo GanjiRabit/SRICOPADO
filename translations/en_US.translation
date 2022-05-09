@@ -4021,6 +4021,18 @@
         <name>MPGJiraDomain</name>
     </customLabels>
     <customLabels>
+        <label><!-- labels --></label>
+        <name>MyLabelName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- label2` --></label>
+        <name>MyLabelName2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaiLabel --></label>
+        <name>SaiLabel</name>
+    </customLabels>
+    <customLabels>
         <label><!-- ACCOUNT SUMMARY --></label>
         <name>copado__ACCOUNT_SUMMARY</name>
     </customLabels>

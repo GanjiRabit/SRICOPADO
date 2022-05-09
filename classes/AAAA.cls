@@ -10,4 +10,9 @@ public String name;
 //adding a test comment - Sanket
 public String currency1;
 //comment2222345
+
+@AuraEnabled
+//adding a test comment - Sanket
+public String currency2;
+//comment2222345
 }

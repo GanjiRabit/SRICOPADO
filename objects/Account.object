@@ -429,7 +429,7 @@
     </fields>
     <fields>
         <fullName>ABCD__c</fullName>
-        <businessOwnerUser>{!Environment.Account_Summary}</businessOwnerUser>
+        <businessOwnerUser>srujana@blue5green.com.partner.dev1</businessOwnerUser>
         <businessStatus>Active</businessStatus>
         <complianceGroup>PII;GDPR;PCI</complianceGroup>
         <description>Testing 1234</description>

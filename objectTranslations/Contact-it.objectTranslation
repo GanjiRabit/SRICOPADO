@@ -9,6 +9,14 @@
         <name>AutoNumber__c</name>
     </fields>
     <fields>
+        <label><!-- Contact test field 1 --></label>
+        <name>Contact_test_field_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact test field 2 --></label>
+        <name>Contact_test_field_2__c</name>
+    </fields>
+    <fields>
         <label><!-- CustomExternalid --></label>
         <name>CustomExternalid__c</name>
     </fields>

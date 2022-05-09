@@ -349,7 +349,7 @@
     <validationRules>
         <fullName>FinServ__AARCanOnlyBeDeactivated</fullName>
         <active>true</active>
-        <errorConditionFormula>AND(OR(ISCHANGED(FinServ__Account__c),ISCHANGED(FinServ__RelatedAccount__c),ISCHANGED(FinServ__Role__c)),NOT(ISNEW()))</errorConditionFormula>
+        <errorConditionFormula>AND(OR(ISCHANGED(FinServ__Account__c),ISCHANGED(FinServ__RelatedAccount__c)),NOT(ISNEW()))</errorConditionFormula>
         <errorMessage>This record can&apos;t be edited. To update relationship information, you can deactivate this record and create a new one.</errorMessage>
     </validationRules>
     <validationRules>

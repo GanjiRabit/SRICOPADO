@@ -280,6 +280,10 @@
         <fullName>TotalCredit</fullName>
     </fields>
     <fields>
+        <fullName>TotalDebtPaidOffAmount</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>TotalEstPaymentAmt</fullName>
     </fields>
     <fields>

@@ -173,7 +173,7 @@
         <active>true</active>
         <label>Sairecordtype</label>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

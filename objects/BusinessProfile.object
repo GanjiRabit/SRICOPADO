@@ -138,6 +138,19 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>BusinessPartnerCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BusinessPartnerRegisteredName</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BusinessPartnerType</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>BusinessStructure</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
@@ -155,6 +168,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ExternalReferenceNumber</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>HasDishonoredPolicies</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -165,6 +182,16 @@
     <fields>
         <fullName>HasUncorrectedSafetyViolations</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RegionName</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ServiceType</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>SourceSystem</fullName>

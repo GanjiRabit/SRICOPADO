@@ -375,6 +375,26 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Contact_test_field_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact test field 1</label>
+        <length>22</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_test_field_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact test field 2</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CurrencyIsoCode</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>

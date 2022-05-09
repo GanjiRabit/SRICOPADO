@@ -346,6 +346,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>RenewedFromPolicyId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>SaleDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>

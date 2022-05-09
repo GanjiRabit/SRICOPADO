@@ -48,5 +48,9 @@
         <label><!-- Skip Unchanged Household Updates --></label>
         <name>FinServ__Skip_Update_If_Household_Unchanged__c</name>
     </fields>
+    <fields>
+        <label><!-- Update Records Silently --></label>
+        <name>FinServ__Update_Records_Silently__c</name>
+    </fields>
     
 </CustomObjectTranslation>
