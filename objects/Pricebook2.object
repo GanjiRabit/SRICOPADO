@@ -139,7 +139,7 @@
     </fields>
     <fields>
         <fullName>IsStandard</fullName>
-        <businessOwnerUser>{!Environment.Account_Summary}</businessOwnerUser>
+        <businessOwnerUser>srujana@blue5green.com.copadosiv3</businessOwnerUser>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

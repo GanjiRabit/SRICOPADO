@@ -65,6 +65,10 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <label><!-- Acceptance Criteria Status --></label>
+        <name>Acceptance_Criteria_Status__c</name>
+    </fields>
+    <fields>
         <label><!-- Active PR Count --></label>
         <name>Active_PR_Count__c</name>
     </fields>
@@ -295,6 +299,30 @@
         <name>ExternalID__c</name>
     </fields>
     <fields>
+        <label><!-- Failing Methods --></label>
+        <name>Failing_Methods__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- JIRA URL --></label>
         <name>JIRA_URL__c</name>
     </fields>
@@ -393,6 +421,30 @@
         <picklistValues>
             <masterLabel>Resolved</masterLabel>
             <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Planned Points --></label>
+        <name>Story_Points_Other__c</name>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
         </picklistValues>
     </fields>
     <fields>
