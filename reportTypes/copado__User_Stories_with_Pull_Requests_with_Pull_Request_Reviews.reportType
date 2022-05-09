@@ -359,6 +359,21 @@
             <field>copado__Progress_Status__c</field>
             <table>copado__User_Story__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Acceptance_Criteria_Status__c</field>
+            <table>copado__User_Story__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Failing_Methods__c</field>
+            <table>copado__User_Story__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Story_Points_Other__c</field>
+            <table>copado__User_Story__c</table>
+        </columns>
         <masterLabel>User Stories</masterLabel>
     </sections>
     <sections>

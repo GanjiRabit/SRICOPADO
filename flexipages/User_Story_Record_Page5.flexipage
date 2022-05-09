@@ -164,6 +164,18 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldItem>Record.copado__Story_Points_Other__c</fieldItem>
+                <identifier>Recordcopado_Story_Points_Other_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Story_Points_Other__c</fieldItem>
+                <identifier>RecordStory_Points_Other_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
                 <fieldItem>Record.RecordTypeId</fieldItem>
                 <identifier>RecordRecordTypeIdField2</identifier>
             </fieldInstance>
@@ -259,6 +271,18 @@
             <fieldInstance>
                 <fieldItem>Record.copado__Priority__c</fieldItem>
                 <identifier>RecordPriority__cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__Priority__c</fieldItem>
+                <identifier>Recordcopado_Priority_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Priority__c</fieldItem>
+                <identifier>RecordPriority_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>

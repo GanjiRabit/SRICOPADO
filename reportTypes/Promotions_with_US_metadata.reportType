@@ -812,6 +812,21 @@
             <field>Jira_Key__c</field>
             <table>copado__Promotion__c.copado__User_Stories__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Acceptance_Criteria_Status__c</field>
+            <table>copado__Promotion__c.copado__User_Stories__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Failing_Methods__c</field>
+            <table>copado__Promotion__c.copado__User_Stories__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Story_Points_Other__c</field>
+            <table>copado__Promotion__c.copado__User_Stories__r</table>
+        </columns>
         <masterLabel>User Stories</masterLabel>
     </sections>
     <sections>
