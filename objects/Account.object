@@ -2137,6 +2137,16 @@ if(And( month(Today())= month(FinServ__RelationshipStartDate__c), Day(Today())&l
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>New_Field_test__c</fullName>
+        <externalId>false</externalId>
+        <label>New Field test</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>NumberOfEmployees</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
