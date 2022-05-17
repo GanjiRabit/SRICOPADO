@@ -11,5 +11,6 @@ public with sharing class ChangePasswordController {
     }     
     
      public ChangePasswordController() {}
-    public void newmethod(){}
+    public string s;
+   
 }
